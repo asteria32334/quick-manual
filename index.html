@@ -37,9 +37,16 @@
 
 </nav>
 
-<div class="language-switch">
-    <button onclick="setLanguage('tr')">🇹🇷</button>
-    <button onclick="setLanguage('en')">🇬🇧</button>
+<div class="language-switch" id="langSwitch">
+    <button class="lang-btn" id="langBtn">EN</button>
+    
+    <div class="lang-dropdown">
+        <button data-lang="en" class="active">English</button>
+        <button data-lang="tr">Türkçe</button>
+        <button data-lang="es">Español</button>
+        <button data-lang="pt">Português</button>
+        <button data-lang="zh">中文</button>
+    </div>
 </div>
 
 <!-- HERO -->
