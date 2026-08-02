@@ -561,6 +561,20 @@ setLanguage(localStorage.getItem("language") || "tr");
 
 }
 
+const langSwitch = document.getElementById('langSwitch');
+    const langBtn = document.getElementById('langBtn');
+
+    langBtn.addEventListener('click', () => {
+        langSwitch.classList.toggle('open');
+    });
+
+    // Dışarı tıklayınca kapansın
+    document.addEventListener('click', (e) => {
+        if (!langSwitch.contains(e.target)) {
+            langSwitch.classList.remove('open');
+        }
+    });
+
 </script>
 
 </body>
