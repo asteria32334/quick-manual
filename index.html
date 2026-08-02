@@ -535,47 +535,62 @@ viewBtn2:"Görüntüle",
 };
 
 function setLanguage(lang){
+    if(!translations[lang]) return;
 
-document.documentElement.lang=lang;
+    document.documentElement.lang = lang;
 
-for(let id in translations[lang]){
+    for(let id in translations[lang]){
+        const element = document.getElementById(id);
+        if(element){
+            element.innerHTML = translations[lang][id];
+        }
+    }
 
-const element=document.getElementById(id);
+    // Buton yazısını güncelle
+    const langBtn = document.getElementById('langBtn');
+    if(langBtn){
+        langBtn.textContent = lang.toUpperCase();
+    }
 
-if(element){
+    // Active class
+    document.querySelectorAll('.lang-dropdown button').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.lang === lang);
+    });
 
-element.innerHTML=translations[lang][id];
-
+    localStorage.setItem("language", lang);
 }
 
-}
-
-localStorage.setItem("language",lang);
-
-}
-
-window.onload=function(){
-
-setLanguage(localStorage.getItem("language") || "tr");
-
-
+window.onload = function(){
+    const savedLang = localStorage.getItem("language") || "tr";
+    setLanguage(savedLang);
 }
 
 const langSwitch = document.getElementById('langSwitch');
-    const langBtn = document.getElementById('langBtn');
+const langBtn = document.getElementById('langBtn');
 
-    langBtn.addEventListener('click', () => {
-        langSwitch.classList.toggle('open');
-    });
+langBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    langSwitch.classList.toggle('open');
+});
 
-    // Dışarı tıklayınca kapansın
-    document.addEventListener('click', (e) => {
-        if (!langSwitch.contains(e.target)) {
-            langSwitch.classList.remove('open');
-        }
+// Dil seçince değiştir
+document.querySelectorAll('.lang-dropdown button').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const lang = btn.dataset.lang;
+        setLanguage(lang);
+        langSwitch.classList.remove('open');
     });
+});
+
+// Dışarı tıklayınca kapansın
+document.addEventListener('click', (e) => {
+    if (!langSwitch.contains(e.target)) {
+        langSwitch.classList.remove('open');
+    }
+});
 
 </script>
+
 
 </body>
 </html>
