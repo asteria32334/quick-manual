@@ -11,29 +11,26 @@
 
     <link rel="apple-touch-icon" href="images/logo.png">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="kurallar.css">
 </head>
 
 <body>
 
 <nav class="navbar">
 
-    <div class="logo">QuickManual</div>
+    <div class="logo"></div>
 
     <ul class="nav-links">
 
-        <li><a href="#whatItIs" id="navHome">Nedir?</a></li>
-        <li><a href="#whatItIsNot" id="navTeam">Ne değildir?</a></li>
-        <li><a href="#whoIsItFor" id="navRobots">Kimler için?</a></li>
-        <li><a href="#howToUseIt" id="navProjects">Nasıl kullanılır?</a></li>
-      <!--  <li><a href="#sponsors" id="navSponsors">Sponsorlarımız</a></li>
+        <li><a href="#awardRules" id="navHome">Ödül Kuralları</a></li>
+        <li><a href="#generalRules" id="navTeam">Genel kurallar</a></li>
+        <li><a href="#robotRules" id="navRobots">Robot Kuralları</a></li>
+      <!--  <li><a href="#" id="navProjects">Nasıl kullanılır?</a></li>
+        <li><a href="#sponsors" id="navSponsors">Sponsorlarımız</a></li>
         <li><a href="#gallery" id="navGallery">Galeri</a></li>
         <li><a href="#contact" id="navContact">İletişim</a></li>
 -->
-        <li><a href="kurallar.html" id="navDecode">Kurallar</a></li>
-        <li><a href="giris.html" id="navLogin">Login</a></li>
-
-    </ul>
+        <li><a href="index.html" id="navDecode">Geri dön</a></li>
 
 </nav>
 
@@ -49,7 +46,15 @@
     </div>
 </div>
 
-<!-- HERO -->
+<!-- HERO kısmından sonra -->
+<section class="search-section">
+    <div class="search-container">
+        <input type="text" id="pageSearch" placeholder="Sayfada ara... (örnek: kurallar, ödül, robot)" autocomplete="off">
+        <button onclick="clearSearch()" class="clear-btn" id="clear">Temizle</button>
+    </div>
+</section>
+
+<!-- HERO 
 <section id="home" class="hero">
 
     <div class="hero-content">
@@ -68,9 +73,9 @@
 
     </div>
  
-</section>
+</section> -->
 
-<!-- what it is -->
+<!-- what it is 
 <section id="whatItIs" class="section">
     <h2 id="whatItIsTitle">Nedir?</h2>
     <p id="whatItIsText">QuickManual, FIRST Tech Challenge resmi 
@@ -79,9 +84,9 @@
     kurallara, puanlama yöntemlerine ve önemli durumlara odaklanır. 
     Amacı, öğrencilerin ve mentörlerin oyunun temelini daha hızlı 
     ve net bir şekilde anlamasına yardımcı olmaktır.</p>
-</section>
+</section> -->
 
-<!-- what it is not -->
+<!-- what it is not 
 <section id="whatItIsNot" class="section">
     <h2 id="whatItIsNotTitle">Ne değildir?</h2>
     <p id="whatItIsNotText">QuickManual resmi Oyun Kılavuzu 
@@ -90,9 +95,9 @@
     belgenin yerini tutmaz. Resmi kararlar, muayene süreçleri veya 
     itirazlar için takımlar her zaman en güncel resmi Game Manual’a 
     başvurmalıdır.</p>
-</section>
+</section> -->
 
-<!-- who is it for  -->
+<!-- who is it for  
 <section id="whoIsItFor" class="section">
     <h2 id="whoIsItForTitle">Kimler için?</h2>
     <p id="whoIsItForText">Bu kaynak özellikle yeni kurulan 
@@ -100,9 +105,9 @@
     okumakta zorlanan takımlar için tasarlanmıştır. Aynı zamanda 
     maç öncesi veya antrenmanlarda hızlı referans arayan deneyimli 
     takımlar için de faydalıdır.</p>
-</section>
+</section> -->
 
-<!-- How to use it -->
+<!-- How to use it 
 <section id="howToUseIt" class="section">
     <h2 id="howToUseItTitle">Nasıl kullanılır?</h2>
     <p id="howToUseItText">Önce kısa özetleri okuyarak ana 
@@ -110,17 +115,15 @@
         sürümünü indirin. QuickManual’ı bir öğrenme ve tekrar 
         aracı olarak kullanın, ancak yarışmalar öncesinde kritik 
         kuralları mutlaka resmi Game Manual’dan kontrol edin.</p>
-</section>
+</section> -->
 
 
-<!-- 
-<section id="robots" class="section">
-   <h2 id="robotsTitle">Robotlarımız</h2>
-    <p id="robotSeason">2025-2026 DECODE</p>
-    <div class="card-container">
+<section id="awardRules" class="section">
+   <h2 id="awardRulesTitle">Ödül Kuralları</h2>
+    <!-- <p id="robotSeason"></p> -->
 
     <div class="card">
-        <img src="images/robotv1.jpeg" alt="Robot 1" width="250">
+       <!-- <img src="images/robotv1.jpeg" alt="Robot 1" width="250"> -->
         <h3 id="robot1Title">AsterBot V1.5</h3>
         <p></p>
     </div>
@@ -131,249 +134,43 @@
         <p></p>
     </div>
 
-</div>
 </section>
 
-<section id="projects" class="section">
-    <h2 id="projectsTitle">Projelerimiz</h2>
-
-    <div class="card-container">
+<section id="generalRules" class="section">
+   <h2 id="generalRulesTitle">Genel Kurallar</h2>
+    <!-- <p id="robotSeason"></p> -->
 
     <div class="card">
-        <img src="images/AgeGuard.jpeg" alt="AgeGuard">
-        <h3 id="project1Title">AgeGuard</h3>
-        <p id="project1Text">Arkeolojik eserlerin doğru bir şekilde çıkarılmasını sağlar</p>
+       <!-- <img src="images/robotv1.jpeg" alt="Robot 1" width="250"> -->
+        <h3 id="robot1Title">AsterBot V1.5</h3>
+        <p></p>
     </div>
 
     <div class="card">
-
-        <img src="images/2025senlik.jpeg" alt="2025 senlik">
-
-        <h3 id="project2Title">2025 Bilim Şenliği</h3>
-
-<p id="project2Text">
-Okulumuz bünyesinde düzenlenen bilim şenliğinde 850+ kişi katıldı, %97,9 STEM ilgi artışı gözlemlendi.
-</p>    </div>
-
-    <div class="card">
-        <img src="images/HistoryGame.jpeg" alt="HistoryGame">
-       <h3 id="project3Title">HistoryGame</h3>
-
-<p id="project3Text">
-Gençlerde arkeoloji, tarih ve STEM alanına olan ilgiyi artırmayı amaçlayan eğitim projesi.
-</p>
+        <img src="images/robotv2.jpeg" alt="Robot 2">
+        <h3 id="robot2Title">AsterBot V3</h3>
+        <p></p>
     </div>
-
-    <div class="card">
-        <img src="images/mia.jpeg" alt="mia">
-       <h3 id="project4Title">Mia Yaşam Merkezi Ortak Etkinliği</h3>
-
-<p id="project4Text">
-Mia Yaşam Merkezi'ndeki büyüklerimizle gerçekleştirilen kil ve STEM etkinliği.
-</p>
-    </div>
-
-    <div class="card">
-        <img src="images/şase.jpeg" alt="şase">
-       <h3 id="project5Title">Düşük Maliyetli Mecanum Şase Hibesi</h3>
-
-<p id="project5Text">
-Ülkemizin birçok bölgesindeki yeni FTC takımlarına 3 set mecanum şase desteği sağlandı.
-</p>
-    </div>
-
-    <div class="card">
-        <img src="images/tarihiEserKoruma.jpeg" alt="tarihiEserKoruma">
-       <h3 id="project6Title">Tarihi Eser Koruma Kutusu</h3>
-
-<p id="project6Text">
-Tarihi eserlerin en çok hasar gördüğü aşama olan taşıma sürecinde güvenliği sağlamak amacıyla tasarlanmıştır.
-</p>    </div>
-
-    <div class="card">
-        <img src="images/ASTERIA SCOUTING.png" alt="AsteriaScouting">
-       <h3 id="project7Title">Open-Source Asteria Scouting App</h3>
-
-<p id="project7Text">
-FTC ve FRC topluluğu için geliştirilen açık kaynaklı scouting uygulaması.
-</p>
-        <a href="https://github.com/asteria32334/scouting.app.public.git"
-target="_blank"
-class="btn"
-id="viewBtn2">
-Görüntüle
-</a>
-
-        
-    </div>
-
-    <div class="card">
-        <img src="images/biyosfer.png" alt="biyosfer">
-<h3 id="project8Title">Ankara Hacettepe Biyosfer Müzesi Gezisi</h3>
-
-<p id="project8Text">
-7. sınıf öğrencilerinin doğa ve biyolojik çeşitlilik hakkında bilgi edinmelerini sağlayan STEM gezisi.
-</p>    </div>
-
-    <div class="card">
-        <img src="images/FTC 101.jpg" alt="ftc101">
-                <h3 id="project9Title">FTC 101</h3>
-
-<p id="project9Text">
-Tüm sezonlar için hazırlanmış kapsamlı FTC başlangıç rehberi.
-</p>
-
-<a href="files/FTC 101 EN.pdf" download class="btn" id="downloadBtn">
-İndir
-</a>
-            </div>
-    <div class="card">
-        <img src="images/kitap1.jpeg" alt="kitap">
-        <h3 id="project10Title">İhsan Köksal Okulu Kitap Bağışı</h3>
-
-<p id="project10Text">
-İhsan Köksal İlkokulu ve Ortaokulu'na üçüncü yılına giren yıllık kitap bağışı projemiz.
-</p>    </div>
-
-
-    <div class="card">
-        <img src="images/Icon-512.png" alt="ftc-turkiye-alliance">
-                <h3 id="project11Title">FTC TÜRKİYE ALLIANCE</h3>
-
-<p id="project11Text">
-Türk FTC takımları için oluşturulmuş forum ve topluluk platformu.
-</p>
-
-<p>
-
-<a href="https://asteria32334.github.io/ftc-turkiye-alliance/" target="_blank" class="btn" id="viewBtn">
-
-Görüntüle
-
-</a>
-
-</p>
-            </div>
-
-    
-    <div class="card">
-    <h3>Engineering Portfolio</h3>
-
-    <p>
-        FTC sezon portföyümüzü inceleyebilirsiniz.
-    </p>
-
-    <a href="images/biyosfer.png"
-       download
-       class="btn">
-       İndir
-    </a> 
-</div>
-
-</div>
-</section>
-
-<section id="sponsors" class="section">
-<h2 id="sponsorsTitle">Sponsorlarımız</h2>
-
-    <div class="sponsor-slider">
-        <div class="sponsor-track" data-clone="true">
-            <img src="images/berker.jpeg" alt="Berker">
-            <img src="images/koçak.jpeg" alt="Koçak">
-            <img src="images/natura.jpeg" alt="Natura">
-            <img src="images/dener.png" alt="Dener">
-            <img src="images/taleworlds.jpg" alt="TaleWorlds">
-            <img src="images/nativex.jpeg" alt="NativeX">
-            
-            <img src="images/berker.jpeg" alt="Berker">
-            <img src="images/koçak.jpeg" alt="Koçak">
-            <img src="images/natura.jpeg" alt="Natura">
-            <img src="images/dener.png" alt="Dener">
-            <img src="images/taleworlds.jpg" alt="TaleWorlds">
-            <img src="images/nativex.jpeg" alt="NativeX">
-        </div>
-    </div>
-</section>
-
-<section id="gallery" class="section">
-<h2 id="galleryTitle">Galeri</h2>
-
-    <div class="gallery">
-    <img src="images/galeri/1.jpeg">
-    <img src="images/galeri/2.jpeg">
-    <img src="images/galeri/3.jpeg">
-    <img src="images/galeri/4.jpeg">
-    <img src="images/galeri/5.jpeg">
-    <img src="images/galeri/6.jpeg">
-    <img src="images/galeri/7.jpeg">
-    <img src="images/galeri/8.jpeg">
-    <img src="images/galeri/9.jpeg">
-    <img src="images/galeri/10.jpeg">
-    <img src="images/galeri/11.jpeg">
-    <img src="images/galeri/12.jpeg">
-    <img src="images/galeri/13.jpeg">
-    <img src="images/galeri/14.jpeg">    
-</div>
-
 
 </section>
 
-<section id="contact" class="section">
-    <h2>İletişim</h2>
+<section id="robotRules" class="section">
+   <h2 id="robotRulesTitle">Genel Kurallar</h2>
+    <!-- <p id="robotSeason"></p> -->
 
-    <div class="card-container contact-grid">
-
-        <div class="card">
-            <h3>E-Mail</h3>
-            <p>
-                <a href="mailto:asteria.32334@gmail.com">asteria.32334@gmail.com</a>
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>Telefon</h3>
-            <p>
-                <a href="tel:+905057770038">+90 505 777 00 38</a>
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>Adres</h3>
-            <p>
-                <a href="https://maps.app.goo.gl/HN1VrrvqUwMMbExA6" target="_blank">
-                    Atölye Adresi
-                </a>
-            </p>
-        </div>
-
+    <div class="card">
+       <!-- <img src="images/robotv1.jpeg" alt="Robot 1" width="250"> -->
+        <h3 id="robot1Title">AsterBot V1.5</h3>
+        <p></p>
     </div>
 
     <div class="card">
-            <h3>Instagram</h3>
-            <p>
-                <a href="https://instagram.com/asteria32334" target="_blank">
-                    @asteria32334
-                </a>
-            </p>
-        </div>
+        <img src="images/robotv2.jpeg" alt="Robot 2">
+        <h3 id="robot2Title">AsterBot V3</h3>
+        <p></p>
+    </div>
+
 </section>
-
-    
-    <p>e-mail: <a href="mailto:asteria.32334@gmail.com">
-    asteria.32334@gmail.com
-</a></p>
-    <p> </p>
-
-    <p>telefon numarası: <a href="tel:+905057770038">
-    +90 505 777 00 38
-</a></p>
-    <p> </p>
-    <div class="address">
-
-    <a href="https://maps.app.goo.gl/HN1VrrvqUwMMbExA6?g_st=ic" target="_blank">
-        Atölyemizin Adresi
-    </a>
-</div>  -->
 
 <section id="contact" class="section">
 <footer class="footer">
@@ -439,26 +236,35 @@ Instagram
     <img class="center-image" src="images/biobuzz.png" alt="biobuzz" style="max-width: 50%; height: auto; display: block;">
 
 </footer>
- 
+
 </section>
 
 <script>
 const translations = {
 
 tr:{
-navHome:"Nedir?",
-navTeam:"Ne değildir?",
-navRobots:"Kimler için?",
+navHome:"Ödül Kuralları",
+navTeam:"Genel Kurallar",
+navRobots:"Robot Kuralları",
 navProjects:"Nasıl kullanılır?",
 navSponsors:"Sponsorlarımız",
 navGallery:"Galeri",
 navContact:"İletişim",
-navDecode:"Kurallar",
+navDecode:"Geri dön",
 navLogin:"Login",
+
+pageSearch:"Sayfada ara... (örnek: kurallar, ödül, robot)",
+clear:"Temizle",
 
 discoverBtn:"Keşfet",
 
-whatItIsTitle:"Nedir?",
+awardRulesTitle:"Ödül Kuralları",
+
+generalRulesTitle:"Genel Kurallar",
+
+robotRulesTitle:"Robot Kuralları",
+
+/*whatItIsTitle:"Nedir?",
 whatItIsText:"QuickManual, FIRST Tech Challenge resmi Oyun Kılavuzu’nun dikkatle hazırlanmış, sadeleştirilmiş bir özetidir. Maçlar sırasında takımların en sık karşılaştığı kurallara, puanlama yöntemlerine ve önemli durumlara odaklanır. Amacı, öğrencilerin ve mentörlerin oyunun temelini daha hızlı ve net bir şekilde anlamasına yardımcı olmaktır.",
 
 whatItIsNotTitle:"Ne değildir?",
@@ -469,6 +275,8 @@ whoIsItForText:"Bu kaynak özellikle yeni kurulan takımlar, rookie öğrenciler
 
 howToUseItTitle:"Nasıl kullanılır?",
 howToUseItText:"Önce kısa özetleri okuyarak ana fikirleri anlayın. Daha sonra kendi dilinizdeki PDF sürümünü indirin. QuickManual’ı bir öğrenme ve tekrar aracı olarak kullanın, ancak yarışmalar öncesinde kritik kuralları mutlaka resmi Game Manual’dan kontrol edin.",
+*/
+
 
 footerTitle:"QuickManual",
 footerDescription:`A community resource by Asteria Robotics
@@ -482,19 +290,28 @@ viewBtn2:"Görüntüle",
 },
 
 en:{
-navHome:"What it is",
-navTeam:"What it is not",
-navRobots:"Who is it for",
+navHome:"Award Rules",
+navTeam:"General Rules",
+navRobots:"Robot Rules",
 navProjects:"How to use it",
 navSponsors:"Sponsors",
 navGallery:"Gallery",
 navContact:"Contact",
-navDecode:"Game Rules",
+navDecode:"Homepage",
 navLogin:"Login",
+
+pageSearch:"Search this page... (Example: rules, rewards, bots)",
+clear:"Clear",
 
 discoverBtn:"Discover",
 
-whatItIsTitle:"What it is",
+awardRulesTitle:"Award Rules",
+
+generalRulesTitle:"General Rules",
+
+robotRulesTitle:"Robot Rules",
+
+/*whatItIsTitle:"What it is",
 whatItIsText:"QuickManual is a carefully prepared, simplified summary of the official FIRST Tech Challenge Game Manual. It focuses on the most important rules, scoring methods, and common situations that teams encounter during matches. The goal is to help students and mentors understand the core of the game faster and more clearly, without having to read the entire official document at once.",
 
 whatItIsNotTitle:"What it is not",
@@ -505,6 +322,8 @@ whoIsItForText:"This resource is designed especially for new teams, rookie stude
 
 howToUseItTitle:"How to use it",
 howToUseItText:"Start by reading the short summaries to understand the main ideas. Then download the PDF version in your preferred language. Use QuickManual as a learning and review tool, but always double-check critical rules with the official Game Manual before competitions.",
+*/
+
 
 footerTitle:"QuickManual",
 footerDescription:`A community resource by Asteria Robotics
@@ -518,19 +337,28 @@ viewBtn2:"View",
 },
 
 es:{
-navHome:"¿Qué es?",
-navTeam:"¿Qué no es?",
-navRobots:"¿Para quién es?",
+navHome:"Normas del premio",
+navTeam:"Normas generales",
+navRobots:"Reglas para los robots",
 navProjects:"Cómo usarlo",
 navSponsors:"Patrocinadores",
 navGallery:"Galería",
 navContact:"Contacto",
-navDecode:"Resumen de Reglas",
+navDecode:"página de inicio",
 navLogin:"Login",
+
+pageSearch:"Buscar en la página... (Ejemplo: normas, premios, bots)",
+clear:"limpiar",
 
 discoverBtn:"Descubrir",
 
-whatItIsTitle:"¿Qué es?",
+awardRulesTitle:"Normas del premio",
+
+generalRulesTitle:"Normas generales",
+
+robotRulesTitle:"Reglas para los robots",
+
+/*whatItIsTitle:"¿Qué es?",
 whatItIsText:"QuickManual es un resumen simplificado y cuidadosamente preparado del Manual de Juego oficial de FIRST Tech Challenge. Se centra en las reglas más importantes, los métodos de puntuación y las situaciones comunes que los equipos enfrentan durante los partidos. Su objetivo es ayudar a estudiantes y mentores a comprender más rápido y con mayor claridad los aspectos esenciales del juego.",
 
 whatItIsNotTitle:"¿Qué no es?",
@@ -541,6 +369,8 @@ whoIsItForText:"Este recurso está diseñado especialmente para equipos nuevos, 
 
 howToUseItTitle:"Cómo usarlo",
 howToUseItText:"Comienza leyendo los resúmenes cortos para entender las ideas principales. Luego descarga la versión en PDF en tu idioma preferido. Utiliza QuickManual como herramienta de aprendizaje y repaso, pero siempre verifica las reglas importantes con el Manual de Juego oficial antes de las competencias.",
+*/
+
 
 footerTitle:"QuickManual",
 footerDescription:`A community resource by Asteria Robotics
@@ -554,19 +384,28 @@ viewBtn2:"Ver",
 },
 
 pt:{
-navHome:"O que é?",
-navTeam:"O que não é?",
-navRobots:"Para quem é?",
+navHome:"Regulamento do Prémio",
+navTeam:"Regras gerais",
+navRobots:"Regras para os robôs",
 navProjects:"Como usar",
 navSponsors:"Patrocinadores",
 navGallery:"Galeria",
 navContact:"Contato",
-navDecode:"Resumo das Regras",
+navDecode:"página inicial",
 navLogin:"Login",
+
+pageSearch:"Pesquisar nesta página... (Exemplo: regras, prémios, bots)",
+clear:"limpar",
 
 discoverBtn:"Descobrir",
 
-whatItIsTitle:"O que é?",
+awardRulesTitle:"Regulamento do Prémio",
+
+generalRulesTitle:"Regras gerais",
+
+robotRulesTitle:"Regras para os robôs",
+
+/*whatItIsTitle:"O que é?",
 whatItIsText:"QuickManual é um resumo simplificado e cuidadosamente preparado do Manual de Jogo oficial do FIRST Tech Challenge. Ele se concentra nas regras mais importantes, nos métodos de pontuação e nas situações comuns que as equipes enfrentam durante as partidas. O objetivo é ajudar estudantes e mentores a compreender de forma mais rápida e clara os aspectos essenciais do jogo.",
 
 whatItIsNotTitle:"O que não é?",
@@ -577,6 +416,8 @@ whoIsItForText:"Este recurso foi desenvolvido especialmente para equipes novas, 
 
 howToUseItTitle:"Como usar",
 howToUseItText:"Comece lendo os resumos curtos para entender as ideias principais. Em seguida, baixe a versão em PDF no seu idioma de preferência. Use o QuickManual como uma ferramenta de aprendizado e revisão, mas sempre confira as regras importantes no Manual de Jogo oficial antes das competições.",
+*/
+
 
 footerTitle:"QuickManual",
 footerDescription:`A community resource by Asteria Robotics
@@ -590,19 +431,28 @@ viewBtn2:"Ver",
 },
 
 zh:{
-navHome:"这是什么？",
-navTeam:"这不是什么？",
-navRobots:"适合谁？",
+navHome:"奖项规则",
+navTeam:"一般规则",
+navRobots:"机器人守则",
 navProjects:"如何使用？",
 navSponsors:"赞助商",
 navGallery:"图库",
 navContact:"联系我们",
-navDecode:"比赛规则",
+navDecode:"首页",
 navLogin:"登录",
+
+pageSearch:"在页面中搜索...（示例：规则、奖励、机器人）",
+clear:"清洁",
 
 discoverBtn:"探索",
 
-whatItIsTitle:"这是什么？",
+awardRulesTitle:"奖项规则",
+
+generalRulesTitle:"一般规则",
+
+robotRulesTitle:"机器人守则",
+
+/*whatItIsTitle:"这是什么？",
 whatItIsText:"QuickManual 是对 FIRST Tech Challenge 官方比赛手册的精心简化摘要。它重点介绍比赛中最重要的规则、得分方式以及队伍经常遇到的情况。目标是帮助学生和导师更快、更清楚地理解比赛的核心内容。",
 
 whatItIsNotTitle:"这不是什么？",
@@ -613,6 +463,8 @@ whoIsItForText:"本资源特别为新队伍、新手学生，以及阅读长篇�
 
 howToUseItTitle:"如何使用？",
 howToUseItText:"先阅读简短摘要，了解主要概念。然后下载你所需语言的 PDF 版本。将 QuickManual 作为学习和复习工具使用，但在比赛前务必对照官方比赛手册核实重要规则。",
+*/
+
 
 footerTitle:"QuickManual",
 footerDescription:`A community resource by Asteria Robotics
@@ -627,21 +479,27 @@ viewBtn2:"查看",
 
 };
 
-function setLanguage(lang){
-    if(!translations[lang]) return;
+function setLanguage(lang) {
+    if (!translations[lang]) return;
 
     document.documentElement.lang = lang;
 
-    for(let id in translations[lang]){
+    for (let id in translations[lang]) {
         const element = document.getElementById(id);
-        if(element){
-            element.innerHTML = translations[lang][id];
+
+        if (element) {
+            // Eğer arama kutusuysa placeholder'ı değiştir
+            if (id === "pageSearch") {
+                element.placeholder = translations[lang][id];
+            } else {
+                element.innerHTML = translations[lang][id];
+            }
         }
     }
 
-    // Buton yazısını güncelle
+    // Dil butonunu güncelle
     const langBtn = document.getElementById('langBtn');
-    if(langBtn){
+    if (langBtn) {
         langBtn.textContent = lang.toUpperCase();
     }
 
@@ -681,6 +539,110 @@ document.addEventListener('click', (e) => {
         langSwitch.classList.remove('open');
     }
 });
+
+function clearHighlights() {
+    const marks = document.querySelectorAll('mark.search-highlight');
+    marks.forEach(mark => {
+        const parent = mark.parentNode;
+        parent.replaceChild(document.createTextNode(mark.textContent), mark);
+        parent.normalize();
+    });
+}
+
+function liveSearch() {
+    clearHighlights();
+
+    const input = document.getElementById('pageSearch');
+    if (!input) return;
+
+    const query = input.value.trim();
+    if (query.length < 1) return;
+
+    const walker = document.createTreeWalker(
+        document.body,
+        NodeFilter.SHOW_TEXT,
+        {
+            acceptNode: function(node) {
+                const parent = node.parentElement;
+                if (!parent) return NodeFilter.FILTER_REJECT;
+
+                // Navbar, footer, arama kutusu, script ve style'ı tamamen atla
+                if (
+                    parent.closest('nav') ||
+                    parent.closest('.navbar') ||
+                    parent.closest('footer') ||
+                    parent.closest('.search-section') ||
+                    parent.closest('.search-box') ||
+                    parent.closest('.language-switch') ||
+                    parent.closest('#langSwitch') ||
+                    parent.closest('.lang-dropdown') ||
+                    parent.tagName === 'SCRIPT' ||
+                    parent.tagName === 'STYLE' ||
+                    parent.tagName === 'NOSCRIPT'
+                ) {
+                    return NodeFilter.FILTER_REJECT;
+                }
+
+                return NodeFilter.FILTER_ACCEPT;
+            }
+        }
+    );
+
+    let firstMatch = null;
+    let node;
+
+    while (node = walker.nextNode()) {
+        const text = node.nodeValue;
+        if (!text || !text.trim()) continue;
+
+        const lowerText = text.toLowerCase();
+        const lowerQuery = query.toLowerCase();
+        const index = lowerText.indexOf(lowerQuery);
+
+        if (index !== -1) {
+            const before = text.substring(0, index);
+            const matchText = text.substring(index, index + query.length);
+            const after = text.substring(index + query.length);
+
+            const mark = document.createElement('mark');
+            mark.className = 'search-highlight';
+            mark.textContent = matchText;
+
+            const parent = node.parentNode;
+            parent.insertBefore(document.createTextNode(before), node);
+            parent.insertBefore(mark, node);
+            node.nodeValue = after;
+
+            if (!firstMatch) {
+                firstMatch = mark;
+            }
+        }
+    }
+
+    // İlk eşleşmeye kaydır
+    if (firstMatch) {
+        firstMatch.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center'
+        });
+    }
+}
+
+// Yazarken anlık arama
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('pageSearch');
+    if (searchInput) {
+        searchInput.addEventListener('input', liveSearch);
+    }
+});
+
+function clearSearch() {
+    const input = document.getElementById('pageSearch');
+    if (input) {
+        input.value = '';
+        clearHighlights();
+    }
+}
 
 </script>
 

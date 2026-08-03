@@ -12,7 +12,7 @@ html {
 
 body {
     font-family: Arial, sans-serif;
-    background: #0b0f1a;
+    background: #778fd7;
     color: white;
     line-height: 1.6;
 }
@@ -56,6 +56,7 @@ body {
     color: #00d4ff;
 }
 
+
 /* ====================== HERO ====================== */
 .hero {
     height: 100vh;
@@ -63,7 +64,8 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: radial-gradient(circle, #101828, #05070d);
+    background: radial-gradient(circle, #a8c0f4, #4c6ed4);
+    margin-top: 25px;
 }
 
 .hero-content h1 {
@@ -107,21 +109,16 @@ body {
 
 /* ====================== SECTIONS ====================== */
 .section {
-    padding: 80px 50px;
+    padding: 40px 50px;
 }
 
 .section h2 {
     color: #00d4ff;
-    margin-bottom: 15px;
+    margin-top: 105px;
+    margin-bottom: 10px;
     text-align: center;
     font-size: 2.2rem;
 }
-
-#sponsorluk {
-    margin-top: 10px;
-}
-
-
 
 /* ====================== CARD CONTAINER ====================== */
 .card-container {
@@ -132,18 +129,21 @@ body {
 }
 
 .card {
-    width: 380px;
-    background: #111827;
+    width: fit-content;
+    height: fit-content;
+    background: #53659a;
     border-radius: 12px;
     padding: 30px;
     overflow: hidden;
     text-align: center;
     transition: all 0.4s ease;
+    margin: 30px;
+
 }
 
 .card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(0, 212, 255, 0.15);
+    box-shadow: 0 15px 45px #223263;
 }
 
 .card img {
@@ -310,7 +310,7 @@ body {
 /* FOOTER */
 
 .footer {
-    background: #081225;
+    background: #263970;
     margin-top: 80px;
 }
 
@@ -356,45 +356,166 @@ body {
     font-size: 0.9rem;
 }
 
-
-
-
-/* ====================== SECTION BOŞLUK DÜZELTME (AGRESİF) ====================== */
-
-.section {
-    padding: 45px 50px 35px !important;   /* Üst 45px, alt 35px */
+.footer-bottom-asterisk {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    font-size: 0.9rem;
+}
+/* ====================== LANGUAGE SWITCHER - DROPDOWN ====================== */
+.language-switch {
+    position: fixed;
+    top: 90px;
+    right: 20px;
+    z-index: 9999;
 }
 
-.section + .section {
-    margin-top: -30px !important;         /* Section’lar arası boşluğu kuvvetle azalt */
-    padding-top: 30px !important;
+.lang-btn {
+    background: rgba(15, 20, 35, 0.95);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 212, 255, 0.3);
+    color: #00d4ff;
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 10px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
 }
 
-/* Hero ile ilk section arası */
-.hero + .section {
-    margin-top: -60px !important;
-    padding-top: 80px !important;
+.lang-btn:hover {
+    background: rgba(0, 212, 255, 0.1);
+    border-color: #00d4ff;
 }
 
-/* Başlıkların alt boşluğunu azalt */
-.section h2 {
-    margin-bottom: 25px !important;
+.lang-btn::after {
+    content: "▼";
+    font-size: 0.7rem;
+    transition: transform 0.25s ease;
 }
 
-/* Card container, sponsor, gallery gibi içerikler */
-.card-container,
-.sponsor-slider,
-.gallery {
-    margin-top: 15px !important;
-    margin-bottom: 15px !important;
+.language-switch.open .lang-btn::after {
+    transform: rotate(180deg);
 }
 
-/* Genel margin temizleme */
-h1, h2, h3, h4, p {
-    margin-bottom: 0.8em;
+.lang-dropdown {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    background: rgba(15, 20, 35, 0.98);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 212, 255, 0.25);
+    border-radius: 10px;
+    min-width: 140px;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: all 0.25s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.language-switch.open .lang-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.lang-dropdown button {
+    display: block;
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: #e2e8f0;
+    text-align: left;
+    padding: 12px 18px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.lang-dropdown button:hover {
+    background: rgba(0, 212, 255, 0.12);
+    color: #00d4ff;
+}
+
+.lang-dropdown button.active {
+    background: rgba(0, 212, 255, 0.18);
+    color: #00d4ff;
+    font-weight: 600;
+}
+
+/* Mobil */
+@media (max-width: 768px) {
+    .language-switch {
+        top: 50px;
+        right: 12px;
+    }
+    
+    .lang-btn {
+        padding: 9px 14px;
+        font-size: 0.9rem;
+    }
 }
 
 
-#portfolyo {
-    margin-top: 70px;
+.center-image {
+    align-items: center;
+    display: block;       /* Allows the image to use margins for alignment */
+    margin-left: auto;    /* Pushes left margin to maximum */
+    margin-right: auto;   /* Pushes right margin to maximum */
+}
+
+
+.search-section {
+    position: fixed;
+    top: 90px;                 /* Navbar’ın altına gelsin */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9998;
+    width: 100%;
+    max-width: 580px;
+    padding: 0 15px;
+    display: flex;
+    justify-content: center;
+    pointer-events: none;      /* Dışarıya tıklamayı engellemesin */
+}
+
+.search-container {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    pointer-events: auto;      /* Sadece kutu tıklanabilir olsun */
+}
+
+.search-container input {
+    flex: 1;
+    padding: 12px 18px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 212, 255, 0.4);
+    background: rgba(15, 20, 35, 0.92);
+    backdrop-filter: blur(12px);
+    color: #e2e8f0;
+    font-size: 0.95rem;
+    outline: none;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.search-container input:focus {
+    border-color: #00d4ff;
+    box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.2);
+}
+
+.search-container .clear-btn {
+    padding: 12px 18px;
+    background: rgba(15, 20, 35, 0.92);
+    border: 1px solid rgba(0, 212, 255, 0.4);
+    color: #00d4ff;
+    border-radius: 12px;
+    cursor: pointer;
+    backdrop-filter: blur(12px);
 }
