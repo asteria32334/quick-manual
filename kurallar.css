@@ -123,14 +123,13 @@ body {
 /* ====================== CARD CONTAINER ====================== */
 .card-container {
     display: flex;
-    gap: 30px;
-    
+    gap: 30px;    
     flex-wrap: wrap;
 }
 
 .card {
-    width: fit-content;
-    height: fit-content;
+    width: auto;
+    height: auto;
     background: #53659a;
     border-radius: 12px;
     padding: 30px;
