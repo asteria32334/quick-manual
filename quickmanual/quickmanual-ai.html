@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>QuickManual AI</title>
+
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        body {
+
+            margin: 0;
+
+            font-family:
+                Arial,
+                sans-serif;
+
+            background: #f4f6f8;
+
+            color: #222;
+        }
+
+
+        .container {
+
+            width: 100%;
+
+            max-width: 700px;
+
+            margin: 5px auto;
+
+            padding: 5px;
+        }
+
+
+        h1 {
+
+            text-align: center;
+
+            margin-bottom: 3px;
+        }
+
+
+        .subtitle {
+
+            text-align: center;
+
+            color: #777;
+
+            font-size: 14px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .chat-box {
+
+            background: white;
+
+            border-radius: 18px;
+
+            padding: 20px;
+
+            box-shadow:
+                0 5px 25px
+                rgba(0, 0, 0, 0.08);
+        }
+
+
+        #messages {
+
+            min-height: 300px;
+
+            max-height: 500px;
+
+            overflow-y: auto;
+
+            margin-bottom: 20px;
+
+            padding: 5px;
+        }
+
+
+        .message {
+
+            padding: 12px 15px;
+
+            margin: 10px 0;
+
+            border-radius: 14px;
+
+            line-height: 1.5;
+
+            white-space: pre-wrap;
+
+            word-wrap: break-word;
+        }
+
+
+        .user {
+
+            background: #e3f2fd;
+
+            margin-left: 50px;
+
+            text-align: right;
+        }
+
+
+        .ai {
+
+            background: #f1f1f1;
+
+            margin-right: 50px;
+        }
+
+
+        .message.ai {
+    white-space: normal;
+    word-break: normal;
+    overflow-wrap: break-word;
+    width: fit-content;
+    max-width: 85%;
+    line-height: 1.5;
+    padding: 12px 16px;
+}
+
+
+        /* ==========================================
+           CEVAP HAZIRLANIYOR
+           ========================================== */
+
+        .thinking-message {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            min-height: 45px;
+        }
+
+
+        .thinking-text {
+
+            color: #666;
+
+            font-size: 14px;
+        }
+
+
+        .dots {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 4px;
+        }
+
+
+        .dots span {
+
+            width: 7px;
+
+            height: 7px;
+
+            background: #555;
+
+            border-radius: 50%;
+
+            display: inline-block;
+
+            animation:
+                thinking
+                1.4s
+                infinite
+                ease-in-out;
+        }
+
+
+        .dots span:nth-child(1) {
+
+            animation-delay: 0s;
+        }
+
+
+        .dots span:nth-child(2) {
+
+            animation-delay: 0.2s;
+        }
+
+
+        .dots span:nth-child(3) {
+
+            animation-delay: 0.4s;
+        }
+
+
+        @keyframes thinking {
+
+            0%,
+            60%,
+            100% {
+
+                transform:
+                    translateY(0);
+
+                opacity: 0.35;
+            }
+
+
+            30% {
+
+                transform:
+                    translateY(-5px);
+
+                opacity: 1;
+            }
+        }
+
+
+        .input-area {
+
+            display: flex;
+
+            gap: 10px;
+        }
+
+
+        #userInput {
+
+            flex: 1;
+
+            padding: 13px;
+
+            border:
+                1px solid #ccc;
+
+            border-radius: 10px;
+
+            font-size: 16px;
+
+            outline: none;
+        }
+
+
+        #userInput:focus {
+
+            border-color: #555;
+        }
+
+
+        button {
+
+            border: none;
+
+            padding:
+                13px 20px;
+
+            border-radius: 10px;
+
+            font-size: 12px;
+
+            background: #111;
+
+            color: white;
+
+            cursor: pointer;
+
+            font-size: 16px;
+
+            transition: 0.2s;
+        }
+
+
+        button:hover {
+
+            opacity: 0.85;
+        }
+
+
+        button:disabled {
+
+            opacity: 0.5;
+
+            cursor: not-allowed;
+        }
+
+
+        .status {
+
+            text-align: center;
+
+            color: #777;
+
+            font-size: 13px;
+
+            margin-top: 12px;
+        }
+
+
+        .manual-status {
+
+            text-align: center;
+
+            font-size: 13px;
+
+            margin-bottom: 15px;
+
+            padding: 8px;
+
+            border-radius: 8px;
+
+            background: #f5f5f5;
+        }
+
+
+        .manual-ok {
+
+            color: #16803c;
+        }
+
+
+        .manual-error {
+
+            color: #c62828;
+        }
+
+        #sendButton {
+            font-size: 10px;
+            padding: 0px 10px;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+    <h1>
+        🤖 QuickManual AI
+    </h1>
+
+
+    <div class="subtitle"  id="subtitle" >
+
+        Game Manual destekli
+        yapay zekâ asistanı
+
+    </div>
+
+
+    <div class="chat-box">
+
+
+        <div
+            id="manualStatus"
+            class="manual-status"
+        >
+
+            📖 Game Manual yükleniyor...
+
+        </div>
+
+
+        <div id="messages">
+
+
+            <div class="message ai"  id="welcomeMessage">
+
+                Merhaba! Ben QuickManual AI.
+
+                Game Manual'ı temel alarak
+                sorularını cevaplayabilirim.
+
+                Bana oyun kuralları, puanlama,
+                robot kuralları veya manualda
+                bulunan başka bir konu hakkında
+                soru sorabilirsin.
+
+            </div>
+
+
+        </div>
+
+
+        <div class="input-area">
+
+
+            <input
+                type="text"
+                id="userInput"
+                
+                placeholder="Manual hakkında bir soru sor..."
+                autocomplete="off"
+            >
+
+
+            <button id="sendButton">
+
+                Gönder
+
+            </button>
+
+
+        </div>
+
+
+        <div class="status">
+
+            Gemini 3.1 Flash-Lite
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+<script>
+
+
+/* =====================================================
+   CLOUDFLARE WORKER
+   ===================================================== */
+
+const WORKER_URL =
+    "https://quickmanual-api.asteria-32334.workers.dev/";
+
+
+/* =====================================================
+   GAME MANUAL
+   ===================================================== */
+
+const MANUAL_URL =
+    "./game-manual.pdf";
+
+
+/* =====================================================
+   HTML ELEMENTLERİ
+   ===================================================== */
+
+const input =
+    document.getElementById(
+        "userInput"
+    );
+
+
+const sendButton =
+    document.getElementById(
+        "sendButton"
+    );
+
+
+const messages =
+    document.getElementById(
+        "messages"
+    );
+
+
+const manualStatus =
+    document.getElementById(
+        "manualStatus"
+    );
+
+
+/* =====================================================
+   MANUAL VERİSİ
+   ===================================================== */
+
+let manualBase64 = null;
+
+const manualMimeType =
+    "application/pdf";
+
+
+/* =====================================================
+   SAYFA AÇILDIĞINDA MANUALI YÜKLE
+   ===================================================== */
+
+loadManual();
+
+
+async function loadManual() {
+
+    try {
+
+        manualStatus.textContent =
+            "📖 Game Manual yükleniyor...";
+
+
+        manualStatus.className =
+            "manual-status";
+
+
+        const response =
+            await fetch(
+                MANUAL_URL
+            );
+
+
+        if (!response.ok) {
+
+            throw new Error(
+                "game-manual.pdf bulunamadı."
+            );
+
+        }
+
+
+        const pdfBlob =
+            await response.blob();
+
+
+        const arrayBuffer =
+            await pdfBlob.arrayBuffer();
+
+
+        /*
+         * PDF'yi Base64'e çevir.
+         *
+         * Bu veri Gemini'ye doğrudan
+         * gönderilmiyor.
+         *
+         * Önce Cloudflare Worker'a gidiyor.
+         */
+
+        manualBase64 =
+            arrayBufferToBase64(
+                arrayBuffer
+            );
+
+
+        /*
+         * PDF boyutunu kontrol et.
+         *
+         * Gemini inline PDF limiti:
+         * 50 MB.
+         */
+
+        const sizeMB =
+            arrayBuffer.byteLength /
+            (1024 * 1024);
+
+
+        console.log(
+            "Game Manual boyutu:",
+            sizeMB.toFixed(2),
+            "MB"
+        );
+
+
+        if (sizeMB > 50) {
+
+            throw new Error(
+                "Game Manual 50 MB'dan büyük. Gemini inline PDF limiti 50 MB."
+            );
+
+        }
+
+
+        manualStatus.textContent =
+            "✅ Game Manual hazır";
+
+
+        manualStatus.className =
+            "manual-status manual-ok";
+
+
+        console.log(
+            "Game Manual başarıyla yüklendi."
+        );
+
+
+    } catch (error) {
+
+        console.error(
+            "Manual yükleme hatası:",
+            error
+        );
+
+
+        manualBase64 = null;
+
+
+        manualStatus.textContent =
+            "❌ Game Manual yüklenemedi";
+
+
+        manualStatus.className =
+            "manual-status manual-error";
+
+    }
+
+}
+
+
+/* =====================================================
+   ARRAYBUFFER → BASE64
+   ===================================================== */
+
+function arrayBufferToBase64(
+    buffer
+) {
+
+    let binary = "";
+
+    const bytes =
+        new Uint8Array(
+            buffer
+        );
+
+
+    const chunkSize =
+        0x8000;
+
+
+    for (
+        let i = 0;
+        i < bytes.length;
+        i += chunkSize
+    ) {
+
+        const chunk =
+            bytes.subarray(
+                i,
+                Math.min(
+                    i + chunkSize,
+                    bytes.length
+                )
+            );
+
+
+        binary +=
+            String.fromCharCode(
+                ...chunk
+            );
+
+    }
+
+
+    return btoa(binary);
+
+}
+
+
+/* =====================================================
+   ENTER TUŞU
+   ===================================================== */
+
+input.addEventListener(
+    "keydown",
+    function(event) {
+
+        if (
+            event.key === "Enter"
+        ) {
+
+            sendMessage();
+
+        }
+
+    }
+);
+
+
+/* =====================================================
+   GÖNDER BUTONU
+   ===================================================== */
+
+sendButton.addEventListener(
+    "click",
+    sendMessage
+);
+
+
+/* =====================================================
+   MESAJ GÖNDERME
+   ===================================================== */
+
+async function sendMessage() {
+
+
+    const userMessage =
+        input.value.trim();
+
+
+    if (!userMessage) {
+
+        return;
+
+    }
+
+
+    /* -------------------------------------------------
+       MANUAL KONTROLÜ
+       ------------------------------------------------- */
+
+    if (!manualBase64) {
+
+        addMessage(
+
+            "❌ Game Manual henüz yüklenmedi. Sayfayı yenileyip tekrar deneyin.",
+
+            "ai"
+
+        );
+
+        return;
+
+    }
+
+
+    /* -------------------------------------------------
+       KULLANICI MESAJINI EKLE
+       ------------------------------------------------- */
+
+    addMessage(
+
+        userMessage,
+
+        "user"
+
+    );
+
+
+    input.value = "";
+
+
+    /* -------------------------------------------------
+       BUTONU KİLİTLE
+       ------------------------------------------------- */
+
+    sendButton.disabled =
+        true;
+
+
+    sendButton.textContent =
+        "Düşünüyor...";
+
+
+    /* -------------------------------------------------
+       AI MESAJ ALANI
+       ------------------------------------------------- */
+
+    const aiMessage =
+        addThinkingMessage();
+
+
+    try {
+
+
+        /* =============================================
+           CLOUDFLARE WORKER'A GÖNDER
+           ============================================= */
+
+        const response =
+            await fetch(
+
+                WORKER_URL,
+
+                {
+
+                    method: "POST",
+
+                    headers: {
+
+                        "Content-Type":
+                            "application/json"
+
+                    },
+
+                    body:
+                        JSON.stringify({
+
+                            question:
+                                userMessage,
+
+                            manualBase64:
+                                manualBase64,
+
+                            manualMimeType:
+                                manualMimeType
+
+                        })
+
+                }
+
+            );
+
+
+        /* =============================================
+           RESPONSE JSON
+           ============================================= */
+
+        const data =
+            await response.json();
+
+
+        console.log(
+            "Worker response:",
+            data
+        );
+
+
+        /* =============================================
+           API HATASI
+           ============================================= */
+
+        if (
+            !response.ok
+        ) {
+
+            const errorMessage =
+                data?.error ||
+                "Cloudflare Worker hatası.";
+
+
+            throw new Error(
+                errorMessage
+            );
+
+        }
+
+
+        /* =============================================
+           GEMINI CEVABI
+           ============================================= */
+
+        const answer =
+            data?.answer?.trim();
+
+
+        if (!answer) {
+
+            throw new Error(
+                "Gemini cevap döndürmedi."
+            );
+
+        }
+
+
+        /* =============================================
+           AI CEVABINI EKRANA YAZ
+           ============================================= */
+
+        aiMessage.classList.remove(
+            "thinking-message"
+        );
+
+
+        aiMessage.innerHTML =
+            "";
+
+
+        aiMessage.textContent =
+            answer;
+
+
+    } catch (error) {
+
+
+        console.error(
+            "QuickManual AI Error:",
+            error
+        );
+
+
+        aiMessage.classList.remove(
+            "thinking-message"
+        );
+
+
+        aiMessage.innerHTML =
+            "";
+
+
+        aiMessage.textContent =
+            "❌ Hata oluştu:\n\n" +
+            error.message;
+
+    }
+
+
+    /* -------------------------------------------------
+       BUTONU TEKRAR AKTİF ET
+       ------------------------------------------------- */
+
+    sendButton.disabled =
+        false;
+
+
+    sendButton.textContent =
+        "Gönder";
+
+
+    /* -------------------------------------------------
+       EN ALTA KAYDIR
+       ------------------------------------------------- */
+
+    messages.scrollTop =
+        messages.scrollHeight;
+
+}
+
+
+/* =====================================================
+   NORMAL MESAJ EKLEME
+   ===================================================== */
+
+function addMessage(
+    text,
+    type
+) {
+
+    const message =
+        document.createElement(
+            "div"
+        );
+
+
+    message.className =
+        `message ${type}`;
+
+
+    message.textContent =
+        text;
+
+
+    messages.appendChild(
+        message
+    );
+
+
+    messages.scrollTop =
+        messages.scrollHeight;
+
+
+    return message;
+
+}
+
+
+/* =====================================================
+   AI "CEVAP HAZIRLANIYOR"
+   ===================================================== */
+
+function addThinkingMessage() {
+
+
+    const message =
+        document.createElement(
+            "div"
+        );
+
+
+    message.className =
+        "message ai thinking-message";
+
+
+    message.innerHTML = `
+
+        <div class="thinking-text">
+            Cevap hazırlanıyor
+        </div>
+
+        <div class="dots">
+
+            <span></span>
+
+            <span></span>
+
+            <span></span>
+
+        </div>
+
+    `;
+
+
+    messages.appendChild(
+        message
+    );
+
+
+    messages.scrollTop =
+        messages.scrollHeight;
+
+
+    return message;
+
+}
+
+window.addEventListener("message", function(event) {
+
+    if (!event.data) return;
+
+    if (event.data.type === "languageChange") {
+
+        currentLanguage = event.data.language;
+
+        updateQuickManualLanguage(currentLanguage);
+    }
+
+});
+
+function updateQuickManualLanguage(language) {
+
+    const texts = {
+
+        tr: {
+            subtitle: "Game Manual destekli yapay zeka asistanı",
+            welcome:
+                "Merhaba! Ben QuickManual AI. Game Manual hakkında sorularını cevaplayabilirim.",
+            placeholder:
+                "Sorunuzu yazın...",
+            send:
+                "Gönder",
+            thinking:
+                "Cevap hazırlanıyor..."
+            
+        },
+
+        en: {
+            subtitle: "AI assistant powered by the Game Manual",
+            welcome:
+                "Hello! I'm QuickManual AI. I can answer your questions about the Game Manual.",
+            placeholder:
+                "Write your question...",
+            send:
+                "Send",
+            thinking:
+                "Preparing answer..."
+        },
+
+        es: {
+            subtitle: "Asistente de IA basado en el Game Manual",
+            welcome:
+                "¡Hola! Soy QuickManual AI. Puedo responder tus preguntas sobre el Game Manual.",
+            placeholder:
+                "Escribe tu pregunta...",
+            send:
+                "Enviar",
+            thinking:
+                "Preparando respuesta..."
+        },
+
+        pt: {
+            subtitle: "Assistente de IA baseado no Game Manual",
+            welcome:
+                "Olá! Eu sou o QuickManual AI. Posso responder às suas perguntas sobre o Game Manual.",
+            placeholder:
+                "Escreva sua pergunta...",
+            send:
+                "Enviar",
+            thinking:
+                "Preparando resposta..."
+        },
+
+        zh: {
+
+            subtitle: "基于 Game Manual 的 AI 助手",
+            welcome:
+                "你好！我是 QuickManual AI。我可以回答你关于 Game Manual 的问题。",
+            placeholder:
+                "请输入你的问题...",
+            send:
+                "发送",
+            thinking:
+                "正在准备答案..."
+        }
+    };
+
+    const t = texts[language] || texts.tr;
+
+    // Hoş geldin mesajı
+    const welcomeMessage =
+        document.getElementById("welcomeMessage");
+
+    if (welcomeMessage) {
+        welcomeMessage.textContent = t.welcome;
+    }
+
+    // Soru kutusu
+    const questionInput =
+        document.getElementById("userInput");
+
+    if (questionInput) {
+        questionInput.placeholder = t.placeholder;
+    }
+
+    // Gönder butonu
+    const sendButton =
+        document.getElementById("sendButton");
+
+    if (sendButton) {
+        sendButton.textContent = t.send;
+    }
+
+    // Cevap hazırlanıyor yazısı
+    const thinkingText =
+        document.getElementById("thinkingText");
+
+    if (thinkingText) {
+        thinkingText.textContent = t.thinking;
+    }
+
+
+    const subtitle =
+    document.getElementById("subtitle");
+
+if (subtitle) {
+    subtitle.textContent = t.subtitle;
+}
+
+}
+
+</script>
+
+
+</body>
+
+</html>
