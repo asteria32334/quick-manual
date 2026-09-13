@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>QuickManual</title>
+<link href="images/logo (2).png" rel="icon"/>
+<link href="manifest.json" rel="manifest"/>
+<link href="images/logo.png" rel="apple-touch-icon"/>
+<link href="kurallar.css" rel="stylesheet"/>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo"></div>
+    <ul class="nav-links">
+        <li><a href="kurallar.html" id="navPanel">Kategoriler</a></li>
+       <!-- <li><a href="kurallar-oduller.html" id="navHome">Ödüller ve Tanımlar</a></li>
+        <li><a href="kurallar-genel.html" id="navTeam">Genel Kurallar</a></li>
+        <li><a href="kurallar-robot.html" id="navRobots">Robot Yapımı</a></li>
+        <li><a href="kurallar-mac.html" id="navGameRules">Maç Kuralları</a></li>
+        <li><a href="kurallar-saha.html" id="navFieldInfo">Saha Eleman Bilgileri</a></li>
+        <li><a href="kurallar-prosedur.html" id="navMatchProcedures">Maç Prosedürleri</a></li>
+        <li><a href="kurallar-puanlama.html" id="navScoringSystem">Nasıl Puan Kazanılır</a></li>
+    -->   <li><a href="index.html" id="navDecode">Geri dön</a></li>
+    </ul>
+</nav>
+
+
+<div class="language-switch" id="langSwitch">
+    <button class="lang-btn" id="langBtn">TR</button>
+    <div class="lang-dropdown">
+        <button data-lang="tr">Türkçe</button>
+        <button data-lang="en">English</button>
+        <button data-lang="es">Español</button>
+        <button data-lang="pt">Português</button>
+        <button data-lang="zh">中文</button>
+    </div>
+</div>
+
+
+<section class="search-section">
+    <div class="search-container">
+        <input type="text" id="pageSearch" placeholder="Sayfada ara... (örnek: kurallar, ödül, robot)" autocomplete="off">
+        <button onclick="clearSearch()" class="clear-btn" id="clear">Temizle</button>
+    </div>
+</section>
+
+<section class="section" id="scoringSystem">
+<h2 id="scoringSystemTitle">Nasıl Puan Kazanılır</h2>
+<div class="card">
+<h3 id="scoringSystemBioTitle1">10.5 Scoring (Page 86)</h3>
+<p id="scoringSystemBioText1">ALLIANCE’lar MATCH boyunca gerçekleştirdikleri<br/>
+çeşitli başarılar üzerinden MATCH points ve<br/>
+RANKING POINTS (RP) kazanır.<br/>
+Puanlama değerlendirmeleri:<br/>
+• HIVE TIP: MATCH boyunca değerlendirilir;<br/>
+ROBOT ve SCORING ELEMENTS tamamen<br/>
+durana kadar devam eder.<br/>
+• MATCH başlamadan önce tamamlanan HIVE<br/>
+TIP, AUTO kapsamında değerlendirilir.<br/>
+• CELL içinde kalan POLLEN/NECTAR,<br/>
+MATCH sonunda değerlendirilir.<br/>
+• FLOWER’daki SCORING ELEMENTS,<br/>
+MATCH boyunca değerlendirilir; final<br/>
+değerlendirme TELEOP sonunda yapılır.<br/>
+• GARDEN scoring, TELEOP sonunda yapılır.<br/>
+• LEAVE ve AUTO PARK → AUTO sonunda<br/>
+değerlendirilir.<br/>
+• TELEOP PARK → MATCH sonunda<br/>
+değerlendirilir.<br/>
+• Scoring insan volunteer’lar tarafından<br/>
+değerlendirilir.<br/>
+• Canlı skor ekranındaki gecikme/hata tek<br/>
+başına ARENA FAULT sayılmaz.<br/>
+• Takımların scoring kriterlerinin açık ve<br/>
+tartışmasız şekilde gerçekleştiğini<br/>
+göstermesi beklenir.<br/>
+• MATCH başlamadan önce, AUTO→TELEOP<br/>
+transition sırasında veya 0:00 sonrasında elde<br/>
+edilen başarılar penalty’ye tabi olabilir.</p>
+</div>
+<div class="card">
+<h3 id="scoringSystemBioTitle2">10.5.1 HIVE Scoring (Page 87)</h3>
+<p id="scoringSystemBioText2">Criteria<br/>
+HIVE TIP<br/>
+HIVE’ın TIPPED sayılması için:<br/>
+1. Bir stable state’ten diğer stable state’e hareket<br/>
+etmeli; aşağı bakan CELL yukarı bakar hale<br/>
+gelmeli.<br/>
+2. Daha önce frame’e temas etmeyen HIVE<br/>
+damper’ı daha sonra frame’e temas etmeli.<br/>
+HIVE’lar bi-stable tasarlanmıştır.<br/>
+⚠ Önemli:<br/>
+• Aşağı bakan CELL’e LAUNCHING yapılırken<br/>
+HIVE’ın hareketi bozulabilir ve TIP<br/>
+gerçekleşmeyebilir.<br/>
+• Gerekirse takım LAUNCHING’i durdurup<br/>
+TIP’in volunteer’lar açısından açıkça<br/>
+gerçekleştiğinden emin olmalıdır.<br/>
+• HIVE TIP kazanmanın tek izin verilen yolu,<br/>
+yukarı bakan CELL’e LAUNCHING yapmaktır.<br/>
+• ROBOT’lar G417’ye uymalı ve başka yollarla<br/>
+HIVE TIP oluşturamaz/bozamaz.</p>
+</div>
+<div class="card">
+<h3 id="scoringSystemBioTitle3">10.5.2 FLOWER Scoring (Page 88)</h3>
+<p id="scoringSystemBioText3">Criteria<br/>
+• NECTAR ve POLLEN, FLOWER’ın top ring<br/>
+ile middle ring arasındaki scoring volume<br/>
+içinde en az kısmen bulunduğunda score<br/>
+eder.<br/>
+• FLOWER scoring MATCH’in son 1<br/>
+dakikasından önce başlayamaz (G410).<br/>
+• 1 dakikadan önce yapılan achievement’lar<br/>
+yine değerlendirilebilir ancak penalty’ye tabi<br/>
+olabilir.<br/>
+• FLOWER’a scoring için SCORING<br/>
+ELEMENTS’in üstten yerleştirilmesi tek izin<br/>
+verilen yöntemdir.<br/>
+• ROBOT’lar FLOWER ile etkileşimde G418’e<br/>
+uymalıdır.<br/>
+Bottom NECTAR Bonus<br/>
+Kendi rengindeki, FLOWER scoring kriterini<br/>
+sağlayan en aşağıdaki NECTAR’a sahip<br/>
+ALLIANCE bonus kazanır.<br/>
+FLOWER Owner<br/>
+Kendi rengindeki scoring kriterini sağlayan en<br/>
+üstteki NECTAR’a sahip ALLIANCE FLOWER’ın<br/>
+sahibi olur.<br/>
+FLOWER sahibi ALLIANCE, POLLEN/NECTAR’ı<br/>
+hangi ALLIANCE’ın yerleştirdiğine bakılmaksızın,<br/>
+o FLOWER’daki scoring kriterini karşılayan<br/>
+elementlerden puan kazanır.</p>
+</div>
+<div class="card">
+<h3 id="scoringSystemBioTitle4">10.5.3 GARDEN Scoring (Page 89)</h3>
+<p id="scoringSystemBioText4">Criteria<br/>
+GARDEN puanı için POLLEN veya NECTAR’ın en<br/>
+az bir kısmı GARDEN zone içinde olmalıdır.<br/>
+• GARDEN’lar ALLIANCE SPECIFIC’tir.<br/>
+• GARDEN, rengine karşılık gelen ALLIANCE<br/>
+için puan kazandırır; elementin hangi<br/>
+ALLIANCE tarafından yerleştirildiği önemli<br/>
+değildir.<br/>
+• GARDEN’lar protected zone değildir.<br/>
+• Her iki ALLIANCE da MATCH sırasında her iki<br/>
+GARDEN’dan SCORING ELEMENT<br/>
+çıkarabilir.<br/>
+• Her renkteki NECTAR ve POLLEN, bulunduğu<br/>
+GARDEN’ın rengine karşılık gelen<br/>
+ALLIANCE’a score eder.</p>
+</div>
+<div class="card">
+<h3 id="scoringSystemBioTitle5">10.5.4 ROBOT Scoring (Page 91)</h3>
+<p id="scoringSystemBioText5">Criteria<br/>
+LEAVE<br/>
+AUTO sırasında LEAVE puanı için ROBOT:<br/>
+• Başlangıçta temas ettiği perimeter wall ile<br/>
+artık temas etmiyor olmalıdır.<br/>
+PARK<br/>
+PARK puanı için ROBOT:<br/>
+• LOADING ZONE’un en az bir kısmının<br/>
+içinde olmalıdır.<br/>
+Sayfadaki Figure 10-7, farklı ROBOT<br/>
+konumlarının PARK kriterini karşılayıp<br/>
+karşılamadığını örneklerle gösteriyor.<br/>
+10.5.5 Point Values<br/>
+Table 10-2: BIOBUZZ Point Values<br/>
+Achievement    AUTO            TELEOP            RP<br/>
+LEAVE                  3   —                 —<br/>
+PARK                   5                 5   —<br/>
+HIVE TIP              20                20   —<br/>
+POLLEN/        —           2   —<br/>
+NECTAR<br/>
+remaining in<br/>
+Bottom         —           5   —<br/>
+NECTAR<br/>
+Bonus<br/>
+POLLEN/        —           2   —<br/>
+NECTAR in<br/>
+an owned<br/>
+FLOWER<br/>
+POLLEN/        —           1   —<br/>
+NECTAR in<br/>
+GARDEN<br/>
+SWARM RP       —     —               1<br/>
+POLLINATOR     —     —               1<br/>
+1 RP<br/>
+POLLINATOR     —     —               1<br/>
+2 RP<br/>
+WIN            —     —               3<br/>
+TIE            —     —               1<br/>
+Table 10-3: BIOBUZZ RP<br/>
+thresholds<br/>
+Normal events için:<br/>
+• SWARM RP: 16 LEAVE + PARK points<br/>
+• POLLINATOR 1 RP: 4 TIPS<br/>
+• POLLINATOR 2 RP: 7 TIPS<br/>
+Regional Championships ve FIRST Championship<br/>
+eşikleri daha sonra Team Updates ile açıklanacak.<br/>
+Premier Events ise kendi eşiklerini belirleyebilir.</p>
+</div>
+<div class="card">
+<h3 id="scoringSystemBioTitle6">League Tournament Ranking (Page 165)</h3>
+<p id="scoringSystemBioText6">League Tournament, genel olarak Qualifying<br/>
+Tournament gibi işler; judging ve advancement<br/>
+vardır.<br/>
+Ancak Qualification Ranking hesabı farklıdır:<br/>
+• Takımın League Meet’lerde oynadığı en iyi 10<br/>
+MATCH<br/>
+• League Tournament’taki Qualification<br/>
+MATCH’leri<br/>
+birlikte ranking hesabına dahil edilir.<br/>
+“Top MATCHES”, Table 13-1’deki sort order’a<br/>
+göre seçilir.<br/>
+Takım League Meet’lerde 10’dan az MATCH<br/>
+oynadıysa eksik kalan MATCH’lerin:<br/>
+• RP,<br/>
+• MATCH Points,<br/>
+• diğer scoring criteria<br/>
+değerleri efektif olarak 0 kabul edilir.</p>
+</div>
+<div class="card">
+<h3 id="scoringSystemBioTitle7">INSPECTOR (Page 171)</h3>
+<p id="scoringSystemBioText7">ROBOT’un/parçanın legality’sini değerlendiren<br/>
+FIRST yetkilisi.<br/>
+JUDGE<br/>
+Event awards’larını belirleyen volunteer.<br/>
+LAUNCH / LAUNCHING<br/>
+SCORING ELEMENT’in:<br/>
+• havaya atılması,<br/>
+• zeminde tercih edilen bir yöne kuvvetle<br/>
+gönderilmesi,<br/>
+• forceful şekilde fırlatılması.<br/>
+LEAVE<br/>
+ROBOT’un başlangıçta temas ettiği perimeter wall<br/>
+ile temasını kesmesiyle kazanılan scoring<br/>
+achievement.<br/>
+LOADING ZONE<br/>
+Yaklaşık 23 in. × 11 in. × infinitely tall zone.<br/>
+LRI<br/>
+Lead ROBOT INSPECTOR.<br/>
+MAJOR FOUL<br/>
+Rakibin MATCH point total’ına 20 puan<br/>
+eklenmesi.<br/>
+MAJOR MECHANISM<br/>
+ROBOT hareketi, SCORING ELEMENT<br/>
+manipulation, FIELD element manipulation veya<br/>
+scorable task yapan büyük mekanik sistem.<br/>
+MATCH<br/>
+• 30 sec AUTO<br/>
+• 8 sec transition<br/>
+• 2 min TELEOP<br/>
+toplamından oluşan oyun.<br/>
+MECHANISM<br/>
+Belirli ROBOT fonksiyonunu gerçekleştiren<br/>
+COMPONENT assembly.<br/>
+MINOR FOUL<br/>
+Rakibin MATCH point total’ına 5 puan.<br/>
+MOMENTARY<br/>
+Yaklaşık 3 saniyeden kısa süre.<br/>
+NECTAR<br/>
+Yaklaşık 3.6 in. (9.1 cm) Gopher ResisDent<br/>
+polyethylene ball.<br/>
+OPERATOR CONSOLE<br/>
+DRIVE TEAM’in ROBOT’a komut göndermek için<br/>
+kullandığı COMPONENTS ve MECHANISMS.<br/>
+PARK<br/>
+ROBOT’un LOADING ZONE içine en az kısmen<br/>
+girmesi.<br/>
+PIN / PINNING<br/>
+Bir ROBOT’un temas yoluyla rakip ROBOT’un<br/>
+hareketini engellemesi.<br/>
+POLLEN<br/>
+2.8 in. (7.1 cm) sarı Gopher ResisDent<br/>
+polyethylene ball.</p>
+</div>
+<div class="card">
+<h3 id="scoringSystemBioTitle8">POLLINATOR 1 RP (Page 172)</h3>
+<p id="scoringSystemBioText8">TIP sayısı ilgili threshold’a ulaştığında kazanılan<br/>
+RP.<br/>
+POLLINATOR 2 RP<br/>
+TIP sayısı ilgili threshold’a ulaştığında kazanılan<br/>
+ikinci RP.<br/>
+PORTFOLIO<br/>
+Judging’de kullanılan ve A201’de şartları<br/>
+açıklanan doküman.<br/>
+RANKING POINTS (RP)<br/>
+Qualification MATCH performansına göre takıma<br/>
+verilen ranking units.<br/>
+RANKING SCORE (RS)<br/>
+Takımın Qualification MATCH’lerinde kazandığı<br/>
+ortalama RP.<br/>
+RED CARD<br/>
+Ağır ROBOT/takım davranışı veya rule violation<br/>
+nedeniyle Head REFEREE tarafından verilen,<br/>
+MATCH’te DISQUALIFICATION oluşturan penalty.<br/>
+REFEREE<br/>
+Current-season rules’u uygulamak üzere FIRST<br/>
+tarafından certified official.<br/>
+REPEATED<br/>
+Bir MATCH içinde birden fazla gerçekleşen<br/>
+davranış.<br/>
+ROBOT<br/>
+Current-season game’i oynamak üzere FTC team<br/>
+tarafından yapılan; power, communications,<br/>
+control ve FIELD movement sistemlerini içeren<br/>
+electromechanical assembly.<br/>
+ROBOT CONTROLLER<br/>
+REV Control Hub veya REV Expansion Hub’a<br/>
+bağlı Android smartphone üzerinde çalışan<br/>
+ROBOT CONTROLLER sistemi.<br/>
+ROBOT SIGN<br/>
+Takım numarasını ve ALLIANCE affiliation’ını aynı<br/>
+anda gösteren zorunlu ROBOT assembly.<br/>
+SCORING ELEMENT<br/>
+BIOBUZZ için:<br/>
+• POLLEN<br/>
+• NECTAR<br/>
+STRATEGIC<br/>
+Competitive advantage elde etmek amacıyla<br/>
+yapılan hareket.<br/>
+STARTING CONFIGURATION<br/>
+ROBOT’un MATCH başlangıcındaki fiziksel<br/>
+configuration.<br/>
+STUDENT<br/>
+1 Eylül itibarıyla HOME REGION’daki high-school/<br/>
+secondary-school/equivalent seviyesini<br/>
+tamamlamamış kişi.<br/>
+SURROGATE<br/>
+Event management software tarafından ekstra<br/>
+Qualification MATCH oynamak üzere random<br/>
+atanan takım.<br/>
+SWARM RP<br/>
+Combined LEAVE + PARK points ilgili threshold’a<br/>
+ulaştığında kazanılan RP.</p>
+</div>
+</section>
+<footer class="footer">
+<div class="footer-container">
+<div class="footer-column">
+<h3 id="footerTitle">QuickManual</h3>
+<p id="footerDescription">
+            A community resource by Asteria Robotics
+            This is not an official FIRST document.
+        </p>
+</div>
+<div class="footer-column">
+<h3 id="contactTitle">İletişim</h3>
+<p><a href="mailto:asteria.32334@gmail.com">
+    asteria.32334@gmail.com
+</a></p>
+<p><a href="tel:+905057770038">
+    +90 (505) 777 00 38
+</a></p>
+<a href="https://maps.app.goo.gl/HN1VrrvqUwMMbExA6?g_st=ic" id="addressText" target="_blank">
+
+Atölyemizin Adresi
+
+</a>
+</div>
+<div class="footer-column">
+<h3> </h3>
+<a href="https://www.instagram.com/asteria_32334/" id="instagramText" target="_blank">
+
+Instagram
+
+</a>
+<p><a href="https://theorangealliance.org/teams/32334" target="_blank">
+        The Orange Alliance
+    </a></p>
+<p><a href="https://ftcscout.org/teams/32334" target="_blank">
+        FTCScout
+    </a></p>
+
+<p><a href="https://www.youtube.com/@asteria32334" target="_blank">
+        YouTube
+    </a></p>
+</div>
+</div>
+<div class="footer-bottom" id="copyrightText">
+© 2026 Asteria Robotics FTC Team 32334. All Rights Reserved.
+</div>
+<div class="footer-bottom-asterisk" id="asterisk">
+        * QuickManual resmi Oyun Kılavuzu değildir ve hiçbir zaman eksiksiz ya da kesin kural kaynağı olarak kabul edilmemelidir. FIRST tarafından yayınlanan resmi belgenin yerini tutmaz. Resmi kararlar, muayene süreçleri veya itirazlar için takımlar her zaman en güncel resmi Game Manual’a başvurmalıdır.
+    </div> <!--
+<div class="footer-bottom-asterisk" id="dateUpdate">
+        ** Son güncellenme tarihi: 5 ağustos 2026, Game Manual V0
+    </div> -->
+<img alt="biobuzz" class="center-image" src="images/biobuzz.png" style="max-width: 50%; height: auto; display: block;"/>
+</footer>
+<script>
+const translations = {
+  "tr": {
+    "navGameRules": "Maç Kuralları",
+    "navFieldInfo": "Saha Eleman Bilgileri",
+    "navMatchProcedures": "Maç Prosedürleri",
+    "navScoringSystem": "Nasıl Puan Kazanılır",
+    "scoringSystemTitle": "Nasıl Puan Kazanılır",
+    "navHome": "Ödüller ve Tanımlar",
+    "navTeam": "Genel Kurallar",
+    "navRobots": "Robot Yapımı",
+    "navDecode": "Geri dön",
+    "asterisk": "* QuickManual resmi Oyun Kılavuzu değildir ve hiçbir zaman eksiksiz ya da kesin kural kaynağı olarak kabul edilmemelidir. FIRST tarafından yayınlanan resmi belgenin yerini tutmaz. Resmi kararlar, muayene süreçleri veya itirazlar için takımlar her zaman en güncel resmi Game Manual’a başvurmalıdır.",
+    "dateUpdate": "** Son güncellenme tarihi: 5 ağustos 2026, Game Manual V0",
+    "pageSearch": "Sayfada ara... (örnek: kurallar, ödül, robot)",
+    "clear": "Temizle",
+    "footerTitle": "QuickManual",
+    "footerDescription": "A community resource by Asteria Robotics\nThis is not an official FIRST document.",
+    "contactTitle": "İletişim",
+    "addressText": "Atölyemizin Adresi",
+    "instagramText": "Instagram",
+    "copyrightText": "© 2026 Asteria Robotics FTC Team 32334. Tüm Hakları Saklıdır.",
+    "navPanel": "Kategoriler",
+    "scoringSystemBioText3": "Criteria<br/>\n• NECTAR ve POLLEN, FLOWER’ın top ring<br/>\nile middle ring arasındaki scoring volume<br/>\niçinde en az kısmen bulunduğunda score<br/>\neder.<br/>\n• FLOWER scoring MATCH’in son 1<br/>\ndakikasından önce başlayamaz (G410).<br/>\n• 1 dakikadan önce yapılan achievement’lar<br/>\nyine değerlendirilebilir ancak penalty’ye tabi<br/>\nolabilir.<br/>\n• FLOWER’a scoring için SCORING<br/>\nELEMENTS’in üstten yerleştirilmesi tek izin<br/>\nverilen yöntemdir.<br/>\n• ROBOT’lar FLOWER ile etkileşimde G418’e<br/>\nuymalıdır.<br/>\nBottom NECTAR Bonus<br/>\nKendi rengindeki, FLOWER scoring kriterini<br/>\nsağlayan en aşağıdaki NECTAR’a sahip<br/>\nALLIANCE bonus kazanır.<br/>\nFLOWER Owner<br/>\nKendi rengindeki scoring kriterini sağlayan en<br/>\nüstteki NECTAR’a sahip ALLIANCE FLOWER’ın<br/>\nsahibi olur.<br/>\nFLOWER sahibi ALLIANCE, POLLEN/NECTAR’ı<br/>\nhangi ALLIANCE’ın yerleştirdiğine bakılmaksızın,<br/>\no FLOWER’daki scoring kriterini karşılayan<br/>\nelementlerden puan kazanır.",
+    "scoringSystemBioTitle1": "10.5 Scoring (Page 86)",
+    "scoringSystemBioTitle3": "10.5.2 FLOWER Scoring (Page 88)",
+    "scoringSystemBioText8": "TIP sayısı ilgili threshold’a ulaştığında kazanılan<br/>\nRP.<br/>\nPOLLINATOR 2 RP<br/>\nTIP sayısı ilgili threshold’a ulaştığında kazanılan<br/>\nikinci RP.<br/>\nPORTFOLIO<br/>\nJudging’de kullanılan ve A201’de şartları<br/>\naçıklanan doküman.<br/>\nRANKING POINTS (RP)<br/>\nQualification MATCH performansına göre takıma<br/>\nverilen ranking units.<br/>\nRANKING SCORE (RS)<br/>\nTakımın Qualification MATCH’lerinde kazandığı<br/>\nortalama RP.<br/>\nRED CARD<br/>\nAğır ROBOT/takım davranışı veya rule violation<br/>\nnedeniyle Head REFEREE tarafından verilen,<br/>\nMATCH’te DISQUALIFICATION oluşturan penalty.<br/>\nREFEREE<br/>\nCurrent-season rules’u uygulamak üzere FIRST<br/>\ntarafından certified official.<br/>\nREPEATED<br/>\nBir MATCH içinde birden fazla gerçekleşen<br/>\ndavranış.<br/>\nROBOT<br/>\nCurrent-season game’i oynamak üzere FTC team<br/>\ntarafından yapılan; power, communications,<br/>\ncontrol ve FIELD movement sistemlerini içeren<br/>\nelectromechanical assembly.<br/>\nROBOT CONTROLLER<br/>\nREV Control Hub veya REV Expansion Hub’a<br/>\nbağlı Android smartphone üzerinde çalışan<br/>\nROBOT CONTROLLER sistemi.<br/>\nROBOT SIGN<br/>\nTakım numarasını ve ALLIANCE affiliation’ını aynı<br/>\nanda gösteren zorunlu ROBOT assembly.<br/>\nSCORING ELEMENT<br/>\nBIOBUZZ için:<br/>\n• POLLEN<br/>\n• NECTAR<br/>\nSTRATEGIC<br/>\nCompetitive advantage elde etmek amacıyla<br/>\nyapılan hareket.<br/>\nSTARTING CONFIGURATION<br/>\nROBOT’un MATCH başlangıcındaki fiziksel<br/>\nconfiguration.<br/>\nSTUDENT<br/>\n1 Eylül itibarıyla HOME REGION’daki high-school/<br/>\nsecondary-school/equivalent seviyesini<br/>\ntamamlamamış kişi.<br/>\nSURROGATE<br/>\nEvent management software tarafından ekstra<br/>\nQualification MATCH oynamak üzere random<br/>\natanan takım.<br/>\nSWARM RP<br/>\nCombined LEAVE + PARK points ilgili threshold’a<br/>\nulaştığında kazanılan RP.",
+    "scoringSystemBioText4": "Criteria<br/>\nGARDEN puanı için POLLEN veya NECTAR’ın en<br/>\naz bir kısmı GARDEN zone içinde olmalıdır.<br/>\n• GARDEN’lar ALLIANCE SPECIFIC’tir.<br/>\n• GARDEN, rengine karşılık gelen ALLIANCE<br/>\niçin puan kazandırır; elementin hangi<br/>\nALLIANCE tarafından yerleştirildiği önemli<br/>\ndeğildir.<br/>\n• GARDEN’lar protected zone değildir.<br/>\n• Her iki ALLIANCE da MATCH sırasında her iki<br/>\nGARDEN’dan SCORING ELEMENT<br/>\nçıkarabilir.<br/>\n• Her renkteki NECTAR ve POLLEN, bulunduğu<br/>\nGARDEN’ın rengine karşılık gelen<br/>\nALLIANCE’a score eder.",
+    "scoringSystemBioText2": "Criteria<br/>\nHIVE TIP<br/>\nHIVE’ın TIPPED sayılması için:<br/>\n1. Bir stable state’ten diğer stable state’e hareket<br/>\netmeli; aşağı bakan CELL yukarı bakar hale<br/>\ngelmeli.<br/>\n2. Daha önce frame’e temas etmeyen HIVE<br/>\ndamper’ı daha sonra frame’e temas etmeli.<br/>\nHIVE’lar bi-stable tasarlanmıştır.<br/>\n⚠ Önemli:<br/>\n• Aşağı bakan CELL’e LAUNCHING yapılırken<br/>\nHIVE’ın hareketi bozulabilir ve TIP<br/>\ngerçekleşmeyebilir.<br/>\n• Gerekirse takım LAUNCHING’i durdurup<br/>\nTIP’in volunteer’lar açısından açıkça<br/>\ngerçekleştiğinden emin olmalıdır.<br/>\n• HIVE TIP kazanmanın tek izin verilen yolu,<br/>\nyukarı bakan CELL’e LAUNCHING yapmaktır.<br/>\n• ROBOT’lar G417’ye uymalı ve başka yollarla<br/>\nHIVE TIP oluşturamaz/bozamaz.",
+    "scoringSystemBioTitle4": "10.5.3 GARDEN Scoring (Page 89)",
+    "scoringSystemBioText5": "Criteria<br/>\nLEAVE<br/>\nAUTO sırasında LEAVE puanı için ROBOT:<br/>\n• Başlangıçta temas ettiği perimeter wall ile<br/>\nartık temas etmiyor olmalıdır.<br/>\nPARK<br/>\nPARK puanı için ROBOT:<br/>\n• LOADING ZONE’un en az bir kısmının<br/>\niçinde olmalıdır.<br/>\nSayfadaki Figure 10-7, farklı ROBOT<br/>\nkonumlarının PARK kriterini karşılayıp<br/>\nkarşılamadığını örneklerle gösteriyor.<br/>\n10.5.5 Point Values<br/>\nTable 10-2: BIOBUZZ Point Values<br/>\nAchievement    AUTO            TELEOP            RP<br/>\nLEAVE                  3   —                 —<br/>\nPARK                   5                 5   —<br/>\nHIVE TIP              20                20   —<br/>\nPOLLEN/        —           2   —<br/>\nNECTAR<br/>\nremaining in<br/>\nBottom         —           5   —<br/>\nNECTAR<br/>\nBonus<br/>\nPOLLEN/        —           2   —<br/>\nNECTAR in<br/>\nan owned<br/>\nFLOWER<br/>\nPOLLEN/        —           1   —<br/>\nNECTAR in<br/>\nGARDEN<br/>\nSWARM RP       —     —               1<br/>\nPOLLINATOR     —     —               1<br/>\n1 RP<br/>\nPOLLINATOR     —     —               1<br/>\n2 RP<br/>\nWIN            —     —               3<br/>\nTIE            —     —               1<br/>\nTable 10-3: BIOBUZZ RP<br/>\nthresholds<br/>\nNormal events için:<br/>\n• SWARM RP: 16 LEAVE + PARK points<br/>\n• POLLINATOR 1 RP: 4 TIPS<br/>\n• POLLINATOR 2 RP: 7 TIPS<br/>\nRegional Championships ve FIRST Championship<br/>\neşikleri daha sonra Team Updates ile açıklanacak.<br/>\nPremier Events ise kendi eşiklerini belirleyebilir.",
+    "scoringSystemBioTitle7": "INSPECTOR (Page 171)",
+    "scoringSystemBioTitle6": "League Tournament Ranking (Page 165)",
+    "scoringSystemBioTitle5": "10.5.4 ROBOT Scoring (Page 91)",
+    "scoringSystemBioTitle2": "10.5.1 HIVE Scoring (Page 87)",
+    "scoringSystemBioTitle8": "POLLINATOR 1 RP (Page 172)",
+    "scoringSystemBioText1": "ALLIANCE’lar MATCH boyunca gerçekleştirdikleri<br/>\nçeşitli başarılar üzerinden MATCH points ve<br/>\nRANKING POINTS (RP) kazanır.<br/>\nPuanlama değerlendirmeleri:<br/>\n• HIVE TIP: MATCH boyunca değerlendirilir;<br/>\nROBOT ve SCORING ELEMENTS tamamen<br/>\ndurana kadar devam eder.<br/>\n• MATCH başlamadan önce tamamlanan HIVE<br/>\nTIP, AUTO kapsamında değerlendirilir.<br/>\n• CELL içinde kalan POLLEN/NECTAR,<br/>\nMATCH sonunda değerlendirilir.<br/>\n• FLOWER’daki SCORING ELEMENTS,<br/>\nMATCH boyunca değerlendirilir; final<br/>\ndeğerlendirme TELEOP sonunda yapılır.<br/>\n• GARDEN scoring, TELEOP sonunda yapılır.<br/>\n• LEAVE ve AUTO PARK → AUTO sonunda<br/>\ndeğerlendirilir.<br/>\n• TELEOP PARK → MATCH sonunda<br/>\ndeğerlendirilir.<br/>\n• Scoring insan volunteer’lar tarafından<br/>\ndeğerlendirilir.<br/>\n• Canlı skor ekranındaki gecikme/hata tek<br/>\nbaşına ARENA FAULT sayılmaz.<br/>\n• Takımların scoring kriterlerinin açık ve<br/>\ntartışmasız şekilde gerçekleştiğini<br/>\ngöstermesi beklenir.<br/>\n• MATCH başlamadan önce, AUTO→TELEOP<br/>\ntransition sırasında veya 0:00 sonrasında elde<br/>\nedilen başarılar penalty’ye tabi olabilir.",
+    "scoringSystemBioText6": "League Tournament, genel olarak Qualifying<br/>\nTournament gibi işler; judging ve advancement<br/>\nvardır.<br/>\nAncak Qualification Ranking hesabı farklıdır:<br/>\n• Takımın League Meet’lerde oynadığı en iyi 10<br/>\nMATCH<br/>\n• League Tournament’taki Qualification<br/>\nMATCH’leri<br/>\nbirlikte ranking hesabına dahil edilir.<br/>\n“Top MATCHES”, Table 13-1’deki sort order’a<br/>\ngöre seçilir.<br/>\nTakım League Meet’lerde 10’dan az MATCH<br/>\noynadıysa eksik kalan MATCH’lerin:<br/>\n• RP,<br/>\n• MATCH Points,<br/>\n• diğer scoring criteria<br/>\ndeğerleri efektif olarak 0 kabul edilir.",
+    "scoringSystemBioText7": "ROBOT’un/parçanın legality’sini değerlendiren<br/>\nFIRST yetkilisi.<br/>\nJUDGE<br/>\nEvent awards’larını belirleyen volunteer.<br/>\nLAUNCH / LAUNCHING<br/>\nSCORING ELEMENT’in:<br/>\n• havaya atılması,<br/>\n• zeminde tercih edilen bir yöne kuvvetle<br/>\ngönderilmesi,<br/>\n• forceful şekilde fırlatılması.<br/>\nLEAVE<br/>\nROBOT’un başlangıçta temas ettiği perimeter wall<br/>\nile temasını kesmesiyle kazanılan scoring<br/>\nachievement.<br/>\nLOADING ZONE<br/>\nYaklaşık 23 in. × 11 in. × infinitely tall zone.<br/>\nLRI<br/>\nLead ROBOT INSPECTOR.<br/>\nMAJOR FOUL<br/>\nRakibin MATCH point total’ına 20 puan<br/>\neklenmesi.<br/>\nMAJOR MECHANISM<br/>\nROBOT hareketi, SCORING ELEMENT<br/>\nmanipulation, FIELD element manipulation veya<br/>\nscorable task yapan büyük mekanik sistem.<br/>\nMATCH<br/>\n• 30 sec AUTO<br/>\n• 8 sec transition<br/>\n• 2 min TELEOP<br/>\ntoplamından oluşan oyun.<br/>\nMECHANISM<br/>\nBelirli ROBOT fonksiyonunu gerçekleştiren<br/>\nCOMPONENT assembly.<br/>\nMINOR FOUL<br/>\nRakibin MATCH point total’ına 5 puan.<br/>\nMOMENTARY<br/>\nYaklaşık 3 saniyeden kısa süre.<br/>\nNECTAR<br/>\nYaklaşık 3.6 in. (9.1 cm) Gopher ResisDent<br/>\npolyethylene ball.<br/>\nOPERATOR CONSOLE<br/>\nDRIVE TEAM’in ROBOT’a komut göndermek için<br/>\nkullandığı COMPONENTS ve MECHANISMS.<br/>\nPARK<br/>\nROBOT’un LOADING ZONE içine en az kısmen<br/>\ngirmesi.<br/>\nPIN / PINNING<br/>\nBir ROBOT’un temas yoluyla rakip ROBOT’un<br/>\nhareketini engellemesi.<br/>\nPOLLEN<br/>\n2.8 in. (7.1 cm) sarı Gopher ResisDent<br/>\npolyethylene ball."
+  },
+  "en": {
+    "navGameRules": "Match Rules",
+    "navFieldInfo": "Field Element Information",
+    "navMatchProcedures": "Match Procedures",
+    "navScoringSystem": "How to Score",
+    "scoringSystemTitle": "How to Score",
+    "navHome": "Awards & Definitions",
+    "navTeam": "General Rules",
+    "navRobots": "Robot Construction",
+    "navDecode": "Go back",
+    "asterisk": "* QuickManual is not the official Game Manual and should never be treated as a complete or final source of rules. It does not replace the official document published by FIRST. For any official decision, inspection, or dispute, teams must always refer to the latest version of the official Game Manual.",
+    "dateUpdate": "** Last updated: August 5, 2026, Game Manual V0",
+    "pageSearch": "Search this page... (Example: rules, rewards, bots)",
+    "clear": "Clear",
+    "footerTitle": "QuickManual",
+    "footerDescription": "A community resource by Asteria Robotics\nThis is not an official FIRST document.",
+    "contactTitle": "Contact Us",
+    "addressText": "Our address",
+    "instagramText": "Instagram",
+    "copyrightText": "© 2026 Asteria Robotics FTC Team 32334. All Rights Reserved.",
+    "scoringSystemBioText1": "ALLIANCES earn MATCH points and RANKING POINTS (RP) through various achievements during a MATCH. Scoring is evaluated as follows: • HIVE TIP is evaluated throughout the MATCH until ROBOTS and SCORING ELEMENTS are fully at rest. • A HIVE TIP completed before the MATCH begins is evaluated as AUTO. • POLLEN/NECTAR remaining in a CELL is evaluated at the end of the MATCH. • SCORING ELEMENTS in FLOWERS are evaluated throughout the MATCH, with final evaluation at the end of TELEOP. • GARDEN scoring is evaluated at the end of TELEOP. • LEAVE and AUTO PARK are evaluated at the end of AUTO. • TELEOP PARK is evaluated at the end of the MATCH. • Scoring is judged by human volunteers. • A delay/error on the live scoring display alone is not an ARENA FAULT. • Teams should make scoring achievements clear and unambiguous. • Achievements made before the MATCH starts, during the AUTO→TELEOP transition, or after 0:00 may be subject to penalties.",
+    "scoringSystemBioText2": "HIVE TIP criteria: for a HIVE to be TIPPED, 1. it must move from one stable state to the other so the downward-facing CELL becomes the upward-facing CELL; and 2. the HIVE damper that was not previously touching the frame must then contact the frame. HIVES are bi-stable. Important: LAUNCHING into the downward-facing CELL can interfere with HIVE movement and prevent a TIP. Teams may need to stop LAUNCHING to make the TIP clearly observable. The only permitted way to earn a HIVE TIP is by LAUNCHING into the upward-facing CELL. ROBOTS must follow G417 and may not create or prevent a HIVE TIP by other methods.",
+    "scoringSystemBioText3": "FLOWER scoring criteria: NECTAR and POLLEN score when at least partially within the scoring volume between the FLOWER top ring and middle ring. FLOWER scoring may not begin before the final 1 minute of the MATCH (G410). Achievements made earlier can still be evaluated but may receive penalties. SCORING ELEMENTS may only be scored in a FLOWER by placing them from the top, and ROBOTS must follow G418. Bottom NECTAR Bonus: the ALLIANCE whose color matches the lowest scoring NECTAR in the FLOWER earns the bonus. FLOWER Owner: the ALLIANCE whose color matches the highest scoring NECTAR owns the FLOWER. The owner scores the qualifying POLLEN/NECTAR in that FLOWER regardless of which ALLIANCE placed them.",
+    "scoringSystemBioText4": "GARDEN scoring criteria: at least part of the POLLEN or NECTAR must be inside the GARDEN zone. GARDENS are ALLIANCE SPECIFIC. A GARDEN scores for the ALLIANCE matching its color regardless of which ALLIANCE placed the element. GARDENS are not protected zones. Either ALLIANCE may remove SCORING ELEMENTS from either GARDEN during a MATCH. NECTAR and POLLEN of either color score for the ALLIANCE corresponding to the GARDEN they occupy.",
+    "scoringSystemBioText5": "ROBOT scoring criteria: LEAVE — during AUTO, the ROBOT must no longer be touching the perimeter wall it touched at the start. PARK — the ROBOT must be at least partially inside the LOADING ZONE. Figure 10-7 shows examples of ROBOT positions that do or do not satisfy PARK. Point values: LEAVE 3 AUTO points; PARK 5 AUTO / 5 TELEOP; HIVE TIP 20 AUTO / 20 TELEOP; POLLEN/NECTAR remaining in CELL 2 TELEOP; Bottom NECTAR Bonus 5 TELEOP; POLLEN/NECTAR in an owned FLOWER 2 TELEOP; POLLEN/NECTAR in GARDEN 1 TELEOP; SWARM RP 1 RP; POLLINATOR 1 RP 1 RP; POLLINATOR 2 RP 1 RP; WIN 3 RP; TIE 1 RP. Normal-event RP thresholds: SWARM RP — 16 combined LEAVE + PARK points; POLLINATOR 1 RP — 4 TIPS; POLLINATOR 2 RP — 7 TIPS. Regional Championship and FIRST Championship thresholds will be announced in Team Updates; Premier Events may set their own thresholds.",
+    "scoringSystemBioText6": "A League Tournament generally operates like a Qualifying Tournament and includes judging and advancement, but Qualification Ranking is calculated differently. A team’s best 10 MATCHES from League Meets are combined with its League Tournament Qualification MATCHES. “Top MATCHES” are selected using the sort order in Table 13-1. If a team played fewer than 10 League Meet MATCHES, the missing MATCHES effectively contribute 0 RP, 0 MATCH Points, and 0 for all other scoring criteria.",
+    "scoringSystemBioText7": "INSPECTOR — FIRST official who evaluates the legality of a ROBOT/part. JUDGE — volunteer who determines event awards. LAUNCH/LAUNCHING — shooting a SCORING ELEMENT into the air, propelling it across the floor in a desired direction, or forcefully throwing it. LEAVE — scoring achievement where a ROBOT stops touching the perimeter wall it contacted at the start. LOADING ZONE — approximately 23 in × 11 in × infinitely tall. LRI — Lead ROBOT INSPECTOR. MAJOR FOUL — 20 points credited to the opponent’s MATCH total. MAJOR MECHANISM — major mechanical system that provides ROBOT movement, SCORING ELEMENT manipulation, FIELD element manipulation, or a scorable task. MATCH — 30 sec AUTO + 8 sec transition + 2 min TELEOP. MECHANISM — COMPONENT assembly providing a specific ROBOT function. MINOR FOUL — 5 points credited to the opponent. MOMENTARY — less than about 3 seconds. NECTAR — approximately 3.6 in (9.1 cm) Gopher ResisDent polyethylene ball. OPERATOR CONSOLE — COMPONENTS/MECHANISMS used by the DRIVE TEAM to send commands to the ROBOT. PARK — ROBOT is at least partially in the LOADING ZONE. PIN/PINNING — preventing an opponent ROBOT from moving through contact. POLLEN — 2.8 in (7.1 cm) yellow Gopher ResisDent polyethylene ball.",
+    "scoringSystemBioText8": "POLLINATOR 1 RP — RP earned when the TIP count reaches its threshold. POLLINATOR 2 RP — second RP earned when the TIP count reaches its threshold. PORTFOLIO — judging document governed by A201. RANKING POINTS (RP) — ranking units earned from ALLIANCE performance in Qualification MATCHES. RANKING SCORE (RS) — average RP earned by a team in Qualification MATCHES. RED CARD — Head REFEREE penalty for egregious ROBOT/team behavior or rule violations that causes MATCH DISQUALIFICATION. REFEREE — FIRST-certified official enforcing current-season rules. REPEATED — action occurring more than once in a MATCH. ROBOT — team-built electromechanical assembly with power, communications, control, and FIELD movement systems. ROBOT CONTROLLER — REV Control Hub or Android smartphone connected to a REV Expansion Hub running the ROBOT CONTROLLER system. ROBOT SIGN — required assembly showing team number and ALLIANCE affiliation. SCORING ELEMENT — POLLEN and NECTAR. STRATEGIC — action intended to gain a competitive advantage. STARTING CONFIGURATION — ROBOT’s physical configuration at MATCH start. STUDENT — person who has not completed high school/secondary/equivalent education in their HOME REGION as of September 1. SURROGATE — team randomly assigned an extra Qualification MATCH. SWARM RP — RP earned when combined LEAVE + PARK points reach the threshold.",
+    "navPanel": "Categories"
+  },
+  "es": {
+    "navGameRules": "Reglas del partido",
+    "navFieldInfo": "Elementos del campo",
+    "navMatchProcedures": "Procedimientos del partido",
+    "navScoringSystem": "Cómo puntuar",
+    "scoringSystemTitle": "Cómo Puntuar",
+    "navHome": "Premios y definiciones",
+    "navTeam": "Reglas generales",
+    "navRobots": "Construcción del robot",
+    "navDecode": "Volver",
+    "asterisk": "* QuickManual no es el Manual de Juego oficial y nunca debe considerarse una fuente completa o definitiva de reglas. No reemplaza el documento oficial publicado por FIRST. Para cualquier decisión oficial, inspección o disputa, los equipos deben consultar siempre la versión más reciente del Manual de Juego oficial.",
+    "dateUpdate": "** Fecha de la última actualización: 5 de agosto de 2026, Manual del juego V0",
+    "pageSearch": "Buscar en la página... (Ejemplo: normas, premios, bots)",
+    "clear": "limpiar",
+    "footerTitle": "QuickManual",
+    "footerDescription": "A community resource by Asteria Robotics\nThis is not an official FIRST document.",
+    "contactTitle": "Contacto",
+    "addressText": "Dirección de nuestro taller",
+    "instagramText": "Instagram",
+    "copyrightText": "© 2026 Asteria Robotics FTC Team 32334. Todos los derechos reservados.",
+    "scoringSystemBioText1": "Las ALLIANCES obtienen MATCH points y RANKING POINTS (RP) mediante distintos logros durante el MATCH. Evaluación: • HIVE TIP se evalúa durante todo el MATCH hasta que ROBOTS y SCORING ELEMENTS quedan completamente inmóviles. • Un HIVE TIP completado antes del inicio se cuenta como AUTO. • POLLEN/NECTAR que permanezcan en una CELL se evalúan al final. • Los SCORING ELEMENTS en FLOWERS se evalúan durante el MATCH y definitivamente al final de TELEOP. • GARDEN scoring se evalúa al final de TELEOP. • LEAVE y AUTO PARK al final de AUTO. • TELEOP PARK al final del MATCH. • La puntuación la determinan voluntarios humanos. • Un retraso/error en la pantalla de puntuación en vivo por sí solo no es ARENA FAULT. • Los equipos deben procurar que los logros sean claros e inequívocos. • Logros antes del inicio, durante la transición AUTO→TELEOP o después de 0:00 pueden recibir penalizaciones.",
+    "scoringSystemBioText2": "Criterios de HIVE TIP: para que un HIVE esté TIPPED, 1. debe pasar de un estado estable al otro, haciendo que la CELL que miraba hacia abajo quede hacia arriba; y 2. el damper del HIVE que antes no tocaba el frame debe pasar a tocarlo. Los HIVES son biestables. Importante: LAUNCHING hacia la CELL inferior puede interferir con el movimiento e impedir el TIP. Puede ser necesario detener el LAUNCHING para que el TIP sea claramente observable. La única forma permitida de obtener un HIVE TIP es LAUNCHING hacia la CELL superior. Los ROBOTS deben cumplir G417 y no pueden provocar o impedir un TIP por otros métodos.",
+    "scoringSystemBioText3": "Criterios de FLOWER: NECTAR y POLLEN puntúan cuando están al menos parcialmente dentro del volumen entre el anillo superior y el anillo medio de la FLOWER. El scoring de FLOWER no puede comenzar antes del último minuto (G410). Los logros anteriores pueden evaluarse pero pueden recibir penalización. Los SCORING ELEMENTS solo pueden introducirse por arriba y los ROBOTS deben cumplir G418. Bottom NECTAR Bonus: la ALLIANCE cuyo color coincida con el NECTAR válido más bajo obtiene el bonus. FLOWER Owner: la ALLIANCE cuyo color coincida con el NECTAR válido más alto es propietaria de la FLOWER. El propietario obtiene los puntos de los POLLEN/NECTAR válidos de esa FLOWER sin importar qué ALLIANCE los colocó.",
+    "scoringSystemBioText4": "Criterios de GARDEN: al menos una parte del POLLEN o NECTAR debe estar dentro del GARDEN. Los GARDENS son ALLIANCE SPECIFIC. Cada GARDEN puntúa para la ALLIANCE de su color, independientemente de quién colocó el elemento. No son protected zones. Ambas ALLIANCES pueden retirar SCORING ELEMENTS de cualquiera de los GARDENS durante el MATCH. NECTAR y POLLEN de cualquier color puntúan para la ALLIANCE correspondiente al GARDEN en el que se encuentren.",
+    "scoringSystemBioText5": "Criterios del ROBOT: LEAVE — durante AUTO, el ROBOT debe dejar de tocar la perimeter wall que tocaba al inicio. PARK — el ROBOT debe estar al menos parcialmente dentro de LOADING ZONE. Figure 10-7 muestra ejemplos. Valores: LEAVE 3 puntos AUTO; PARK 5 AUTO / 5 TELEOP; HIVE TIP 20 AUTO / 20 TELEOP; POLLEN/NECTAR restantes en CELL 2 TELEOP; Bottom NECTAR Bonus 5; POLLEN/NECTAR en una FLOWER propia 2; POLLEN/NECTAR en GARDEN 1; SWARM RP 1 RP; POLLINATOR 1 RP 1; POLLINATOR 2 RP 1; WIN 3 RP; TIE 1 RP. Umbrales normales: SWARM RP — 16 puntos LEAVE + PARK; POLLINATOR 1 RP — 4 TIPS; POLLINATOR 2 RP — 7 TIPS. Los umbrales de Regional y FIRST Championship se anunciarán por Team Updates; Premier Events pueden fijar los suyos.",
+    "scoringSystemBioText6": "Un League Tournament funciona en general como un Qualifying Tournament e incluye judging y advancement, pero el Qualification Ranking se calcula de forma diferente. Se combinan los mejores 10 MATCHES del equipo en League Meets con los Qualification MATCHES del League Tournament. Los “Top MATCHES” se seleccionan con el orden de Table 13-1. Si un equipo jugó menos de 10 MATCHES en League Meets, los MATCHES faltantes aportan efectivamente 0 RP, 0 MATCH Points y 0 en los demás criterios.",
+    "scoringSystemBioText7": "INSPECTOR — oficial FIRST que evalúa la legalidad de un ROBOT/pieza. JUDGE — voluntario que determina los premios. LAUNCH/LAUNCHING — lanzar un SCORING ELEMENT al aire, impulsarlo por el suelo en una dirección deseada o arrojarlo con fuerza. LEAVE — logro en el que el ROBOT deja de tocar la perimeter wall inicial. LOADING ZONE — aprox. 23 in × 11 in × altura infinita. LRI — Lead ROBOT INSPECTOR. MAJOR FOUL — 20 puntos para el rival. MAJOR MECHANISM — sistema que proporciona movimiento, manipulación de SCORING ELEMENTS/FIELD o una tarea puntuable. MATCH — 30 s AUTO + 8 s transición + 2 min TELEOP. MECHANISM — conjunto de COMPONENTS con una función del ROBOT. MINOR FOUL — 5 puntos para el rival. MOMENTARY — menos de unos 3 s. NECTAR — bola Gopher ResisDent de 3,6 in (9,1 cm). OPERATOR CONSOLE — COMPONENTS/MECHANISMS usados por DRIVE TEAM para dar órdenes. PARK — ROBOT al menos parcialmente en LOADING ZONE. PIN/PINNING — impedir el movimiento del ROBOT rival mediante contacto. POLLEN — bola amarilla Gopher ResisDent de 2,8 in (7,1 cm).",
+    "scoringSystemBioText8": "POLLINATOR 1 RP — RP obtenido al alcanzar el umbral de TIPS. POLLINATOR 2 RP — segundo RP al alcanzar su umbral de TIPS. PORTFOLIO — documento de judging regulado por A201. RANKING POINTS (RP) — unidades obtenidas por el rendimiento de la ALLIANCE en Qualification MATCHES. RANKING SCORE (RS) — promedio de RP del equipo. RED CARD — penalización del Head REFEREE por conducta/infracción grave que causa DISQUALIFICATION. REFEREE — oficial certificado por FIRST que aplica las reglas. REPEATED — acción que ocurre más de una vez en un MATCH. ROBOT — conjunto electromecánico del equipo con energía, comunicaciones, control y movimiento. ROBOT CONTROLLER — REV Control Hub o smartphone Android conectado a REV Expansion Hub. ROBOT SIGN — elemento obligatorio que muestra número y ALLIANCE. SCORING ELEMENT — POLLEN y NECTAR. STRATEGIC — acción para obtener ventaja competitiva. STARTING CONFIGURATION — configuración física inicial. STUDENT — persona que al 1 de septiembre no ha completado secundaria/equivalente en su HOME REGION. SURROGATE — equipo asignado aleatoriamente a un Qualification MATCH adicional. SWARM RP — RP al alcanzar el umbral combinado de LEAVE + PARK.",
+    "navPanel": "Categorías"
+  },
+  "pt": {
+    "navGameRules": "Regras da partida",
+    "navFieldInfo": "Elementos do campo",
+    "navMatchProcedures": "Procedimentos da partida",
+    "navScoringSystem": "Como pontuar",
+    "scoringSystemTitle": "Como Pontuar",
+    "navHome": "Prêmios e definições",
+    "navTeam": "Regras gerais",
+    "navRobots": "Construção do robô",
+    "navDecode": "Voltar",
+    "asterisk": "* QuickManual não é o Manual de Jogo oficial e nunca deve ser tratado como uma fonte completa ou definitiva de regras. Ele não substitui o documento oficial publicado pela FIRST. Para qualquer decisão oficial, inspeção ou contestação, as equipes devem sempre consultar a versão mais recente do Manual de Jogo oficial.",
+    "dateUpdate": "** Data da última atualização: 5 de agosto de 2026, Manual do Jogo V0",
+    "pageSearch": "Pesquisar nesta página... (Exemplo: regras, prémios, bots)",
+    "clear": "limpar",
+    "footerTitle": "QuickManual",
+    "footerDescription": "A community resource by Asteria Robotics\nThis is not an official FIRST document.",
+    "contactTitle": "Contato",
+    "addressText": "Endereço da nossa oficina",
+    "instagramText": "Instagram",
+    "copyrightText": "© 2026 Asteria Robotics FTC Team 32334. Todos os direitos reservados.",
+    "scoringSystemBioText1": "As ALLIANCES ganham MATCH points e RANKING POINTS (RP) por várias conquistas durante um MATCH. Avaliação: • HIVE TIP é avaliado durante todo o MATCH até ROBOTS e SCORING ELEMENTS ficarem completamente parados. • Um HIVE TIP concluído antes do início conta como AUTO. • POLLEN/NECTAR restantes em uma CELL são avaliados no fim do MATCH. • SCORING ELEMENTS em FLOWERS são avaliados durante o MATCH, com avaliação final no fim de TELEOP. • GARDEN scoring no fim de TELEOP. • LEAVE e AUTO PARK no fim de AUTO. • TELEOP PARK no fim do MATCH. • A pontuação é julgada por voluntários humanos. • Um atraso/erro apenas no placar ao vivo não é ARENA FAULT. • As equipes devem tornar as conquistas claras e inequívocas. • Conquistas antes do início, durante a transição AUTO→TELEOP ou após 0:00 podem gerar penalidades.",
+    "scoringSystemBioText2": "Critérios de HIVE TIP: para um HIVE ser TIPPED, 1. deve passar de um estado estável ao outro, fazendo a CELL voltada para baixo passar a ficar para cima; e 2. o damper do HIVE que não tocava o frame deve passar a tocá-lo. Os HIVES são biestáveis. Importante: LAUNCHING na CELL voltada para baixo pode interferir no movimento e impedir o TIP. Pode ser necessário parar o LAUNCHING para que o TIP fique claramente visível. A única forma permitida de obter HIVE TIP é LAUNCHING na CELL voltada para cima. ROBOTS devem cumprir G417 e não podem criar ou impedir TIP por outros métodos.",
+    "scoringSystemBioText3": "Critérios de FLOWER: NECTAR e POLLEN pontuam quando estão ao menos parcialmente dentro do volume entre o anel superior e o anel intermediário da FLOWER. O scoring não pode começar antes do último minuto (G410). Conquistas anteriores podem ser avaliadas, mas podem receber penalidade. SCORING ELEMENTS só podem ser colocados por cima e ROBOTS devem cumprir G418. Bottom NECTAR Bonus: a ALLIANCE cuja cor corresponde ao NECTAR válido mais baixo recebe o bônus. FLOWER Owner: a ALLIANCE cuja cor corresponde ao NECTAR válido mais alto é dona da FLOWER. A dona recebe os pontos dos POLLEN/NECTAR válidos nessa FLOWER, independentemente de quem os colocou.",
+    "scoringSystemBioText4": "Critérios de GARDEN: pelo menos parte do POLLEN ou NECTAR deve estar dentro da zona GARDEN. Os GARDENS são ALLIANCE SPECIFIC. Cada GARDEN pontua para a ALLIANCE de sua cor, independentemente de quem colocou o elemento. Não são protected zones. Ambas as ALLIANCES podem retirar SCORING ELEMENTS de qualquer GARDEN durante o MATCH. NECTAR e POLLEN de qualquer cor pontuam para a ALLIANCE correspondente ao GARDEN onde estão.",
+    "scoringSystemBioText5": "Critérios do ROBOT: LEAVE — durante AUTO, o ROBOT deve deixar de tocar a perimeter wall que tocava no início. PARK — o ROBOT deve estar pelo menos parcialmente dentro da LOADING ZONE. Figure 10-7 mostra exemplos. Valores: LEAVE 3 AUTO; PARK 5 AUTO / 5 TELEOP; HIVE TIP 20 AUTO / 20 TELEOP; POLLEN/NECTAR restantes em CELL 2 TELEOP; Bottom NECTAR Bonus 5; POLLEN/NECTAR em FLOWER possuída 2; POLLEN/NECTAR em GARDEN 1; SWARM RP 1 RP; POLLINATOR 1 RP 1; POLLINATOR 2 RP 1; WIN 3 RP; TIE 1 RP. Limites normais: SWARM RP — 16 pontos combinados LEAVE + PARK; POLLINATOR 1 RP — 4 TIPS; POLLINATOR 2 RP — 7 TIPS. Limites de Regional e FIRST Championship serão publicados em Team Updates; Premier Events podem definir os próprios.",
+    "scoringSystemBioText6": "Um League Tournament funciona em geral como um Qualifying Tournament, com judging e advancement, mas o Qualification Ranking é calculado de forma diferente. Os 10 melhores MATCHES da equipe em League Meets são combinados com os Qualification MATCHES do League Tournament. “Top MATCHES” são escolhidos pela ordem da Table 13-1. Se a equipe jogou menos de 10 MATCHES em League Meets, os MATCHES ausentes contribuem efetivamente com 0 RP, 0 MATCH Points e 0 nos demais critérios.",
+    "scoringSystemBioText7": "INSPECTOR — oficial FIRST que avalia a legalidade de um ROBOT/peça. JUDGE — voluntário que determina prêmios. LAUNCH/LAUNCHING — lançar um SCORING ELEMENT ao ar, impulsioná-lo pelo piso em direção desejada ou arremessá-lo com força. LEAVE — conquista em que o ROBOT deixa de tocar a perimeter wall inicial. LOADING ZONE — aprox. 23 in × 11 in × altura infinita. LRI — Lead ROBOT INSPECTOR. MAJOR FOUL — 20 pontos para o adversário. MAJOR MECHANISM — sistema que fornece movimento, manipulação de SCORING ELEMENT/FIELD ou tarefa pontuável. MATCH — 30 s AUTO + 8 s transição + 2 min TELEOP. MECHANISM — conjunto de COMPONENTS com uma função. MINOR FOUL — 5 pontos para o adversário. MOMENTARY — menos de ~3 s. NECTAR — bola Gopher ResisDent de 3,6 in (9,1 cm). OPERATOR CONSOLE — COMPONENTS/MECHANISMS usados pelo DRIVE TEAM para comandar o ROBOT. PARK — ROBOT ao menos parcialmente na LOADING ZONE. PIN/PINNING — impedir movimento de ROBOT adversário por contato. POLLEN — bola amarela Gopher ResisDent de 2,8 in (7,1 cm).",
+    "scoringSystemBioText8": "POLLINATOR 1 RP — RP obtido quando o número de TIPS alcança o limite. POLLINATOR 2 RP — segundo RP ao alcançar seu limite de TIPS. PORTFOLIO — documento de judging com requisitos em A201. RANKING POINTS (RP) — unidades obtidas pelo desempenho da ALLIANCE nos Qualification MATCHES. RANKING SCORE (RS) — média de RP da equipe. RED CARD — penalidade do Head REFEREE por comportamento/infração grave que causa DISQUALIFICATION. REFEREE — oficial certificado pela FIRST que aplica as regras. REPEATED — ação que acontece mais de uma vez em um MATCH. ROBOT — conjunto eletromecânico construído pela equipe com energia, comunicação, controle e movimento. ROBOT CONTROLLER — REV Control Hub ou smartphone Android ligado a REV Expansion Hub. ROBOT SIGN — identificação obrigatória com número e ALLIANCE. SCORING ELEMENT — POLLEN e NECTAR. STRATEGIC — ação para obter vantagem competitiva. STARTING CONFIGURATION — configuração física inicial do ROBOT. STUDENT — pessoa que em 1º de setembro não concluiu ensino médio/secundário/equivalente em sua HOME REGION. SURROGATE — equipe sorteada para um Qualification MATCH extra. SWARM RP — RP ao atingir o limite combinado de LEAVE + PARK.",
+    "navPanel": "Categorias"
+  },
+  "zh": {
+    "navGameRules": "比赛规则",
+    "navFieldInfo": "场地元素信息",
+    "navMatchProcedures": "比赛流程",
+    "navScoringSystem": "如何得分",
+    "scoringSystemTitle": "如何得分",
+    "navHome": "奖项与定义",
+    "navTeam": "通用规则",
+    "navRobots": "机器人构建",
+    "navDecode": "返回",
+    "asterisk": "* QuickManual 不是官方比赛手册，绝不能被视为完整或最终的规则来源。它不能替代 FIRST 发布的官方文件。对于任何正式决定、检查或争议，队伍必须始终参考最新版本的官方比赛手册。",
+    "dateUpdate": "** 最后更新日期：2026年8月5日，游戏手册 V0",
+    "pageSearch": "在页面中搜索...（示例：规则、奖励、机器人）",
+    "clear": "清洁",
+    "footerTitle": "QuickManual",
+    "footerDescription": "A community resource by Asteria Robotics\nThis is not an official FIRST document.",
+    "contactTitle": "联系我们",
+    "addressText": "我们的工作室地址",
+    "instagramText": "Instagram",
+    "copyrightText": "© 2026 Asteria Robotics FTC Team 32334. 版权所有。",
+    "scoringSystemBioText1": "ALLIANCE 在 MATCH 中通过不同成就获得 MATCH points 和 RANKING POINTS (RP)。计分判定：• HIVE TIP 在整个 MATCH 中持续判定，直到 ROBOTS 与 SCORING ELEMENTS 完全静止。• MATCH 开始前完成的 HIVE TIP 按 AUTO 计算。• CELL 中剩余的 POLLEN/NECTAR 在 MATCH 结束时判定。• FLOWER 中的 SCORING ELEMENTS 在 MATCH 过程中判定，并在 TELEOP 结束时最终确认。• GARDEN scoring 在 TELEOP 结束时判定。• LEAVE 与 AUTO PARK 在 AUTO 结束时判定。• TELEOP PARK 在 MATCH 结束时判定。• 得分由人工志愿者判断。• 实时得分显示的延迟/错误本身不构成 ARENA FAULT。• 队伍应让得分成就清楚且无争议。• MATCH 开始前、AUTO→TELEOP 过渡期间或 0:00 之后取得的成就可能受到处罚。",
+    "scoringSystemBioText2": "HIVE TIP 判定：要使 HIVE 被视为 TIPPED，1. 它必须从一个稳定状态转到另一个稳定状态，使原本朝下的 CELL 变为朝上；2. 原先未接触 frame 的 HIVE damper 随后必须接触 frame。HIVES 为双稳态结构。重要：向朝下的 CELL LAUNCHING 可能干扰 HIVE 运动并导致 TIP 未完成。必要时队伍应停止 LAUNCHING，使 TIP 对志愿者来说清晰可见。获得 HIVE TIP 的唯一允许方式是向朝上的 CELL LAUNCHING。ROBOTS 必须遵守 G417，不得以其他方式制造或阻止 HIVE TIP。",
+    "scoringSystemBioText3": "FLOWER 计分：当 NECTAR 或 POLLEN 至少部分位于 FLOWER 顶环与中环之间的 scoring volume 内时得分。FLOWER scoring 不得在 MATCH 最后 1 分钟之前开始（G410）；更早的成就仍可能被判定但会受到处罚。SCORING ELEMENTS 只能从顶部放入 FLOWER，ROBOTS 必须遵守 G418。Bottom NECTAR Bonus：颜色与 FLOWER 中最低有效 NECTAR 相同的 ALLIANCE 获得奖励。FLOWER Owner：颜色与最高有效 NECTAR 相同的 ALLIANCE 拥有该 FLOWER。拥有者可获得该 FLOWER 内所有符合条件的 POLLEN/NECTAR 分数，无论由哪一方放入。",
+    "scoringSystemBioText4": "GARDEN 计分：POLLEN 或 NECTAR 至少有一部分必须位于 GARDEN zone 内。GARDENS 为 ALLIANCE SPECIFIC。每个 GARDEN 为与其颜色对应的 ALLIANCE 得分，与哪一方放入元素无关。GARDENS 不是 protected zones。MATCH 期间双方均可从任一 GARDEN 取出 SCORING ELEMENTS。任何颜色的 NECTAR 和 POLLEN 都为其所在 GARDEN 对应的 ALLIANCE 得分。",
+    "scoringSystemBioText5": "ROBOT 计分：LEAVE — AUTO 期间，ROBOT 必须不再接触其起始时接触的 perimeter wall。PARK — ROBOT 必须至少部分进入 LOADING ZONE。Figure 10-7 给出示例。分值：LEAVE 3 AUTO；PARK 5 AUTO / 5 TELEOP；HIVE TIP 20 AUTO / 20 TELEOP；CELL 中剩余 POLLEN/NECTAR 2 TELEOP；Bottom NECTAR Bonus 5；owned FLOWER 中 POLLEN/NECTAR 2；GARDEN 中 POLLEN/NECTAR 1；SWARM RP 1 RP；POLLINATOR 1 RP 1；POLLINATOR 2 RP 1；WIN 3 RP；TIE 1 RP。普通赛事 RP 门槛：SWARM RP — LEAVE + PARK 合计 16 分；POLLINATOR 1 RP — 4 TIPS；POLLINATOR 2 RP — 7 TIPS。Regional Championship 与 FIRST Championship 门槛将通过 Team Updates 公布；Premier Events 可设置自己的门槛。",
+    "scoringSystemBioText6": "League Tournament 整体类似 Qualifying Tournament，并包含 judging 与 advancement，但 Qualification Ranking 的计算方式不同。队伍在 League Meets 中成绩最好的 10 场 MATCH 会与 League Tournament 的 Qualification MATCHES 合并计算。“Top MATCHES”按 Table 13-1 的排序规则选取。如果队伍在 League Meets 中少于 10 场，则缺少的 MATCH 在 RP、MATCH Points 和其他计分标准中都按 0 计算。",
+    "scoringSystemBioText7": "INSPECTOR — 评估 ROBOT/部件合法性的 FIRST 官方人员。JUDGE — 决定赛事奖项的志愿者。LAUNCH/LAUNCHING — 将 SCORING ELEMENT 射向空中、沿地面朝目标方向推动或用力抛出。LEAVE — ROBOT 不再接触起始 perimeter wall 的得分成就。LOADING ZONE — 约 23 in × 11 in × 无限高。LRI — Lead ROBOT INSPECTOR。MAJOR FOUL — 给对手 MATCH 总分增加 20 分。MAJOR MECHANISM — 用于 ROBOT 移动、SCORING ELEMENT/FIELD 元素操作或完成可得分任务的大型系统。MATCH — 30 秒 AUTO + 8 秒过渡 + 2 分钟 TELEOP。MECHANISM — 实现特定 ROBOT 功能的 COMPONENT 组件。MINOR FOUL — 给对手增加 5 分。MOMENTARY — 少于约 3 秒。NECTAR — 约 3.6 in（9.1 cm）Gopher ResisDent 聚乙烯球。OPERATOR CONSOLE — DRIVE TEAM 向 ROBOT 发送指令使用的 COMPONENTS/MECHANISMS。PARK — ROBOT 至少部分进入 LOADING ZONE。PIN/PINNING — 通过接触阻止对方 ROBOT 移动。POLLEN — 2.8 in（7.1 cm）黄色 Gopher ResisDent 聚乙烯球。",
+    "scoringSystemBioText8": "POLLINATOR 1 RP — TIP 数达到门槛时获得的 RP。POLLINATOR 2 RP — TIP 数达到相应门槛时获得的第二个 RP。PORTFOLIO — 按 A201 要求用于 judging 的文件。RANKING POINTS (RP) — 根据 ALLIANCE 在 Qualification MATCHES 中的表现获得的排名单位。RANKING SCORE (RS) — 队伍在 Qualification MATCHES 中平均获得的 RP。RED CARD — Head REFEREE 对严重 ROBOT/队伍行为或规则违规作出的处罚，会导致 MATCH DISQUALIFICATION。REFEREE — 经 FIRST 认证、负责执行当前赛季规则的裁判。REPEATED — 在一场 MATCH 中发生超过一次的行为。ROBOT — 队伍制造的机电系统，包括电源、通信、控制与 FIELD 移动系统。ROBOT CONTROLLER — REV Control Hub 或连接 REV Expansion Hub 的 Android 手机控制系统。ROBOT SIGN — 必须安装、同时显示队号与 ALLIANCE 身份的标识。SCORING ELEMENT — POLLEN 和 NECTAR。STRATEGIC — 以取得竞争优势为目的的行为。STARTING CONFIGURATION — ROBOT 在 MATCH 开始时的物理配置。STUDENT — 截至 9 月 1 日尚未在 HOME REGION 完成高中/中学或同等教育的人。SURROGATE — 被系统随机分配额外 Qualification MATCH 的队伍。SWARM RP — LEAVE + PARK 合计分达到门槛时获得的 RP。",
+    "navPanel": "分类"
+  }
+};
+
+function setLanguage(lang) {
+    if (!translations[lang]) return;
+    document.documentElement.lang = lang;
+
+    for (const id in translations[lang]) {
+        const element = document.getElementById(id);
+        if (!element) continue;
+        if (id === "pageSearch") {
+            element.placeholder = translations[lang][id];
+        } else {
+            element.innerHTML = translations[lang][id];
+        }
+    }
+
+    const langBtn = document.getElementById("langBtn");
+    if (langBtn) langBtn.textContent = lang.toUpperCase();
+
+    document.querySelectorAll(".lang-dropdown button").forEach(btn => {
+        btn.classList.toggle("active", btn.dataset.lang === lang);
+    });
+
+    localStorage.setItem("language", lang);
+
+    const quickManualIframe = document.getElementById("quickmanual-iframe");
+    if (quickManualIframe && quickManualIframe.contentWindow) {
+        quickManualIframe.contentWindow.postMessage({
+            type: "languageChange",
+            language: lang
+        }, "*");
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    setLanguage(localStorage.getItem("language") || "tr");
+
+    const langSwitch = document.getElementById("langSwitch");
+    const langBtn = document.getElementById("langBtn");
+
+    if (langBtn && langSwitch) {
+        langBtn.addEventListener("click", function (e) {
+            e.stopPropagation();
+            langSwitch.classList.toggle("open");
+        });
+
+        document.querySelectorAll(".lang-dropdown button").forEach(btn => {
+            btn.addEventListener("click", function () {
+                setLanguage(btn.dataset.lang);
+                langSwitch.classList.remove("open");
+            });
+        });
+
+        document.addEventListener("click", function (e) {
+            if (!langSwitch.contains(e.target)) langSwitch.classList.remove("open");
+        });
+    }
+
+    const searchInput = document.getElementById("pageSearch");
+    if (searchInput) searchInput.addEventListener("input", liveSearch);
+
+    // QuickManual AI widget - same behavior as the original page.
+    const widget = document.createElement("div");
+    widget.id = "quickmanual-widget";
+    widget.innerHTML = `
+        <div id="quickmanual-window">
+            <button id="quickmanual-close" aria-label="QuickManual AI'yi kapat" title="Kapat">×</button>
+            <iframe id="quickmanual-iframe" src="quickmanual/quickmanual-ai.html"
+                    title="QuickManual AI" loading="lazy"></iframe>
+        </div>
+        <button id="quickmanual-button" aria-label="QuickManual AI'yi aç" title="QuickManual AI">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 11.5C20 15.6421 16.1944 19 11.5 19C10.3065 19 9.17663 18.7881 8.16571 18.4049L4 20L5.20564 16.3878C4.44183 15.1111 4 13.6179 4 12C4 7.85786 7.80558 4.5 12.5 4.5C17.1944 4.5 20 7.35786 20 11.5Z"
+                      stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                <circle cx="9" cy="12" r="0.8" fill="currentColor"/>
+                <circle cx="12" cy="12" r="0.8" fill="currentColor"/>
+                <circle cx="15" cy="12" r="0.8" fill="currentColor"/>
+            </svg>
+        </button>`;
+    document.body.appendChild(widget);
+
+    const button = document.getElementById("quickmanual-button");
+    const windowBox = document.getElementById("quickmanual-window");
+    const closeButton = document.getElementById("quickmanual-close");
+
+    if (button && windowBox) button.addEventListener("click", () => windowBox.classList.toggle("open"));
+    if (closeButton && windowBox) closeButton.addEventListener("click", () => windowBox.classList.remove("open"));
+});
+
+function clearHighlights() {
+    document.querySelectorAll("mark.search-highlight").forEach(mark => {
+        const parent = mark.parentNode;
+        parent.replaceChild(document.createTextNode(mark.textContent), mark);
+        parent.normalize();
+    });
+}
+
+function liveSearch() {
+    clearHighlights();
+    const input = document.getElementById("pageSearch");
+    if (!input) return;
+    const query = input.value.trim();
+    if (!query) return;
+
+    const lowerQuery = query.toLocaleLowerCase();
+    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+        acceptNode(node) {
+            const parent = node.parentElement;
+            if (!parent) return NodeFilter.FILTER_REJECT;
+            if (
+                parent.closest("nav") ||
+                parent.closest("footer") ||
+                parent.closest(".search-section") ||
+                parent.closest(".language-switch") ||
+                parent.closest("#quickmanual-widget") ||
+                parent.tagName === "SCRIPT" ||
+                parent.tagName === "STYLE"
+            ) return NodeFilter.FILTER_REJECT;
+            return NodeFilter.FILTER_ACCEPT;
+        }
+    });
+
+    let firstMatch = null;
+    const nodes = [];
+    let n;
+    while ((n = walker.nextNode())) nodes.push(n);
+
+    for (const node of nodes) {
+        const text = node.nodeValue;
+        if (!text || !text.trim()) continue;
+        const index = text.toLocaleLowerCase().indexOf(lowerQuery);
+        if (index === -1) continue;
+
+        const before = text.slice(0, index);
+        const matchText = text.slice(index, index + query.length);
+        const after = text.slice(index + query.length);
+        const mark = document.createElement("mark");
+        mark.className = "search-highlight";
+        mark.textContent = matchText;
+
+        const parent = node.parentNode;
+        parent.insertBefore(document.createTextNode(before), node);
+        parent.insertBefore(mark, node);
+        node.nodeValue = after;
+        if (!firstMatch) firstMatch = mark;
+    }
+
+    if (firstMatch) firstMatch.scrollIntoView({ behavior: "smooth", block: "center" });
+}
+
+function clearSearch() {
+    const input = document.getElementById("pageSearch");
+    if (input) input.value = "";
+    clearHighlights();
+}
+
+</script>
+</body>
+</html>

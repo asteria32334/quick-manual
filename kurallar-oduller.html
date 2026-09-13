@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>QuickManual</title>
+<link href="images/logo (2).png" rel="icon"/>
+<link href="manifest.json" rel="manifest"/>
+<link href="images/logo.png" rel="apple-touch-icon"/>
+<link href="kurallar.css" rel="stylesheet"/>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo"></div>
+    <ul class="nav-links">
+        <li><a href="kurallar.html" id="navPanel">Kategoriler</a></li>
+      <!-- <li><a href="kurallar-oduller.html" id="navHome">Ödüller ve Tanımlar</a></li>
+        <li><a href="kurallar-genel.html" id="navTeam">Genel Kurallar</a></li>
+        <li><a href="kurallar-robot.html" id="navRobots">Robot Yapımı</a></li>
+        <li><a href="kurallar-mac.html" id="navGameRules">Maç Kuralları</a></li>
+        <li><a href="kurallar-saha.html" id="navFieldInfo">Saha Eleman Bilgileri</a></li>
+        <li><a href="kurallar-prosedur.html" id="navMatchProcedures">Maç Prosedürleri</a></li>
+        <li><a href="kurallar-puanlama.html" id="navScoringSystem">Nasıl Puan Kazanılır</a></li>
+    --> <li><a href="index.html" id="navDecode">Geri dön</a></li>
+    </ul>
+</nav>
+
+
+<div class="language-switch" id="langSwitch">
+    <button class="lang-btn" id="langBtn">TR</button>
+    <div class="lang-dropdown">
+        <button data-lang="tr">Türkçe</button>
+        <button data-lang="en">English</button>
+        <button data-lang="es">Español</button>
+        <button data-lang="pt">Português</button>
+        <button data-lang="zh">中文</button>
+    </div>
+</div>
+
+
+<section class="search-section">
+    <div class="search-container">
+        <input type="text" id="pageSearch" placeholder="Sayfada ara... (örnek: kurallar, ödül, robot)" autocomplete="off">
+        <button onclick="clearSearch()" class="clear-btn" id="clear">Temizle</button>
+    </div>
+</section>
+
+<section class="section" id="awardRules">
+<h2 id="awardRulesTitle">Ödüller ve Tanımlar</h2>
+<div class="card">
+<h3 id="awardRulesBioTitle1">Figure 6-1: Award hierarchy (Page 44)</h3>
+<p id="awardRulesBioText1">Inspire Award<br/>
+MCI, TA ve Documentation alanlarında başarılı<br/>
+olan ve diğerlerine ilham veren takımı tanır.<br/>
+MCI awards<br/>
+ROBOT’un:<br/>
+•   brainstorming,<br/>
+•   design,<br/>
+•   construction,<br/>
+•   operation,<br/>
+•   control<br/>
+alanlarındaki teknik başarısını değerlendirir.<br/>
+TA awards<br/>
+Takımın skillset geliştirmesi, program/team’i<br/>
+sürdürülebilir hale getirmesi ve FIRST mesajını<br/>
+outreach yoluyla yaymasını değerlendirir.<br/>
+Think Award<br/>
+Takımın PORTFOLIO üzerinden process ve<br/>
+ROBOT’unu başarılı şekilde dokümante etmesini<br/>
+değerlendirir.<br/>
+Judges’ Choice Award<br/>
+Diğer kategorilere tam uymayan fakat özel çabası,<br/>
+performansı veya takım dinamiği nedeniyle dikkat<br/>
+çeken takıma verilir.<br/>
+Önemli: JUDGES kazananı mutlaka “en iyi takım”<br/>
+olarak değerlendirmez; yayınlanmış award<br/>
+criteria’ya olumlu örnek olan takımları tanırlar.<br/>
+Takımın ROBOT inspection durumundan<br/>
+bağımsız olarak judging’e katılması mümkündür;<br/>
+ROBOT olmadan gelen takım bile judged award<br/>
+için uygun olabilir.</p>
+</div>
+<div class="card">
+<h3 id="awardRulesBioTitle2">6.1.1 Sources of Information Considered for Awards (Page 45)</h3>
+<p id="awardRulesBioText2">JUDGES şu kaynakları kullanır:<br/>
+• Initial Interview<br/>
+• Follow-up interview<br/>
+• PORTFOLIO (uygunsa)<br/>
+Judging yalnızca current event ve current<br/>
+season bilgilerine dayanır.<br/>
+Manual’a göre current season judging açısından<br/>
+January 1, 2026 tarihinde başlar.<br/>
+JUDGES şu bilgileri değerlendiremez:<br/>
+• Geçmiş event performansı<br/>
+• Takım hakkında kişisel bilgileri<br/>
+• Websites/social media gibi external sources<br/>
+• Award criteria’da özellikle belirtilmedikçe<br/>
+ROBOT’un MATCH performansı<br/>
+• ROBOT penalties<br/>
+• Tournament ranking<br/>
+PORTFOLIO’da January 1, 2026’dan sonraki<br/>
+progress/challenges/accomplishments current<br/>
+season kapsamında değerlendirilebilir.</p>
+</div>
+<div class="card">
+<h3 id="awardRulesBioTitle3">6.1.2 Initial Interview (Page 46)</h3>
+<p id="awardRulesBioText3">Takımlar Initial Interview’a hazırlanmalıdır.<br/>
+Üç format olabilir:<br/>
+1. Scheduled in-person<br/>
+2. Unscheduled in-person<br/>
+3. Remote<br/>
+Üç formatın award kuralları aynıdır.<br/>
+Interview akışı:<br/>
+1. JUDGES kendini tanıtır.<br/>
+2. Takım isterse prepared presentation başlatır.<br/>
+3. Takım yaklaşık 5 dakika uninterrupted<br/>
+presentation yapabilir.<br/>
+4. JUDGES Q&amp;A yapar.<br/>
+5. Interview sona erer.<br/>
+6. JUDGES kendi arasında değerlendirme yapar.<br/>
+7. Sonraki takım çağrılır.<br/>
+Initial Interview formatını Event Director belirler.<br/>
+Pit’te yapılan interview’larda çevrenin gürültülü<br/>
+olabileceği dikkate alınmalıdır.</p>
+</div>
+<div class="card">
+<h3 id="awardRulesBioTitle4">Initial Interview’ın Q&amp;A kısmının başında tüm (Page 47)</h3>
+<p id="awardRulesBioText4">takımlara iki temel soru sorulur:<br/>
+• Bir soru MCI kategorisine,<br/>
+• bir soru TA kategorisine<br/>
+odaklanır.<br/>
+Sonrasında JUDGES ek sorular sorabilir.<br/>
+6.1.3 Pit Interview(s)<br/>
+Initial Interviews tamamlandıktan sonra JUDGES,<br/>
+bazı takımlarla pit’te follow-up interview yapabilir.<br/>
+Takımlar burada:<br/>
+• ROBOT prototypes,<br/>
+• design artifacts,<br/>
+• outreach fotoğrafları/mektupları<br/>
+gibi ek materyaller gösterebilir.<br/>
+Yeni bir presentation hazırlamak gerekmez.<br/>
+Ancak JUDGES pit interview sırasında ek bilgi<br/>
+okuyabilse de, bu materyalleri daha sonra<br/>
+deliberation’a taşıyamaz.<br/>
+6.1.4 Sustained Outreach and<br/>
+Demonstrating Impact by Numbers<br/>
+Sürekli ve sürdürülebilir outreach, tek seferlik<br/>
+outreach’ten daha güçlü kabul edilir.<br/>
+JUDGES yalnızca “kaç kişiye ulaşıldığına” değil,<br/>
+outreach’in ulaşılan kişiler üzerindeki impact’ine<br/>
+de bakar.</p>
+</div>
+<div class="card">
+<h3 id="awardRulesBioTitle5">6.2 Team Judged Award (Page 48)</h3>
+<p id="awardRulesBioText5">Rules<br/>
+A201 — Team PORTFOLIOS have limits.<br/>
+PORTFOLIO:<br/>
+•   1 cover page içermeli.<br/>
+•   En fazla 15 content page olmalı.<br/>
+•   US Letter veya A4 boyutunda olmalı.<br/>
+•   Dijital ise 15 MB’den küçük olmalı.<br/>
+•   Yalnızca January 1, 2026 sonrasındaki<br/>
+progress, challenges ve accomplishments’ı<br/>
+içermeli.<br/>
+Cover page award criteria değerlendirmesinde<br/>
+kullanılmaz.<br/>
+15 sayfanın üzerindeki içerik değerlendirilmez.<br/>
+Student privacy için:<br/>
+• yalnızca first name + last initial kullanılması,<br/>
+• öğrencilerin full name’lerinin yazılmaması<br/>
+istenir.<br/>
+JUDGES PORTFOLIO içindeki link, website veya<br/>
+video’lara tıklamaz.<br/>
+Ayrıca interview’da verilen ekstra basılı<br/>
+dokümanları judging room’a götürmezler.<br/>
+AI kullanımı<br/>
+Takımlar PORTFOLIO hazırlarken AI ve research<br/>
+aids kullanabilir; ancak intellectual property<br/>
+haklarına uymalı ve AI kullanımını footnote/<br/>
+endnote ile belirtmelidir.<br/>
+Manual örnek olarak “Portfolio created by Team<br/>
+XXXXX and ChatGPT” ifadesini veriyor.</p>
+</div>
+<div class="card">
+<h3 id="awardRulesBioTitle6">A202 — PORTFOLIOS must be (Page 49)</h3>
+<p id="awardRulesBioText6">submitted on time and as requested.<br/>
+PORTFOLIO, Event Director’ın belirttiği yöntem<br/>
+ve deadline’a göre teslim edilmelidir.<br/>
+Başka talimat yoksa Initial Interview sırasında 1<br/>
+printed copy verilmelidir.<br/>
+A203 — Teams must participate in an<br/>
+Initial Interview session.<br/>
+Judged Award için Initial Interview zorunludur.<br/>
+A204 — Have the right resources<br/>
+available for your Initial Interview.<br/>
+2 veya daha fazla öğrencili takımlarda en az 2<br/>
+STUDENT representative bulunmalıdır.<br/>
+Takımın yanında:<br/>
+•   PORTFOLIO,<br/>
+•   show-and-tell materyalleri,<br/>
+•   isteğe bağlı 1 silent observer,<br/>
+•   gerekiyorsa 1 support person<br/>
+bulunabilir.<br/>
+ROBOT olmadan da judging’e katılmak<br/>
+mümkündür.<br/>
+A205 — Everyone gets equal Initial<br/>
+Interview time.<br/>
+Tüm takımlar aynı uzunlukta ve en az 10 dakika<br/>
+Initial Interview süresine sahip olur.</p>
+</div>
+<div class="card">
+<h3 id="awardRulesBioTitle7">A206 — The Initial Interview timer starts (Page 50)</h3>
+<p id="awardRulesBioText7">when the team starts.<br/>
+JUDGES kendini tanıttıktan ve takım<br/>
+presentation’a veya Q&amp;A’ya başladıktan sonra<br/>
+timer başlar.<br/>
+Takım uzun süre başlamazsa JUDGES takımı<br/>
+uyarabilir ve timer yine başlatılır.<br/>
+A207 — Prepared initial presentation<br/>
+time should not be interrupted.<br/>
+İlk 5 dakika, takım isterse uninterrupted prepared<br/>
+oral presentation için ayrılır.<br/>
+Takım presentation’ı erken bitirebilir; kalan süre<br/>
+Q&amp;A olur.<br/>
+A208 — One adult silent observer is<br/>
+welcome.<br/>
+Bir yetişkin sessiz observer olarak interview’a<br/>
+katılabilir.<br/>
+Ancak:<br/>
+• öğrencilerle JUDGES arasındaki etkileşime<br/>
+müdahale edemez,<br/>
+• aktif coaching yapamaz.<br/>
+A209 — Translator and/or Sign<br/>
+Language Interpreter accommodations<br/>
+will be made for teams who need it.<br/>
+Takımın ana dili JUDGES’ın diliyle aynı değilse<br/>
+translator kullanılabilir.<br/>
+Gerekirse önceden Event Director ile iletişime<br/>
+geçilerek 2–5 dakika ek interview süresi<br/>
+istenebilir.<br/>
+A210 — No Photos, Video or Audio<br/>
+recording during Initial Interview.<br/>
+Initial Interview sırasında fotoğraf, video veya ses<br/>
+kaydı alınamaz.</p>
+</div>
+<div class="card">
+<h3 id="awardRulesBioTitle8">6.2 Team Judged Award Rules (Page 51)</h3>
+<p id="awardRulesBioText8">A211 — The number of awards given<br/>
+scales with event size.<br/>
+Verilecek judged award sayısı etkinliğe katılan<br/>
+takım sayısına göre değişir.<br/>
+Event büyüklüğüne göre:<br/>
+•   4–10 teams<br/>
+•   11–20 teams<br/>
+•   21–40 teams<br/>
+•   41–64 teams<br/>
+için farklı award seviyeleri bulunur.<br/>
+Örneğin Inspire Award küçük etkinliklerde yalnızca<br/>
+1st Place olabilirken daha büyük etkinliklerde 2nd<br/>
+ve 3rd Place de verilebilir.<br/>
+Aynı şekilde:<br/>
+•   Think Award<br/>
+•   Connect Award<br/>
+•   Reach Award<br/>
+•   Sustain Award<br/>
+•   Design Award<br/>
+•   Innovate Award<br/>
+•   Control Award<br/>
+için de event büyüklüğüne bağlı olarak farklı<br/>
+sıralamalar vardır.<br/>
+Judges’ Choice Award ise her event’te<br/>
+opsiyoneldir.<br/>
+Parantez içindeki award seviyeleri<br/>
+discretionary’dir; yani zorunlu değildir.</p>
+</div>
+<div class="card">
+<h3 id="awardRulesBioTitle9">A212 — Judging feedback is provided to (Page 52)</h3>
+<p id="awardRulesBioText9">all teams.<br/>
+Her takım Initial Interview sonrasında feedback<br/>
+alır.<br/>
+JUDGES interview’ın hemen ardından ilk<br/>
+izlenimlerine göre feedback formunu doldurur. Bu<br/>
+form daha sonraki judging deliberations sırasında<br/>
+kullanılmaz.<br/>
+Feedback:<br/>
+• in-person judging’de PORTFOLIO ile birlikte<br/>
+etkinlik sonunda verilebilir,<br/>
+• veya Lead Coach 1’e FTC-Scoring üzerinden<br/>
+dijital olarak gönderilebilir.<br/>
+A213 — Teams are only eligible to win<br/>
+the Inspire Award in their own region.<br/>
+Takım yalnızca HOME REGION içindeki<br/>
+tournament’larda Inspire Award için<br/>
+değerlendirilebilir.<br/>
+İstisna:<br/>
+• FIRST Championship<br/>
+• FIRST Premier Events<br/>
+Bu etkinliklerde bütün takımlar Inspire Award için<br/>
+değerlendirilebilir.<br/>
+A214 — Teams cannot win the Inspire<br/>
+Award at multiple Qualifying or League<br/>
+Tournaments.<br/>
+Bir takım sezon içinde Qualifying veya League<br/>
+Tournament’lardan yalnızca bir kez 1st Place<br/>
+Inspire Award kazanabilir.<br/>
+Ancak 1st Place Inspire kazandıktan sonra<br/>
+sonraki QT/LT etkinliklerinde:<br/>
+• 2nd Place Inspire<br/>
+• 3rd Place Inspire<br/>
+kazanabilir.<br/>
+Ayrıca daha sonra:<br/>
+• Regional Super Qualifying Tournament<br/>
+• Regional Championship<br/>
+seviyelerinde Inspire kazanması mümkündür.<br/>
+A215 — Teams can only get one judged<br/>
+award.<br/>
+Bir takım aynı event’te yalnızca 1 judged award<br/>
+kazanabilir veya runner-up olabilir.<br/>
+Bu, Tournament ALLIANCE Awards veya<br/>
+Individual Awards kazanmasını engellemez.</p>
+</div>
+<div class="card">
+<h3 id="awardRulesBioTitle10">6.3 Team Judged Award (Page 53)</h3>
+<p id="awardRulesBioText10">Descriptions<br/>
+6.3.1 Inspire Award<br/>
+Inspire Award; FIRST programları için güçlü bir rol<br/>
+model olan takımı tanır.<br/>
+Takım:<br/>
+•   birçok judged award için güçlü aday olmalı,<br/>
+•   pozitif ve saygılı davranmalı,<br/>
+•   FIRST Core Values’ı yansıtmalı,<br/>
+•   Gracious Professionalism göstermeli,<br/>
+•   deneyim, bilgi ve heyecanını paylaşmalı,<br/>
+•   ROBOT tasarlama ve geliştirmede başarılı<br/>
+olmalıdır.<br/>
+Inspire Award Criteria<br/>
+Required 1:<br/>
+Takım PORTFOLIO sunmalıdır.<br/>
+Required 2:<br/>
+Takım şu üç kategorinin her birinden en az bir<br/>
+award için güçlü aday olmalıdır:<br/>
+• Machine, Creativity, and Innovation Awards<br/>
+• Team Attributes Awards<br/>
+• Think Award<br/>
+Required 3:<br/>
+Takım pozitif ve inclusive olmalı; her takım üyesi<br/>
+takımın başarısına katkıda bulunmalıdır.<br/>
+Required 4:<br/>
+Takım deneyimlerini ve bilgilerini JUDGES ile<br/>
+paylaşabilmelidir.</p>
+</div>
+<div class="card">
+<h3 id="awardRulesBioTitle11">6.3.2 Think Award (Page 54)</h3>
+<p id="awardRulesBioText11">Think Award, güçlü bir PORTFOLIO hazırlayan<br/>
+takımı tanır.<br/>
+PORTFOLIO:<br/>
+• engineering journey’yi,<br/>
+• takımın sezon boyunca gelişimini,<br/>
+• tasarım/build/programlama kararlarını<br/>
+açıkça göstermelidir.<br/>
+Think Award Criteria<br/>
+Required 1: PORTFOLIO zorunludur ve en az bir<br/>
+engineering topic içermelidir:<br/>
+A. Engineering process kullanımına dair kanıt<br/>
+B. ROBOT tasarımından öğrenilen ve uygulanan<br/>
+dersler<br/>
+C. Farklı tasarım seçeneklerinin karşılaştırılması<br/>
+ve neden birinin seçildiğinin açıklanması<br/>
+D. ROBOT veya programming design<br/>
+kararlarında matematik kullanımı<br/>
+Encouraged 2:<br/>
+PORTFOLIO’daki bilgi kolay okunmalı ve kolay<br/>
+bulunmalıdır.<br/>
+6.3.3 Connect Award<br/>
+STEM topluluğuyla anlamlı bağlantılar kuran ve<br/>
+bu bağlantıları uzun vadeli takım gelişiminde<br/>
+kullanan takımı tanır.<br/>
+PORTFOLIO gerekli değildir.<br/>
+Required 1:<br/>
+Takım professional development planını<br/>
+açıklamalıdır:<br/>
+• öğrenme hedefleri,<br/>
+• bu hedeflere ulaşmak için atılan/atılacak<br/>
+adımlar.<br/>
+Encouraged:<br/>
+• STEM profesyonelleriyle ilişkiler kurmak,<br/>
+• engineering community ile mentoring,<br/>
+knowledge sharing, technical guidance veya<br/>
+collaboration yapmak.</p>
+</div>
+<div class="card">
+<h3 id="awardRulesBioTitle12">6.3.4 Reach Award (Page 55)</h3>
+<p id="awardRulesBioText12">FIRST topluluğuna daha önce katılmamış kişileri<br/>
+FIRST’e kazandıran takımı tanır.<br/>
+PORTFOLIO gerekli değildir.<br/>
+Reach Award Criteria<br/>
+Required 1: Outreach planı açıklanmalı:<br/>
+• outreach objectives,<br/>
+• strategy,<br/>
+• FIRST community growth’a katkısı.<br/>
+Required 2:<br/>
+Daha önce FIRST community’de yer almamış<br/>
+yeni:<br/>
+•   teams,<br/>
+•   coaches,<br/>
+•   mentors,<br/>
+•   volunteers<br/>
+kazandırılmış olmalı.<br/>
+Encouraged:<br/>
+• FIRST ambassador olmak,<br/>
+• public awareness artırmak,<br/>
+• etkili ve sürekli gelişen promotion/outreach<br/>
+materyalleri hazırlamak.<br/>
+6.3.5 Sustain Award<br/>
+Takımın gelecekte devam etmesini ve büyümesini<br/>
+sağlayacak leadership, resources ve<br/>
+organizational practices oluşturan takımı tanır.<br/>
+PORTFOLIO gerekli değildir.<br/>
+Required:<br/>
+• financial sustainability,<br/>
+• season planning,<br/>
+• long-term team sustainability<br/>
+alanlarından en az birinde plan bulunmalı.<br/>
+Ayrıca takım bu planların ilerlemesini nasıl<br/>
+ölçtüğünü, takip ettiğini ve değerlendirdiğini<br/>
+gösterebilmelidir.<br/>
+Encouraged:<br/>
+•   future student leaders yetiştirmek,<br/>
+•   açık takım rolleri,<br/>
+•   risk management,<br/>
+•   sorunlarda mitigation ve plan değişikliği.</p>
+</div>
+<div class="card">
+<h3 id="awardRulesBioTitle13">6.3.6 Innovate Award sponsored by RTX (Page 56)</h3>
+<p id="awardRulesBioText13">ROBOTS’un game challenge’larına yaratıcı<br/>
+çözümler geliştiren takımı tanır.<br/>
+Tasarım:<br/>
+• yaratıcı,<br/>
+• özgün,<br/>
+• ROBOT’un tamamına veya bir MECHANISM’e<br/>
+ait<br/>
+olabilir.<br/>
+PORTFOLIO gerekli değildir.<br/>
+Innovate Award Criteria<br/>
+Required:<br/>
+1. Engineering work ve design development<br/>
+süreci gösterilmeli.<br/>
+2. ROBOT/MECHANISM creative veya unique<br/>
+olmalı.<br/>
+3. Tasarım stabil ve reliable olmalı; game goals’a<br/>
+çoğu zaman ulaşmalı.<br/>
+Encouraged:<br/>
+Tasarım riskleri ve bu risklerin nasıl azaltıldığı<br/>
+açıklanmalı.<br/>
+6.3.7 Control Award<br/>
+Sensors ve software kullanarak game<br/>
+challenge’larına yaratıcı çözümler geliştiren takımı<br/>
+tanır.<br/>
+Örneğin:<br/>
+• autonomous operation,<br/>
+• smarter mechanical systems,<br/>
+• sensors<br/>
+kullanılabilir.<br/>
+Çözüm AUTO, TELEOP veya her ikisinde<br/>
+kullanılabilir.<br/>
+PORTFOLIO zorunludur.<br/>
+PORTFOLIO şunları açıklamalıdır:<br/>
+• hardware/software control COMPONENTS,<br/>
+• çözdükleri problemler,<br/>
+• her sistemin işlevi.<br/>
+Ayrıca external feedback kullanarak ROBOT’u<br/>
+kontrol eden en az bir hardware/software çözümü<br/>
+bulunmalıdır.<br/>
+Full code’u PORTFOLIO’ya koymak gerekli<br/>
+değildir.</p>
+</div>
+<div class="card">
+<h3 id="awardRulesBioTitle14">6.3.8 Design Award (Page 57)</h3>
+<p id="awardRulesBioText14">Industrial design prensiplerini anlayan takımı tanır.<br/>
+Odak:<br/>
+•   form,<br/>
+•   function,<br/>
+•   appearance,<br/>
+•   efficiency,<br/>
+•   maintainability.<br/>
+PORTFOLIO gerekli değildir.<br/>
+Design Award Criteria<br/>
+Required:<br/>
+1. ROBOT elegant, efficient ve/veya practical to<br/>
+maintain olmalı.<br/>
+2. Sadece tek COMPONENT değil, ROBOT’un<br/>
+tamamı veya tasarım süreci dikkate alınır.<br/>
+Encouraged:<br/>
+• ROBOT görünümü ve fonksiyonuyla öne<br/>
+çıkmalı.<br/>
+• Tasarım kararlarının nedenleri düşünülmüş<br/>
+olmalı.<br/>
+• Tasarım game plan/strategy ile uyumlu ve<br/>
+consistent çalışmalı.<br/>
+6.3.9 Judges’ Choice Award<br/>
+Opsiyoneldir; her event’te verilmez.<br/>
+Diğer award kategorilerine uymayan fakat:<br/>
+• unique efforts,<br/>
+• performance,<br/>
+• team dynamics<br/>
+nedeniyle dikkat çeken takıma verilebilir.<br/>
+6.4 Tournament ALLIANCE Awards<br/>
+6.4.1 Winning Alliance Award<br/>
+Playoff final MATCH’inde kazanan ALLIANCE’a<br/>
+verilir.<br/>
+Dual/multi-division event’lerde division playoff<br/>
+winners ve event finals playoff winners için ayrı<br/>
+award’lar olabilir.<br/>
+6.4.2 Finalist Alliance Award<br/>
+Playoff final MATCH’inde finalist olan ALLIANCE’a<br/>
+verilir.</p>
+</div>
+<div class="card">
+<h3 id="awardRulesBioTitle15">6.5 Individual Awards (Page 58)</h3>
+<p id="awardRulesBioText15">6.5.1 FIRST Leadership Award<br/>
+Öğrenci liderliğini güçlü şekilde gösteren<br/>
+öğrencileri tanır.<br/>
+Bu kişiler:<br/>
+• FIRST mission’ı destekler,<br/>
+• Inclusion, Teamwork, Impact gibi Core<br/>
+Values’ı savunur,<br/>
+• Gracious Professionalism gösterir,<br/>
+• gelecekte lifelong leader/alumni/advocate<br/>
+olmaya hazırlanır.<br/>
+6.5.2 Compass Award<br/>
+Regional Championship seviyesinde opsiyonel bir<br/>
+award’dır.<br/>
+FIRST Championship’e katılan tüm takımlar bu<br/>
+award’a başvurabilir.<br/>
+Outstanding guidance/support sağlayan bir adult<br/>
+coach veya mentor’u tanır.<br/>
+Başvuru:<br/>
+• takım STUDENT’ları tarafından yapılır,<br/>
+• 40–60 saniyelik video gerekir,<br/>
+• mentorun takıma katkısı ve onu özel yapan<br/>
+şey gösterilmelidir.<br/>
+Compass Award Criteria<br/>
+Required 1:<br/>
+Takım mentorun katkısını ve onu farklı yapan<br/>
+özelliği açıklayabilmeli.<br/>
+Required 2: Video:<br/>
+• Event Director/local Program Delivery Partner<br/>
+deadline’ına kadar,<br/>
+• .mp4, .mov, .avi, .wmv,<br/>
+• takım başına event başına 1 video,<br/>
+• telifli müzik izinli,<br/>
+• maksimum 60 saniye, credits dahil<br/>
+olmalıdır.</p>
+</div>
+<div class="card">
+<h3 id="awardRulesBioTitle16">6.6 Project-Based Global Awards (Page 59)</h3>
+<p id="awardRulesBioText16">Bunlar sezon boyunca bir kez değerlendirilen ve<br/>
+verilen global award’lardır.<br/>
+Tüm registered FIRST Tech Challenge teams<br/>
+başvurabilir.<br/>
+Her award’ın:<br/>
+• kendi requirements’ı,<br/>
+• kendi deadline’ı<br/>
+vardır.<br/>
+Bu award’lar team advancement’a katkı<br/>
+sağlamaz.<br/>
+Daha fazla bilgi sonradan yayınlanacaktır.</p>
+</div>
+</section>
+<footer class="footer">
+<div class="footer-container">
+<div class="footer-column">
+<h3 id="footerTitle">QuickManual</h3>
+<p id="footerDescription">
+            A community resource by Asteria Robotics
+            This is not an official FIRST document.
+        </p>
+</div>
+<div class="footer-column">
+<h3 id="contactTitle">İletişim</h3>
+<p><a href="mailto:asteria.32334@gmail.com">
+    asteria.32334@gmail.com
+</a></p>
+<p><a href="tel:+905057770038">
+    +90 (505) 777 00 38
+</a></p>
+<a href="https://maps.app.goo.gl/HN1VrrvqUwMMbExA6?g_st=ic" id="addressText" target="_blank">
+
+Atölyemizin Adresi
+
+</a>
+</div>
+<div class="footer-column">
+<h3> </h3>
+<a href="https://www.instagram.com/asteria_32334/" id="instagramText" target="_blank">
+
+Instagram
+
+</a>
+<p><a href="https://theorangealliance.org/teams/32334" target="_blank">
+        The Orange Alliance
+    </a></p>
+<p><a href="https://ftcscout.org/teams/32334" target="_blank">
+        FTCScout
+    </a></p>
+
+<p><a href="https://www.youtube.com/@asteria32334" target="_blank">
+        YouTube
+    </a></p>
+</div>
+</div>
+<div class="footer-bottom" id="copyrightText">
+© 2026 Asteria Robotics FTC Team 32334. All Rights Reserved.
+</div>
+<div class="footer-bottom-asterisk" id="asterisk">
+        * QuickManual resmi Oyun Kılavuzu değildir ve hiçbir zaman eksiksiz ya da kesin kural kaynağı olarak kabul edilmemelidir. FIRST tarafından yayınlanan resmi belgenin yerini tutmaz. Resmi kararlar, muayene süreçleri veya itirazlar için takımlar her zaman en güncel resmi Game Manual’a başvurmalıdır.
+    </div>
+<!--<div class="footer-bottom-asterisk" id="dateUpdate">
+        ** Son güncellenme tarihi: 5 ağustos 2026, Game Manual V0
+    </div> -->
+<img alt="biobuzz" class="center-image" src="images/biobuzz.png" style="max-width: 50%; height: auto; display: block;"/>
+</footer>
+<script>
+const translations = {
+  "tr": {
+    "navGameRules": "Maç Kuralları",
+    "navFieldInfo": "Saha Eleman Bilgileri",
+    "navMatchProcedures": "Maç Prosedürleri",
+    "navScoringSystem": "Nasıl Puan Kazanılır",
+    "navHome": "Ödüller ve Tanımlar",
+    "navTeam": "Genel Kurallar",
+    "navRobots": "Robot Yapımı",
+    "navDecode": "Geri dön",
+    "asterisk": "* QuickManual resmi Oyun Kılavuzu değildir ve hiçbir zaman eksiksiz ya da kesin kural kaynağı olarak kabul edilmemelidir. FIRST tarafından yayınlanan resmi belgenin yerini tutmaz. Resmi kararlar, muayene süreçleri veya itirazlar için takımlar her zaman en güncel resmi Game Manual’a başvurmalıdır.",
+    "dateUpdate": "** Son güncellenme tarihi: 5 ağustos 2026, Game Manual V0",
+    "pageSearch": "Sayfada ara... (örnek: kurallar, ödül, robot)",
+    "clear": "Temizle",
+    "awardRulesTitle": "Ödüller ve Tanımlar",
+    "footerTitle": "QuickManual",
+    "footerDescription": "A community resource by Asteria Robotics\nThis is not an official FIRST document.",
+    "contactTitle": "İletişim",
+    "addressText": "Atölyemizin Adresi",
+    "instagramText": "Instagram",
+    "copyrightText": "© 2026 Asteria Robotics FTC Team 32334. Tüm Hakları Saklıdır.",
+    "navPanel": "Kategoriler",
+    "awardRulesBioTitle4": "Initial Interview’ın Q&A kısmının başında tüm (Page 47)",
+    "awardRulesBioText15": "6.5.1 FIRST Leadership Award<br/>\nÖğrenci liderliğini güçlü şekilde gösteren<br/>\nöğrencileri tanır.<br/>\nBu kişiler:<br/>\n• FIRST mission’ı destekler,<br/>\n• Inclusion, Teamwork, Impact gibi Core<br/>\nValues’ı savunur,<br/>\n• Gracious Professionalism gösterir,<br/>\n• gelecekte lifelong leader/alumni/advocate<br/>\nolmaya hazırlanır.<br/>\n6.5.2 Compass Award<br/>\nRegional Championship seviyesinde opsiyonel bir<br/>\naward’dır.<br/>\nFIRST Championship’e katılan tüm takımlar bu<br/>\naward’a başvurabilir.<br/>\nOutstanding guidance/support sağlayan bir adult<br/>\ncoach veya mentor’u tanır.<br/>\nBaşvuru:<br/>\n• takım STUDENT’ları tarafından yapılır,<br/>\n• 40–60 saniyelik video gerekir,<br/>\n• mentorun takıma katkısı ve onu özel yapan<br/>\nşey gösterilmelidir.<br/>\nCompass Award Criteria<br/>\nRequired 1:<br/>\nTakım mentorun katkısını ve onu farklı yapan<br/>\nözelliği açıklayabilmeli.<br/>\nRequired 2: Video:<br/>\n• Event Director/local Program Delivery Partner<br/>\ndeadline’ına kadar,<br/>\n• .mp4, .mov, .avi, .wmv,<br/>\n• takım başına event başına 1 video,<br/>\n• telifli müzik izinli,<br/>\n• maksimum 60 saniye, credits dahil<br/>\nolmalıdır.",
+    "awardRulesBioTitle10": "6.3 Team Judged Award (Page 53)",
+    "awardRulesBioText13": "ROBOTS’un game challenge’larına yaratıcı<br/>\nçözümler geliştiren takımı tanır.<br/>\nTasarım:<br/>\n• yaratıcı,<br/>\n• özgün,<br/>\n• ROBOT’un tamamına veya bir MECHANISM’e<br/>\nait<br/>\nolabilir.<br/>\nPORTFOLIO gerekli değildir.<br/>\nInnovate Award Criteria<br/>\nRequired:<br/>\n1. Engineering work ve design development<br/>\nsüreci gösterilmeli.<br/>\n2. ROBOT/MECHANISM creative veya unique<br/>\nolmalı.<br/>\n3. Tasarım stabil ve reliable olmalı; game goals’a<br/>\nçoğu zaman ulaşmalı.<br/>\nEncouraged:<br/>\nTasarım riskleri ve bu risklerin nasıl azaltıldığı<br/>\naçıklanmalı.<br/>\n6.3.7 Control Award<br/>\nSensors ve software kullanarak game<br/>\nchallenge’larına yaratıcı çözümler geliştiren takımı<br/>\ntanır.<br/>\nÖrneğin:<br/>\n• autonomous operation,<br/>\n• smarter mechanical systems,<br/>\n• sensors<br/>\nkullanılabilir.<br/>\nÇözüm AUTO, TELEOP veya her ikisinde<br/>\nkullanılabilir.<br/>\nPORTFOLIO zorunludur.<br/>\nPORTFOLIO şunları açıklamalıdır:<br/>\n• hardware/software control COMPONENTS,<br/>\n• çözdükleri problemler,<br/>\n• her sistemin işlevi.<br/>\nAyrıca external feedback kullanarak ROBOT’u<br/>\nkontrol eden en az bir hardware/software çözümü<br/>\nbulunmalıdır.<br/>\nFull code’u PORTFOLIO’ya koymak gerekli<br/>\ndeğildir.",
+    "awardRulesBioText7": "when the team starts.<br/>\nJUDGES kendini tanıttıktan ve takım<br/>\npresentation’a veya Q&A’ya başladıktan sonra<br/>\ntimer başlar.<br/>\nTakım uzun süre başlamazsa JUDGES takımı<br/>\nuyarabilir ve timer yine başlatılır.<br/>\nA207 — Prepared initial presentation<br/>\ntime should not be interrupted.<br/>\nİlk 5 dakika, takım isterse uninterrupted prepared<br/>\noral presentation için ayrılır.<br/>\nTakım presentation’ı erken bitirebilir; kalan süre<br/>\nQ&A olur.<br/>\nA208 — One adult silent observer is<br/>\nwelcome.<br/>\nBir yetişkin sessiz observer olarak interview’a<br/>\nkatılabilir.<br/>\nAncak:<br/>\n• öğrencilerle JUDGES arasındaki etkileşime<br/>\nmüdahale edemez,<br/>\n• aktif coaching yapamaz.<br/>\nA209 — Translator and/or Sign<br/>\nLanguage Interpreter accommodations<br/>\nwill be made for teams who need it.<br/>\nTakımın ana dili JUDGES’ın diliyle aynı değilse<br/>\ntranslator kullanılabilir.<br/>\nGerekirse önceden Event Director ile iletişime<br/>\ngeçilerek 2–5 dakika ek interview süresi<br/>\nistenebilir.<br/>\nA210 — No Photos, Video or Audio<br/>\nrecording during Initial Interview.<br/>\nInitial Interview sırasında fotoğraf, video veya ses<br/>\nkaydı alınamaz.",
+    "awardRulesBioText2": "JUDGES şu kaynakları kullanır:<br/>\n• Initial Interview<br/>\n• Follow-up interview<br/>\n• PORTFOLIO (uygunsa)<br/>\nJudging yalnızca current event ve current<br/>\nseason bilgilerine dayanır.<br/>\nManual’a göre current season judging açısından<br/>\nJanuary 1, 2026 tarihinde başlar.<br/>\nJUDGES şu bilgileri değerlendiremez:<br/>\n• Geçmiş event performansı<br/>\n• Takım hakkında kişisel bilgileri<br/>\n• Websites/social media gibi external sources<br/>\n• Award criteria’da özellikle belirtilmedikçe<br/>\nROBOT’un MATCH performansı<br/>\n• ROBOT penalties<br/>\n• Tournament ranking<br/>\nPORTFOLIO’da January 1, 2026’dan sonraki<br/>\nprogress/challenges/accomplishments current<br/>\nseason kapsamında değerlendirilebilir.",
+    "awardRulesBioText6": "submitted on time and as requested.<br/>\nPORTFOLIO, Event Director’ın belirttiği yöntem<br/>\nve deadline’a göre teslim edilmelidir.<br/>\nBaşka talimat yoksa Initial Interview sırasında 1<br/>\nprinted copy verilmelidir.<br/>\nA203 — Teams must participate in an<br/>\nInitial Interview session.<br/>\nJudged Award için Initial Interview zorunludur.<br/>\nA204 — Have the right resources<br/>\navailable for your Initial Interview.<br/>\n2 veya daha fazla öğrencili takımlarda en az 2<br/>\nSTUDENT representative bulunmalıdır.<br/>\nTakımın yanında:<br/>\n•   PORTFOLIO,<br/>\n•   show-and-tell materyalleri,<br/>\n•   isteğe bağlı 1 silent observer,<br/>\n•   gerekiyorsa 1 support person<br/>\nbulunabilir.<br/>\nROBOT olmadan da judging’e katılmak<br/>\nmümkündür.<br/>\nA205 — Everyone gets equal Initial<br/>\nInterview time.<br/>\nTüm takımlar aynı uzunlukta ve en az 10 dakika<br/>\nInitial Interview süresine sahip olur.",
+    "awardRulesBioText8": "A211 — The number of awards given<br/>\nscales with event size.<br/>\nVerilecek judged award sayısı etkinliğe katılan<br/>\ntakım sayısına göre değişir.<br/>\nEvent büyüklüğüne göre:<br/>\n•   4–10 teams<br/>\n•   11–20 teams<br/>\n•   21–40 teams<br/>\n•   41–64 teams<br/>\niçin farklı award seviyeleri bulunur.<br/>\nÖrneğin Inspire Award küçük etkinliklerde yalnızca<br/>\n1st Place olabilirken daha büyük etkinliklerde 2nd<br/>\nve 3rd Place de verilebilir.<br/>\nAynı şekilde:<br/>\n•   Think Award<br/>\n•   Connect Award<br/>\n•   Reach Award<br/>\n•   Sustain Award<br/>\n•   Design Award<br/>\n•   Innovate Award<br/>\n•   Control Award<br/>\niçin de event büyüklüğüne bağlı olarak farklı<br/>\nsıralamalar vardır.<br/>\nJudges’ Choice Award ise her event’te<br/>\nopsiyoneldir.<br/>\nParantez içindeki award seviyeleri<br/>\ndiscretionary’dir; yani zorunlu değildir.",
+    "awardRulesBioTitle1": "Figure 6-1: Award hierarchy (Page 44)",
+    "awardRulesBioTitle11": "6.3.2 Think Award (Page 54)",
+    "awardRulesBioTitle7": "A206 — The Initial Interview timer starts (Page 50)",
+    "awardRulesBioTitle12": "6.3.4 Reach Award (Page 55)",
+    "awardRulesBioTitle13": "6.3.6 Innovate Award sponsored by RTX (Page 56)",
+    "awardRulesBioTitle5": "6.2 Team Judged Award (Page 48)",
+    "awardRulesBioText1": "Inspire Award<br/>\nMCI, TA ve Documentation alanlarında başarılı<br/>\nolan ve diğerlerine ilham veren takımı tanır.<br/>\nMCI awards<br/>\nROBOT’un:<br/>\n•   brainstorming,<br/>\n•   design,<br/>\n•   construction,<br/>\n•   operation,<br/>\n•   control<br/>\nalanlarındaki teknik başarısını değerlendirir.<br/>\nTA awards<br/>\nTakımın skillset geliştirmesi, program/team’i<br/>\nsürdürülebilir hale getirmesi ve FIRST mesajını<br/>\noutreach yoluyla yaymasını değerlendirir.<br/>\nThink Award<br/>\nTakımın PORTFOLIO üzerinden process ve<br/>\nROBOT’unu başarılı şekilde dokümante etmesini<br/>\ndeğerlendirir.<br/>\nJudges’ Choice Award<br/>\nDiğer kategorilere tam uymayan fakat özel çabası,<br/>\nperformansı veya takım dinamiği nedeniyle dikkat<br/>\nçeken takıma verilir.<br/>\nÖnemli: JUDGES kazananı mutlaka “en iyi takım”<br/>\nolarak değerlendirmez; yayınlanmış award<br/>\ncriteria’ya olumlu örnek olan takımları tanırlar.<br/>\nTakımın ROBOT inspection durumundan<br/>\nbağımsız olarak judging’e katılması mümkündür;<br/>\nROBOT olmadan gelen takım bile judged award<br/>\niçin uygun olabilir.",
+    "awardRulesBioTitle14": "6.3.8 Design Award (Page 57)",
+    "awardRulesBioTitle8": "6.2 Team Judged Award Rules (Page 51)",
+    "awardRulesBioTitle16": "6.6 Project-Based Global Awards (Page 59)",
+    "awardRulesBioTitle15": "6.5 Individual Awards (Page 58)",
+    "awardRulesBioText12": "FIRST topluluğuna daha önce katılmamış kişileri<br/>\nFIRST’e kazandıran takımı tanır.<br/>\nPORTFOLIO gerekli değildir.<br/>\nReach Award Criteria<br/>\nRequired 1: Outreach planı açıklanmalı:<br/>\n• outreach objectives,<br/>\n• strategy,<br/>\n• FIRST community growth’a katkısı.<br/>\nRequired 2:<br/>\nDaha önce FIRST community’de yer almamış<br/>\nyeni:<br/>\n•   teams,<br/>\n•   coaches,<br/>\n•   mentors,<br/>\n•   volunteers<br/>\nkazandırılmış olmalı.<br/>\nEncouraged:<br/>\n• FIRST ambassador olmak,<br/>\n• public awareness artırmak,<br/>\n• etkili ve sürekli gelişen promotion/outreach<br/>\nmateryalleri hazırlamak.<br/>\n6.3.5 Sustain Award<br/>\nTakımın gelecekte devam etmesini ve büyümesini<br/>\nsağlayacak leadership, resources ve<br/>\norganizational practices oluşturan takımı tanır.<br/>\nPORTFOLIO gerekli değildir.<br/>\nRequired:<br/>\n• financial sustainability,<br/>\n• season planning,<br/>\n• long-term team sustainability<br/>\nalanlarından en az birinde plan bulunmalı.<br/>\nAyrıca takım bu planların ilerlemesini nasıl<br/>\nölçtüğünü, takip ettiğini ve değerlendirdiğini<br/>\ngösterebilmelidir.<br/>\nEncouraged:<br/>\n•   future student leaders yetiştirmek,<br/>\n•   açık takım rolleri,<br/>\n•   risk management,<br/>\n•   sorunlarda mitigation ve plan değişikliği.",
+    "awardRulesBioTitle9": "A212 — Judging feedback is provided to (Page 52)",
+    "awardRulesBioText9": "all teams.<br/>\nHer takım Initial Interview sonrasında feedback<br/>\nalır.<br/>\nJUDGES interview’ın hemen ardından ilk<br/>\nizlenimlerine göre feedback formunu doldurur. Bu<br/>\nform daha sonraki judging deliberations sırasında<br/>\nkullanılmaz.<br/>\nFeedback:<br/>\n• in-person judging’de PORTFOLIO ile birlikte<br/>\netkinlik sonunda verilebilir,<br/>\n• veya Lead Coach 1’e FTC-Scoring üzerinden<br/>\ndijital olarak gönderilebilir.<br/>\nA213 — Teams are only eligible to win<br/>\nthe Inspire Award in their own region.<br/>\nTakım yalnızca HOME REGION içindeki<br/>\ntournament’larda Inspire Award için<br/>\ndeğerlendirilebilir.<br/>\nİstisna:<br/>\n• FIRST Championship<br/>\n• FIRST Premier Events<br/>\nBu etkinliklerde bütün takımlar Inspire Award için<br/>\ndeğerlendirilebilir.<br/>\nA214 — Teams cannot win the Inspire<br/>\nAward at multiple Qualifying or League<br/>\nTournaments.<br/>\nBir takım sezon içinde Qualifying veya League<br/>\nTournament’lardan yalnızca bir kez 1st Place<br/>\nInspire Award kazanabilir.<br/>\nAncak 1st Place Inspire kazandıktan sonra<br/>\nsonraki QT/LT etkinliklerinde:<br/>\n• 2nd Place Inspire<br/>\n• 3rd Place Inspire<br/>\nkazanabilir.<br/>\nAyrıca daha sonra:<br/>\n• Regional Super Qualifying Tournament<br/>\n• Regional Championship<br/>\nseviyelerinde Inspire kazanması mümkündür.<br/>\nA215 — Teams can only get one judged<br/>\naward.<br/>\nBir takım aynı event’te yalnızca 1 judged award<br/>\nkazanabilir veya runner-up olabilir.<br/>\nBu, Tournament ALLIANCE Awards veya<br/>\nIndividual Awards kazanmasını engellemez.",
+    "awardRulesBioText10": "Descriptions<br/>\n6.3.1 Inspire Award<br/>\nInspire Award; FIRST programları için güçlü bir rol<br/>\nmodel olan takımı tanır.<br/>\nTakım:<br/>\n•   birçok judged award için güçlü aday olmalı,<br/>\n•   pozitif ve saygılı davranmalı,<br/>\n•   FIRST Core Values’ı yansıtmalı,<br/>\n•   Gracious Professionalism göstermeli,<br/>\n•   deneyim, bilgi ve heyecanını paylaşmalı,<br/>\n•   ROBOT tasarlama ve geliştirmede başarılı<br/>\nolmalıdır.<br/>\nInspire Award Criteria<br/>\nRequired 1:<br/>\nTakım PORTFOLIO sunmalıdır.<br/>\nRequired 2:<br/>\nTakım şu üç kategorinin her birinden en az bir<br/>\naward için güçlü aday olmalıdır:<br/>\n• Machine, Creativity, and Innovation Awards<br/>\n• Team Attributes Awards<br/>\n• Think Award<br/>\nRequired 3:<br/>\nTakım pozitif ve inclusive olmalı; her takım üyesi<br/>\ntakımın başarısına katkıda bulunmalıdır.<br/>\nRequired 4:<br/>\nTakım deneyimlerini ve bilgilerini JUDGES ile<br/>\npaylaşabilmelidir.",
+    "awardRulesBioText5": "Rules<br/>\nA201 — Team PORTFOLIOS have limits.<br/>\nPORTFOLIO:<br/>\n•   1 cover page içermeli.<br/>\n•   En fazla 15 content page olmalı.<br/>\n•   US Letter veya A4 boyutunda olmalı.<br/>\n•   Dijital ise 15 MB’den küçük olmalı.<br/>\n•   Yalnızca January 1, 2026 sonrasındaki<br/>\nprogress, challenges ve accomplishments’ı<br/>\niçermeli.<br/>\nCover page award criteria değerlendirmesinde<br/>\nkullanılmaz.<br/>\n15 sayfanın üzerindeki içerik değerlendirilmez.<br/>\nStudent privacy için:<br/>\n• yalnızca first name + last initial kullanılması,<br/>\n• öğrencilerin full name’lerinin yazılmaması<br/>\nistenir.<br/>\nJUDGES PORTFOLIO içindeki link, website veya<br/>\nvideo’lara tıklamaz.<br/>\nAyrıca interview’da verilen ekstra basılı<br/>\ndokümanları judging room’a götürmezler.<br/>\nAI kullanımı<br/>\nTakımlar PORTFOLIO hazırlarken AI ve research<br/>\naids kullanabilir; ancak intellectual property<br/>\nhaklarına uymalı ve AI kullanımını footnote/<br/>\nendnote ile belirtmelidir.<br/>\nManual örnek olarak “Portfolio created by Team<br/>\nXXXXX and ChatGPT” ifadesini veriyor.",
+    "awardRulesBioTitle2": "6.1.1 Sources of Information Considered for Awards (Page 45)",
+    "awardRulesBioTitle3": "6.1.2 Initial Interview (Page 46)",
+    "awardRulesBioText3": "Takımlar Initial Interview’a hazırlanmalıdır.<br/>\nÜç format olabilir:<br/>\n1. Scheduled in-person<br/>\n2. Unscheduled in-person<br/>\n3. Remote<br/>\nÜç formatın award kuralları aynıdır.<br/>\nInterview akışı:<br/>\n1. JUDGES kendini tanıtır.<br/>\n2. Takım isterse prepared presentation başlatır.<br/>\n3. Takım yaklaşık 5 dakika uninterrupted<br/>\npresentation yapabilir.<br/>\n4. JUDGES Q&A yapar.<br/>\n5. Interview sona erer.<br/>\n6. JUDGES kendi arasında değerlendirme yapar.<br/>\n7. Sonraki takım çağrılır.<br/>\nInitial Interview formatını Event Director belirler.<br/>\nPit’te yapılan interview’larda çevrenin gürültülü<br/>\nolabileceği dikkate alınmalıdır.",
+    "awardRulesBioText14": "Industrial design prensiplerini anlayan takımı tanır.<br/>\nOdak:<br/>\n•   form,<br/>\n•   function,<br/>\n•   appearance,<br/>\n•   efficiency,<br/>\n•   maintainability.<br/>\nPORTFOLIO gerekli değildir.<br/>\nDesign Award Criteria<br/>\nRequired:<br/>\n1. ROBOT elegant, efficient ve/veya practical to<br/>\nmaintain olmalı.<br/>\n2. Sadece tek COMPONENT değil, ROBOT’un<br/>\ntamamı veya tasarım süreci dikkate alınır.<br/>\nEncouraged:<br/>\n• ROBOT görünümü ve fonksiyonuyla öne<br/>\nçıkmalı.<br/>\n• Tasarım kararlarının nedenleri düşünülmüş<br/>\nolmalı.<br/>\n• Tasarım game plan/strategy ile uyumlu ve<br/>\nconsistent çalışmalı.<br/>\n6.3.9 Judges’ Choice Award<br/>\nOpsiyoneldir; her event’te verilmez.<br/>\nDiğer award kategorilerine uymayan fakat:<br/>\n• unique efforts,<br/>\n• performance,<br/>\n• team dynamics<br/>\nnedeniyle dikkat çeken takıma verilebilir.<br/>\n6.4 Tournament ALLIANCE Awards<br/>\n6.4.1 Winning Alliance Award<br/>\nPlayoff final MATCH’inde kazanan ALLIANCE’a<br/>\nverilir.<br/>\nDual/multi-division event’lerde division playoff<br/>\nwinners ve event finals playoff winners için ayrı<br/>\naward’lar olabilir.<br/>\n6.4.2 Finalist Alliance Award<br/>\nPlayoff final MATCH’inde finalist olan ALLIANCE’a<br/>\nverilir.",
+    "awardRulesBioText4": "takımlara iki temel soru sorulur:<br/>\n• Bir soru MCI kategorisine,<br/>\n• bir soru TA kategorisine<br/>\nodaklanır.<br/>\nSonrasında JUDGES ek sorular sorabilir.<br/>\n6.1.3 Pit Interview(s)<br/>\nInitial Interviews tamamlandıktan sonra JUDGES,<br/>\nbazı takımlarla pit’te follow-up interview yapabilir.<br/>\nTakımlar burada:<br/>\n• ROBOT prototypes,<br/>\n• design artifacts,<br/>\n• outreach fotoğrafları/mektupları<br/>\ngibi ek materyaller gösterebilir.<br/>\nYeni bir presentation hazırlamak gerekmez.<br/>\nAncak JUDGES pit interview sırasında ek bilgi<br/>\nokuyabilse de, bu materyalleri daha sonra<br/>\ndeliberation’a taşıyamaz.<br/>\n6.1.4 Sustained Outreach and<br/>\nDemonstrating Impact by Numbers<br/>\nSürekli ve sürdürülebilir outreach, tek seferlik<br/>\noutreach’ten daha güçlü kabul edilir.<br/>\nJUDGES yalnızca “kaç kişiye ulaşıldığına” değil,<br/>\noutreach’in ulaşılan kişiler üzerindeki impact’ine<br/>\nde bakar.",
+    "awardRulesBioText16": "Bunlar sezon boyunca bir kez değerlendirilen ve<br/>\nverilen global award’lardır.<br/>\nTüm registered FIRST Tech Challenge teams<br/>\nbaşvurabilir.<br/>\nHer award’ın:<br/>\n• kendi requirements’ı,<br/>\n• kendi deadline’ı<br/>\nvardır.<br/>\nBu award’lar team advancement’a katkı<br/>\nsağlamaz.<br/>\nDaha fazla bilgi sonradan yayınlanacaktır.",
+    "awardRulesBioTitle6": "A202 — PORTFOLIOS must be (Page 49)",
+    "awardRulesBioText11": "Think Award, güçlü bir PORTFOLIO hazırlayan<br/>\ntakımı tanır.<br/>\nPORTFOLIO:<br/>\n• engineering journey’yi,<br/>\n• takımın sezon boyunca gelişimini,<br/>\n• tasarım/build/programlama kararlarını<br/>\naçıkça göstermelidir.<br/>\nThink Award Criteria<br/>\nRequired 1: PORTFOLIO zorunludur ve en az bir<br/>\nengineering topic içermelidir:<br/>\nA. Engineering process kullanımına dair kanıt<br/>\nB. ROBOT tasarımından öğrenilen ve uygulanan<br/>\ndersler<br/>\nC. Farklı tasarım seçeneklerinin karşılaştırılması<br/>\nve neden birinin seçildiğinin açıklanması<br/>\nD. ROBOT veya programming design<br/>\nkararlarında matematik kullanımı<br/>\nEncouraged 2:<br/>\nPORTFOLIO’daki bilgi kolay okunmalı ve kolay<br/>\nbulunmalıdır.<br/>\n6.3.3 Connect Award<br/>\nSTEM topluluğuyla anlamlı bağlantılar kuran ve<br/>\nbu bağlantıları uzun vadeli takım gelişiminde<br/>\nkullanan takımı tanır.<br/>\nPORTFOLIO gerekli değildir.<br/>\nRequired 1:<br/>\nTakım professional development planını<br/>\naçıklamalıdır:<br/>\n• öğrenme hedefleri,<br/>\n• bu hedeflere ulaşmak için atılan/atılacak<br/>\nadımlar.<br/>\nEncouraged:<br/>\n• STEM profesyonelleriyle ilişkiler kurmak,<br/>\n• engineering community ile mentoring,<br/>\nknowledge sharing, technical guidance veya<br/>\ncollaboration yapmak."
+  },
+  "en": {
+    "navGameRules": "Match Rules",
+    "navFieldInfo": "Field Element Information",
+    "navMatchProcedures": "Match Procedures",
+    "navScoringSystem": "How to Score",
+    "navHome": "Awards & Definitions",
+    "navTeam": "General Rules",
+    "navRobots": "Robot Construction",
+    "navDecode": "Go back",
+    "asterisk": "* QuickManual is not the official Game Manual and should never be treated as a complete or final source of rules. It does not replace the official document published by FIRST. For any official decision, inspection, or dispute, teams must always refer to the latest version of the official Game Manual.",
+    "dateUpdate": "** Last updated: August 5, 2026, Game Manual V0",
+    "pageSearch": "Search this page... (Example: rules, rewards, bots)",
+    "clear": "Clear",
+    "awardRulesTitle": "Awards & Definitions",
+    "footerTitle": "QuickManual",
+    "footerDescription": "A community resource by Asteria Robotics\nThis is not an official FIRST document.",
+    "contactTitle": "Contact Us",
+    "addressText": "Our address",
+    "instagramText": "Instagram",
+    "copyrightText": "© 2026 Asteria Robotics FTC Team 32334. All Rights Reserved.",
+    "navPanel": "Categories",
+    "awardRulesBioText1": "The Inspire Award recognizes a team that excels across MCI, Team Attributes, and Documentation and inspires others. MCI awards evaluate technical achievement in ROBOT brainstorming, design, construction, operation, and control. TA awards evaluate skill development, sustainability, and outreach. Think recognizes strong PORTFOLIO documentation. Judges' Choice recognizes a distinctive effort that does not fit another category. JUDGES recognize teams that best demonstrate published criteria; a team may participate in judging even without a ROBOT or completed inspection.",
+    "awardRulesBioText2": "JUDGES may use the Initial Interview, follow-up interviews, and the PORTFOLIO when applicable. Judging is based only on the current event and current season; for judging, the current season begins January 1, 2026. Past event performance, personal information, external websites/social media, ROBOT MATCH performance unless specified, penalties, and tournament ranking are not considered. PORTFOLIO work after January 1, 2026 may be considered.",
+    "awardRulesBioText3": "Teams should prepare for the Initial Interview, which may be scheduled in-person, unscheduled in-person, or remote; the award rules are the same for all formats. JUDGES introduce themselves, the team may give an uninterrupted presentation of about 5 minutes, then Q&A follows. JUDGES deliberate afterward. The Event Director selects the format, and pit interviews may take place in a noisy environment.",
+    "awardRulesBioText4": "At the start of Q&A, teams receive two standard questions: one focused on MCI and one on TA. JUDGES may then ask additional questions. After Initial Interviews, JUDGES may conduct follow-up pit interviews and review prototypes, design artifacts, outreach photos/letters, and similar materials, but these materials cannot be taken into later deliberation. Sustained outreach and demonstrated impact are valued more than one-time activities or raw contact counts.",
+    "awardRulesBioText5": "A201 limits the PORTFOLIO to 1 cover page plus up to 15 content pages, US Letter or A4, and under 15 MB if digital. It may include only progress, challenges, and accomplishments after January 1, 2026. The cover is not judged and content after page 15 is ignored. Use first name + last initial for student privacy. JUDGES do not follow links or videos. AI/research aids are allowed if intellectual-property rules are followed and AI use is disclosed in a footnote/endnote.",
+    "awardRulesBioText6": "A202 requires the PORTFOLIO to be submitted by the Event Director's method and deadline; if no other instructions are given, provide one printed copy during the Initial Interview. A203 requires participation in an Initial Interview for judged awards. A204 generally requires at least 2 STUDENT representatives for teams with 2+ students; a PORTFOLIO, show-and-tell items, one optional silent observer, and a support person when needed may be present. A205 gives all teams equal Initial Interview time of at least 10 minutes.",
+    "awardRulesBioText7": "A206 starts the interview timer after JUDGES introduce themselves and the team begins its presentation or Q&A. A207 protects the first 5 minutes for an uninterrupted prepared presentation if the team wants it. A208 permits one silent adult observer who may not coach or interfere. A209 allows translators/sign-language interpreters and permits a 2–5 minute accommodation request in advance. A210 prohibits photos, video, and audio recording during the Initial Interview.",
+    "awardRulesBioText8": "A211 scales the number and placement of judged awards with event size: 4–10, 11–20, 21–40, or 41–64 teams. Larger events may award 2nd and 3rd places for Inspire and other awards. Think, Connect, Reach, Sustain, Design, Innovate, and Control placements also scale with size. Judges' Choice is optional, and placements shown in parentheses are discretionary.",
+    "awardRulesBioText9": "A212 provides judging feedback to every team after the Initial Interview; it reflects initial impressions and is not updated after later deliberations. Feedback may be returned with the PORTFOLIO or sent through FTC-Scoring. A213 limits Inspire eligibility to the team's HOME REGION, except at FIRST Championship and Premier Events. A214 allows only one 1st-place Inspire at Qualifying/League Tournaments in a season, though later 2nd/3rd places and higher-level Inspire wins remain possible. A215 limits a team to one judged award or runner-up at an event, excluding ALLIANCE and individual awards.",
+    "awardRulesBioText10": "The Inspire Award recognizes a strong role-model team. The team should be a strong candidate across judged categories, act positively and respectfully, demonstrate FIRST Core Values and Gracious Professionalism, share its experience and enthusiasm, and show strong ROBOT design/development. A PORTFOLIO is required, the team must be a strong candidate in at least one MCI award, one Team Attributes award, and Think, and the team should be inclusive with all members contributing.",
+    "awardRulesBioText11": "Think recognizes a strong PORTFOLIO showing the engineering journey, season development, and design/build/programming decisions. The PORTFOLIO must include at least one of: evidence of an engineering process, lessons learned from ROBOT design, comparison of design alternatives and why one was chosen, or mathematics used in ROBOT/programming decisions. Information should be easy to read and find. Connect recognizes meaningful STEM-community relationships used for long-term team development; no PORTFOLIO is required, but teams must explain a professional-development plan and steps toward learning goals.",
+    "awardRulesBioText12": "Reach recognizes teams that bring new people into the FIRST community; no PORTFOLIO is required. Teams should explain outreach goals/strategy and demonstrate growth such as new teams, coaches, mentors, or volunteers. Sustain recognizes long-term team sustainability; teams must show a plan for areas such as finances, season planning, or team continuity and explain how progress is tracked. Leadership development, clear roles, risk management, and adapting plans are encouraged.",
+    "awardRulesBioText13": "Innovate Award sponsored by RTX recognizes a creative or unique ROBOT/MECHANISM solution that is reliable and usually achieves game goals; teams should show engineering work and design development, and explaining risks/mitigations is encouraged. Control Award recognizes creative sensor/software/control solutions. A PORTFOLIO is required for Control and must explain control hardware/software, the problems solved, and at least one solution using external feedback.",
+    "awardRulesBioText14": "Design Award recognizes understanding of industrial-design principles such as form, function, appearance, efficiency, and maintainability. The ROBOT should be elegant, efficient, and/or practical to maintain, and the overall ROBOT/design process is considered. Judges' Choice is optional and may recognize a distinctive effort, performance, or team dynamic that does not fit another award. Winning Alliance and Finalist Alliance Awards recognize the winner and runner-up of the Playoff final.",
+    "awardRulesBioText15": "Individual Awards include the FIRST Leadership Award, which recognizes STUDENTS who demonstrate leadership, FIRST mission advocacy, Core Values, and Gracious Professionalism. The optional Compass Award at Regional Championship recognizes an outstanding adult mentor/coach nominated by STUDENTS with a 40–60 second video that explains the mentor's impact and follows format, duration, and copyright requirements.",
+    "awardRulesBioText16": "Project-Based Global Awards are season-long global awards evaluated and presented once per season. All registered FTC teams may apply, each award has its own requirements and deadline, and these awards do not contribute Advancement Points."
+  },
+  "es": {
+    "navGameRules": "Reglas del partido",
+    "navFieldInfo": "Elementos del campo",
+    "navMatchProcedures": "Procedimientos del partido",
+    "navScoringSystem": "Cómo puntuar",
+    "navHome": "Premios y definiciones",
+    "navTeam": "Reglas generales",
+    "navRobots": "Construcción del robot",
+    "navDecode": "Volver",
+    "asterisk": "* QuickManual no es el Manual de Juego oficial y nunca debe considerarse una fuente completa o definitiva de reglas. No reemplaza el documento oficial publicado por FIRST. Para cualquier decisión oficial, inspección o disputa, los equipos deben consultar siempre la versión más reciente del Manual de Juego oficial.",
+    "dateUpdate": "** Fecha de la última actualización: 5 de agosto de 2026, Manual del juego V0",
+    "pageSearch": "Buscar en la página... (Ejemplo: normas, premios, bots)",
+    "clear": "limpiar",
+    "awardRulesTitle": "Premios y definiciones",
+    "footerTitle": "QuickManual",
+    "footerDescription": "A community resource by Asteria Robotics\nThis is not an official FIRST document.",
+    "contactTitle": "Contacto",
+    "addressText": "Dirección de nuestro taller",
+    "instagramText": "Instagram",
+    "copyrightText": "© 2026 Asteria Robotics FTC Team 32334. Todos los derechos reservados.",
+    "navPanel": "Categorías",
+    "awardRulesBioText1": "Inspire Award reconoce a un equipo que sobresale en MCI, Team Attributes y Documentation e inspira a otros. Los MCI awards evalúan el logro técnico en brainstorming, design, construction, operation y control del ROBOT. Los TA awards evalúan desarrollo de habilidades, sostenibilidad y outreach. Think reconoce una documentación sólida mediante PORTFOLIO. Judges' Choice reconoce un esfuerzo distintivo que no encaja en otra categoría. JUDGES reconoce a equipos que demuestran mejor los criterios publicados; se puede participar en judging incluso sin ROBOT o inspection completa.",
+    "awardRulesBioText2": "JUDGES puede usar Initial Interview, entrevistas de seguimiento y PORTFOLIO cuando corresponda. Judging se basa solo en el current event y current season; para judging, la temporada actual empieza el 1 de enero de 2026. No se consideran rendimiento en eventos pasados, información personal, websites/social media externos, rendimiento del ROBOT en MATCH salvo que se indique, penalties ni tournament ranking. El trabajo del PORTFOLIO posterior al 1 de enero de 2026 puede considerarse.",
+    "awardRulesBioText3": "Los equipos deben prepararse para el Initial Interview, que puede ser presencial programado, presencial no programado o remoto; las reglas de awards son las mismas. JUDGES se presenta, el equipo puede hacer una presentación ininterrumpida de unos 5 minutos y luego hay Q&A. Después JUDGES delibera. Event Director define el formato y las entrevistas en pit pueden desarrollarse en un entorno ruidoso.",
+    "awardRulesBioText4": "Al comienzo del Q&A se hacen dos preguntas estándar: una de MCI y una de TA. Luego JUDGES puede hacer preguntas adicionales. Después de los Initial Interviews, puede haber follow-up interviews en pit y mostrarse prototipos, objetos de diseño, fotos/cartas de outreach y materiales similares; estos materiales no se llevan a la deliberación posterior. Se valora más el outreach sostenido y su impacto demostrado que actividades aisladas o simples cifras de alcance.",
+    "awardRulesBioText5": "A201 limita el PORTFOLIO a 1 portada + máximo 15 páginas de contenido, formato US Letter o A4, y menos de 15 MB si es digital. Solo puede incluir progreso, retos y logros posteriores al 1 de enero de 2026. La portada no se evalúa y lo que exceda 15 páginas se ignora. Para privacidad se recomienda nombre + inicial del apellido. JUDGES no abre enlaces ni videos. Se permite AI/research aids si se respetan derechos de propiedad intelectual y se declara su uso en nota al pie/final.",
+    "awardRulesBioText6": "A202 exige entregar el PORTFOLIO según el método y plazo del Event Director; si no hay otras instrucciones, se entrega una copia impresa durante el Initial Interview. A203 exige participar en Initial Interview para judged awards. A204 normalmente exige al menos 2 STUDENT representatives si el equipo tiene 2+ estudiantes; pueden acompañarse de PORTFOLIO, materiales de muestra, un observador silencioso opcional y apoyo cuando sea necesario. A205 da a todos al menos 10 minutos y el mismo tiempo de entrevista.",
+    "awardRulesBioText7": "A206 inicia el cronómetro tras la presentación de JUDGES y cuando el equipo empieza presentación o Q&A. A207 reserva los primeros 5 minutos para una presentación preparada e ininterrumpida si el equipo la desea. A208 permite un adulto observador silencioso sin coaching ni intervención. A209 permite traductor/intérprete y solicitar con antelación 2–5 minutos extra. A210 prohíbe fotos, video y audio durante Initial Interview.",
+    "awardRulesBioText8": "A211 ajusta cantidad y puestos de judged awards al tamaño del evento: 4–10, 11–20, 21–40 o 41–64 equipos. Eventos mayores pueden entregar 2.º y 3.º en Inspire y otros awards. Think, Connect, Reach, Sustain, Design, Innovate y Control también escalan según tamaño. Judges' Choice es opcional y los puestos entre paréntesis son discrecionales.",
+    "awardRulesBioText9": "A212 da feedback a todos tras Initial Interview; refleja impresiones iniciales y no cambia tras deliberaciones posteriores. Puede devolverse con PORTFOLIO o por FTC-Scoring. A213 limita Inspire a HOME REGION salvo FIRST Championship/Premier Events. A214 permite un solo Inspire 1st Place en Qualifying/League por temporada, aunque siguen posibles puestos 2.º/3.º y victorias en niveles superiores. A215 limita a un judged award o runner-up por evento, sin contar ALLIANCE ni individual awards.",
+    "awardRulesBioText10": "Inspire Award reconoce a un equipo modelo. Debe ser fuerte en varias categorías, actuar de forma positiva/respetuosa, demostrar FIRST Core Values y Gracious Professionalism, compartir experiencia y entusiasmo, y mostrar buen diseño/desarrollo del ROBOT. PORTFOLIO es obligatorio; el equipo debe ser candidato fuerte en al menos un MCI award, un Team Attributes award y Think, y ser inclusivo con contribución de todos sus miembros.",
+    "awardRulesBioText11": "Think reconoce un PORTFOLIO sólido que muestre engineering journey, desarrollo de temporada y decisiones de design/build/programming. Debe incluir al menos uno de: proceso de ingeniería, lecciones del diseño del ROBOT, comparación de alternativas y elección, o matemáticas en decisiones de ROBOT/programming. La información debe ser fácil de leer/localizar. Connect reconoce relaciones significativas con la comunidad STEM usadas para desarrollo a largo plazo; no exige PORTFOLIO, pero sí un plan de desarrollo profesional y pasos hacia objetivos de aprendizaje.",
+    "awardRulesBioText12": "Reach reconoce a equipos que incorporan personas nuevas a FIRST; no exige PORTFOLIO. Deben explicar objetivos/estrategia de outreach y demostrar crecimiento, como nuevos equipos, coaches, mentors o volunteers. Sustain reconoce sostenibilidad a largo plazo: se necesita un plan de finanzas, temporada o continuidad y explicar cómo se mide el progreso. Se fomentan liderazgo futuro, roles claros, gestión de riesgos y adaptación de planes.",
+    "awardRulesBioText13": "Innovate Award sponsored by RTX reconoce una solución ROBOT/MECHANISM creativa o única que sea fiable y logre normalmente los objetivos; se debe mostrar trabajo de ingeniería y desarrollo del diseño, y se recomienda explicar riesgos/mitigaciones. Control Award reconoce soluciones creativas de sensores/software/control. Control requiere PORTFOLIO que explique hardware/software, problemas resueltos y al menos una solución con feedback externo.",
+    "awardRulesBioText14": "Design Award reconoce principios de diseño industrial como forma, función, apariencia, eficiencia y mantenibilidad. El ROBOT debe ser elegante, eficiente y/o fácil de mantener, y se considera el ROBOT/proceso completo. Judges' Choice es opcional para un esfuerzo, rendimiento o dinámica especial fuera de otras categorías. Winning Alliance y Finalist Alliance Awards reconocen al ganador y finalista de la final de Playoffs.",
+    "awardRulesBioText15": "Los Individual Awards incluyen FIRST Leadership Award, que reconoce a STUDENTS con liderazgo, defensa de la misión de FIRST, Core Values y Gracious Professionalism. Compass Award, opcional en Regional Championship, reconoce a un mentor/coach adulto excepcional nominado por STUDENTS mediante un video de 40–60 segundos que explique su impacto y cumpla formato, duración y copyright.",
+    "awardRulesBioText16": "Project-Based Global Awards son premios globales de temporada evaluados y entregados una vez por temporada. Todos los equipos FTC registrados pueden solicitar; cada premio tiene sus propios requisitos y fecha límite, y no aporta Advancement Points."
+  },
+  "pt": {
+    "navGameRules": "Regras da partida",
+    "navFieldInfo": "Elementos do campo",
+    "navMatchProcedures": "Procedimentos da partida",
+    "navScoringSystem": "Como pontuar",
+    "navHome": "Prêmios e definições",
+    "navTeam": "Regras gerais",
+    "navRobots": "Construção do robô",
+    "navDecode": "Voltar",
+    "asterisk": "* QuickManual não é o Manual de Jogo oficial e nunca deve ser tratado como uma fonte completa ou definitiva de regras. Ele não substitui o documento oficial publicado pela FIRST. Para qualquer decisão oficial, inspeção ou contestação, as equipes devem sempre consultar a versão mais recente do Manual de Jogo oficial.",
+    "dateUpdate": "** Data da última atualização: 5 de agosto de 2026, Manual do Jogo V0",
+    "pageSearch": "Pesquisar nesta página... (Exemplo: regras, prémios, bots)",
+    "clear": "limpar",
+    "awardRulesTitle": "Prémios e Definições",
+    "footerTitle": "QuickManual",
+    "footerDescription": "A community resource by Asteria Robotics\nThis is not an official FIRST document.",
+    "contactTitle": "Contato",
+    "addressText": "Endereço da nossa oficina",
+    "instagramText": "Instagram",
+    "copyrightText": "© 2026 Asteria Robotics FTC Team 32334. Todos os direitos reservados.",
+    "navPanel": "Categorias",
+    "awardRulesBioText1": "Inspire Award reconhece uma equipe que se destaca em MCI, Team Attributes e Documentation e inspira outras pessoas. MCI awards avaliam desempenho técnico em brainstorming, design, construction, operation e control do ROBOT. TA awards avaliam desenvolvimento de habilidades, sustentabilidade e outreach. Think reconhece boa documentação em PORTFOLIO. Judges' Choice reconhece um esforço especial que não se encaixa em outra categoria. JUDGES reconhecem equipes que melhor demonstram os critérios publicados; uma equipe pode participar do judging mesmo sem ROBOT ou inspection completa.",
+    "awardRulesBioText2": "JUDGES podem usar Initial Interview, entrevistas de acompanhamento e PORTFOLIO quando aplicável. Judging considera apenas current event e current season; para judging, a temporada atual começa em 1º de janeiro de 2026. Não são considerados desempenho de eventos passados, informações pessoais, websites/social media externos, desempenho do ROBOT em MATCH salvo quando especificado, penalties ou tournament ranking. Trabalho no PORTFOLIO após 1º de janeiro de 2026 pode ser considerado.",
+    "awardRulesBioText3": "As equipes devem se preparar para o Initial Interview, que pode ser presencial agendado, presencial não agendado ou remoto; as regras de awards são iguais. JUDGES se apresentam, a equipe pode fazer uma apresentação ininterrupta de cerca de 5 minutos e depois ocorre Q&A. JUDGES deliberam em seguida. O Event Director escolhe o formato, e entrevistas no pit podem ocorrer em ambiente barulhento.",
+    "awardRulesBioText4": "No início do Q&A são feitas duas perguntas padrão: uma de MCI e uma de TA. Depois JUDGES podem fazer perguntas extras. Após Initial Interviews, JUDGES podem realizar follow-up interviews no pit e ver protótipos, artefatos de design, fotos/cartas de outreach e materiais similares; esses materiais não podem ser levados à deliberação posterior. Outreach contínuo e impacto demonstrado valem mais do que ações únicas ou apenas números de alcance.",
+    "awardRulesBioText5": "A201 limita o PORTFOLIO a 1 capa + no máximo 15 páginas de conteúdo, formato US Letter ou A4, e menos de 15 MB se digital. Só pode incluir progresso, desafios e conquistas após 1º de janeiro de 2026. A capa não é avaliada e conteúdo além da página 15 é ignorado. Para privacidade, use primeiro nome + inicial do sobrenome. JUDGES não abrem links ou vídeos. AI/research aids são permitidos se regras de propriedade intelectual forem respeitadas e o uso de AI for declarado em nota de rodapé/final.",
+    "awardRulesBioText6": "A202 exige entregar o PORTFOLIO pelo método e prazo do Event Director; se não houver outra orientação, entregue uma cópia impressa no Initial Interview. A203 exige Initial Interview para judged awards. A204 normalmente exige pelo menos 2 STUDENT representatives se a equipe tiver 2+ estudantes; podem estar presentes PORTFOLIO, materiais de demonstração, um observador silencioso opcional e apoio quando necessário. A205 dá a todas as equipes tempo igual e pelo menos 10 minutos.",
+    "awardRulesBioText7": "A206 inicia o cronômetro depois que JUDGES se apresentam e a equipe começa apresentação ou Q&A. A207 reserva os primeiros 5 minutos para uma apresentação preparada e ininterrupta, se desejado. A208 permite um adulto observador silencioso sem coaching/interferência. A209 permite tradutor/intérprete e solicitação antecipada de 2–5 minutos extras. A210 proíbe fotos, vídeo e áudio durante Initial Interview.",
+    "awardRulesBioText8": "A211 ajusta quantidade e colocações de judged awards ao tamanho do evento: 4–10, 11–20, 21–40 ou 41–64 equipes. Eventos maiores podem conceder 2º/3º lugares em Inspire e outros awards. Think, Connect, Reach, Sustain, Design, Innovate e Control também escalam conforme o tamanho. Judges' Choice é opcional e colocações entre parênteses são discricionárias.",
+    "awardRulesBioText9": "A212 fornece feedback a todas as equipes após Initial Interview; ele reflete impressões iniciais e não é atualizado após deliberações posteriores. Pode ser devolvido com o PORTFOLIO ou enviado pelo FTC-Scoring. A213 limita Inspire à HOME REGION, exceto FIRST Championship/Premier Events. A214 permite apenas um Inspire 1st Place em Qualifying/League por temporada, embora 2º/3º lugares e vitórias em níveis superiores ainda sejam possíveis. A215 limita a equipe a um judged award ou runner-up por evento, excluindo ALLIANCE e individual awards.",
+    "awardRulesBioText10": "Inspire Award reconhece uma equipe modelo. Ela deve ser forte em várias categorias, agir de forma positiva/respeitosa, demonstrar FIRST Core Values e Gracious Professionalism, compartilhar experiência e entusiasmo e mostrar bom design/desenvolvimento do ROBOT. PORTFOLIO é obrigatório; a equipe deve ser forte candidata em pelo menos um MCI award, um Team Attributes award e Think, além de ser inclusiva com contribuição de todos.",
+    "awardRulesBioText11": "Think reconhece um PORTFOLIO forte mostrando engineering journey, evolução da temporada e decisões de design/build/programming. Deve incluir pelo menos um de: processo de engenharia, lições do design do ROBOT, comparação de alternativas e escolha, ou matemática em decisões de ROBOT/programming. As informações devem ser fáceis de ler/encontrar. Connect reconhece relações significativas com a comunidade STEM usadas para desenvolvimento de longo prazo; PORTFOLIO não é obrigatório, mas é preciso explicar plano de desenvolvimento profissional e passos para objetivos de aprendizado.",
+    "awardRulesBioText12": "Reach reconhece equipes que trazem novas pessoas para a comunidade FIRST; PORTFOLIO não é obrigatório. Deve-se explicar objetivos/estratégia de outreach e demonstrar crescimento, como novas equipes, coaches, mentors ou volunteers. Sustain reconhece sustentabilidade de longo prazo: exige plano de finanças, temporada ou continuidade e explicação de como o progresso é acompanhado. Desenvolvimento de liderança, papéis claros, gestão de risco e adaptação de planos são incentivados.",
+    "awardRulesBioText13": "Innovate Award sponsored by RTX reconhece uma solução ROBOT/MECHANISM criativa ou única que seja confiável e normalmente alcance objetivos do jogo; é preciso mostrar trabalho de engenharia e desenvolvimento do design, e explicar riscos/mitigações é recomendado. Control Award reconhece soluções criativas de sensores/software/control. Control exige PORTFOLIO explicando hardware/software, problemas resolvidos e ao menos uma solução usando feedback externo.",
+    "awardRulesBioText14": "Design Award reconhece princípios de design industrial como forma, função, aparência, eficiência e manutenção. O ROBOT deve ser elegante, eficiente e/ou prático de manter, e o ROBOT/processo completo é considerado. Judges' Choice é opcional para esforço, desempenho ou dinâmica especial fora de outras categorias. Winning Alliance e Finalist Alliance Awards reconhecem vencedor e finalista da final de Playoffs.",
+    "awardRulesBioText15": "Individual Awards incluem FIRST Leadership Award, que reconhece STUDENTS com liderança, defesa da missão FIRST, Core Values e Gracious Professionalism. Compass Award, opcional em Regional Championship, reconhece mentor/coach adulto excepcional indicado por STUDENTS em vídeo de 40–60 segundos explicando seu impacto e seguindo formato, duração e copyright.",
+    "awardRulesBioText16": "Project-Based Global Awards são prêmios globais de temporada avaliados e entregues uma vez por temporada. Todas as equipes FTC registradas podem se inscrever; cada prêmio tem requisitos e prazo próprios e não gera Advancement Points."
+  },
+  "zh": {
+    "navGameRules": "比赛规则",
+    "navFieldInfo": "场地元素信息",
+    "navMatchProcedures": "比赛流程",
+    "navScoringSystem": "如何得分",
+    "navHome": "奖项与定义",
+    "navTeam": "通用规则",
+    "navRobots": "机器人构建",
+    "navDecode": "返回",
+    "asterisk": "* QuickManual 不是官方比赛手册，绝不能被视为完整或最终的规则来源。它不能替代 FIRST 发布的官方文件。对于任何正式决定、检查或争议，队伍必须始终参考最新版本的官方比赛手册。",
+    "dateUpdate": "** 最后更新日期：2026年8月5日，游戏手册 V0",
+    "pageSearch": "在页面中搜索...（示例：规则、奖励、机器人）",
+    "clear": "清洁",
+    "awardRulesTitle": "奖项与定义",
+    "footerTitle": "QuickManual",
+    "footerDescription": "A community resource by Asteria Robotics\nThis is not an official FIRST document.",
+    "contactTitle": "联系我们",
+    "addressText": "我们的工作室地址",
+    "instagramText": "Instagram",
+    "copyrightText": "© 2026 Asteria Robotics FTC Team 32334. 版权所有。",
+    "navPanel": "分类",
+    "awardRulesBioText1": "Inspire Award 表彰在 MCI、Team Attributes 和 Documentation 各方面表现优秀并能激励他人的队伍。MCI awards 评估 ROBOT 在 brainstorming、design、construction、operation 和 control 方面的技术成果；TA awards 评估技能发展、可持续性和 outreach；Think 关注 PORTFOLIO 的工程记录；Judges' Choice 表彰不完全属于其他类别但具有突出特色的努力。JUDGES 依据公开标准表彰代表性最强的队伍；即使没有 ROBOT 或未完成 inspection，也可以参加 judging。",
+    "awardRulesBioText2": "JUDGES 可依据 Initial Interview、follow-up interview 以及适用时的 PORTFOLIO。Judging 仅考虑 current event 和 current season；对于 judging，本赛季从 2026 年 1 月 1 日开始。不考虑过去赛事表现、个人信息、外部 websites/social media、除标准明确要求外的 ROBOT MATCH 表现、penalties 或 tournament ranking。PORTFOLIO 中 2026 年 1 月 1 日之后的成果可被考虑。",
+    "awardRulesBioText3": "队伍应为 Initial Interview 做好准备，形式可为预约现场、非预约现场或远程；三种形式适用相同 award 规则。JUDGES 先自我介绍，队伍可进行约 5 分钟不被打断的 presentation，之后进入 Q&A，最后 JUDGES 进行内部讨论。形式由 Event Director 决定；pit interview 环境可能较嘈杂。",
+    "awardRulesBioText4": "Q&A 开始时，每队会收到两道标准问题：一道针对 MCI，一道针对 TA，之后 JUDGES 可继续提问。Initial Interviews 后，JUDGES 可在 pit 进行 follow-up interview，并查看 ROBOT prototypes、design artifacts、outreach 照片/信件等材料，但这些材料不能带入后续 deliberation。持续性 outreach 和实际影响比一次性活动或单纯人数统计更受重视。",
+    "awardRulesBioText5": "A201 将 PORTFOLIO 限制为 1 页封面 + 最多 15 页内容，US Letter 或 A4；数字版须小于 15 MB。仅可包含 2026 年 1 月 1 日之后的 progress、challenges 和 accomplishments。封面不参与评审，超过 15 页的内容不阅读。为保护学生隐私，建议使用名字 + 姓氏首字母。JUDGES 不会点击链接或视频。可使用 AI/research aids，但必须遵守知识产权要求，并通过 footnote/endnote 说明 AI 使用。",
+    "awardRulesBioText6": "A202 要求按 Event Director 指定方式和截止时间提交 PORTFOLIO；若无其他说明，应在 Initial Interview 时提供 1 份纸质版。A203 要求想获得 judged award 的队伍必须参加 Initial Interview。A204 对有 2 名以上学生的队伍通常要求至少 2 名 STUDENT representative，并可携带 PORTFOLIO、展示材料、1 名可选 silent observer 和必要的 support person。A205 要求所有队伍获得相同且至少 10 分钟的采访时间。",
+    "awardRulesBioText7": "A206：JUDGES 自我介绍后，当队伍开始 presentation 或 Q&A 时计时开始。A207：如队伍需要，前 5 分钟为不被打断的 prepared presentation。A208：允许 1 名成人 silent observer，但不得 coaching 或干预。A209：可安排翻译/手语翻译，并可提前申请额外 2–5 分钟。A210：Initial Interview 期间禁止拍照、录像或录音。",
+    "awardRulesBioText8": "A211 根据赛事规模调整 judged awards 的数量和名次：4–10、11–20、21–40 或 41–64 支队伍。较大赛事可设置 Inspire 及其他奖项的第 2/3 名。Think、Connect、Reach、Sustain、Design、Innovate、Control 也随规模变化。Judges' Choice 为可选奖项，括号中的名次属于 discretionary。",
+    "awardRulesBioText9": "A212：每队在 Initial Interview 后都会获得 judging feedback，该反馈只反映初始印象，不随之后 deliberation 更新，可与 PORTFOLIO 一起返还或通过 FTC-Scoring 发送。A213：Inspire 通常仅可在 HOME REGION 获得，FIRST Championship/Premier Events 除外。A214：每赛季在 Qualifying/League Tournament 中最多获得一次 Inspire 1st Place，但之后仍可获得第 2/3 名及更高级赛事的 Inspire。A215：同一赛事每队最多获得一个 judged award 或 runner-up，不含 ALLIANCE/individual awards。",
+    "awardRulesBioText10": "Inspire Award 表彰全面且具榜样作用的队伍。队伍应在多个 judged categories 中表现强劲，保持积极尊重，体现 FIRST Core Values 和 Gracious Professionalism，分享经验、知识与热情，并展示出色的 ROBOT 设计与开发。必须提交 PORTFOLIO，并在 MCI、Team Attributes 与 Think 三类中都至少成为一个奖项的强候选，同时保持包容并让所有成员做出贡献。",
+    "awardRulesBioText11": "Think Award 表彰优秀 PORTFOLIO，应体现 engineering journey、赛季成长以及 design/build/programming 决策。至少包含以下之一：工程流程证据、ROBOT 设计经验、不同设计方案的比较与选择理由、或在 ROBOT/programming 决策中使用数学。信息应易读易找。Connect Award 表彰与 STEM 社区建立有意义并用于长期发展的联系；不要求 PORTFOLIO，但必须说明 professional development plan、学习目标和实施步骤。",
+    "awardRulesBioText12": "Reach Award 表彰把此前未参与 FIRST 的人带入社区的队伍；不要求 PORTFOLIO。应说明 outreach 目标/策略，并展示新增队伍、coach、mentor、volunteer 等成果。Sustain Award 关注长期可持续性：需提出财务、赛季规划或队伍延续方面的计划，并说明如何跟踪进度。未来领导力培养、明确分工、风险管理和调整计划均受到鼓励。",
+    "awardRulesBioText13": "Innovate Award sponsored by RTX 表彰具有创造性/独特性、可靠并能稳定完成游戏目标的 ROBOT 或 MECHANISM 方案；需展示工程工作和设计开发过程，建议说明风险及 mitigation。Control Award 表彰创新的传感器/software/control 方案。Control 要求 PORTFOLIO 说明控制硬件/软件、解决的问题，以及至少一个使用外部 feedback 的控制方案。",
+    "awardRulesBioText14": "Design Award 表彰对工业设计原则的理解，包括形态、功能、外观、效率和可维护性。ROBOT 应优雅、高效和/或易于维护，并综合评估整个 ROBOT/设计过程。Judges' Choice 为可选奖项，用于其他类别无法覆盖的突出努力、表现或团队特色。Winning Alliance 与 Finalist Alliance Awards 分别表彰 Playoff 决赛冠军和亚军。",
+    "awardRulesBioText15": "Individual Awards 包括 FIRST Leadership Award，用于表彰展现领导力、支持 FIRST mission、践行 Core Values 和 Gracious Professionalism 的 STUDENT。Compass Award 在 Regional Championship 可选，用于表彰优秀成人 mentor/coach，由 STUDENTS 通过 40–60 秒视频提名，说明其影响并遵守格式、时长和版权要求。",
+    "awardRulesBioText16": "Project-Based Global Awards 是面向整个赛季、每赛季评选一次的全球项目奖项。所有已注册 FTC 队伍都可申请；每个奖项有独立要求和截止日期，并且不获得 Advancement Points。"
+  }
+};
+
+function setLanguage(lang) {
+    if (!translations[lang]) return;
+    document.documentElement.lang = lang;
+
+    for (const id in translations[lang]) {
+        const element = document.getElementById(id);
+        if (!element) continue;
+        if (id === "pageSearch") {
+            element.placeholder = translations[lang][id];
+        } else {
+            element.innerHTML = translations[lang][id];
+        }
+    }
+
+    const langBtn = document.getElementById("langBtn");
+    if (langBtn) langBtn.textContent = lang.toUpperCase();
+
+    document.querySelectorAll(".lang-dropdown button").forEach(btn => {
+        btn.classList.toggle("active", btn.dataset.lang === lang);
+    });
+
+    localStorage.setItem("language", lang);
+
+    const quickManualIframe = document.getElementById("quickmanual-iframe");
+    if (quickManualIframe && quickManualIframe.contentWindow) {
+        quickManualIframe.contentWindow.postMessage({
+            type: "languageChange",
+            language: lang
+        }, "*");
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    setLanguage(localStorage.getItem("language") || "tr");
+
+    const langSwitch = document.getElementById("langSwitch");
+    const langBtn = document.getElementById("langBtn");
+
+    if (langBtn && langSwitch) {
+        langBtn.addEventListener("click", function (e) {
+            e.stopPropagation();
+            langSwitch.classList.toggle("open");
+        });
+
+        document.querySelectorAll(".lang-dropdown button").forEach(btn => {
+            btn.addEventListener("click", function () {
+                setLanguage(btn.dataset.lang);
+                langSwitch.classList.remove("open");
+            });
+        });
+
+        document.addEventListener("click", function (e) {
+            if (!langSwitch.contains(e.target)) langSwitch.classList.remove("open");
+        });
+    }
+
+    const searchInput = document.getElementById("pageSearch");
+    if (searchInput) searchInput.addEventListener("input", liveSearch);
+
+    // QuickManual AI widget - same behavior as the original page.
+    const widget = document.createElement("div");
+    widget.id = "quickmanual-widget";
+    widget.innerHTML = `
+        <div id="quickmanual-window">
+            <button id="quickmanual-close" aria-label="QuickManual AI'yi kapat" title="Kapat">×</button>
+            <iframe id="quickmanual-iframe" src="quickmanual/quickmanual-ai.html"
+                    title="QuickManual AI" loading="lazy"></iframe>
+        </div>
+        <button id="quickmanual-button" aria-label="QuickManual AI'yi aç" title="QuickManual AI">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 11.5C20 15.6421 16.1944 19 11.5 19C10.3065 19 9.17663 18.7881 8.16571 18.4049L4 20L5.20564 16.3878C4.44183 15.1111 4 13.6179 4 12C4 7.85786 7.80558 4.5 12.5 4.5C17.1944 4.5 20 7.35786 20 11.5Z"
+                      stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                <circle cx="9" cy="12" r="0.8" fill="currentColor"/>
+                <circle cx="12" cy="12" r="0.8" fill="currentColor"/>
+                <circle cx="15" cy="12" r="0.8" fill="currentColor"/>
+            </svg>
+        </button>`;
+    document.body.appendChild(widget);
+
+    const button = document.getElementById("quickmanual-button");
+    const windowBox = document.getElementById("quickmanual-window");
+    const closeButton = document.getElementById("quickmanual-close");
+
+    if (button && windowBox) button.addEventListener("click", () => windowBox.classList.toggle("open"));
+    if (closeButton && windowBox) closeButton.addEventListener("click", () => windowBox.classList.remove("open"));
+});
+
+function clearHighlights() {
+    document.querySelectorAll("mark.search-highlight").forEach(mark => {
+        const parent = mark.parentNode;
+        parent.replaceChild(document.createTextNode(mark.textContent), mark);
+        parent.normalize();
+    });
+}
+
+function liveSearch() {
+    clearHighlights();
+    const input = document.getElementById("pageSearch");
+    if (!input) return;
+    const query = input.value.trim();
+    if (!query) return;
+
+    const lowerQuery = query.toLocaleLowerCase();
+    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+        acceptNode(node) {
+            const parent = node.parentElement;
+            if (!parent) return NodeFilter.FILTER_REJECT;
+            if (
+                parent.closest("nav") ||
+                parent.closest("footer") ||
+                parent.closest(".search-section") ||
+                parent.closest(".language-switch") ||
+                parent.closest("#quickmanual-widget") ||
+                parent.tagName === "SCRIPT" ||
+                parent.tagName === "STYLE"
+            ) return NodeFilter.FILTER_REJECT;
+            return NodeFilter.FILTER_ACCEPT;
+        }
+    });
+
+    let firstMatch = null;
+    const nodes = [];
+    let n;
+    while ((n = walker.nextNode())) nodes.push(n);
+
+    for (const node of nodes) {
+        const text = node.nodeValue;
+        if (!text || !text.trim()) continue;
+        const index = text.toLocaleLowerCase().indexOf(lowerQuery);
+        if (index === -1) continue;
+
+        const before = text.slice(0, index);
+        const matchText = text.slice(index, index + query.length);
+        const after = text.slice(index + query.length);
+        const mark = document.createElement("mark");
+        mark.className = "search-highlight";
+        mark.textContent = matchText;
+
+        const parent = node.parentNode;
+        parent.insertBefore(document.createTextNode(before), node);
+        parent.insertBefore(mark, node);
+        node.nodeValue = after;
+        if (!firstMatch) firstMatch = mark;
+    }
+
+    if (firstMatch) firstMatch.scrollIntoView({ behavior: "smooth", block: "center" });
+}
+
+function clearSearch() {
+    const input = document.getElementById("pageSearch");
+    if (input) input.value = "";
+    clearHighlights();
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>QuickManual</title>
+<link href="images/logo (2).png" rel="icon"/>
+<link href="manifest.json" rel="manifest"/>
+<link href="images/logo.png" rel="apple-touch-icon"/>
+<link href="kurallar.css" rel="stylesheet"/>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo"></div>
+    <ul class="nav-links">
+        <li><a href="kurallar.html" id="navPanel">Kategoriler</a></li>
+      <!--  <li><a href="kurallar-oduller.html" id="navHome">Ödüller ve Tanımlar</a></li>
+        <li><a href="kurallar-genel.html" id="navTeam">Genel Kurallar</a></li>
+        <li><a href="kurallar-robot.html" id="navRobots">Robot Yapımı</a></li>
+        <li><a href="kurallar-mac.html" id="navGameRules">Maç Kuralları</a></li>
+        <li><a href="kurallar-saha.html" id="navFieldInfo">Saha Eleman Bilgileri</a></li>
+        <li><a href="kurallar-prosedur.html" id="navMatchProcedures">Maç Prosedürleri</a></li>
+        <li><a href="kurallar-puanlama.html" id="navScoringSystem">Nasıl Puan Kazanılır</a></li> -->
+        <li><a href="index.html" id="navDecode">Geri dön</a></li>
+    </ul>
+</nav>
+
+
+<div class="language-switch" id="langSwitch">
+    <button class="lang-btn" id="langBtn">TR</button>
+    <div class="lang-dropdown">
+        <button data-lang="tr">Türkçe</button>
+        <button data-lang="en">English</button>
+        <button data-lang="es">Español</button>
+        <button data-lang="pt">Português</button>
+        <button data-lang="zh">中文</button>
+    </div>
+</div>
+
+
+<section class="search-section">
+    <div class="search-container">
+        <input type="text" id="pageSearch" placeholder="Sayfada ara... (örnek: kurallar, ödül, robot)" autocomplete="off">
+        <button onclick="clearSearch()" class="clear-btn" id="clear">Temizle</button>
+    </div>
+</section>
+
+<section class="section" id="robotRules">
+<h2 id="robotRulesTitle">Robot Yapımı</h2>
+<div class="card">
+<h3 id="robotRulesBioTitle1">Section 12 ROBOT (Page 118)</h3>
+<p id="robotRulesBioText1">Construction Rules (R)<br/>
+Section 12 — ROBOT Construction Rules<br/>
+• Bu bölüm ROBOT’ta kullanılabilecek parça,<br/>
+malzeme ve bunların kullanımını belirler.<br/>
+• ROBOT; güç, iletişim, kontrol ve hareket<br/>
+sistemlerini içeren, oyuna katılmak için gerekli<br/>
+elektromekanik yapıdır.<br/>
+• Kuralların amacı güvenlik, güvenilirlik, eşitlik,<br/>
+tasarım zorluğu ve profesyonel standartları<br/>
+korumaktır.<br/>
+• COMPONENT: Temel halinde, işlevini<br/>
+değiştirmeden ayrılamayan parça.<br/>
+• MECHANISM: Birden fazla COMPONENT’in<br/>
+belirli bir işlev için oluşturduğu ve sökülüp<br/>
+tekrar takılabilen düzenek.<br/>
+• COTS (Commercial-Off-The-Shelf):<br/>
+VENDOR tarafından takımların satın<br/>
+alabileceği, standart ve değiştirilmemiş ticari<br/>
+ürün.</p>
+</div>
+<div class="card">
+<h3 id="robotRulesBioTitle2">COTS → FABRICATED ITEM ayrımı: (Page 118)</h3>
+<p id="robotRulesBioText2">• COTS ürüne delik açmak veya fiziksel olarak<br/>
+değiştirmek onu FABRICATED ITEM yapar.<br/>
+• COTS olmayan bir üreticinin yalnızca takım<br/>
+için özel ürettiği parça da COTS sayılmaz.<br/>
+• COTS ürün üzerine yalnızca işlevsel olmayan<br/>
+etiket eklemek COTS olarak kalabilir.</p>
+</div>
+<div class="card">
+<h3 id="robotRulesBioTitle3">COTS / FABRICATED ITEM örnekleri (devam). (Page 119)</h3>
+<p id="robotRulesBioText3">• COTS bir ürünün tasarım çizimi,<br/>
+FABRICATED ITEM üretmek için ham kaynak<br/>
+olarak kullanılabilir; ortaya çıkan ürün<br/>
+FABRICATED ITEM’dır.<br/>
+• COTS parçaya cihaz-spesifik montaj delikleri<br/>
+açılırsa FABRICATED ITEM olur.<br/>
+• Artık satılmayan ancak orijinal haliyle işlevsel<br/>
+olarak eşdeğer olan COTS parçalar<br/>
+kullanılabilir.</p>
+</div>
+<div class="card">
+<h3 id="robotRulesBioTitle4">VENDOR tanımı: (Page 120)</h3>
+<p id="robotRulesBioText4">Bir VENDOR:<br/>
+• resmi bir vergi/işletme kaydına sahip olmalı,<br/>
+• FIRST takımının tamamen sahip olduğu bir<br/>
+yan kuruluş olmamalı,<br/>
+• genel ürünleri makul sürede sağlayabilecek<br/>
+stok/üretim kapasitesine sahip olmalı,<br/>
+• ürünlerini tüm FIRST Tech Challenge<br/>
+takımlarına sunmalıdır.<br/>
+Section 12 ROBOT Construction Rules (R)<br/>
+• FABRICATED ITEM: ROBOT üzerinde<br/>
+kullanılacağı son hâle ulaşmak için<br/>
+değiştirilmiş, üretilmiş, kesilmiş, işlenmiş,<br/>
+boyanmış vb. COMPONENT veya<br/>
+MECHANISM’dir.<br/>
+•   Bir malzeme, takım tarafından yalnızca<br/>
+saklama/taşıma amacıyla kesilmişse COTS<br/>
+veya FABRICATED ITEM sayılmayabilir.<br/>
+•   Takımlar, parçaların kurallara uygunluğunu<br/>
+inspection sırasında belgelemek zorunda<br/>
+kalabilir.<br/>
+•   Parçanın uygunluğu konusunda resmî karar<br/>
+gerekiyorsa FIRST’a sorulmalıdır.<br/>
+•   R101 — It is your team’s ROBOT: ROBOT<br/>
+ve MAJOR MECHANISMS, yarışmaya katılan<br/>
+takım tarafından oluşturulmalıdır. Başka<br/>
+takımların yardım etmesi, parça üretmesi veya<br/>
+yazılım/strateji desteği vermesi yasak değildir.</p>
+</div>
+<div class="card">
+<h3 id="robotRulesBioTitle5">Section 12 ROBOT Construction Rules (R) (Page 121)</h3>
+<p id="robotRulesBioText5">• R101 devamı: Gearbox assembly, tek başına<br/>
+bir COMPONENT/MECHANISM veya COTS<br/>
+ürünleri genellikle MAJOR MECHANISM<br/>
+sayılmaz.<br/>
+• R102 — STARTING CONFIGURATION is<br/>
+limited to an 18-inch Cube: ROBOT maç<br/>
+başlangıcında tamamen sabit ve 18 × 18 × 18<br/>
+inç (45,70 cm³ hacim) içinde olmalıdır.<br/>
+• Değiştirilebilir MECHANISMS kullanılıyorsa<br/>
+tüm konfigürasyonların kurallara uygunluğu<br/>
+gösterilebilmelidir.<br/>
+• Önceden yüklenmiş SCORING ELEMENTS<br/>
+başlangıç ölçüsünün dışına taşabilir.<br/>
+• R103 — ROBOTS may assist in holding the<br/>
+STARTING CONFIGURATION: ROBOT<br/>
+başlangıç konumunu kendi başına<br/>
+koruyabilmelidir; mekanik olarak veya servo/<br/>
+motorları konumlandıran bir OpMode ile<br/>
+yapılabilir.<br/>
+• R104 — There is no ROBOT weight limit:<br/>
+BIOBUZZ ROBOTLARI için resmî ağırlık sınırı<br/>
+yoktur. Ancak zemin, batarya tüketimi, taşıma<br/>
+ve performans etkileri dikkate alınmalıdır.</p>
+</div>
+<div class="card">
+<h3 id="robotRulesBioTitle6">Section 12 ROBOT Construction Rules (R) (Page 122)</h3>
+<p id="robotRulesBioText6">• R105 — A ROBOT must stay as one<br/>
+assembly, and there are limits to how<br/>
+much it can expand.<br/>
+• Maç başladıktan sonra ROBOT genişleyebilir;<br/>
+ancak tamamen açılmış hâlde 18 × 24 × 29<br/>
+inç (45,70 × 61,0 × 73,65 cm) hacim sınırında<br/>
+kalmalıdır.<br/>
+• ROBOT bu sınırı yazılım kullanmadan<br/>
+fiziksel olarak sağlayabilmelidir.<br/>
+• ROBOT, COMPONENTS’leri kasıtlı olarak<br/>
+ayıracak şekilde tasarlanamaz.<br/>
+• 29 inçlik ölçü her zaman FIELD yüzeyinden<br/>
+dikey yüksekliktir.</p>
+</div>
+<div class="card">
+<h3 id="robotRulesBioTitle7">Section 12 ROBOT Construction Rules (R) (Page 123)</h3>
+<p id="robotRulesBioText7">• ROBOT ölçümü, normal oyun sırasında<br/>
+kullanacağı stable configuration durumunda<br/>
+yapılır.<br/>
+• ROBOT hafifçe eğilirse, tekrar stable<br/>
+configuration’a getirildiğinde sınırlar içindeyse<br/>
+bu tek başına ihlal değildir.<br/>
+• ROBOT’un tüm mekanik uzantıları inspection<br/>
+sırasında gösterilmelidir.<br/>
+• Yazılım uzantıyı sınırlasa bile mekanik olarak<br/>
+ölçü sınırını aşabilen ROBOT ihlal kabul edilir.<br/>
+• Tek bir MECHANISM iki yana uzanabiliyorsa,<br/>
+maksimum toplam genişlik sınırı aşmadığı<br/>
+sürece izinlidir.<br/>
+• Birden fazla bağımsız MECHANISM aynı<br/>
+anda iki yana açılarak toplam genişliği aşarsa<br/>
+izin verilmez.</p>
+</div>
+<div class="card">
+<h3 id="robotRulesBioTitle8">Section 12 ROBOT Construction Rules (R) (Page 124)</h3>
+<p id="robotRulesBioText8">• Yatay düzlemde dönen bir extension,<br/>
+hareketinin her noktasında ROBOT’un izin<br/>
+verilen ölçülerini aşmıyorsa kullanılabilir.<br/>
+12.2 Fair Play &amp; Damage Prevention<br/>
+• R201 — ROBOTS should be designed so<br/>
+they don’t damage anything or make a<br/>
+mess in the ARENA.<br/>
+• ROBOT, ARENA’ya zarar verme veya maç<br/>
+sırasında temizlik gerektirecek malzeme<br/>
+bırakma riski oluşturmamalıdır.<br/>
+• SCORING ELEMENTS üzerinde normal<br/>
+kullanım kaynaklı çizilme/iz oluşması beklenir;<br/>
+ancak parçaların koparılması, yırtılması veya<br/>
+sürekli hasar verilmesi ihlaldir.</p>
+</div>
+<div class="card">
+<h3 id="robotRulesBioTitle9">Section 12 ROBOT Construction Rules (R) (Page 145)</h3>
+<p id="robotRulesBioText9">• R201 — Damage risk örnekleri: zemine<br/>
+zarar verebilecek traction cihazları, açıkta<br/>
+keskin kenarlar ve aşındırıcı yüzeyler yasaktır.<br/>
+• FIELD’e dökülebilecek aşırı lubricant,<br/>
+yeterince sabitlenmemiş ballast (kum, kahve<br/>
+çekirdeği, bilye vb.), sıvı/jel, tire sealant ve<br/>
+graphite powder gibi maddeler risk oluşturur.<br/>
+• R202 — Design ROBOTS and OPERATOR<br/>
+CONSOLES for safety and fair play.<br/>
+• ROBOT ve OPERATOR CONSOLE tehlikeli<br/>
+malzeme içermemeli, güvenlik riski<br/>
+oluşturmamalı veya diğer ROBOTLARIN/<br/>
+FIELD STAFF’ın çalışmasını<br/>
+engellememelidir.<br/>
+• Görüşü kapatan shield/curtain, maç seslerini<br/>
+taklit eden yüksek sesli cihazlar ve diğer<br/>
+ROBOTLARIN sensörlerini/vision sistemlerini<br/>
+yanıltmaya yönelik düzenekler yasaktır.<br/>
+• Alev/pyrotechnics, tehlikeli maddeler ve<br/>
+ROBOT’a zarar vermek/devirmek için<br/>
+tasarlanmış cihazlar yasaktır.<br/>
+• Gereksiz entanglement riski oluşturan<br/>
+düzenekler yasaktır.<br/>
+• 5 Hz’den hızlı yanıp sönen dekoratif/<br/>
+fonksiyonel ışıklar ek incelemeye tabi<br/>
+tutulabilir.<br/>
+R203 *ROBOTS must be designed to be quickly<br/>
+removed from the FIELD without requiring power.<br/>
+Robotlarda elektrik olmasa bile içerisinden saha<br/>
+elemanları çıkarılabilecek şekilde tasarlanmalı<br/>
+Page 125 — 12.2 General Robot Design (Devam)<br/>
+R204 — No grabbing the floor<br/>
+Robot, zemine tutunarak veya aşağı yönlü ekstra<br/>
+kuvvet oluşturarak avantaj sağlayamaz.<br/>
+Özet<br/>
+Robot; sahayı kavrayan, kilitleyen veya yüzeye<br/>
+takılan mekanizmalar kullanamaz.<br/>
+Vakum, fan, türbin veya başka bir hava akışı<br/>
+oluşturarak zemine emme kuvveti oluşturamaz.<br/>
+Amaç, robotun çekişini yapay olarak artırmasını<br/>
+engellemektir.<br/>
+Normal lastik sürtünmesi ve robot ağırlığından<br/>
+kaynaklanan tutuş serbesttir.<br/>
+Page 126 — 12.3 Fabrication<br/>
+R301 — COTS MAJOR MECHANISMS are legal<br/>
+but have limits<br/>
+Hazır satın alınabilen (COTS) büyük<br/>
+mekanizmalar kullanılabilir ancak oyunu doğrudan<br/>
+oynayan hazır çözümler yasaktır.<br/>
+Özet<br/>
+Oyunun görevini tek başına yerine getiren hazır<br/>
+mekanizmalar kullanılamaz.<br/>
+Takımlar bu parçaları kendi robot tasarımlarının<br/>
+parçası hâline getirmelidir.<br/>
+İzin verilen istisnalar:<br/>
+Hazır sürüş şaseleri (drive chassis).<br/>
+FIRST Tech Challenge StarterBot mekanizmaları.<br/>
+R302 — Legal COTS parts may be modified<br/>
+Yasal COTS parçalar robot için değiştirilebilir.<br/>
+Özet<br/>
+Takımlar COTS parçaları:<br/>
+Kesebilir.<br/>
+Delebilir.<br/>
+Taşlayabilir.<br/>
+Boyayabilir.<br/>
+Şekillendirebilir.<br/>
+Başka parçalarla birleştirebilir.<br/>
+Ancak yapılan değişiklik başka bir Robot<br/>
+Construction Rule'u ihlal edemez.<br/>
+R303 — COTS MECHANISMS must remain<br/>
+simple<br/>
+Hazır mekanizmalar sınırlı serbestlik derecesine<br/>
+sahip olmalıdır.<br/>
+Özet<br/>
+Genel olarak COTS mekanizmalar tek hareket<br/>
+eksenli olmalıdır.<br/>
+İzin verilen örnekler<br/>
+Mecanum Wheel.<br/>
+Omni Wheel.<br/>
+Odometry Pod.<br/>
+Ratchet.<br/>
+Planetary Gearbox.<br/>
+Bu parçalar çok parçalı olsa bile oyun<br/>
+mekanizması olarak değerlendirilmez.<br/>
+R304 — Teams may reuse previous work<br/>
+Önceki sezonlarda geliştirilen parçalar ve<br/>
+yazılımlar tekrar kullanılabilir.<br/>
+Özet<br/>
+Tekrar kullanılabilecekler:<br/>
+CAD tasarımları.<br/>
+Kod kütüphaneleri.<br/>
+Vision algoritmaları.<br/>
+Özel üretilmiş parçalar.<br/>
+Önceki robot mekanizmaları.<br/>
+Kickoff öncesinde yapılmış olmaları yasallığını<br/>
+bozmaz.<br/>
+R305 — Current season SCORING ELEMENTS<br/>
+cannot become ROBOT parts<br/>
+BIOBUZZ sezonunun Scoring Element'leri<br/>
+robotun yapısında kullanılamaz.<br/>
+Özet<br/>
+Yasaktır:<br/>
+Gerçek Pollen parçalarını robot üzerinde<br/>
+kullanmak.<br/>
+Pollen'in birebir kopyasını mekanizma olarak<br/>
+kullanmak.<br/>
+Oyun elemanını robotun yapısal parçası yapmak.<br/>
+Amaç tüm takımların aynı oyun elemanlarıyla<br/>
+yarışmasını sağlamaktır.<br/>
+Page 127 — 12.4 ROBOT SIGN Rules<br/>
+ROBOT SIGN Overview<br/>
+Her robot sahada kolayca tanınabilmelidir.<br/>
+Özet<br/>
+Robot Sign;<br/>
+Takım numarasını gösterir.<br/>
+Alliance rengini gösterir.<br/>
+Hakemlerin ve skor görevlilerinin uzaktan<br/>
+okuyabileceği şekilde tasarlanır.<br/>
+R401 — Minimum of two ROBOT SIGNS<br/>
+Robot üzerinde en az iki Robot Sign bulunmalıdır.<br/>
+Özet<br/>
+Robot Sign kuralları:<br/>
+En az 2 adet.<br/>
+Birbirine zıt veya en az 90° farklı yüzeylerde.<br/>
+Minimum boyut:<br/>
+6.5 inç genişlik<br/>
+2.5 inç yükseklik<br/>
+Dayanıklı ve robot gövdesine sabitlenmiş<br/>
+olmalıdır.<br/>
+R402 — ROBOT SIGNS indicate your ALLIANCE<br/>
+Robot Sign ittifak rengini açıkça göstermelidir.<br/>
+Özet<br/>
+Her tabelada:<br/>
+Tam kırmızı veya tam mavi opak arka plan<br/>
+bulunur.<br/>
+Sadece takım numarası yer alabilir.<br/>
+Güçle aydınlatılamaz.<br/>
+Çift taraflı kullanılıyorsa karşı renk görünemez.<br/>
+R403 — Team number on ROBOT SIGNS<br/>
+Takım numarası belirli görünürlük kurallarına<br/>
+uymalıdır.<br/>
+Özet<br/>
+Takım numarası:<br/>
+Beyaz.<br/>
+Opak.<br/>
+Yaklaşık 2.25 inç yüksekliğinde.<br/>
+Arap rakamlarıyla yazılmış.<br/>
+Dikey üst üste yazılamaz.<br/>
+Güçle aydınlatılamaz.<br/>
+Page 128 — ROBOT SIGN Exceptions<br/>
+Handwritten ROBOT SIGN Exception<br/>
+İstisnai durumlarda el yazısı tabela kullanılabilir.<br/>
+Özet<br/>
+Eğer:<br/>
+Yasal tabela kaybolmuşsa,<br/>
+Yazdırma imkânı yoksa,<br/>
+Head Referee geçici el yazısı Robot Sign<br/>
+kullanımına izin verebilir.<br/>
+ROBOT SIGN Visibility Requirement<br/>
+Robot Sign saha görevlileri tarafından uzaktan<br/>
+okunabilir olmalıdır.<br/>
+Özet<br/>
+Amaç:<br/>
+Yaklaşık 12 feet (3.66 m) uzaklıktan okunabilmesi.<br/>
+Robotun hangi ittifakta olduğunun kolay<br/>
+anlaşılması.<br/>
+Page 129 — 12.5 Motors &amp; Actuators<br/>
+Motor and Actuator Overview<br/>
+Robot yalnızca FIRST tarafından izin verilen<br/>
+motor ve servo modellerini kullanabilir.<br/>
+Özet<br/>
+Tüm aktüatörler:<br/>
+Güvenli olmalı.<br/>
+Onaylı kontrol sistemi üzerinden sürülmeli.<br/>
+Sayı limitlerine uymalıdır.<br/>
+R501 — Only specific motors are allowed<br/>
+Sadece izin verilen motor modelleri kullanılabilir.<br/>
+Özet<br/>
+Yasal motor aileleri arasında:<br/>
+goBILDA Yellow Jacket.<br/>
+REV HD Hex.<br/>
+REV Core Hex.<br/>
+AndyMark NeveRest.<br/>
+TETRIX.<br/>
+Studica Maverick.<br/>
+SWYFT Spike.<br/>
+WATTOS Stingray.<br/>
+Telefon titreşim motoru ve sensör içindeki küçük<br/>
+motorlar bu limite dahil değildir.<br/>
+R502 — Servo usage is restricted<br/>
+Servo motorların güç sınırları vardır.<br/>
+Özet<br/>
+Servo kuralları:<br/>
+Standart servo maksimum 8 W.<br/>
+Linear servo maksimum 1 A.<br/>
+Teknik özellik gerektiğinde takımlar belge<br/>
+gösterebilmelidir.<br/>
+R503 — ROBOTS are limited to 8 motors and 8<br/>
+servos<br/>
+Robotta motor ve servo sayısı sınırlıdır.<br/>
+Özet<br/>
+Maksimum:<br/>
+8 Motor<br/>
+8 Servo<br/>
+Bu sayı robotun tüm konfigürasyonları için<br/>
+geçerlidir.<br/>
+Page 123 — 12.5 Motors &amp; Actuators<br/>
+R504 — Do not modify actuators unless explicitly<br/>
+allowed<br/>
+Motor ve servoların iç yapısı değiştirilemez;<br/>
+yalnızca izin verilen değişiklikler yapılabilir.<br/>
+Özet<br/>
+Motor veya servo açılarak iç mekanizması<br/>
+değiştirilemez.<br/>
+Kablo kısaltma veya konnektör değiştirme<br/>
+serbesttir.<br/>
+Montaj aparatları değiştirilebilir.<br/>
+Üreticinin izin verdiği firmware veya ayarlar<br/>
+uygulanabilir.<br/>
+Etiketleme, izolasyon ve normal bakım yapılabilir.<br/>
+R505 — All actuators must be controlled through<br/>
+approved devices<br/>
+Tüm motor ve servolar yalnızca FIRST tarafından<br/>
+onaylanan güç kontrol cihazları üzerinden<br/>
+çalıştırılmalıdır.<br/>
+Özet<br/>
+İzin verilen kontrol cihazları:<br/>
+REV Control Hub<br/>
+REV Expansion Hub<br/>
+REV Servo Hub / Servo Power Module<br/>
+REV SPARKmini<br/>
+goBILDA Servo Power Injector<br/>
+Studica Servo Power Block<br/>
+Motor veya servo doğrudan bataryaya<br/>
+bağlanamaz.<br/>
+R506 — Relays, electromagnets and solenoids<br/>
+are prohibited<br/>
+Robotta röle, elektromıknatıs veya elektrikli<br/>
+solenoid aktüatör kullanılamaz.<br/>
+Özet<br/>
+Yasak olanlar:<br/>
+Elektromıknatıs ile nesne tutmak.<br/>
+Solenoid piston kullanmak.<br/>
+Elektrikli röle ile motor sürmek.<br/>
+Robot yalnızca izin verilen motor ve servo<br/>
+sistemleriyle hareket üretmelidir.<br/>
+Page 134— 12.6 Power Distribution<br/>
+Power Distribution Overview<br/>
+Robotun elektrik sistemi tek bir ana batarya ve<br/>
+onaylı güç dağıtım yapısı üzerine kurulmalıdır.<br/>
+Özet<br/>
+Tek ana batarya kullanılır.<br/>
+Güç ana anahtardan geçer.<br/>
+Elektrik sistemi inspection sırasında görülebilir<br/>
+olmalıdır.<br/>
+R601 — Only one main battery is allowed<br/>
+Robotta yalnızca bir adet onaylı FTC ana<br/>
+bataryası bulunabilir.<br/>
+Özet<br/>
+Sadece resmi FTC uyumlu 12V NiMH bataryalar<br/>
+kullanılabilir.<br/>
+Aynı anda ikinci ana batarya kullanılamaz.<br/>
+Batarya yalnızca izin verilen konektör veya sigorta<br/>
+değişikliğiyle modifiye edilebilir.<br/>
+R602 — Other batteries are limited to self-<br/>
+contained devices<br/>
+Ek bataryalar yalnızca bağımsız elektronik<br/>
+cihazlara güç verebilir.<br/>
+Özet<br/>
+İzin verilen örnekler:<br/>
+USB powerbank.<br/>
+Kamera bataryası.<br/>
+Kendi bataryası olan kayıt cihazı.<br/>
+İzin verilmeyen kullanım:<br/>
+Motor beslemek.<br/>
+Servo beslemek.<br/>
+Control Hub yerine güç vermek.<br/>
+R603 — Main Power Switch is required<br/>
+Robotta erişilebilir bir ana güç anahtarı<br/>
+bulunmalıdır.<br/>
+Özet<br/>
+Anahtar:<br/>
+Kolay ulaşılabilir olmalı.<br/>
+Robot sahadayken hızlı kapatılabilmeli.<br/>
+Hareketli parçaların arasında gizlenmemelidir.<br/>
+R604 — Fuses must remain legal<br/>
+Sigortalar üreticinin belirlediği değerlerde<br/>
+kullanılmalıdır.<br/>
+Özet<br/>
+Yasaktır:<br/>
+Daha yüksek amper sigorta takmak.<br/>
+Sigortayı köprülemek.<br/>
+Kendini sıfırlayan sigorta eklemek.<br/>
+Page 135 — Power Distribution (Devam)<br/>
+R605 — ROBOT frame cannot carry current<br/>
+Robot şasisi elektrik iletim yolu olarak<br/>
+kullanılamaz.<br/>
+Özet<br/>
+Şase üzerinden güç taşınamaz.<br/>
+Elektrik kabloları kullanılmalıdır.<br/>
+Gerekirse yalnızca izin verilen topraklama<br/>
+bağlantısı yapılabilir.<br/>
+R606 — Electrical system must be inspectable<br/>
+Elektrik sistemi inspection sırasında görülebilir<br/>
+durumda olmalıdır.<br/>
+Özet<br/>
+Görünür olması gerekenler:<br/>
+Batarya bağlantısı.<br/>
+Ana anahtar.<br/>
+Sigortalar.<br/>
+Güç dağıtımı.<br/>
+Hub LED göstergeleri.<br/>
+Robot Controller durumu.<br/>
+Denetçi kablolamayı görebilmelidir.<br/>
+R607 — Custom circuits are limited<br/>
+Takım tarafından tasarlanan elektronik devreler<br/>
+gerilim sınırlarına uymalıdır.<br/>
+Özet<br/>
+Regüle çıkış en fazla 5V olabilir.<br/>
+LED uygulamaları istisna olabilir.<br/>
+Ana batarya voltajını yükselten devre yapılamaz.<br/>
+R608 — Power regulating devices must be<br/>
+powered correctly<br/>
+Güç düzenleyici cihazlar yalnızca izin verilen<br/>
+şekilde beslenebilir.<br/>
+Özet<br/>
+Control Hub, Expansion Hub ve Servo Module:<br/>
+Ana bataryadan beslenmelidir.<br/>
+Üretici bağlantı şeması değiştirilmemelidir.<br/>
+Page 137 — Power Distribution (Devam)<br/>
+R609 — Use appropriately sized wire<br/>
+Robot kabloları taşıdığı akıma uygun kalınlıkta<br/>
+olmalıdır.<br/>
+Özet<br/>
+Ana batarya hattı minimum 18 AWG.<br/>
+Motor hatları uygun akım kapasitesinde olmalıdır.<br/>
+Düşük akımlı sinyal kabloları daha ince olabilir.<br/>
+R610 — Use correct wire colors<br/>
+Pozitif ve toprak hatları standart renklerle<br/>
+işaretlenmelidir.<br/>
+Özet<br/>
+Önerilen renkler:<br/>
+Kırmızı / Sarı / Beyaz / Kahverengi: Pozitif güç.<br/>
+Siyah / Mavi: GND (Toprak).<br/>
+Inspection sırasında kablolar kolay ayırt<br/>
+edilebilmelidir.<br/>
+R611 — Powered USB hubs have limited power<br/>
+sources<br/>
+Powered USB Hub yalnızca izin verilen<br/>
+kaynaklardan beslenebilir.<br/>
+Özet<br/>
+İzin verilen kaynaklar:<br/>
+Onaylı USB powerbank.<br/>
+Hub'ın resmi 5V AUX çıkışı.<br/>
+Başka voltaj kaynakları kullanılamaz.<br/>
+R612 — Do not modify critical power paths<br/>
+Ana güç hattı değiştirilemez.<br/>
+Özet<br/>
+Değiştirilemeyen güç yolu:<br/>
+Batarya → Ana Anahtar → Hub / Güç Regülatörü<br/>
+→ Motor / Servo<br/>
+Yasaktır:<br/>
+Boost converter.<br/>
+Buck converter ile ana sistemi beslemek.<br/>
+Ana güç hattını yeniden yönlendirmek.<br/>
+R613 — Do not combine power between devices<br/>
+Farklı güç çıkışları birbirine bağlanamaz.<br/>
+Özet<br/>
+Bir cihaz yalnızca bağlı olduğu porttan güç<br/>
+almalıdır.<br/>
+İki farklı port paralel bağlanamaz.<br/>
+İki farklı Hub'ın güç çıkışları birleştirilemez.<br/>
+Page 134 — 12.7 Control, Command &amp; Signals<br/>
+System<br/>
+Control, Command &amp; Signals System<br/>
+Robotun kontrol sistemi, Robot Controller, Driver<br/>
+Station ve haberleşme cihazlarının tamamı<br/>
+FTC'nin izin verdiği mimariyi kullanmalıdır.<br/>
+Özet<br/>
+Robot yalnızca resmi FTC kontrol sistemiyle<br/>
+çalıştırılır.<br/>
+Kablosuz iletişim yalnızca Robot Controller ↔<br/>
+Driver Station arasında gerçekleşebilir.<br/>
+Ağ güvenliği ve cihaz yapılandırmaları tüm<br/>
+takımlar için standarttır.<br/>
+R701 — Control the ROBOT with a single ROBOT<br/>
+CONTROLLER<br/>
+Robot yalnızca bir Robot Controller tarafından<br/>
+kontrol edilebilir.<br/>
+Özet<br/>
+İzin verilen iki yapı:<br/>
+REV Control Hub.<br/>
+Android telefon + REV Expansion Hub.<br/>
+Ek olarak en fazla 1 Expansion Hub kullanılabilir.<br/>
+Aynı robotta iki Robot Controller bulunamaz.<br/>
+R702 — Teams may not alter coprocessor<br/>
+software<br/>
+Kontrol sistemindeki coprocessor yazılımı<br/>
+değiştirilemez.<br/>
+Özet<br/>
+Üretici firmware güncellemeleri yapılabilir.<br/>
+FTC SDK dışında çalışan sistem yazılımı<br/>
+yüklenemez.<br/>
+Desteklenen programlanabilir vision cihazı<br/>
+yalnızca manualda belirtilen cihazlardır.<br/>
+R703 — Smartphone must connect via USB<br/>
+Telefon tabanlı Robot Controller kullanılıyorsa<br/>
+Expansion Hub'a USB ile bağlanmalıdır.<br/>
+Özet<br/>
+USB bağlantısı zorunludur.<br/>
+Kablosuz bağlantıyla Robot Controller<br/>
+çalıştırılamaz.<br/>
+USB bağlantısı maç boyunca kesilmemelidir.<br/>
+Page 140 — Control, Command &amp; Signals<br/>
+System (Devam)<br/>
+R704 — Use networks and bandwidth as directed<br/>
+Kablosuz ağlar yalnızca FIRST'ün belirlediği<br/>
+şekilde kullanılmalıdır.<br/>
+Özet<br/>
+Yasaktır:<br/>
+Robot ağına bilgisayar bağlamak.<br/>
+Sürekli video yayını yapmak.<br/>
+FTC Dashboard veya benzeri üçüncü parti ağ<br/>
+servislerini maç sırasında kullanmak.<br/>
+Başka takımın ağına bağlanmak.<br/>
+Robot yalnızca resmi Driver Station bağlantısını<br/>
+kullanmalıdır.<br/>
+R705 — Configure devices for your team number<br/>
+Robot Controller ve Driver Station cihaz adları<br/>
+takım numarasına göre ayarlanmalıdır.<br/>
+Özet<br/>
+Format:<br/>
+TEAMNUMBER-RC<br/>
+TEAMNUMBER-DS<br/>
+Yedek cihazlar harf eklenerek isimlendirilebilir.<br/>
+Örnek:<br/>
+32334-RC<br/>
+32334-A-DS<br/>
+R706 — Only specified modifications to core<br/>
+control devices<br/>
+Control Hub, Driver Station ve temel kontrol<br/>
+cihazları yalnızca izin verilen şekilde<br/>
+değiştirilebilir.<br/>
+Özet<br/>
+Serbest olanlar:<br/>
+Etiketleme.<br/>
+Montaj.<br/>
+Kablo düzenleme.<br/>
+Firmware güncellemesi.<br/>
+Basit onarım.<br/>
+Yasaktır:<br/>
+Donanımı değiştirmek.<br/>
+Güç devresini değiştirmek.<br/>
+Radyo donanımını değiştirmek.<br/>
+Page 142 — USB, Vision &amp; Recording Devices<br/>
+R707 — USB is for vision<br/>
+USB bağlantıları yalnızca izin verilen cihazlar için<br/>
+kullanılabilir.<br/>
+Özet<br/>
+İzin verilen USB cihazları:<br/>
+Webcam.<br/>
+Vision sensörü.<br/>
+USB Hub.<br/>
+Expansion Hub.<br/>
+Başka USB çevre birimleri kullanılamaz.<br/>
+R708 — Use only supported USB vision devices<br/>
+Yalnızca FTC tarafından desteklenen USB<br/>
+görüntüleme cihazları kullanılabilir.<br/>
+Özet<br/>
+İzin verilenler:<br/>
+Resmi desteklenen webcam'ler.<br/>
+Manualda belirtilen vision cihazları.<br/>
+Yasaktır:<br/>
+Stereo kamera.<br/>
+Desteklenmeyen görüntü işleme donanımları.<br/>
+R709 — Recording devices are permitted<br/>
+Kayıt cihazları kullanılabilir ancak robot kontrolüne<br/>
+katkı sağlayamaz.<br/>
+Özet<br/>
+Serbest:<br/>
+GoPro.<br/>
+Action Camera.<br/>
+Video kayıt cihazı.<br/>
+Şartlar:<br/>
+Kablosuz özelliği kapalı olmalı.<br/>
+Maç sırasında veri aktaramaz.<br/>
+Sadece kayıt amacıyla kullanılabilir.<br/>
+Page 142— Lasers &amp; Android Configuration<br/>
+R710 — Lasers are restricted<br/>
+Lazer kullanımı ciddi şekilde sınırlandırılmıştır.<br/>
+Özet<br/>
+İzin verilen lazer:<br/>
+Sensörün parçası olmalı.<br/>
+Class I / Exempt güvenlik sınıfında olmalı.<br/>
+Görünür lazer ışığı yaymamalıdır.<br/>
+Lazer pointer veya hedefleme sistemi<br/>
+kullanılamaz.<br/>
+R711 — Configure Android devices appropriately<br/>
+Android cihazlar yarışma öncesinde doğru şekilde<br/>
+yapılandırılmalıdır.<br/>
+Özet<br/>
+Robot Controller:<br/>
+Wi-Fi şifresi değiştirilmeli.<br/>
+Gereksiz uygulamalar kapatılmalı.<br/>
+Driver Station:<br/>
+Airplane Mode açık.<br/>
+Wi-Fi açık.<br/>
+Bluetooth kapalı.<br/>
+Sadece kendi robotuna bağlı olmalı.<br/>
+Page 138 — Android Device Requirements<br/>
+Android Device Configuration Checklist<br/>
+FTC, Android cihazların yarışma öncesi kontrol<br/>
+edilmesini ister.<br/>
+Özet<br/>
+Kontrol edilmesi gerekenler:<br/>
+Airplane Mode.<br/>
+Bluetooth kapalı.<br/>
+Wi-Fi açık.<br/>
+Doğru takım numarası.<br/>
+Güncel FTC Driver Station uygulaması.<br/>
+Güncel FTC Robot Controller uygulaması.<br/>
+Yanlış yapılandırılmış cihazlar inspection<br/>
+sırasında düzeltilmelidir.<br/>
+Page 143 — 12.8 Pneumatic Systems &amp; Airflow<br/>
+Devices<br/>
+Pneumatic Systems &amp; Airflow Devices<br/>
+Robotlarda pnömatik ve hava akışı oluşturan<br/>
+sistemler büyük ölçüde yasaktır.<br/>
+Özet<br/>
+Robot aktif hava basıncı oluşturamaz.<br/>
+Vakum oluşturamaz.<br/>
+Hava üfleyerek oyun elemanını hareket ettiremez.<br/>
+R801 — No Pneumatic Actuators, High-Speed<br/>
+Blowers, or Vacuums<br/>
+Pnömatik aktüatörler, kompresörler, blower ve<br/>
+vakum sistemleri kullanılamaz.<br/>
+Özet<br/>
+Yasaktır:<br/>
+Kompresör.<br/>
+Basınç tankı.<br/>
+Vakum pompası.<br/>
+Hava üfleyici fan.<br/>
+Solenoid pnömatik piston.<br/>
+İzin verilen tek istisna:<br/>
+Üretici tarafından kapalı şekilde şarj edilmiş gas<br/>
+shock / gaz yayları.<br/>
+Elektronik cihazların kendi soğutma fanları.<br/>
+Page 143 — 12.9 Operator Console<br/>
+Operator Console<br/>
+Operator Console, sürücülerin maç boyunca<br/>
+robotu kontrol ettiği tüm ekipmanların oluşturduğu<br/>
+kontrol istasyonudur.<br/>
+Özet<br/>
+Operator Console şunları kapsar:<br/>
+Driver Station cihazı.<br/>
+Gamepad'ler.<br/>
+USB Hub (gerekiyorsa).<br/>
+Güç bankası (kullanılıyorsa).<br/>
+Kablolar ve bağlantılar.<br/>
+Maç boyunca yalnızca izin verilen ekipmanlar<br/>
+kullanılabilir.<br/>
+R901 — Use only a specified DRIVER STATION<br/>
+device<br/>
+Operator Console'da yalnızca bir Driver Station<br/>
+cihazı aktif olabilir.<br/>
+Özet<br/>
+İzin verilen cihazlar:<br/>
+REV Driver Hub.<br/>
+FTC Driver Station uygulaması yüklü Android<br/>
+telefon/tablet.<br/>
+Kurallar:<br/>
+Aynı anda yalnızca 1 Driver Station robotla<br/>
+bağlantıda olabilir.<br/>
+Yedek Driver Station getirilebilir ancak kapalı<br/>
+kalmalıdır.<br/>
+Driver Hub resmi olarak desteklenen cihazdır.<br/>
+R902 — Touch screen must be accessible<br/>
+Driver Station ekranı maç boyunca erişilebilir<br/>
+olmalıdır.<br/>
+Özet<br/>
+Dokunmatik ekran görünür olmalıdır.<br/>
+Ekran tamamen kapatılamaz.<br/>
+Fare, klavye veya başka cihaz gerektirmeden<br/>
+kullanılabilmelidir.<br/>
+Inspection sırasında ekran kontrol edilir.<br/>
+Page 144 — Operator Console Size &amp; Hardware<br/>
+R903 — OPERATOR CONSOLE physical limits<br/>
+Operator Console belirli fiziksel ölçüleri aşamaz.<br/>
+Özet<br/>
+Maksimum boyut:<br/>
+Genişlik: 3 ft (91.4 cm)<br/>
+Derinlik: 1.5 ft (45.7 cm)<br/>
+Yükseklik: 2 ft (61 cm)<br/>
+Ek kurallar:<br/>
+Güç bankaları bu ölçüye dahildir.<br/>
+Aynı anda yalnızca 1 USB Hub kullanılabilir.<br/>
+Yaklaşık 20 lb (9 kg) üzerindeki konsollar ek<br/>
+incelemeye alınabilir.<br/>
+R904 — Only official wireless communication<br/>
+Operator Console'da resmi FTC bağlantısı<br/>
+dışında kablosuz iletişim kullanılamaz.<br/>
+Özet<br/>
+Yasaktır:<br/>
+Bluetooth gamepad bağlantısı.<br/>
+Ek Wi-Fi adaptörü.<br/>
+Hotspot.<br/>
+Kablosuz USB dongle.<br/>
+Robot ile Driver Station arasındaki resmi bağlantı<br/>
+dışında hiçbir kablosuz haberleşme bulunamaz.<br/>
+13 Tournament (T)<br/>
+13.1 Overview<br/>
+FIRST Tech Challenge yarışmaları head-to-head<br/>
+tournament formatında oynanıyor. Turnuvada üç<br/>
+çeşit MATCH bulunuyor:<br/>
+• Practice MATCHES: Her etkinlikte olmak<br/>
+zorunda değil. Takımlar Qualification<br/>
+MATCHES başlamadan önce ROBOT’larını<br/>
+gerçek yarışma FIELD’ında kullanma fırsatı<br/>
+buluyor.<br/>
+• Qualification MATCHES: Takımlar burada<br/>
+MATCH points ve RANKING POINTS<br/>
+kazanıyor. Bunlar takımın sıralamasını<br/>
+belirliyor ve Playoff MATCHES’e katılma<br/>
+hakkını etkiliyor.<br/>
+• Playoff MATCHES: Etkinliği kazanan<br/>
+ALLIANCE’ı belirliyor.</p>
+</div>
+<div class="card">
+<h3 id="robotRulesBioTitle10">CUSTOM CIRCUIT (Page 170)</h3>
+<p id="robotRulesBioText10">R501’deki actuator veya R505’teki power<br/>
+regulation device dışında kalan aktif elektriksel<br/>
+öğe.<br/>
+DISABLED<br/>
+REFEREE takımın ROBOT’u durdurmasını ister;<br/>
+tüm outputs kapatılır ve ROBOT MATCH’in geri<br/>
+kalanında kullanılamaz.<br/>
+DISQUALIFIED<br/>
+Qualification MATCH’te:<br/>
+• 0 MATCH points<br/>
+• 0 RP<br/>
+Playoff MATCH’te:<br/>
+• ALLIANCE 0 MATCH points.<br/>
+DRIVE COACH<br/>
+Rehber veya danışman.<br/>
+DRIVE TEAM<br/>
+Belirli bir MATCH için takım performansından<br/>
+sorumlu en fazla 4 kişi.<br/>
+DRIVER<br/>
+ROBOT operator/controller.<br/>
+DRIVER STATION<br/>
+DRIVER STATION App çalıştıran Android<br/>
+smartphone veya REV Driver Hub.<br/>
+FABRICATED ITEM<br/>
+Son ROBOT kullanım formuna getirilmiş,<br/>
+değiştirilmiş, üretilmiş, kesilmiş, boyanmış,<br/>
+işlenmiş vb. COMPONENT veya MECHANISM.<br/>
+FIELD<br/>
+Yaklaşık 144 in. × 144 in. saha.<br/>
+FIELD STAFF<br/>
+ARENA çevresinde MATCH’lerin güvenli, adil ve<br/>
+verimli yürütülmesini sağlayan volunteers.<br/>
+FLOWER<br/>
+POLLEN ve NECTAR’ın üstten yerleştirilebildiği,<br/>
+POLLEN’ın alttan çıkarılabildiği FIELD yapısı.<br/>
+FTA<br/>
+FIRST Technical Advisor.<br/>
+GARDEN<br/>
+Yaklaşık 23 in. × 2 in. × infinitely tall alliance-<br/>
+colored zone.<br/>
+HIVE<br/>
+2 CELL ve bağlantı mekanizmasından oluşan,<br/>
+pivot üzerinde dönen bi-stable yapı.<br/>
+HOME REGION<br/>
+Takımın atandığı ve advancement için uygun<br/>
+olduğu region.<br/>
+HUMAN PLAYER<br/>
+SCORING ELEMENT manager.</p>
+</div>
+</section>
+<footer class="footer">
+<div class="footer-container">
+<div class="footer-column">
+<h3 id="footerTitle">QuickManual</h3>
+<p id="footerDescription">
+            A community resource by Asteria Robotics
+            This is not an official FIRST document.
+        </p>
+</div>
+<div class="footer-column">
+<h3 id="contactTitle">İletişim</h3>
+<p><a href="mailto:asteria.32334@gmail.com">
+    asteria.32334@gmail.com
+</a></p>
+<p><a href="tel:+905057770038">
+    +90 (505) 777 00 38
+</a></p>
+<a href="https://maps.app.goo.gl/HN1VrrvqUwMMbExA6?g_st=ic" id="addressText" target="_blank">
+
+Atölyemizin Adresi
+
+</a>
+</div>
+<div class="footer-column">
+<h3> </h3>
+<a href="https://www.instagram.com/asteria_32334/" id="instagramText" target="_blank">
+
+Instagram
+
+</a>
+<p><a href="https://theorangealliance.org/teams/32334" target="_blank">
+        The Orange Alliance
+    </a></p>
+<p><a href="https://ftcscout.org/teams/32334" target="_blank">
+        FTCScout
+    </a></p>
+
+<p><a href="https://www.youtube.com/@asteria32334" target="_blank">
+        YouTube
+    </a></p>
+</div>
+</div>
+<div class="footer-bottom" id="copyrightText">
+© 2026 Asteria Robotics FTC Team 32334. All Rights Reserved.
+</div>
+<div class="footer-bottom-asterisk" id="asterisk">
+        * QuickManual resmi Oyun Kılavuzu değildir ve hiçbir zaman eksiksiz ya da kesin kural kaynağı olarak kabul edilmemelidir. FIRST tarafından yayınlanan resmi belgenin yerini tutmaz. Resmi kararlar, muayene süreçleri veya itirazlar için takımlar her zaman en güncel resmi Game Manual’a başvurmalıdır.
+    </div> <!--
+<div class="footer-bottom-asterisk" id="dateUpdate">
+        ** Son güncellenme tarihi: 5 ağustos 2026, Game Manual V0
+    </div> -->
+<img alt="biobuzz" class="center-image" src="images/biobuzz.png" style="max-width: 50%; height: auto; display: block;"/>
+</footer>
+<script>
+const translations = {
+  "tr": {
+    "navGameRules": "Maç Kuralları",
+    "navFieldInfo": "Saha Eleman Bilgileri",
+    "navMatchProcedures": "Maç Prosedürleri",
+    "navScoringSystem": "Nasıl Puan Kazanılır",
+    "navHome": "Ödüller ve Tanımlar",
+    "navTeam": "Genel Kurallar",
+    "navRobots": "Robot Yapımı",
+    "navDecode": "Geri dön",
+    "asterisk": "* QuickManual resmi Oyun Kılavuzu değildir ve hiçbir zaman eksiksiz ya da kesin kural kaynağı olarak kabul edilmemelidir. FIRST tarafından yayınlanan resmi belgenin yerini tutmaz. Resmi kararlar, muayene süreçleri veya itirazlar için takımlar her zaman en güncel resmi Game Manual’a başvurmalıdır.",
+    "dateUpdate": "** Son güncellenme tarihi: 5 ağustos 2026, Game Manual V0",
+    "pageSearch": "Sayfada ara... (örnek: kurallar, ödül, robot)",
+    "clear": "Temizle",
+    "robotRulesTitle": "Robot Yapımı",
+    "footerTitle": "QuickManual",
+    "footerDescription": "A community resource by Asteria Robotics\nThis is not an official FIRST document.",
+    "contactTitle": "İletişim",
+    "addressText": "Atölyemizin Adresi",
+    "instagramText": "Instagram",
+    "copyrightText": "© 2026 Asteria Robotics FTC Team 32334. Tüm Hakları Saklıdır.",
+    "navPanel": "Kategoriler",
+    "robotRulesBioTitle6": "Section 12 ROBOT Construction Rules (R) (Page 122)",
+    "robotRulesBioText4": "Bir VENDOR:<br/>\n• resmi bir vergi/işletme kaydına sahip olmalı,<br/>\n• FIRST takımının tamamen sahip olduğu bir<br/>\nyan kuruluş olmamalı,<br/>\n• genel ürünleri makul sürede sağlayabilecek<br/>\nstok/üretim kapasitesine sahip olmalı,<br/>\n• ürünlerini tüm FIRST Tech Challenge<br/>\ntakımlarına sunmalıdır.<br/>\nSection 12 ROBOT Construction Rules (R)<br/>\n• FABRICATED ITEM: ROBOT üzerinde<br/>\nkullanılacağı son hâle ulaşmak için<br/>\ndeğiştirilmiş, üretilmiş, kesilmiş, işlenmiş,<br/>\nboyanmış vb. COMPONENT veya<br/>\nMECHANISM’dir.<br/>\n•   Bir malzeme, takım tarafından yalnızca<br/>\nsaklama/taşıma amacıyla kesilmişse COTS<br/>\nveya FABRICATED ITEM sayılmayabilir.<br/>\n•   Takımlar, parçaların kurallara uygunluğunu<br/>\ninspection sırasında belgelemek zorunda<br/>\nkalabilir.<br/>\n•   Parçanın uygunluğu konusunda resmî karar<br/>\ngerekiyorsa FIRST’a sorulmalıdır.<br/>\n•   R101 — It is your team’s ROBOT: ROBOT<br/>\nve MAJOR MECHANISMS, yarışmaya katılan<br/>\ntakım tarafından oluşturulmalıdır. Başka<br/>\ntakımların yardım etmesi, parça üretmesi veya<br/>\nyazılım/strateji desteği vermesi yasak değildir.",
+    "robotRulesBioTitle5": "Section 12 ROBOT Construction Rules (R) (Page 121)",
+    "robotRulesBioTitle7": "Section 12 ROBOT Construction Rules (R) (Page 123)",
+    "robotRulesBioText8": "• Yatay düzlemde dönen bir extension,<br/>\nhareketinin her noktasında ROBOT’un izin<br/>\nverilen ölçülerini aşmıyorsa kullanılabilir.<br/>\n12.2 Fair Play & Damage Prevention<br/>\n• R201 — ROBOTS should be designed so<br/>\nthey don’t damage anything or make a<br/>\nmess in the ARENA.<br/>\n• ROBOT, ARENA’ya zarar verme veya maç<br/>\nsırasında temizlik gerektirecek malzeme<br/>\nbırakma riski oluşturmamalıdır.<br/>\n• SCORING ELEMENTS üzerinde normal<br/>\nkullanım kaynaklı çizilme/iz oluşması beklenir;<br/>\nancak parçaların koparılması, yırtılması veya<br/>\nsürekli hasar verilmesi ihlaldir.",
+    "robotRulesBioText1": "Construction Rules (R)<br/>\nSection 12 — ROBOT Construction Rules<br/>\n• Bu bölüm ROBOT’ta kullanılabilecek parça,<br/>\nmalzeme ve bunların kullanımını belirler.<br/>\n• ROBOT; güç, iletişim, kontrol ve hareket<br/>\nsistemlerini içeren, oyuna katılmak için gerekli<br/>\nelektromekanik yapıdır.<br/>\n• Kuralların amacı güvenlik, güvenilirlik, eşitlik,<br/>\ntasarım zorluğu ve profesyonel standartları<br/>\nkorumaktır.<br/>\n• COMPONENT: Temel halinde, işlevini<br/>\ndeğiştirmeden ayrılamayan parça.<br/>\n• MECHANISM: Birden fazla COMPONENT’in<br/>\nbelirli bir işlev için oluşturduğu ve sökülüp<br/>\ntekrar takılabilen düzenek.<br/>\n• COTS (Commercial-Off-The-Shelf):<br/>\nVENDOR tarafından takımların satın<br/>\nalabileceği, standart ve değiştirilmemiş ticari<br/>\nürün.",
+    "robotRulesBioText6": "• R105 — A ROBOT must stay as one<br/>\nassembly, and there are limits to how<br/>\nmuch it can expand.<br/>\n• Maç başladıktan sonra ROBOT genişleyebilir;<br/>\nancak tamamen açılmış hâlde 18 × 24 × 29<br/>\ninç (45,70 × 61,0 × 73,65 cm) hacim sınırında<br/>\nkalmalıdır.<br/>\n• ROBOT bu sınırı yazılım kullanmadan<br/>\nfiziksel olarak sağlayabilmelidir.<br/>\n• ROBOT, COMPONENTS’leri kasıtlı olarak<br/>\nayıracak şekilde tasarlanamaz.<br/>\n• 29 inçlik ölçü her zaman FIELD yüzeyinden<br/>\ndikey yüksekliktir.",
+    "robotRulesBioText9": "• R201 — Damage risk örnekleri: zemine<br/>\nzarar verebilecek traction cihazları, açıkta<br/>\nkeskin kenarlar ve aşındırıcı yüzeyler yasaktır.<br/>\n• FIELD’e dökülebilecek aşırı lubricant,<br/>\nyeterince sabitlenmemiş ballast (kum, kahve<br/>\nçekirdeği, bilye vb.), sıvı/jel, tire sealant ve<br/>\ngraphite powder gibi maddeler risk oluşturur.<br/>\n• R202 — Design ROBOTS and OPERATOR<br/>\nCONSOLES for safety and fair play.<br/>\n• ROBOT ve OPERATOR CONSOLE tehlikeli<br/>\nmalzeme içermemeli, güvenlik riski<br/>\noluşturmamalı veya diğer ROBOTLARIN/<br/>\nFIELD STAFF’ın çalışmasını<br/>\nengellememelidir.<br/>\n• Görüşü kapatan shield/curtain, maç seslerini<br/>\ntaklit eden yüksek sesli cihazlar ve diğer<br/>\nROBOTLARIN sensörlerini/vision sistemlerini<br/>\nyanıltmaya yönelik düzenekler yasaktır.<br/>\n• Alev/pyrotechnics, tehlikeli maddeler ve<br/>\nROBOT’a zarar vermek/devirmek için<br/>\ntasarlanmış cihazlar yasaktır.<br/>\n• Gereksiz entanglement riski oluşturan<br/>\ndüzenekler yasaktır.<br/>\n• 5 Hz’den hızlı yanıp sönen dekoratif/<br/>\nfonksiyonel ışıklar ek incelemeye tabi<br/>\ntutulabilir.<br/>\nR203 *ROBOTS must be designed to be quickly<br/>\nremoved from the FIELD without requiring power.<br/>\nRobotlarda elektrik olmasa bile içerisinden saha<br/>\nelemanları çıkarılabilecek şekilde tasarlanmalı<br/>\nPage 125 — 12.2 General Robot Design (Devam)<br/>\nR204 — No grabbing the floor<br/>\nRobot, zemine tutunarak veya aşağı yönlü ekstra<br/>\nkuvvet oluşturarak avantaj sağlayamaz.<br/>\nÖzet<br/>\nRobot; sahayı kavrayan, kilitleyen veya yüzeye<br/>\ntakılan mekanizmalar kullanamaz.<br/>\nVakum, fan, türbin veya başka bir hava akışı<br/>\noluşturarak zemine emme kuvveti oluşturamaz.<br/>\nAmaç, robotun çekişini yapay olarak artırmasını<br/>\nengellemektir.<br/>\nNormal lastik sürtünmesi ve robot ağırlığından<br/>\nkaynaklanan tutuş serbesttir.<br/>\nPage 126 — 12.3 Fabrication<br/>\nR301 — COTS MAJOR MECHANISMS are legal<br/>\nbut have limits<br/>\nHazır satın alınabilen (COTS) büyük<br/>\nmekanizmalar kullanılabilir ancak oyunu doğrudan<br/>\noynayan hazır çözümler yasaktır.<br/>\nÖzet<br/>\nOyunun görevini tek başına yerine getiren hazır<br/>\nmekanizmalar kullanılamaz.<br/>\nTakımlar bu parçaları kendi robot tasarımlarının<br/>\nparçası hâline getirmelidir.<br/>\nİzin verilen istisnalar:<br/>\nHazır sürüş şaseleri (drive chassis).<br/>\nFIRST Tech Challenge StarterBot mekanizmaları.<br/>\nR302 — Legal COTS parts may be modified<br/>\nYasal COTS parçalar robot için değiştirilebilir.<br/>\nÖzet<br/>\nTakımlar COTS parçaları:<br/>\nKesebilir.<br/>\nDelebilir.<br/>\nTaşlayabilir.<br/>\nBoyayabilir.<br/>\nŞekillendirebilir.<br/>\nBaşka parçalarla birleştirebilir.<br/>\nAncak yapılan değişiklik başka bir Robot<br/>\nConstruction Rule'u ihlal edemez.<br/>\nR303 — COTS MECHANISMS must remain<br/>\nsimple<br/>\nHazır mekanizmalar sınırlı serbestlik derecesine<br/>\nsahip olmalıdır.<br/>\nÖzet<br/>\nGenel olarak COTS mekanizmalar tek hareket<br/>\neksenli olmalıdır.<br/>\nİzin verilen örnekler<br/>\nMecanum Wheel.<br/>\nOmni Wheel.<br/>\nOdometry Pod.<br/>\nRatchet.<br/>\nPlanetary Gearbox.<br/>\nBu parçalar çok parçalı olsa bile oyun<br/>\nmekanizması olarak değerlendirilmez.<br/>\nR304 — Teams may reuse previous work<br/>\nÖnceki sezonlarda geliştirilen parçalar ve<br/>\nyazılımlar tekrar kullanılabilir.<br/>\nÖzet<br/>\nTekrar kullanılabilecekler:<br/>\nCAD tasarımları.<br/>\nKod kütüphaneleri.<br/>\nVision algoritmaları.<br/>\nÖzel üretilmiş parçalar.<br/>\nÖnceki robot mekanizmaları.<br/>\nKickoff öncesinde yapılmış olmaları yasallığını<br/>\nbozmaz.<br/>\nR305 — Current season SCORING ELEMENTS<br/>\ncannot become ROBOT parts<br/>\nBIOBUZZ sezonunun Scoring Element'leri<br/>\nrobotun yapısında kullanılamaz.<br/>\nÖzet<br/>\nYasaktır:<br/>\nGerçek Pollen parçalarını robot üzerinde<br/>\nkullanmak.<br/>\nPollen'in birebir kopyasını mekanizma olarak<br/>\nkullanmak.<br/>\nOyun elemanını robotun yapısal parçası yapmak.<br/>\nAmaç tüm takımların aynı oyun elemanlarıyla<br/>\nyarışmasını sağlamaktır.<br/>\nPage 127 — 12.4 ROBOT SIGN Rules<br/>\nROBOT SIGN Overview<br/>\nHer robot sahada kolayca tanınabilmelidir.<br/>\nÖzet<br/>\nRobot Sign;<br/>\nTakım numarasını gösterir.<br/>\nAlliance rengini gösterir.<br/>\nHakemlerin ve skor görevlilerinin uzaktan<br/>\nokuyabileceği şekilde tasarlanır.<br/>\nR401 — Minimum of two ROBOT SIGNS<br/>\nRobot üzerinde en az iki Robot Sign bulunmalıdır.<br/>\nÖzet<br/>\nRobot Sign kuralları:<br/>\nEn az 2 adet.<br/>\nBirbirine zıt veya en az 90° farklı yüzeylerde.<br/>\nMinimum boyut:<br/>\n6.5 inç genişlik<br/>\n2.5 inç yükseklik<br/>\nDayanıklı ve robot gövdesine sabitlenmiş<br/>\nolmalıdır.<br/>\nR402 — ROBOT SIGNS indicate your ALLIANCE<br/>\nRobot Sign ittifak rengini açıkça göstermelidir.<br/>\nÖzet<br/>\nHer tabelada:<br/>\nTam kırmızı veya tam mavi opak arka plan<br/>\nbulunur.<br/>\nSadece takım numarası yer alabilir.<br/>\nGüçle aydınlatılamaz.<br/>\nÇift taraflı kullanılıyorsa karşı renk görünemez.<br/>\nR403 — Team number on ROBOT SIGNS<br/>\nTakım numarası belirli görünürlük kurallarına<br/>\nuymalıdır.<br/>\nÖzet<br/>\nTakım numarası:<br/>\nBeyaz.<br/>\nOpak.<br/>\nYaklaşık 2.25 inç yüksekliğinde.<br/>\nArap rakamlarıyla yazılmış.<br/>\nDikey üst üste yazılamaz.<br/>\nGüçle aydınlatılamaz.<br/>\nPage 128 — ROBOT SIGN Exceptions<br/>\nHandwritten ROBOT SIGN Exception<br/>\nİstisnai durumlarda el yazısı tabela kullanılabilir.<br/>\nÖzet<br/>\nEğer:<br/>\nYasal tabela kaybolmuşsa,<br/>\nYazdırma imkânı yoksa,<br/>\nHead Referee geçici el yazısı Robot Sign<br/>\nkullanımına izin verebilir.<br/>\nROBOT SIGN Visibility Requirement<br/>\nRobot Sign saha görevlileri tarafından uzaktan<br/>\nokunabilir olmalıdır.<br/>\nÖzet<br/>\nAmaç:<br/>\nYaklaşık 12 feet (3.66 m) uzaklıktan okunabilmesi.<br/>\nRobotun hangi ittifakta olduğunun kolay<br/>\nanlaşılması.<br/>\nPage 129 — 12.5 Motors & Actuators<br/>\nMotor and Actuator Overview<br/>\nRobot yalnızca FIRST tarafından izin verilen<br/>\nmotor ve servo modellerini kullanabilir.<br/>\nÖzet<br/>\nTüm aktüatörler:<br/>\nGüvenli olmalı.<br/>\nOnaylı kontrol sistemi üzerinden sürülmeli.<br/>\nSayı limitlerine uymalıdır.<br/>\nR501 — Only specific motors are allowed<br/>\nSadece izin verilen motor modelleri kullanılabilir.<br/>\nÖzet<br/>\nYasal motor aileleri arasında:<br/>\ngoBILDA Yellow Jacket.<br/>\nREV HD Hex.<br/>\nREV Core Hex.<br/>\nAndyMark NeveRest.<br/>\nTETRIX.<br/>\nStudica Maverick.<br/>\nSWYFT Spike.<br/>\nWATTOS Stingray.<br/>\nTelefon titreşim motoru ve sensör içindeki küçük<br/>\nmotorlar bu limite dahil değildir.<br/>\nR502 — Servo usage is restricted<br/>\nServo motorların güç sınırları vardır.<br/>\nÖzet<br/>\nServo kuralları:<br/>\nStandart servo maksimum 8 W.<br/>\nLinear servo maksimum 1 A.<br/>\nTeknik özellik gerektiğinde takımlar belge<br/>\ngösterebilmelidir.<br/>\nR503 — ROBOTS are limited to 8 motors and 8<br/>\nservos<br/>\nRobotta motor ve servo sayısı sınırlıdır.<br/>\nÖzet<br/>\nMaksimum:<br/>\n8 Motor<br/>\n8 Servo<br/>\nBu sayı robotun tüm konfigürasyonları için<br/>\ngeçerlidir.<br/>\nPage 123 — 12.5 Motors & Actuators<br/>\nR504 — Do not modify actuators unless explicitly<br/>\nallowed<br/>\nMotor ve servoların iç yapısı değiştirilemez;<br/>\nyalnızca izin verilen değişiklikler yapılabilir.<br/>\nÖzet<br/>\nMotor veya servo açılarak iç mekanizması<br/>\ndeğiştirilemez.<br/>\nKablo kısaltma veya konnektör değiştirme<br/>\nserbesttir.<br/>\nMontaj aparatları değiştirilebilir.<br/>\nÜreticinin izin verdiği firmware veya ayarlar<br/>\nuygulanabilir.<br/>\nEtiketleme, izolasyon ve normal bakım yapılabilir.<br/>\nR505 — All actuators must be controlled through<br/>\napproved devices<br/>\nTüm motor ve servolar yalnızca FIRST tarafından<br/>\nonaylanan güç kontrol cihazları üzerinden<br/>\nçalıştırılmalıdır.<br/>\nÖzet<br/>\nİzin verilen kontrol cihazları:<br/>\nREV Control Hub<br/>\nREV Expansion Hub<br/>\nREV Servo Hub / Servo Power Module<br/>\nREV SPARKmini<br/>\ngoBILDA Servo Power Injector<br/>\nStudica Servo Power Block<br/>\nMotor veya servo doğrudan bataryaya<br/>\nbağlanamaz.<br/>\nR506 — Relays, electromagnets and solenoids<br/>\nare prohibited<br/>\nRobotta röle, elektromıknatıs veya elektrikli<br/>\nsolenoid aktüatör kullanılamaz.<br/>\nÖzet<br/>\nYasak olanlar:<br/>\nElektromıknatıs ile nesne tutmak.<br/>\nSolenoid piston kullanmak.<br/>\nElektrikli röle ile motor sürmek.<br/>\nRobot yalnızca izin verilen motor ve servo<br/>\nsistemleriyle hareket üretmelidir.<br/>\nPage 134— 12.6 Power Distribution<br/>\nPower Distribution Overview<br/>\nRobotun elektrik sistemi tek bir ana batarya ve<br/>\nonaylı güç dağıtım yapısı üzerine kurulmalıdır.<br/>\nÖzet<br/>\nTek ana batarya kullanılır.<br/>\nGüç ana anahtardan geçer.<br/>\nElektrik sistemi inspection sırasında görülebilir<br/>\nolmalıdır.<br/>\nR601 — Only one main battery is allowed<br/>\nRobotta yalnızca bir adet onaylı FTC ana<br/>\nbataryası bulunabilir.<br/>\nÖzet<br/>\nSadece resmi FTC uyumlu 12V NiMH bataryalar<br/>\nkullanılabilir.<br/>\nAynı anda ikinci ana batarya kullanılamaz.<br/>\nBatarya yalnızca izin verilen konektör veya sigorta<br/>\ndeğişikliğiyle modifiye edilebilir.<br/>\nR602 — Other batteries are limited to self-<br/>\ncontained devices<br/>\nEk bataryalar yalnızca bağımsız elektronik<br/>\ncihazlara güç verebilir.<br/>\nÖzet<br/>\nİzin verilen örnekler:<br/>\nUSB powerbank.<br/>\nKamera bataryası.<br/>\nKendi bataryası olan kayıt cihazı.<br/>\nİzin verilmeyen kullanım:<br/>\nMotor beslemek.<br/>\nServo beslemek.<br/>\nControl Hub yerine güç vermek.<br/>\nR603 — Main Power Switch is required<br/>\nRobotta erişilebilir bir ana güç anahtarı<br/>\nbulunmalıdır.<br/>\nÖzet<br/>\nAnahtar:<br/>\nKolay ulaşılabilir olmalı.<br/>\nRobot sahadayken hızlı kapatılabilmeli.<br/>\nHareketli parçaların arasında gizlenmemelidir.<br/>\nR604 — Fuses must remain legal<br/>\nSigortalar üreticinin belirlediği değerlerde<br/>\nkullanılmalıdır.<br/>\nÖzet<br/>\nYasaktır:<br/>\nDaha yüksek amper sigorta takmak.<br/>\nSigortayı köprülemek.<br/>\nKendini sıfırlayan sigorta eklemek.<br/>\nPage 135 — Power Distribution (Devam)<br/>\nR605 — ROBOT frame cannot carry current<br/>\nRobot şasisi elektrik iletim yolu olarak<br/>\nkullanılamaz.<br/>\nÖzet<br/>\nŞase üzerinden güç taşınamaz.<br/>\nElektrik kabloları kullanılmalıdır.<br/>\nGerekirse yalnızca izin verilen topraklama<br/>\nbağlantısı yapılabilir.<br/>\nR606 — Electrical system must be inspectable<br/>\nElektrik sistemi inspection sırasında görülebilir<br/>\ndurumda olmalıdır.<br/>\nÖzet<br/>\nGörünür olması gerekenler:<br/>\nBatarya bağlantısı.<br/>\nAna anahtar.<br/>\nSigortalar.<br/>\nGüç dağıtımı.<br/>\nHub LED göstergeleri.<br/>\nRobot Controller durumu.<br/>\nDenetçi kablolamayı görebilmelidir.<br/>\nR607 — Custom circuits are limited<br/>\nTakım tarafından tasarlanan elektronik devreler<br/>\ngerilim sınırlarına uymalıdır.<br/>\nÖzet<br/>\nRegüle çıkış en fazla 5V olabilir.<br/>\nLED uygulamaları istisna olabilir.<br/>\nAna batarya voltajını yükselten devre yapılamaz.<br/>\nR608 — Power regulating devices must be<br/>\npowered correctly<br/>\nGüç düzenleyici cihazlar yalnızca izin verilen<br/>\nşekilde beslenebilir.<br/>\nÖzet<br/>\nControl Hub, Expansion Hub ve Servo Module:<br/>\nAna bataryadan beslenmelidir.<br/>\nÜretici bağlantı şeması değiştirilmemelidir.<br/>\nPage 137 — Power Distribution (Devam)<br/>\nR609 — Use appropriately sized wire<br/>\nRobot kabloları taşıdığı akıma uygun kalınlıkta<br/>\nolmalıdır.<br/>\nÖzet<br/>\nAna batarya hattı minimum 18 AWG.<br/>\nMotor hatları uygun akım kapasitesinde olmalıdır.<br/>\nDüşük akımlı sinyal kabloları daha ince olabilir.<br/>\nR610 — Use correct wire colors<br/>\nPozitif ve toprak hatları standart renklerle<br/>\nişaretlenmelidir.<br/>\nÖzet<br/>\nÖnerilen renkler:<br/>\nKırmızı / Sarı / Beyaz / Kahverengi: Pozitif güç.<br/>\nSiyah / Mavi: GND (Toprak).<br/>\nInspection sırasında kablolar kolay ayırt<br/>\nedilebilmelidir.<br/>\nR611 — Powered USB hubs have limited power<br/>\nsources<br/>\nPowered USB Hub yalnızca izin verilen<br/>\nkaynaklardan beslenebilir.<br/>\nÖzet<br/>\nİzin verilen kaynaklar:<br/>\nOnaylı USB powerbank.<br/>\nHub'ın resmi 5V AUX çıkışı.<br/>\nBaşka voltaj kaynakları kullanılamaz.<br/>\nR612 — Do not modify critical power paths<br/>\nAna güç hattı değiştirilemez.<br/>\nÖzet<br/>\nDeğiştirilemeyen güç yolu:<br/>\nBatarya → Ana Anahtar → Hub / Güç Regülatörü<br/>\n→ Motor / Servo<br/>\nYasaktır:<br/>\nBoost converter.<br/>\nBuck converter ile ana sistemi beslemek.<br/>\nAna güç hattını yeniden yönlendirmek.<br/>\nR613 — Do not combine power between devices<br/>\nFarklı güç çıkışları birbirine bağlanamaz.<br/>\nÖzet<br/>\nBir cihaz yalnızca bağlı olduğu porttan güç<br/>\nalmalıdır.<br/>\nİki farklı port paralel bağlanamaz.<br/>\nİki farklı Hub'ın güç çıkışları birleştirilemez.<br/>\nPage 134 — 12.7 Control, Command & Signals<br/>\nSystem<br/>\nControl, Command & Signals System<br/>\nRobotun kontrol sistemi, Robot Controller, Driver<br/>\nStation ve haberleşme cihazlarının tamamı<br/>\nFTC'nin izin verdiği mimariyi kullanmalıdır.<br/>\nÖzet<br/>\nRobot yalnızca resmi FTC kontrol sistemiyle<br/>\nçalıştırılır.<br/>\nKablosuz iletişim yalnızca Robot Controller ↔<br/>\nDriver Station arasında gerçekleşebilir.<br/>\nAğ güvenliği ve cihaz yapılandırmaları tüm<br/>\ntakımlar için standarttır.<br/>\nR701 — Control the ROBOT with a single ROBOT<br/>\nCONTROLLER<br/>\nRobot yalnızca bir Robot Controller tarafından<br/>\nkontrol edilebilir.<br/>\nÖzet<br/>\nİzin verilen iki yapı:<br/>\nREV Control Hub.<br/>\nAndroid telefon + REV Expansion Hub.<br/>\nEk olarak en fazla 1 Expansion Hub kullanılabilir.<br/>\nAynı robotta iki Robot Controller bulunamaz.<br/>\nR702 — Teams may not alter coprocessor<br/>\nsoftware<br/>\nKontrol sistemindeki coprocessor yazılımı<br/>\ndeğiştirilemez.<br/>\nÖzet<br/>\nÜretici firmware güncellemeleri yapılabilir.<br/>\nFTC SDK dışında çalışan sistem yazılımı<br/>\nyüklenemez.<br/>\nDesteklenen programlanabilir vision cihazı<br/>\nyalnızca manualda belirtilen cihazlardır.<br/>\nR703 — Smartphone must connect via USB<br/>\nTelefon tabanlı Robot Controller kullanılıyorsa<br/>\nExpansion Hub'a USB ile bağlanmalıdır.<br/>\nÖzet<br/>\nUSB bağlantısı zorunludur.<br/>\nKablosuz bağlantıyla Robot Controller<br/>\nçalıştırılamaz.<br/>\nUSB bağlantısı maç boyunca kesilmemelidir.<br/>\nPage 140 — Control, Command & Signals<br/>\nSystem (Devam)<br/>\nR704 — Use networks and bandwidth as directed<br/>\nKablosuz ağlar yalnızca FIRST'ün belirlediği<br/>\nşekilde kullanılmalıdır.<br/>\nÖzet<br/>\nYasaktır:<br/>\nRobot ağına bilgisayar bağlamak.<br/>\nSürekli video yayını yapmak.<br/>\nFTC Dashboard veya benzeri üçüncü parti ağ<br/>\nservislerini maç sırasında kullanmak.<br/>\nBaşka takımın ağına bağlanmak.<br/>\nRobot yalnızca resmi Driver Station bağlantısını<br/>\nkullanmalıdır.<br/>\nR705 — Configure devices for your team number<br/>\nRobot Controller ve Driver Station cihaz adları<br/>\ntakım numarasına göre ayarlanmalıdır.<br/>\nÖzet<br/>\nFormat:<br/>\nTEAMNUMBER-RC<br/>\nTEAMNUMBER-DS<br/>\nYedek cihazlar harf eklenerek isimlendirilebilir.<br/>\nÖrnek:<br/>\n32334-RC<br/>\n32334-A-DS<br/>\nR706 — Only specified modifications to core<br/>\ncontrol devices<br/>\nControl Hub, Driver Station ve temel kontrol<br/>\ncihazları yalnızca izin verilen şekilde<br/>\ndeğiştirilebilir.<br/>\nÖzet<br/>\nSerbest olanlar:<br/>\nEtiketleme.<br/>\nMontaj.<br/>\nKablo düzenleme.<br/>\nFirmware güncellemesi.<br/>\nBasit onarım.<br/>\nYasaktır:<br/>\nDonanımı değiştirmek.<br/>\nGüç devresini değiştirmek.<br/>\nRadyo donanımını değiştirmek.<br/>\nPage 142 — USB, Vision & Recording Devices<br/>\nR707 — USB is for vision<br/>\nUSB bağlantıları yalnızca izin verilen cihazlar için<br/>\nkullanılabilir.<br/>\nÖzet<br/>\nİzin verilen USB cihazları:<br/>\nWebcam.<br/>\nVision sensörü.<br/>\nUSB Hub.<br/>\nExpansion Hub.<br/>\nBaşka USB çevre birimleri kullanılamaz.<br/>\nR708 — Use only supported USB vision devices<br/>\nYalnızca FTC tarafından desteklenen USB<br/>\ngörüntüleme cihazları kullanılabilir.<br/>\nÖzet<br/>\nİzin verilenler:<br/>\nResmi desteklenen webcam'ler.<br/>\nManualda belirtilen vision cihazları.<br/>\nYasaktır:<br/>\nStereo kamera.<br/>\nDesteklenmeyen görüntü işleme donanımları.<br/>\nR709 — Recording devices are permitted<br/>\nKayıt cihazları kullanılabilir ancak robot kontrolüne<br/>\nkatkı sağlayamaz.<br/>\nÖzet<br/>\nSerbest:<br/>\nGoPro.<br/>\nAction Camera.<br/>\nVideo kayıt cihazı.<br/>\nŞartlar:<br/>\nKablosuz özelliği kapalı olmalı.<br/>\nMaç sırasında veri aktaramaz.<br/>\nSadece kayıt amacıyla kullanılabilir.<br/>\nPage 142— Lasers & Android Configuration<br/>\nR710 — Lasers are restricted<br/>\nLazer kullanımı ciddi şekilde sınırlandırılmıştır.<br/>\nÖzet<br/>\nİzin verilen lazer:<br/>\nSensörün parçası olmalı.<br/>\nClass I / Exempt güvenlik sınıfında olmalı.<br/>\nGörünür lazer ışığı yaymamalıdır.<br/>\nLazer pointer veya hedefleme sistemi<br/>\nkullanılamaz.<br/>\nR711 — Configure Android devices appropriately<br/>\nAndroid cihazlar yarışma öncesinde doğru şekilde<br/>\nyapılandırılmalıdır.<br/>\nÖzet<br/>\nRobot Controller:<br/>\nWi-Fi şifresi değiştirilmeli.<br/>\nGereksiz uygulamalar kapatılmalı.<br/>\nDriver Station:<br/>\nAirplane Mode açık.<br/>\nWi-Fi açık.<br/>\nBluetooth kapalı.<br/>\nSadece kendi robotuna bağlı olmalı.<br/>\nPage 138 — Android Device Requirements<br/>\nAndroid Device Configuration Checklist<br/>\nFTC, Android cihazların yarışma öncesi kontrol<br/>\nedilmesini ister.<br/>\nÖzet<br/>\nKontrol edilmesi gerekenler:<br/>\nAirplane Mode.<br/>\nBluetooth kapalı.<br/>\nWi-Fi açık.<br/>\nDoğru takım numarası.<br/>\nGüncel FTC Driver Station uygulaması.<br/>\nGüncel FTC Robot Controller uygulaması.<br/>\nYanlış yapılandırılmış cihazlar inspection<br/>\nsırasında düzeltilmelidir.<br/>\nPage 143 — 12.8 Pneumatic Systems & Airflow<br/>\nDevices<br/>\nPneumatic Systems & Airflow Devices<br/>\nRobotlarda pnömatik ve hava akışı oluşturan<br/>\nsistemler büyük ölçüde yasaktır.<br/>\nÖzet<br/>\nRobot aktif hava basıncı oluşturamaz.<br/>\nVakum oluşturamaz.<br/>\nHava üfleyerek oyun elemanını hareket ettiremez.<br/>\nR801 — No Pneumatic Actuators, High-Speed<br/>\nBlowers, or Vacuums<br/>\nPnömatik aktüatörler, kompresörler, blower ve<br/>\nvakum sistemleri kullanılamaz.<br/>\nÖzet<br/>\nYasaktır:<br/>\nKompresör.<br/>\nBasınç tankı.<br/>\nVakum pompası.<br/>\nHava üfleyici fan.<br/>\nSolenoid pnömatik piston.<br/>\nİzin verilen tek istisna:<br/>\nÜretici tarafından kapalı şekilde şarj edilmiş gas<br/>\nshock / gaz yayları.<br/>\nElektronik cihazların kendi soğutma fanları.<br/>\nPage 143 — 12.9 Operator Console<br/>\nOperator Console<br/>\nOperator Console, sürücülerin maç boyunca<br/>\nrobotu kontrol ettiği tüm ekipmanların oluşturduğu<br/>\nkontrol istasyonudur.<br/>\nÖzet<br/>\nOperator Console şunları kapsar:<br/>\nDriver Station cihazı.<br/>\nGamepad'ler.<br/>\nUSB Hub (gerekiyorsa).<br/>\nGüç bankası (kullanılıyorsa).<br/>\nKablolar ve bağlantılar.<br/>\nMaç boyunca yalnızca izin verilen ekipmanlar<br/>\nkullanılabilir.<br/>\nR901 — Use only a specified DRIVER STATION<br/>\ndevice<br/>\nOperator Console'da yalnızca bir Driver Station<br/>\ncihazı aktif olabilir.<br/>\nÖzet<br/>\nİzin verilen cihazlar:<br/>\nREV Driver Hub.<br/>\nFTC Driver Station uygulaması yüklü Android<br/>\ntelefon/tablet.<br/>\nKurallar:<br/>\nAynı anda yalnızca 1 Driver Station robotla<br/>\nbağlantıda olabilir.<br/>\nYedek Driver Station getirilebilir ancak kapalı<br/>\nkalmalıdır.<br/>\nDriver Hub resmi olarak desteklenen cihazdır.<br/>\nR902 — Touch screen must be accessible<br/>\nDriver Station ekranı maç boyunca erişilebilir<br/>\nolmalıdır.<br/>\nÖzet<br/>\nDokunmatik ekran görünür olmalıdır.<br/>\nEkran tamamen kapatılamaz.<br/>\nFare, klavye veya başka cihaz gerektirmeden<br/>\nkullanılabilmelidir.<br/>\nInspection sırasında ekran kontrol edilir.<br/>\nPage 144 — Operator Console Size & Hardware<br/>\nR903 — OPERATOR CONSOLE physical limits<br/>\nOperator Console belirli fiziksel ölçüleri aşamaz.<br/>\nÖzet<br/>\nMaksimum boyut:<br/>\nGenişlik: 3 ft (91.4 cm)<br/>\nDerinlik: 1.5 ft (45.7 cm)<br/>\nYükseklik: 2 ft (61 cm)<br/>\nEk kurallar:<br/>\nGüç bankaları bu ölçüye dahildir.<br/>\nAynı anda yalnızca 1 USB Hub kullanılabilir.<br/>\nYaklaşık 20 lb (9 kg) üzerindeki konsollar ek<br/>\nincelemeye alınabilir.<br/>\nR904 — Only official wireless communication<br/>\nOperator Console'da resmi FTC bağlantısı<br/>\ndışında kablosuz iletişim kullanılamaz.<br/>\nÖzet<br/>\nYasaktır:<br/>\nBluetooth gamepad bağlantısı.<br/>\nEk Wi-Fi adaptörü.<br/>\nHotspot.<br/>\nKablosuz USB dongle.<br/>\nRobot ile Driver Station arasındaki resmi bağlantı<br/>\ndışında hiçbir kablosuz haberleşme bulunamaz.<br/>\n13 Tournament (T)<br/>\n13.1 Overview<br/>\nFIRST Tech Challenge yarışmaları head-to-head<br/>\ntournament formatında oynanıyor. Turnuvada üç<br/>\nçeşit MATCH bulunuyor:<br/>\n• Practice MATCHES: Her etkinlikte olmak<br/>\nzorunda değil. Takımlar Qualification<br/>\nMATCHES başlamadan önce ROBOT’larını<br/>\ngerçek yarışma FIELD’ında kullanma fırsatı<br/>\nbuluyor.<br/>\n• Qualification MATCHES: Takımlar burada<br/>\nMATCH points ve RANKING POINTS<br/>\nkazanıyor. Bunlar takımın sıralamasını<br/>\nbelirliyor ve Playoff MATCHES’e katılma<br/>\nhakkını etkiliyor.<br/>\n• Playoff MATCHES: Etkinliği kazanan<br/>\nALLIANCE’ı belirliyor.",
+    "robotRulesBioTitle9": "Section 12 ROBOT Construction Rules (R) (Page 145)",
+    "robotRulesBioText5": "• R101 devamı: Gearbox assembly, tek başına<br/>\nbir COMPONENT/MECHANISM veya COTS<br/>\nürünleri genellikle MAJOR MECHANISM<br/>\nsayılmaz.<br/>\n• R102 — STARTING CONFIGURATION is<br/>\nlimited to an 18-inch Cube: ROBOT maç<br/>\nbaşlangıcında tamamen sabit ve 18 × 18 × 18<br/>\ninç (45,70 cm³ hacim) içinde olmalıdır.<br/>\n• Değiştirilebilir MECHANISMS kullanılıyorsa<br/>\ntüm konfigürasyonların kurallara uygunluğu<br/>\ngösterilebilmelidir.<br/>\n• Önceden yüklenmiş SCORING ELEMENTS<br/>\nbaşlangıç ölçüsünün dışına taşabilir.<br/>\n• R103 — ROBOTS may assist in holding the<br/>\nSTARTING CONFIGURATION: ROBOT<br/>\nbaşlangıç konumunu kendi başına<br/>\nkoruyabilmelidir; mekanik olarak veya servo/<br/>\nmotorları konumlandıran bir OpMode ile<br/>\nyapılabilir.<br/>\n• R104 — There is no ROBOT weight limit:<br/>\nBIOBUZZ ROBOTLARI için resmî ağırlık sınırı<br/>\nyoktur. Ancak zemin, batarya tüketimi, taşıma<br/>\nve performans etkileri dikkate alınmalıdır.",
+    "robotRulesBioTitle1": "Section 12 ROBOT (Page 118)",
+    "robotRulesBioTitle3": "COTS / FABRICATED ITEM örnekleri (devam). (Page 119)",
+    "robotRulesBioTitle8": "Section 12 ROBOT Construction Rules (R) (Page 124)",
+    "robotRulesBioText7": "• ROBOT ölçümü, normal oyun sırasında<br/>\nkullanacağı stable configuration durumunda<br/>\nyapılır.<br/>\n• ROBOT hafifçe eğilirse, tekrar stable<br/>\nconfiguration’a getirildiğinde sınırlar içindeyse<br/>\nbu tek başına ihlal değildir.<br/>\n• ROBOT’un tüm mekanik uzantıları inspection<br/>\nsırasında gösterilmelidir.<br/>\n• Yazılım uzantıyı sınırlasa bile mekanik olarak<br/>\nölçü sınırını aşabilen ROBOT ihlal kabul edilir.<br/>\n• Tek bir MECHANISM iki yana uzanabiliyorsa,<br/>\nmaksimum toplam genişlik sınırı aşmadığı<br/>\nsürece izinlidir.<br/>\n• Birden fazla bağımsız MECHANISM aynı<br/>\nanda iki yana açılarak toplam genişliği aşarsa<br/>\nizin verilmez.",
+    "robotRulesBioText2": "• COTS ürüne delik açmak veya fiziksel olarak<br/>\ndeğiştirmek onu FABRICATED ITEM yapar.<br/>\n• COTS olmayan bir üreticinin yalnızca takım<br/>\niçin özel ürettiği parça da COTS sayılmaz.<br/>\n• COTS ürün üzerine yalnızca işlevsel olmayan<br/>\netiket eklemek COTS olarak kalabilir.",
+    "robotRulesBioText3": "• COTS bir ürünün tasarım çizimi,<br/>\nFABRICATED ITEM üretmek için ham kaynak<br/>\nolarak kullanılabilir; ortaya çıkan ürün<br/>\nFABRICATED ITEM’dır.<br/>\n• COTS parçaya cihaz-spesifik montaj delikleri<br/>\naçılırsa FABRICATED ITEM olur.<br/>\n• Artık satılmayan ancak orijinal haliyle işlevsel<br/>\nolarak eşdeğer olan COTS parçalar<br/>\nkullanılabilir.",
+    "robotRulesBioTitle4": "VENDOR tanımı: (Page 120)",
+    "robotRulesBioTitle2": "COTS → FABRICATED ITEM ayrımı: (Page 118)",
+    "robotRulesBioText10": "R501’deki actuator veya R505’teki power<br/>\nregulation device dışında kalan aktif elektriksel<br/>\nöğe.<br/>\nDISABLED<br/>\nREFEREE takımın ROBOT’u durdurmasını ister;<br/>\ntüm outputs kapatılır ve ROBOT MATCH’in geri<br/>\nkalanında kullanılamaz.<br/>\nDISQUALIFIED<br/>\nQualification MATCH’te:<br/>\n• 0 MATCH points<br/>\n• 0 RP<br/>\nPlayoff MATCH’te:<br/>\n• ALLIANCE 0 MATCH points.<br/>\nDRIVE COACH<br/>\nRehber veya danışman.<br/>\nDRIVE TEAM<br/>\nBelirli bir MATCH için takım performansından<br/>\nsorumlu en fazla 4 kişi.<br/>\nDRIVER<br/>\nROBOT operator/controller.<br/>\nDRIVER STATION<br/>\nDRIVER STATION App çalıştıran Android<br/>\nsmartphone veya REV Driver Hub.<br/>\nFABRICATED ITEM<br/>\nSon ROBOT kullanım formuna getirilmiş,<br/>\ndeğiştirilmiş, üretilmiş, kesilmiş, boyanmış,<br/>\nişlenmiş vb. COMPONENT veya MECHANISM.<br/>\nFIELD<br/>\nYaklaşık 144 in. × 144 in. saha.<br/>\nFIELD STAFF<br/>\nARENA çevresinde MATCH’lerin güvenli, adil ve<br/>\nverimli yürütülmesini sağlayan volunteers.<br/>\nFLOWER<br/>\nPOLLEN ve NECTAR’ın üstten yerleştirilebildiği,<br/>\nPOLLEN’ın alttan çıkarılabildiği FIELD yapısı.<br/>\nFTA<br/>\nFIRST Technical Advisor.<br/>\nGARDEN<br/>\nYaklaşık 23 in. × 2 in. × infinitely tall alliance-<br/>\ncolored zone.<br/>\nHIVE<br/>\n2 CELL ve bağlantı mekanizmasından oluşan,<br/>\npivot üzerinde dönen bi-stable yapı.<br/>\nHOME REGION<br/>\nTakımın atandığı ve advancement için uygun<br/>\nolduğu region.<br/>\nHUMAN PLAYER<br/>\nSCORING ELEMENT manager.",
+    "robotRulesBioTitle10": "CUSTOM CIRCUIT (Page 170)"
+  },
+  "en": {
+    "navGameRules": "Match Rules",
+    "navFieldInfo": "Field Element Information",
+    "navMatchProcedures": "Match Procedures",
+    "navScoringSystem": "How to Score",
+    "navHome": "Awards & Definitions",
+    "navTeam": "General Rules",
+    "navRobots": "Robot Construction",
+    "navDecode": "Go back",
+    "asterisk": "* QuickManual is not the official Game Manual and should never be treated as a complete or final source of rules. It does not replace the official document published by FIRST. For any official decision, inspection, or dispute, teams must always refer to the latest version of the official Game Manual.",
+    "dateUpdate": "** Last updated: August 5, 2026, Game Manual V0",
+    "pageSearch": "Search this page... (Example: rules, rewards, bots)",
+    "clear": "Clear",
+    "robotRulesTitle": "Robot Building",
+    "footerTitle": "QuickManual",
+    "footerDescription": "A community resource by Asteria Robotics\nThis is not an official FIRST document.",
+    "contactTitle": "Contact Us",
+    "addressText": "Our address",
+    "instagramText": "Instagram",
+    "copyrightText": "© 2026 Asteria Robotics FTC Team 32334. All Rights Reserved.",
+    "navPanel": "Categories",
+    "robotRulesBioText1": "Section 12 defines what parts/materials may be used on a ROBOT and how they may be used. A ROBOT is the electromechanical assembly containing the power, communications, control, and movement systems needed to play the game. Rules support safety, reliability, equity, design challenge, and professional standards. COMPONENT means a basic part that cannot be further disassembled without damage or a fundamental change; MECHANISM is an assembly of COMPONENTS with a specific function; COTS is a standard, unmodified product available to all teams from a VENDOR.",
+    "robotRulesBioText2": "Drilling or physically modifying a COTS product turns it into a FABRICATED ITEM. A part custom-made only for a team by a non-COTS source is not COTS. Adding only a non-functional label to a COTS product may allow it to remain COTS.",
+    "robotRulesBioText3": "A design drawing from a COTS product may be used as a source to manufacture a FABRICATED ITEM, but the resulting part is FABRICATED. Adding device-specific mounting holes to COTS makes it FABRICATED. Discontinued COTS parts may still be used if they remain functionally equivalent to the original item.",
+    "robotRulesBioText4": "A VENDOR must be a legitimate registered business, not a wholly team-owned subsidiary, able to provide general products in reasonable time, and offer products to all FTC teams. A FABRICATED ITEM is a COMPONENT or MECHANISM altered or manufactured into its final ROBOT form. Teams may need to document legality during inspection. R101 requires the ROBOT and MAJOR MECHANISMS to be created by the competing team, although assistance, fabrication help, software, and strategy support from others are allowed.",
+    "robotRulesBioText5": "R101 continues with examples of items that are usually not MAJOR MECHANISMS. R102 requires the STARTING CONFIGURATION to fit entirely and remain still inside an 18 × 18 × 18 in cube; all interchangeable configurations must be legal and preloaded SCORING ELEMENTS may extend outside the measurement. R103 allows the ROBOT to hold its own STARTING CONFIGURATION mechanically or through an OpMode. R104 sets no official ROBOT weight limit, though floor loading, battery use, transport, and performance should be considered.",
+    "robotRulesBioText6": "R105 requires the ROBOT to remain one assembly and limits expansion. After the MATCH starts the ROBOT may expand, but in a fully extended state it must remain within an 18 × 24 × 29 in volume. The ROBOT must satisfy this limit physically without relying on software, and it may not intentionally detach COMPONENTS. The 29 in dimension is always vertical from the FIELD surface.",
+    "robotRulesBioText7": "ROBOT size is measured in a stable configuration that could occur during normal play. Brief tipping is not itself a violation if the ROBOT returns to a legal stable configuration. All mechanical extensions must be demonstrated during inspection. A ROBOT that can mechanically exceed the size limit is illegal even if software normally prevents it. Multiple extensions are allowed only when their combined envelope remains within the limit.",
+    "robotRulesBioText8": "A horizontally rotating extension is legal only if the ROBOT stays within allowed dimensions throughout its motion. R201 requires ROBOTS to avoid damaging the ARENA or creating a mess. Normal wear on SCORING ELEMENTS is expected, but tearing, breaking pieces off, repeated damage, or leaving material that requires cleanup is not allowed.",
+    "robotRulesBioText9": "R201 examples of damage risks include aggressive traction devices, exposed sharp/abrasive surfaces, excessive lubricant, unsecured ballast, liquids/gels, tire sealant, or graphite powder. R202 requires safe and fair ROBOTS/OPERATOR CONSOLES and prohibits hazardous materials, vision-blocking curtains, loud match-sound imitation, sensor/vision interference, flames/pyrotechnics, devices intended to damage/tip opponents, and unnecessary entanglement. R203 requires the ROBOT to be removable from the FIELD without power and allow FIELD elements to be removed. R204 prohibits grabbing/suctioning the floor for extra downforce. R301–R305 regulate COTS MAJOR MECHANISMS, modification/reuse, and use of current-season SCORING ELEMENTS. R401–R403 regulate ROBOT SIGNS. R501–R506 regulate motors/servos/actuators. R601–R613 regulate power distribution. R701–R711 regulate control, networks, USB/vision, recording, lasers, and Android configuration. R801 largely prohibits pneumatics, vacuums, and high-speed blowers. R901–R904 regulate the OPERATOR CONSOLE, Driver Station, dimensions, USB, and wireless communication.",
+    "robotRulesBioText10": "Glossary terms: CUSTOM CIRCUIT is an active electrical item that is neither an R501 actuator nor an R505 power-regulation device. DISABLED means a REFEREE orders the ROBOT stopped for the rest of the MATCH. DISQUALIFIED gives 0 MATCH points and 0 RP in Qualification or causes the ALLIANCE to receive 0 MATCH points in Playoffs. DRIVE TEAM has up to 4 people; DRIVER operates the ROBOT; DRIVER STATION is the Android device running the app. FABRICATED ITEM is a modified/manufactured COMPONENT or MECHANISM. FIELD is about 144 × 144 in. FIELD STAFF run MATCHES safely and fairly. FLOWER receives POLLEN/NECTAR from the top and allows POLLEN removal from the bottom. GARDEN is an ALLIANCE-colored zone. HIVE is a bi-stable two-CELL structure. HOME REGION determines advancement eligibility. HUMAN PLAYER manages SCORING ELEMENTS."
+  },
+  "es": {
+    "navGameRules": "Reglas del partido",
+    "navFieldInfo": "Elementos del campo",
+    "navMatchProcedures": "Procedimientos del partido",
+    "navScoringSystem": "Cómo puntuar",
+    "navHome": "Premios y definiciones",
+    "navTeam": "Reglas generales",
+    "navRobots": "Construcción del robot",
+    "navDecode": "Volver",
+    "asterisk": "* QuickManual no es el Manual de Juego oficial y nunca debe considerarse una fuente completa o definitiva de reglas. No reemplaza el documento oficial publicado por FIRST. Para cualquier decisión oficial, inspección o disputa, los equipos deben consultar siempre la versión más reciente del Manual de Juego oficial.",
+    "dateUpdate": "** Fecha de la última actualización: 5 de agosto de 2026, Manual del juego V0",
+    "pageSearch": "Buscar en la página... (Ejemplo: normas, premios, bots)",
+    "clear": "limpiar",
+    "robotRulesTitle": "Construcción de robots",
+    "footerTitle": "QuickManual",
+    "footerDescription": "A community resource by Asteria Robotics\nThis is not an official FIRST document.",
+    "contactTitle": "Contacto",
+    "addressText": "Dirección de nuestro taller",
+    "instagramText": "Instagram",
+    "copyrightText": "© 2026 Asteria Robotics FTC Team 32334. Todos los derechos reservados.",
+    "navPanel": "Categorías",
+    "robotRulesBioText1": "Section 12 define qué piezas/materiales pueden usarse en un ROBOT y cómo. Un ROBOT es el conjunto electromecánico con sistemas de energía, comunicación, control y movimiento necesarios para jugar. Las reglas protegen seguridad, fiabilidad, igualdad, reto de diseño y estándares profesionales. COMPONENT es una pieza básica que no puede desmontarse más sin dañarse o cambiar su función; MECHANISM es un conjunto de COMPONENTS con una función; COTS es un producto estándar y sin modificar disponible para todos mediante un VENDOR.",
+    "robotRulesBioText2": "Perforar o modificar físicamente un producto COTS lo convierte en FABRICATED ITEM. Una pieza fabricada especialmente para un solo equipo por una fuente que no es COTS tampoco es COTS. Añadir solo una etiqueta no funcional puede permitir que el producto siga siendo COTS.",
+    "robotRulesBioText3": "El plano de diseño de un producto COTS puede usarse como referencia para fabricar un FABRICATED ITEM, pero el resultado es FABRICATED. Añadir agujeros de montaje específicos también convierte COTS en FABRICATED. Piezas COTS descatalogadas pueden usarse si siguen siendo funcionalmente equivalentes al original.",
+    "robotRulesBioText4": "Un VENDOR debe ser una empresa legítima registrada, no una filial totalmente propiedad de un equipo, capaz de suministrar productos generales en tiempo razonable y disponible para todos los equipos FTC. FABRICATED ITEM es un COMPONENT o MECHANISM modificado/fabricado hasta su forma final en el ROBOT. Puede ser necesario demostrar legalidad en inspection. R101 exige que el ROBOT y los MAJOR MECHANISMS sean creados por el equipo participante, aunque se permite ayuda, fabricación, software y estrategia de otros.",
+    "robotRulesBioText5": "R101 continúa con ejemplos de elementos que normalmente no son MAJOR MECHANISMS. R102 exige que STARTING CONFIGURATION quede inmóvil dentro de un cubo de 18 × 18 × 18 in; todas las configuraciones intercambiables deben ser legales y los SCORING ELEMENTS precargados pueden sobresalir. R103 permite mantener la configuración de inicio mecánicamente o con OpMode. R104 no fija límite oficial de peso, aunque deben considerarse carga del suelo, batería, transporte y rendimiento.",
+    "robotRulesBioText6": "R105 exige que el ROBOT permanezca como un solo conjunto y limita su expansión. Tras iniciar el MATCH puede expandirse, pero totalmente extendido debe caber en 18 × 24 × 29 in. Debe cumplir físicamente sin depender de software y no puede separar COMPONENTS intencionadamente. Las 29 in siempre se miden verticalmente desde la superficie del FIELD.",
+    "robotRulesBioText7": "El tamaño del ROBOT se mide en una configuración estable posible durante juego normal. Una inclinación breve no es por sí sola infracción si vuelve a una configuración estable legal. Todas las extensiones deben mostrarse en inspection. Si mecánicamente puede superar el límite, es ilegal aunque software lo evite normalmente. Varias extensiones son válidas solo si el volumen combinado sigue dentro del límite.",
+    "robotRulesBioText8": "Una extensión que gira horizontalmente es legal solo si el ROBOT permanece dentro de las dimensiones permitidas durante todo el movimiento. R201 exige no dañar ARENA ni crear suciedad. El desgaste normal de SCORING ELEMENTS es esperable, pero romper, rasgar, causar daño repetido o dejar material que requiera limpieza no está permitido.",
+    "robotRulesBioText9": "R201 identifica riesgos como dispositivos de tracción agresivos, bordes/superficies abrasivas, lubricante excesivo, ballast suelto, líquidos/geles, sellador de neumáticos o graphite powder. R202 exige ROBOTS/OPERATOR CONSOLES seguros y justos y prohíbe materiales peligrosos, cortinas que bloqueen visión, sonidos que imiten el MATCH, interferencia de sensores/vision, llamas, dispositivos para dañar/volcar rivales y riesgos innecesarios de entanglement. R203 exige retirar el ROBOT sin energía; R204 prohíbe agarrar/aspirar el suelo. R301–R305 regulan COTS, R401–R403 ROBOT SIGNS, R501–R506 actuadores, R601–R613 energía, R701–R711 control/red/vision, R801 neumática/vacío/blowers y R901–R904 OPERATOR CONSOLE.",
+    "robotRulesBioText10": "Glosario: CUSTOM CIRCUIT es un elemento eléctrico activo que no es actuator R501 ni power-regulation device R505. DISABLED significa que REFEREE ordena detener el ROBOT por el resto del MATCH. DISQUALIFIED da 0 MATCH points/0 RP en Qualification o 0 MATCH points a la ALLIANCE en Playoffs. DRIVE TEAM tiene hasta 4 personas; DRIVER controla el ROBOT; DRIVER STATION ejecuta la app. FABRICATED ITEM es una pieza modificada/fabricada. FIELD mide aprox. 144 × 144 in. FIELD STAFF opera MATCHES de forma segura/justa. FLOWER recibe POLLEN/NECTAR arriba y permite retirar POLLEN abajo. GARDEN es una zona de ALLIANCE, HIVE es una estructura biestable de 2 CELLS, HOME REGION determina elegibilidad de advancement y HUMAN PLAYER gestiona SCORING ELEMENTS."
+  },
+  "pt": {
+    "navGameRules": "Regras da partida",
+    "navFieldInfo": "Elementos do campo",
+    "navMatchProcedures": "Procedimentos da partida",
+    "navScoringSystem": "Como pontuar",
+    "navHome": "Prêmios e definições",
+    "navTeam": "Regras gerais",
+    "navRobots": "Construção do robô",
+    "navDecode": "Voltar",
+    "asterisk": "* QuickManual não é o Manual de Jogo oficial e nunca deve ser tratado como uma fonte completa ou definitiva de regras. Ele não substitui o documento oficial publicado pela FIRST. Para qualquer decisão oficial, inspeção ou contestação, as equipes devem sempre consultar a versão mais recente do Manual de Jogo oficial.",
+    "dateUpdate": "** Data da última atualização: 5 de agosto de 2026, Manual do Jogo V0",
+    "pageSearch": "Pesquisar nesta página... (Exemplo: regras, prémios, bots)",
+    "clear": "limpar",
+    "robotRulesTitle": "Construção de robôs",
+    "footerTitle": "QuickManual",
+    "footerDescription": "A community resource by Asteria Robotics\nThis is not an official FIRST document.",
+    "contactTitle": "Contato",
+    "addressText": "Endereço da nossa oficina",
+    "instagramText": "Instagram",
+    "copyrightText": "© 2026 Asteria Robotics FTC Team 32334. Todos os direitos reservados.",
+    "navPanel": "Categorias",
+    "robotRulesBioText1": "Section 12 define quais peças/materiais podem ser usados no ROBOT e como. Um ROBOT é o conjunto eletromecânico com sistemas de energia, comunicação, controle e movimento necessários para jogar. As regras protegem segurança, confiabilidade, igualdade, desafio de design e padrões profissionais. COMPONENT é uma peça básica que não pode ser desmontada sem dano ou mudança fundamental; MECHANISM é um conjunto de COMPONENTS com uma função; COTS é um produto padrão e não modificado disponível para todas as equipes por um VENDOR.",
+    "robotRulesBioText2": "Furar ou modificar fisicamente um produto COTS o transforma em FABRICATED ITEM. Uma peça feita sob medida apenas para uma equipe por uma fonte não-COTS também não é COTS. Adicionar apenas uma etiqueta não funcional pode permitir que o item continue sendo COTS.",
+    "robotRulesBioText3": "O desenho de um produto COTS pode servir como referência para fabricar um FABRICATED ITEM, mas o resultado é FABRICATED. Adicionar furos de montagem específicos também transforma COTS em FABRICATED. Peças COTS descontinuadas podem ser usadas se continuarem funcionalmente equivalentes ao original.",
+    "robotRulesBioText4": "Um VENDOR deve ser uma empresa legítima registrada, não uma subsidiária totalmente pertencente a uma equipe, capaz de fornecer produtos gerais em prazo razoável e disponível para todas as equipes FTC. FABRICATED ITEM é um COMPONENT ou MECHANISM modificado/fabricado até sua forma final no ROBOT. Pode ser necessário comprovar legalidade na inspection. R101 exige que ROBOT e MAJOR MECHANISMS sejam criados pela equipe competidora, embora ajuda, fabricação, software e estratégia de terceiros sejam permitidos.",
+    "robotRulesBioText5": "R101 continua com exemplos de itens que normalmente não são MAJOR MECHANISMS. R102 exige que STARTING CONFIGURATION fique imóvel dentro de um cubo de 18 × 18 × 18 in; todas as configurações intercambiáveis devem ser legais e SCORING ELEMENTS pré-carregados podem ultrapassar a medição. R103 permite manter a configuração inicial mecanicamente ou com OpMode. R104 não define limite oficial de peso, mas carga no piso, bateria, transporte e desempenho devem ser considerados.",
+    "robotRulesBioText6": "R105 exige que o ROBOT permaneça como uma única montagem e limita expansão. Após o MATCH começar, pode expandir, mas totalmente aberto deve caber em 18 × 24 × 29 in. Deve cumprir fisicamente sem depender de software e não pode separar COMPONENTS intencionalmente. As 29 in são sempre medidas verticalmente a partir da superfície do FIELD.",
+    "robotRulesBioText7": "O tamanho do ROBOT é medido em uma configuração estável possível durante jogo normal. Uma inclinação breve não é por si só infração se o ROBOT voltar a uma configuração estável legal. Todas as extensões devem ser mostradas na inspection. Se mecanicamente puder exceder o limite, é ilegal mesmo que software normalmente impeça. Várias extensões só são permitidas se o envelope combinado permanecer dentro do limite.",
+    "robotRulesBioText8": "Uma extensão que gira horizontalmente é legal apenas se o ROBOT permanecer dentro das dimensões permitidas durante todo o movimento. R201 exige que ROBOTS não danifiquem a ARENA nem façam sujeira. Desgaste normal em SCORING ELEMENTS é esperado, mas rasgar, quebrar partes, causar dano repetido ou deixar material que exija limpeza não é permitido.",
+    "robotRulesBioText9": "R201 cita riscos como dispositivos de tração agressivos, bordas/superfícies abrasivas, lubrificante excessivo, ballast solto, líquidos/géis, tire sealant ou graphite powder. R202 exige ROBOTS/OPERATOR CONSOLES seguros e justos e proíbe materiais perigosos, cortinas que bloqueiem visão, sons que imitem MATCH, interferência de sensores/vision, chamas, dispositivos para danificar/tombar adversários e risco desnecessário de entanglement. R203 exige remover o ROBOT sem energia; R204 proíbe agarrar/sugar o piso. R301–R305 regulam COTS, R401–R403 ROBOT SIGNS, R501–R506 atuadores, R601–R613 energia, R701–R711 controle/rede/vision, R801 pneumática/vácuo/blowers e R901–R904 OPERATOR CONSOLE.",
+    "robotRulesBioText10": "Glossário: CUSTOM CIRCUIT é item elétrico ativo que não é actuator R501 nem power-regulation device R505. DISABLED significa que REFEREE manda parar o ROBOT pelo restante do MATCH. DISQUALIFIED dá 0 MATCH points/0 RP em Qualification ou 0 MATCH points à ALLIANCE em Playoffs. DRIVE TEAM tem até 4 pessoas; DRIVER controla o ROBOT; DRIVER STATION executa o app. FABRICATED ITEM é peça modificada/fabricada. FIELD mede aprox. 144 × 144 in. FIELD STAFF conduz MATCHES com segurança/justiça. FLOWER recebe POLLEN/NECTAR por cima e permite retirar POLLEN por baixo. GARDEN é zona da ALLIANCE, HIVE é estrutura biestável de 2 CELLS, HOME REGION define eligibility de advancement e HUMAN PLAYER gerencia SCORING ELEMENTS."
+  },
+  "zh": {
+    "navGameRules": "比赛规则",
+    "navFieldInfo": "场地元素信息",
+    "navMatchProcedures": "比赛流程",
+    "navScoringSystem": "如何得分",
+    "navHome": "奖项与定义",
+    "navTeam": "通用规则",
+    "navRobots": "机器人构建",
+    "navDecode": "返回",
+    "asterisk": "* QuickManual 不是官方比赛手册，绝不能被视为完整或最终的规则来源。它不能替代 FIRST 发布的官方文件。对于任何正式决定、检查或争议，队伍必须始终参考最新版本的官方比赛手册。",
+    "dateUpdate": "** 最后更新日期：2026年8月5日，游戏手册 V0",
+    "pageSearch": "在页面中搜索...（示例：规则、奖励、机器人）",
+    "clear": "清洁",
+    "robotRulesTitle": "机器人制作",
+    "footerTitle": "QuickManual",
+    "footerDescription": "A community resource by Asteria Robotics\nThis is not an official FIRST document.",
+    "contactTitle": "联系我们",
+    "addressText": "我们的工作室地址",
+    "instagramText": "Instagram",
+    "copyrightText": "© 2026 Asteria Robotics FTC Team 32334. 版权所有。",
+    "navPanel": "分类",
+    "robotRulesBioText1": "Section 12 规定 ROBOT 可使用哪些零件/材料及其使用方式。ROBOT 是参加比赛所需的机电系统，包含电源、通信、控制和移动系统。规则旨在保证安全、可靠、公平、设计挑战和专业标准。COMPONENT 是无法在不损坏或改变基本功能的情况下进一步拆分的基础零件；MECHANISM 是由多个 COMPONENTS 组成并完成特定功能的结构；COTS 是由 VENDOR 向所有队伍提供的标准、未修改商业产品。",
+    "robotRulesBioText2": "对 COTS 产品钻孔或进行物理修改后，它会成为 FABRICATED ITEM。由非 COTS 来源专门为某支队伍定制的零件也不属于 COTS。仅添加不影响功能的标签时，该产品仍可能保持 COTS 状态。",
+    "robotRulesBioText3": "COTS 产品的设计图可作为制造 FABRICATED ITEM 的参考，但最终制成的零件属于 FABRICATED。为特定设备增加安装孔也会使 COTS 变为 FABRICATED。已停产的 COTS 零件如果与原产品功能等效，仍可使用。",
+    "robotRulesBioText4": "VENDOR 必须是合法注册企业，不能是完全由 FIRST 队伍拥有的附属机构，应有能力在合理时间内提供通用产品，并向所有 FTC 队伍开放。FABRICATED ITEM 是被修改或制造成 ROBOT 最终使用形态的 COMPONENT/MECHANISM。inspection 时可能需要证明合法性。R101 要求 ROBOT 和 MAJOR MECHANISMS 由参赛队伍制作，但允许其他队伍提供帮助、加工、software 或 strategy 支持。",
+    "robotRulesBioText5": "R101 还说明哪些项目通常不算 MAJOR MECHANISMS。R102 要求 STARTING CONFIGURATION 静止并完全位于 18 × 18 × 18 in 立方体内；所有可更换配置都必须合法，预装 SCORING ELEMENTS 可超出尺寸。R103 允许通过机械方式或 OpMode 保持起始配置。R104 不设官方 ROBOT 重量上限，但应考虑地面负荷、电池、运输和性能。",
+    "robotRulesBioText6": "R105 要求 ROBOT 保持为一个整体并限制扩展。MATCH 开始后可展开，但完全展开时必须位于 18 × 24 × 29 in 范围内。必须靠机械结构本身满足限制，不能依赖 software，且不得故意分离 COMPONENTS。29 in 始终从 FIELD 表面垂直测量。",
+    "robotRulesBioText7": "ROBOT 尺寸按正常 gameplay 中可能出现的稳定状态测量。短暂倾斜本身不构成违规，只要恢复后稳定状态合法。所有机械 extension 都必须在 inspection 中展示。即使 software 通常限制，如果机械上可以超过尺寸上限仍属不合法。多个独立 extension 只有在组合后仍不超过总体范围时才允许。",
+    "robotRulesBioText8": "水平旋转的 extension 只有在整个运动过程中都不超出 ROBOT 尺寸限制时才合法。R201 要求 ROBOT 不得损坏 ARENA 或制造需要清理的杂物。SCORING ELEMENTS 的正常磨损可以接受，但撕裂、掉块、持续损坏或留下需要清理的材料不允许。",
+    "robotRulesBioText9": "R201 的损坏风险包括过度抓地装置、裸露尖锐/磨蚀表面、过量润滑剂、未固定 ballast、液体/凝胶、轮胎密封剂或 graphite powder。R202 要求 ROBOT/OPERATOR CONSOLE 安全且公平，禁止危险材料、遮挡视线的 curtain、模仿 MATCH 声音的高音设备、干扰 sensor/vision、火焰/pyrotechnics、用于损坏或掀翻对手的装置以及不必要的 entanglement。R203 要求断电也能快速移出 ROBOT；R204 禁止抓地/吸地增加下压力。R301–R305 管理 COTS，R401–R403 管理 ROBOT SIGNS，R501–R506 管理 actuators，R601–R613 管理电源，R701–R711 管理控制/网络/vision，R801 限制气动/真空/blowers，R901–R904 管理 OPERATOR CONSOLE。",
+    "robotRulesBioText10": "术语：CUSTOM CIRCUIT 是既非 R501 actuator 也非 R505 power-regulation device 的有源电气项目。DISABLED 表示 REFEREE 要求 ROBOT 在剩余 MATCH 中停止。DISQUALIFIED 在 Qualification 中得到 0 MATCH points 与 0 RP，在 Playoffs 中使 ALLIANCE 得到 0 MATCH points。DRIVE TEAM 最多 4 人；DRIVER 操作 ROBOT；DRIVER STATION 是运行相应 App 的 Android 设备。FABRICATED ITEM 是经过修改/制造的零件。FIELD 约 144 × 144 in。FIELD STAFF 负责安全、公平地运行 MATCH。FLOWER 从上方接收 POLLEN/NECTAR 并允许从下方取出 POLLEN。GARDEN 是 ALLIANCE 区域，HIVE 是由 2 个 CELLS 构成的双稳态结构，HOME REGION 决定晋级资格，HUMAN PLAYER 管理 SCORING ELEMENTS。"
+  }
+};
+
+function setLanguage(lang) {
+    if (!translations[lang]) return;
+    document.documentElement.lang = lang;
+
+    for (const id in translations[lang]) {
+        const element = document.getElementById(id);
+        if (!element) continue;
+        if (id === "pageSearch") {
+            element.placeholder = translations[lang][id];
+        } else {
+            element.innerHTML = translations[lang][id];
+        }
+    }
+
+    const langBtn = document.getElementById("langBtn");
+    if (langBtn) langBtn.textContent = lang.toUpperCase();
+
+    document.querySelectorAll(".lang-dropdown button").forEach(btn => {
+        btn.classList.toggle("active", btn.dataset.lang === lang);
+    });
+
+    localStorage.setItem("language", lang);
+
+    const quickManualIframe = document.getElementById("quickmanual-iframe");
+    if (quickManualIframe && quickManualIframe.contentWindow) {
+        quickManualIframe.contentWindow.postMessage({
+            type: "languageChange",
+            language: lang
+        }, "*");
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    setLanguage(localStorage.getItem("language") || "tr");
+
+    const langSwitch = document.getElementById("langSwitch");
+    const langBtn = document.getElementById("langBtn");
+
+    if (langBtn && langSwitch) {
+        langBtn.addEventListener("click", function (e) {
+            e.stopPropagation();
+            langSwitch.classList.toggle("open");
+        });
+
+        document.querySelectorAll(".lang-dropdown button").forEach(btn => {
+            btn.addEventListener("click", function () {
+                setLanguage(btn.dataset.lang);
+                langSwitch.classList.remove("open");
+            });
+        });
+
+        document.addEventListener("click", function (e) {
+            if (!langSwitch.contains(e.target)) langSwitch.classList.remove("open");
+        });
+    }
+
+    const searchInput = document.getElementById("pageSearch");
+    if (searchInput) searchInput.addEventListener("input", liveSearch);
+
+    // QuickManual AI widget - same behavior as the original page.
+    const widget = document.createElement("div");
+    widget.id = "quickmanual-widget";
+    widget.innerHTML = `
+        <div id="quickmanual-window">
+            <button id="quickmanual-close" aria-label="QuickManual AI'yi kapat" title="Kapat">×</button>
+            <iframe id="quickmanual-iframe" src="quickmanual/quickmanual-ai.html"
+                    title="QuickManual AI" loading="lazy"></iframe>
+        </div>
+        <button id="quickmanual-button" aria-label="QuickManual AI'yi aç" title="QuickManual AI">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 11.5C20 15.6421 16.1944 19 11.5 19C10.3065 19 9.17663 18.7881 8.16571 18.4049L4 20L5.20564 16.3878C4.44183 15.1111 4 13.6179 4 12C4 7.85786 7.80558 4.5 12.5 4.5C17.1944 4.5 20 7.35786 20 11.5Z"
+                      stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                <circle cx="9" cy="12" r="0.8" fill="currentColor"/>
+                <circle cx="12" cy="12" r="0.8" fill="currentColor"/>
+                <circle cx="15" cy="12" r="0.8" fill="currentColor"/>
+            </svg>
+        </button>`;
+    document.body.appendChild(widget);
+
+    const button = document.getElementById("quickmanual-button");
+    const windowBox = document.getElementById("quickmanual-window");
+    const closeButton = document.getElementById("quickmanual-close");
+
+    if (button && windowBox) button.addEventListener("click", () => windowBox.classList.toggle("open"));
+    if (closeButton && windowBox) closeButton.addEventListener("click", () => windowBox.classList.remove("open"));
+});
+
+function clearHighlights() {
+    document.querySelectorAll("mark.search-highlight").forEach(mark => {
+        const parent = mark.parentNode;
+        parent.replaceChild(document.createTextNode(mark.textContent), mark);
+        parent.normalize();
+    });
+}
+
+function liveSearch() {
+    clearHighlights();
+    const input = document.getElementById("pageSearch");
+    if (!input) return;
+    const query = input.value.trim();
+    if (!query) return;
+
+    const lowerQuery = query.toLocaleLowerCase();
+    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+        acceptNode(node) {
+            const parent = node.parentElement;
+            if (!parent) return NodeFilter.FILTER_REJECT;
+            if (
+                parent.closest("nav") ||
+                parent.closest("footer") ||
+                parent.closest(".search-section") ||
+                parent.closest(".language-switch") ||
+                parent.closest("#quickmanual-widget") ||
+                parent.tagName === "SCRIPT" ||
+                parent.tagName === "STYLE"
+            ) return NodeFilter.FILTER_REJECT;
+            return NodeFilter.FILTER_ACCEPT;
+        }
+    });
+
+    let firstMatch = null;
+    const nodes = [];
+    let n;
+    while ((n = walker.nextNode())) nodes.push(n);
+
+    for (const node of nodes) {
+        const text = node.nodeValue;
+        if (!text || !text.trim()) continue;
+        const index = text.toLocaleLowerCase().indexOf(lowerQuery);
+        if (index === -1) continue;
+
+        const before = text.slice(0, index);
+        const matchText = text.slice(index, index + query.length);
+        const after = text.slice(index + query.length);
+        const mark = document.createElement("mark");
+        mark.className = "search-highlight";
+        mark.textContent = matchText;
+
+        const parent = node.parentNode;
+        parent.insertBefore(document.createTextNode(before), node);
+        parent.insertBefore(mark, node);
+        node.nodeValue = after;
+        if (!firstMatch) firstMatch = mark;
+    }
+
+    if (firstMatch) firstMatch.scrollIntoView({ behavior: "smooth", block: "center" });
+}
+
+function clearSearch() {
+    const input = document.getElementById("pageSearch");
+    if (input) input.value = "";
+    clearHighlights();
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>QuickManual</title>
+<link href="images/logo (2).png" rel="icon"/>
+<link href="manifest.json" rel="manifest"/>
+<link href="images/logo.png" rel="apple-touch-icon"/>
+<link href="kurallar.css" rel="stylesheet"/>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo"></div>
+    <ul class="nav-links">
+        <li><a href="kurallar.html" id="navPanel">Kategoriler</a></li>
+      <!--  <li><a href="kurallar-oduller.html" id="navHome">Ödüller ve Tanımlar</a></li>
+        <li><a href="kurallar-genel.html" id="navTeam">Genel Kurallar</a></li>
+        <li><a href="kurallar-robot.html" id="navRobots">Robot Yapımı</a></li>
+        <li><a href="kurallar-mac.html" id="navGameRules">Maç Kuralları</a></li>
+        <li><a href="kurallar-saha.html" id="navFieldInfo">Saha Eleman Bilgileri</a></li>
+        <li><a href="kurallar-prosedur.html" id="navMatchProcedures">Maç Prosedürleri</a></li>
+        <li><a href="kurallar-puanlama.html" id="navScoringSystem">Nasıl Puan Kazanılır</a></li>
+    -->  <li><a href="index.html" id="navDecode">Geri dön</a></li>
+    </ul>
+</nav>
+
+
+<div class="language-switch" id="langSwitch">
+    <button class="lang-btn" id="langBtn">TR</button>
+    <div class="lang-dropdown">
+        <button data-lang="tr">Türkçe</button>
+        <button data-lang="en">English</button>
+        <button data-lang="es">Español</button>
+        <button data-lang="pt">Português</button>
+        <button data-lang="zh">中文</button>
+    </div>
+</div>
+
+
+<section class="search-section">
+    <div class="search-container">
+        <input type="text" id="pageSearch" placeholder="Sayfada ara... (örnek: kurallar, ödül, robot)" autocomplete="off">
+        <button onclick="clearSearch()" class="clear-btn" id="clear">Temizle</button>
+    </div>
+</section>
+
+<section class="section" id="fieldInfo">
+<h2 id="fieldInfoTitle">Saha Eleman Bilgileri</h2>
+<div class="card">
+<h3 id="fieldInfoBioTitle1">9 ARENA (Page 63)</h3>
+<p id="fieldInfoBioText1">ARENA, BIOBUZZ oynanması için gereken tüm<br/>
+game infrastructure’ı kapsar:<br/>
+•   FIELD<br/>
+•   SCORING ELEMENTS<br/>
+•   queue area<br/>
+•   team media area<br/>
+•   event management equipment<br/>
+9.1 Dimensions and Accuracy<br/>
+FIELD için resmi kaynaklar:<br/>
+1. 3D CAD model — FIELD’in resmi<br/>
+representation’ı.<br/>
+2. Event Field Setup Guide<br/>
+3. Field Acceptance Checklist<br/>
+4. Field Mitigation Guide<br/>
+3D CAD modelden alınan ölçümlerde genel<br/>
+tolerance:<br/>
+±1 in. (±2.5 cm)<br/>
+Manual’daki çizimler genel görsel anlayış içindir;<br/>
+aksi belirtilmedikçe gösterilen ölçüler nominaldir<br/>
+ve yine ±1 in. tolerance taşır.</p>
+</div>
+<div class="card">
+<h3 id="fieldInfoBioTitle2">9.2 FIELD (Page 64)</h3>
+<p id="fieldInfoBioText2">BIOBUZZ FIELD yaklaşık:<br/>
+144 in × 144 in<br/>
+365.75 cm × 365.75 cm<br/>
+alanındadır.<br/>
+Zemin:<br/>
+36 interlocking soft foam TILES<br/>
+Her TILE yaklaşık:<br/>
+24 in × 24 in × 0.59 in<br/>
+60.95 cm × 60.95 cm × 1.50 cm<br/>
+FIELD’de:<br/>
+• 1 HIVE Structure<br/>
+◦ 1 Frame<br/>
+◦ 2 HIVE<br/>
+• 4 FLOWERS<br/>
+bulunur.<br/>
+Official event’lerde AndyMark am-5850_Full veya<br/>
+officially licensed equivalent kullanılabilir.<br/>
+FIELD perimeter için ana model am-0481’dir.<br/>
+Bazı etkinliklerde FIELD platform/risers üzerine<br/>
+yükseltilebilir; ALLIANCE AREAS ground level’da<br/>
+kalabilir.<br/>
+Aynı event’teki competition FIELDS, Section 9.1<br/>
+ve T404’e uygun ve birbirleriyle consistent<br/>
+olmalıdır.</p>
+</div>
+<div class="card">
+<h3 id="fieldInfoBioTitle3">9.3 Areas, Zones, &amp; Markings (Page 65)</h3>
+<p id="fieldInfoBioText3">Manual’da:<br/>
+• zone → FIELD içindeki alanları,<br/>
+• area → FIELD dışındaki alanları<br/>
+tanımlamak için kullanılır.<br/>
+FIELD üzerindeki tape:<br/>
+• yaklaşık 1 in veya 2 in genişlikte olabilir,<br/>
+• kırmızı veya electric blue olabilir.<br/>
+BIOBUZZ FIELD’de tape lines:<br/>
+• TILE seam üzerinden geçmez,<br/>
+• specification’da continuous gösterilir.<br/>
+ALLIANCE AREA<br/>
+Yaklaşık:<br/>
+97 in × 54 in × infinitely tall<br/>
+hacimdir.<br/>
+FIELD dışındadır ve ALLIANCE renkli tape ile<br/>
+belirlenir.<br/>
+LOADING ZONE<br/>
+Yaklaşık:<br/>
+23 in × 11 in × infinitely tall<br/>
+alan/hacimdir.<br/>
+Kırmızı veya mavi tape ve FIELD perimeter<br/>
+tarafından sınırlandırılır.<br/>
+LOADING ZONE, yanındaki ALLIANCE AREA’ya<br/>
+ait olan ALLIANCE-specific zone’dur.</p>
+</div>
+<div class="card">
+<h3 id="fieldInfoBioTitle4">GARDEN (Page 66)</h3>
+<p id="fieldInfoBioText4">GARDEN yaklaşık:<br/>
+23 in × 2 in × infinitely tall<br/>
+hacimdir.<br/>
+FIELD’in karşılıklı köşelerinde red veya blue<br/>
+tape’in dış kenarı tarafından tanımlanır.<br/>
+Bu sayfa özellikle LOADING ZONE ve<br/>
+GARDEN‘ın geometrisini ve ölçülerini gösteren<br/>
+Figure 9-3’ü içerir.</p>
+</div>
+<div class="card">
+<h3 id="fieldInfoBioTitle5">9.4 TILE Coordinates (Page 67)</h3>
+<p id="fieldInfoBioText5">FIELD kurulumu sırasında TILE koordinatları<br/>
+kullanılır.<br/>
+İki koordinat sistemi gösterilir:<br/>
+TILE seam/tab-line locations<br/>
+TILE’ların birbirine geçtiği seam/tab noktalarını<br/>
+gösterir.<br/>
+TILE locations<br/>
+TILE’ların grid üzerindeki koordinatlarını gösterir.<br/>
+Şekilde yatay koordinatlar:<br/>
+V, W, X, Y, Z<br/>
+diğer grid sisteminde:<br/>
+A, B, C, D, E, F<br/>
+ve dikeyde numaralar kullanılır.</p>
+</div>
+<div class="card">
+<h3 id="fieldInfoBioTitle6">9.5 ALLIANCE AREA (Page 68)</h3>
+<p id="fieldInfoBioText6">ALLIANCE AREA, MATCH sırasında DRIVE<br/>
+TEAM’in bulunduğu red veya blue alandır.<br/>
+FIELD, ana seyirci bakış açısından:<br/>
+red ALLIANCE AREA solda<br/>
+olacak şekilde konumlandırılır.<br/>
+Event tarafından OPERATOR CONSOLE için:<br/>
+• short tables,<br/>
+• stands,<br/>
+• stools<br/>
+sağlanabilir.<br/>
+Bunlar event tarafından sağlandıysa takım izinsiz<br/>
+şekilde yerlerini değiştiremez.<br/>
+İzin için:<br/>
+• Head REFEREE,<br/>
+• FIELD Supervisor,<br/>
+• FTA<br/>
+ile iletişim kurulmalıdır.</p>
+</div>
+<div class="card">
+<h3 id="fieldInfoBioTitle7">9.6 HIVE Structure (Page 69)</h3>
+<p id="fieldInfoBioText7">HIVE Structure FIELD’in merkezinde bulunur.<br/>
+Bir Frame:<br/>
+• kırmızı HIVE,<br/>
+• mavi HIVE<br/>
+taşır.<br/>
+Her HIVE’da:<br/>
+2 CELLS<br/>
+bulunur.<br/>
+Her CELL:<br/>
+• üç boyutlu bir yapı,<br/>
+• NECTAR ve POLLEN taşıyabilen bir scoring<br/>
+structure’dır.<br/>
+HIVE bir pivot üzerinde döner ve tip olabilir.<br/>
+Her HIVE:<br/>
+• bi-stable yapıdadır,<br/>
+• bir CELL yukarı bakacak şekilde iki stabil<br/>
+pozisyondan birinde durur.<br/>
+Yeterli POLLEN/NECTAR yukarı bakan CELL’e<br/>
+LAUNCH edildiğinde HIVE diğer konuma<br/>
+geçebilir.<br/>
+Her CELL’in alt yüzünde:<br/>
+AprilTag Cluster<br/>
+bulunur ve bu cluster 4 distinct AprilTags içerir.<br/>
+9.6.1 Frame<br/>
+Frame:<br/>
+• iki triangular metal structure,<br/>
+• mounting strips,<br/>
+• üstte bir crossbar<br/>
+ile oluşturulur.<br/>
+Yaklaşık:<br/>
+• 49.46 in (125.65 cm) wide<br/>
+• 38.95 in (98.95 cm) deep<br/>
+• pivot axis yaklaşık 43.95 in (111.65 cm)<br/>
+above TILES<br/>
+değerlerindedir.<br/>
+Frame’in iki yanında BIOBUZZ logosu taşıyan<br/>
+panel olabilir; ancak bu graphic her event’te<br/>
+bulunmayabilir.</p>
+</div>
+<div class="card">
+<h3 id="fieldInfoBioTitle8">9.6.2 HIVE and CELL (Page 71)</h3>
+<p id="fieldInfoBioText8">Her HIVE:<br/>
+• bi-stable,<br/>
+• 2 CELL içeren,<br/>
+• pivot üzerinde dönen<br/>
+bir yapıdır.<br/>
+İki CELL aynı renktedir:<br/>
+• ikisi de red veya<br/>
+• ikisi de blue.<br/>
+CELL’ler yaklaşık:<br/>
+18.8 in (47.8 cm)<br/>
+aralıkla bulunur.<br/>
+HIVE’ın iki stabil pozisyonu vardır ve her<br/>
+pozisyonda bir CELL yukarı bakar.<br/>
+CELL opening yaklaşık:<br/>
+20 in wide × 14 in tall × 12 in deep<br/>
+yani yaklaşık:<br/>
+50.8 cm × 35.6 cm × 30.5 cm<br/>
+boyutlarındadır.<br/>
+Sayfa 71–80<br/>
+9.6.2 HIVE and CELL<br/>
+• HIVE yapısındaki CELL’lerin temel ölçüleri ve<br/>
+birbirlerine göre konumları gösterilir.<br/>
+• CELL’ler yaklaşık 18.84 in. aralıklıdır.<br/>
+• HIVE’ların merkezden merkeze mesafesi<br/>
+yaklaşık 25.5 in.<br/>
+• HIVE’ın alt ve üst noktalarının TILE’lara göre<br/>
+yükseklikleri şekillerde belirtilmiştir.<br/>
+• CELL’ler yaklaşık 30° açıyla konumlanabilir.</p>
+</div>
+<div class="card">
+<h3 id="fieldInfoBioTitle9">9.7 FLOWER (Page 72)</h3>
+<p id="fieldInfoBioText9">• FIELD üzerinde toplam 4 FLOWER bulunur<br/>
+ve bunlar perimeter wall’a bağlıdır.<br/>
+• POLLEN ve NECTAR FLOWER’ın üst<br/>
+kısmından yerleştirilebilir.<br/>
+• POLLEN, FLOWER’ın altındaki Retrieval<br/>
+Opening üzerinden ROBOT tarafından<br/>
+çıkarılabilir.<br/>
+• FLOWER’ın üst açıklığı yaklaşık 4 in.<br/>
+çapındadır ve TILE’lardan yaklaşık 21.5 in.<br/>
+yüksektedir.<br/>
+• Üstteki backstop, POLLEN ve NECTAR’ın<br/>
+FLOWER içine yönlendirilmesine yardımcı<br/>
+olur.<br/>
+• Alt bölümde ROBOT’ların SCORING<br/>
+ELEMENT çıkarması için yaklaşık 3.55 in.<br/>
+yüksekliğinde ve 3.57 in. derinliğinde bir<br/>
+Retrieval Opening vardır.<br/>
+• Alt ring yaklaşık 0.4 in. yüksekliğindedir ve<br/>
+POLLEN’ın oturduğu açıklık yaklaşık 2.79 in.<br/>
+çapındadır.</p>
+</div>
+<div class="card">
+<h3 id="fieldInfoBioTitle10">Figure 9-12: FLOWER details (Page 73)</h3>
+<p id="fieldInfoBioText10">• FLOWER’ın üst açıklığı: yaklaşık 4.0 in.<br/>
+• FLOWER üst kısmının TILE’dan yüksekliği:<br/>
+yaklaşık 21.5 in.<br/>
+• Retrieval Opening: yaklaşık 3.55 in.<br/>
+• Retrieval Opening derinliği: yaklaşık 3.57 in.<br/>
+• Alt ring kalınlığı: yaklaşık 0.43 in.<br/>
+• POLLEN’ın oturduğu bottom ring açıklığı:<br/>
+yaklaşık 2.79 in.</p>
+</div>
+<div class="card">
+<h3 id="fieldInfoBioTitle11">9.8 SCORING ELEMENTS (Page 74)</h3>
+<p id="fieldInfoBioText11">BIOBUZZ’daki SCORING ELEMENTS:<br/>
+• POLLEN: yaklaşık 2.8 in. (7.1 cm) çapında<br/>
+sarı Gopher ResisDent™ polyethylene topları.<br/>
+• NECTAR: yaklaşık 3.6 in. (9.1 cm) çapında<br/>
+kırmızı ve mavi Gopher ResisDent™<br/>
+polyethylene topları.<br/>
+• Bir MATCH içinde toplam:<br/>
+◦ 40 POLLEN<br/>
+◦ 8 red NECTAR<br/>
+◦ 8 blue NECTAR<br/>
+• POLLEN ve NECTAR tamamen küresel<br/>
+değildir ve boyutlarında küçük farklılıklar<br/>
+olabilir. ROBOT tasarımında bu tolerans<br/>
+dikkate alınmalıdır.<br/>
+9.9 AprilTags<br/>
+• BIOBUZZ AprilTag’leri 3.25 in. (8.25 cm) kare<br/>
+hedeflerdir.<br/>
+• 36h11 tag family kullanılır.<br/>
+• ROBOT navigation ve targeting amacıyla<br/>
+kullanılır.<br/>
+• Her AprilTag Cluster, tek bir sticker üzerinde<br/>
+bulunan 4 AprilTag’den oluşur.<br/>
+• CELL üzerindeki cluster’lar Reference Holes<br/>
+kullanılarak hizalanır.</p>
+</div>
+<div class="card">
+<h3 id="fieldInfoBioTitle12">Figure 9-15: AprilTag Cluster and Reference Hole layout (Page 75)</h3>
+<p id="fieldInfoBioText12">Reference Hole layout<br/>
+• AprilTag Cluster’ın CELL üzerindeki konumu<br/>
+ve Reference Hole’ların yerleşimi gösterilir.<br/>
+• Her AprilTag Cluster, CELL’in alt tarafında,<br/>
+TILE’lara bakacak şekilde yerleştirilir.<br/>
+• Cluster’ın alt kenarı FIELD merkezine doğru<br/>
+yönlendirilmiştir.<br/>
+• Manual içindeki bu görseller örnektir, ölçekli<br/>
+değildir ve practice amacıyla basılmak<br/>
+üzere tasarlanmamıştır.<br/>
+• Practice için resmi printable FIELD<br/>
+kaynaklarının kullanılması gerekir.</p>
+</div>
+<div class="card">
+<h3 id="fieldInfoBioTitle13">Figure 9-16: AprilTag Cluster on (Page 76)</h3>
+<p id="fieldInfoBioText13">CELL<br/>
+AprilTag’lerin FIELD üzerindeki konumları:<br/>
+• Red CELL — FIELD’in audience tarafının<br/>
+karşısı: ID 30, 31, 32, 33<br/>
+• Red CELL — audience tarafı: ID 34, 35, 36,<br/>
+37<br/>
+• Blue CELL — audience tarafı: ID 38, 39, 40,<br/>
+41<br/>
+• Blue CELL — FIELD’in audience tarafının<br/>
+karşısı: ID 42, 43, 44, 45<br/>
+Bu yerleşim ROBOT’ların AprilTag tabanlı<br/>
+localization/targeting sistemleri için önemlidir.</p>
+</div>
+<div class="card">
+<h3 id="fieldInfoBioTitle14">Figure 9-17: AprilTag Locations on the BIOBUZZ FIELD (Page 77)</h3>
+<p id="fieldInfoBioText14">BIOBUZZ FIELD<br/>
+FIELD üzerindeki AprilTag grupları görsel olarak:<br/>
+•   Red Scoring Tags: 33, 32, 31, 30<br/>
+•   Blue Scoring Tags: 45, 44, 43, 42<br/>
+•   Red Audience Tags: 34, 35, 36, 37<br/>
+•   Blue Audience Tags: 38, 39, 40, 41<br/>
+Bu sayfa özellikle vision-based ROBOT navigation<br/>
+ve scoring mekanizmaları tasarlanırken referans<br/>
+alınabilecek FIELD yerleşimini gösterir.</p>
+</div>
+<div class="card">
+<h3 id="fieldInfoBioTitle15">9.10 FIELD STAFF (Page 78)</h3>
+<p id="fieldInfoBioText15">FIELD STAFF, MATCH’lerin verimli, adil ve<br/>
+güvenli şekilde yürütülmesini sağlayan<br/>
+gönüllülerdir.<br/>
+Özellikle bilinmesi gereken 3 rol:<br/>
+Head REFEREE<br/>
+• REFEREE ve Official Scorer’ları yönetir.<br/>
+• Scoring süreçlerini denetler.<br/>
+• MATCH skorları, FOULS, YELLOW ve RED<br/>
+CARD kararlarında final authority sahibidir.<br/>
+FIRST Technical Advisor (FTA)<br/>
+• Etkinliğin FIRST gerekliliklerine uygun, güvenli<br/>
+ve düzgün ilerlemesine yardımcı olur.<br/>
+• FIELD, ROBOTS ve oyunla ilgili teknik<br/>
+konulara odaklanır.<br/>
+• Takımlar için teknik konularda bir kaynak ve<br/>
+takım savunucusu olarak görev yapar.<br/>
+FIELD Supervisor<br/>
+• FIELD üzerindeki MATCH faaliyetlerini yönetir.<br/>
+• MATCH akışının ve etkinlik temposunun<br/>
+düzgün ilerlemesini sağlar.<br/>
+• FIELD reset ekiplerini yönetir.</p>
+</div>
+<div class="card">
+<h3 id="fieldInfoBioTitle16">9.11 Event Management System (Page 79)</h3>
+<p id="fieldInfoBioText16">FIRST Event Management System; MATCH<br/>
+skorlarını ve diğer event verilerini yöneten<br/>
+sistemdir.<br/>
+Sistem; FIELD electronics, bilgisayarlar, ekranlar,<br/>
+REFEREE/volunteer cihazları, wireless access<br/>
+point ve ethernet bağlantılarını kapsar.<br/>
+Önemli nokta:<br/>
+Sesli uyarılar (audio cues) sadece katılımcılara<br/>
+yardımcı olmak içindir; resmî MATCH zaman<br/>
+göstergeleri değildir.<br/>
+Eğer sesli uyarı ile FIELD üzerindeki görsel timer<br/>
+arasında fark varsa:<br/>
+Visual FIELD timers are the authority.<br/>
+MATCH sesli uyarıları arasında:<br/>
+•   MATCH start — 2:30<br/>
+•   AUTO ends — 2:00<br/>
+•   AUTO → TELEOP geçişi — 0:08–0:01<br/>
+•   TELEOP begins — 2:00<br/>
+•   FLOWER Ownership Unlocked — 1:00<br/>
+•   Final 20 seconds — 0:20<br/>
+•   MATCH end — 0:00<br/>
+•   MATCH stopped — Foghorn</p>
+</div>
+</section>
+<footer class="footer">
+<div class="footer-container">
+<div class="footer-column">
+<h3 id="footerTitle">QuickManual</h3>
+<p id="footerDescription">
+            A community resource by Asteria Robotics
+            This is not an official FIRST document.
+        </p>
+</div>
+<div class="footer-column">
+<h3 id="contactTitle">İletişim</h3>
+<p><a href="mailto:asteria.32334@gmail.com">
+    asteria.32334@gmail.com
+</a></p>
+<p><a href="tel:+905057770038">
+    +90 (505) 777 00 38
+</a></p>
+<a href="https://maps.app.goo.gl/HN1VrrvqUwMMbExA6?g_st=ic" id="addressText" target="_blank">
+
+Atölyemizin Adresi
+
+</a>
+</div>
+<div class="footer-column">
+<h3> </h3>
+<a href="https://www.instagram.com/asteria_32334/" id="instagramText" target="_blank">
+
+Instagram
+
+</a>
+<p><a href="https://theorangealliance.org/teams/32334" target="_blank">
+        The Orange Alliance
+    </a></p>
+<p><a href="https://ftcscout.org/teams/32334" target="_blank">
+        FTCScout
+    </a></p>
+
+<p><a href="https://www.youtube.com/@asteria32334" target="_blank">
+        YouTube
+    </a></p>
+</div>
+</div>
+<div class="footer-bottom" id="copyrightText">
+© 2026 Asteria Robotics FTC Team 32334. All Rights Reserved.
+</div>
+<div class="footer-bottom-asterisk" id="asterisk">
+        * QuickManual resmi Oyun Kılavuzu değildir ve hiçbir zaman eksiksiz ya da kesin kural kaynağı olarak kabul edilmemelidir. FIRST tarafından yayınlanan resmi belgenin yerini tutmaz. Resmi kararlar, muayene süreçleri veya itirazlar için takımlar her zaman en güncel resmi Game Manual’a başvurmalıdır.
+    </div> <!--
+<div class="footer-bottom-asterisk" id="dateUpdate">
+        ** Son güncellenme tarihi: 5 ağustos 2026, Game Manual V0
+    </div> -->
+<img alt="biobuzz" class="center-image" src="images/biobuzz.png" style="max-width: 50%; height: auto; display: block;"/>
+</footer>
+<script>
+const translations = {
+  "tr": {
+    "navGameRules": "Maç Kuralları",
+    "navFieldInfo": "Saha Eleman Bilgileri",
+    "navMatchProcedures": "Maç Prosedürleri",
+    "navScoringSystem": "Nasıl Puan Kazanılır",
+    "fieldInfoTitle": "Saha Eleman Bilgileri",
+    "navHome": "Ödüller ve Tanımlar",
+    "navTeam": "Genel Kurallar",
+    "navRobots": "Robot Yapımı",
+    "navDecode": "Geri dön",
+    "asterisk": "* QuickManual resmi Oyun Kılavuzu değildir ve hiçbir zaman eksiksiz ya da kesin kural kaynağı olarak kabul edilmemelidir. FIRST tarafından yayınlanan resmi belgenin yerini tutmaz. Resmi kararlar, muayene süreçleri veya itirazlar için takımlar her zaman en güncel resmi Game Manual’a başvurmalıdır.",
+    "dateUpdate": "** Son güncellenme tarihi: 5 ağustos 2026, Game Manual V0",
+    "pageSearch": "Sayfada ara... (örnek: kurallar, ödül, robot)",
+    "clear": "Temizle",
+    "footerTitle": "QuickManual",
+    "footerDescription": "A community resource by Asteria Robotics\nThis is not an official FIRST document.",
+    "contactTitle": "İletişim",
+    "addressText": "Atölyemizin Adresi",
+    "instagramText": "Instagram",
+    "copyrightText": "© 2026 Asteria Robotics FTC Team 32334. Tüm Hakları Saklıdır.",
+    "navPanel": "Kategoriler",
+    "fieldInfoBioText11": "BIOBUZZ’daki SCORING ELEMENTS:<br/>\n• POLLEN: yaklaşık 2.8 in. (7.1 cm) çapında<br/>\nsarı Gopher ResisDent™ polyethylene topları.<br/>\n• NECTAR: yaklaşık 3.6 in. (9.1 cm) çapında<br/>\nkırmızı ve mavi Gopher ResisDent™<br/>\npolyethylene topları.<br/>\n• Bir MATCH içinde toplam:<br/>\n◦ 40 POLLEN<br/>\n◦ 8 red NECTAR<br/>\n◦ 8 blue NECTAR<br/>\n• POLLEN ve NECTAR tamamen küresel<br/>\ndeğildir ve boyutlarında küçük farklılıklar<br/>\nolabilir. ROBOT tasarımında bu tolerans<br/>\ndikkate alınmalıdır.<br/>\n9.9 AprilTags<br/>\n• BIOBUZZ AprilTag’leri 3.25 in. (8.25 cm) kare<br/>\nhedeflerdir.<br/>\n• 36h11 tag family kullanılır.<br/>\n• ROBOT navigation ve targeting amacıyla<br/>\nkullanılır.<br/>\n• Her AprilTag Cluster, tek bir sticker üzerinde<br/>\nbulunan 4 AprilTag’den oluşur.<br/>\n• CELL üzerindeki cluster’lar Reference Holes<br/>\nkullanılarak hizalanır.",
+    "fieldInfoBioTitle12": "Figure 9-15: AprilTag Cluster and Reference Hole layout (Page 75)",
+    "fieldInfoBioText10": "• FLOWER’ın üst açıklığı: yaklaşık 4.0 in.<br/>\n• FLOWER üst kısmının TILE’dan yüksekliği:<br/>\nyaklaşık 21.5 in.<br/>\n• Retrieval Opening: yaklaşık 3.55 in.<br/>\n• Retrieval Opening derinliği: yaklaşık 3.57 in.<br/>\n• Alt ring kalınlığı: yaklaşık 0.43 in.<br/>\n• POLLEN’ın oturduğu bottom ring açıklığı:<br/>\nyaklaşık 2.79 in.",
+    "fieldInfoBioTitle4": "GARDEN (Page 66)",
+    "fieldInfoBioText5": "FIELD kurulumu sırasında TILE koordinatları<br/>\nkullanılır.<br/>\nİki koordinat sistemi gösterilir:<br/>\nTILE seam/tab-line locations<br/>\nTILE’ların birbirine geçtiği seam/tab noktalarını<br/>\ngösterir.<br/>\nTILE locations<br/>\nTILE’ların grid üzerindeki koordinatlarını gösterir.<br/>\nŞekilde yatay koordinatlar:<br/>\nV, W, X, Y, Z<br/>\ndiğer grid sisteminde:<br/>\nA, B, C, D, E, F<br/>\nve dikeyde numaralar kullanılır.",
+    "fieldInfoBioText15": "FIELD STAFF, MATCH’lerin verimli, adil ve<br/>\ngüvenli şekilde yürütülmesini sağlayan<br/>\ngönüllülerdir.<br/>\nÖzellikle bilinmesi gereken 3 rol:<br/>\nHead REFEREE<br/>\n• REFEREE ve Official Scorer’ları yönetir.<br/>\n• Scoring süreçlerini denetler.<br/>\n• MATCH skorları, FOULS, YELLOW ve RED<br/>\nCARD kararlarında final authority sahibidir.<br/>\nFIRST Technical Advisor (FTA)<br/>\n• Etkinliğin FIRST gerekliliklerine uygun, güvenli<br/>\nve düzgün ilerlemesine yardımcı olur.<br/>\n• FIELD, ROBOTS ve oyunla ilgili teknik<br/>\nkonulara odaklanır.<br/>\n• Takımlar için teknik konularda bir kaynak ve<br/>\ntakım savunucusu olarak görev yapar.<br/>\nFIELD Supervisor<br/>\n• FIELD üzerindeki MATCH faaliyetlerini yönetir.<br/>\n• MATCH akışının ve etkinlik temposunun<br/>\ndüzgün ilerlemesini sağlar.<br/>\n• FIELD reset ekiplerini yönetir.",
+    "fieldInfoBioTitle5": "9.4 TILE Coordinates (Page 67)",
+    "fieldInfoBioText3": "Manual’da:<br/>\n• zone → FIELD içindeki alanları,<br/>\n• area → FIELD dışındaki alanları<br/>\ntanımlamak için kullanılır.<br/>\nFIELD üzerindeki tape:<br/>\n• yaklaşık 1 in veya 2 in genişlikte olabilir,<br/>\n• kırmızı veya electric blue olabilir.<br/>\nBIOBUZZ FIELD’de tape lines:<br/>\n• TILE seam üzerinden geçmez,<br/>\n• specification’da continuous gösterilir.<br/>\nALLIANCE AREA<br/>\nYaklaşık:<br/>\n97 in × 54 in × infinitely tall<br/>\nhacimdir.<br/>\nFIELD dışındadır ve ALLIANCE renkli tape ile<br/>\nbelirlenir.<br/>\nLOADING ZONE<br/>\nYaklaşık:<br/>\n23 in × 11 in × infinitely tall<br/>\nalan/hacimdir.<br/>\nKırmızı veya mavi tape ve FIELD perimeter<br/>\ntarafından sınırlandırılır.<br/>\nLOADING ZONE, yanındaki ALLIANCE AREA’ya<br/>\nait olan ALLIANCE-specific zone’dur.",
+    "fieldInfoBioTitle16": "9.11 Event Management System (Page 79)",
+    "fieldInfoBioText9": "• FIELD üzerinde toplam 4 FLOWER bulunur<br/>\nve bunlar perimeter wall’a bağlıdır.<br/>\n• POLLEN ve NECTAR FLOWER’ın üst<br/>\nkısmından yerleştirilebilir.<br/>\n• POLLEN, FLOWER’ın altındaki Retrieval<br/>\nOpening üzerinden ROBOT tarafından<br/>\nçıkarılabilir.<br/>\n• FLOWER’ın üst açıklığı yaklaşık 4 in.<br/>\nçapındadır ve TILE’lardan yaklaşık 21.5 in.<br/>\nyüksektedir.<br/>\n• Üstteki backstop, POLLEN ve NECTAR’ın<br/>\nFLOWER içine yönlendirilmesine yardımcı<br/>\nolur.<br/>\n• Alt bölümde ROBOT’ların SCORING<br/>\nELEMENT çıkarması için yaklaşık 3.55 in.<br/>\nyüksekliğinde ve 3.57 in. derinliğinde bir<br/>\nRetrieval Opening vardır.<br/>\n• Alt ring yaklaşık 0.4 in. yüksekliğindedir ve<br/>\nPOLLEN’ın oturduğu açıklık yaklaşık 2.79 in.<br/>\nçapındadır.",
+    "fieldInfoBioTitle15": "9.10 FIELD STAFF (Page 78)",
+    "fieldInfoBioTitle9": "9.7 FLOWER (Page 72)",
+    "fieldInfoBioTitle7": "9.6 HIVE Structure (Page 69)",
+    "fieldInfoBioTitle6": "9.5 ALLIANCE AREA (Page 68)",
+    "fieldInfoBioText7": "HIVE Structure FIELD’in merkezinde bulunur.<br/>\nBir Frame:<br/>\n• kırmızı HIVE,<br/>\n• mavi HIVE<br/>\ntaşır.<br/>\nHer HIVE’da:<br/>\n2 CELLS<br/>\nbulunur.<br/>\nHer CELL:<br/>\n• üç boyutlu bir yapı,<br/>\n• NECTAR ve POLLEN taşıyabilen bir scoring<br/>\nstructure’dır.<br/>\nHIVE bir pivot üzerinde döner ve tip olabilir.<br/>\nHer HIVE:<br/>\n• bi-stable yapıdadır,<br/>\n• bir CELL yukarı bakacak şekilde iki stabil<br/>\npozisyondan birinde durur.<br/>\nYeterli POLLEN/NECTAR yukarı bakan CELL’e<br/>\nLAUNCH edildiğinde HIVE diğer konuma<br/>\ngeçebilir.<br/>\nHer CELL’in alt yüzünde:<br/>\nAprilTag Cluster<br/>\nbulunur ve bu cluster 4 distinct AprilTags içerir.<br/>\n9.6.1 Frame<br/>\nFrame:<br/>\n• iki triangular metal structure,<br/>\n• mounting strips,<br/>\n• üstte bir crossbar<br/>\nile oluşturulur.<br/>\nYaklaşık:<br/>\n• 49.46 in (125.65 cm) wide<br/>\n• 38.95 in (98.95 cm) deep<br/>\n• pivot axis yaklaşık 43.95 in (111.65 cm)<br/>\nabove TILES<br/>\ndeğerlerindedir.<br/>\nFrame’in iki yanında BIOBUZZ logosu taşıyan<br/>\npanel olabilir; ancak bu graphic her event’te<br/>\nbulunmayabilir.",
+    "fieldInfoBioTitle8": "9.6.2 HIVE and CELL (Page 71)",
+    "fieldInfoBioText14": "BIOBUZZ FIELD<br/>\nFIELD üzerindeki AprilTag grupları görsel olarak:<br/>\n•   Red Scoring Tags: 33, 32, 31, 30<br/>\n•   Blue Scoring Tags: 45, 44, 43, 42<br/>\n•   Red Audience Tags: 34, 35, 36, 37<br/>\n•   Blue Audience Tags: 38, 39, 40, 41<br/>\nBu sayfa özellikle vision-based ROBOT navigation<br/>\nve scoring mekanizmaları tasarlanırken referans<br/>\nalınabilecek FIELD yerleşimini gösterir.",
+    "fieldInfoBioTitle13": "Figure 9-16: AprilTag Cluster on (Page 76)",
+    "fieldInfoBioTitle2": "9.2 FIELD (Page 64)",
+    "fieldInfoBioTitle14": "Figure 9-17: AprilTag Locations on the BIOBUZZ FIELD (Page 77)",
+    "fieldInfoBioText4": "GARDEN yaklaşık:<br/>\n23 in × 2 in × infinitely tall<br/>\nhacimdir.<br/>\nFIELD’in karşılıklı köşelerinde red veya blue<br/>\ntape’in dış kenarı tarafından tanımlanır.<br/>\nBu sayfa özellikle LOADING ZONE ve<br/>\nGARDEN‘ın geometrisini ve ölçülerini gösteren<br/>\nFigure 9-3’ü içerir.",
+    "fieldInfoBioTitle11": "9.8 SCORING ELEMENTS (Page 74)",
+    "fieldInfoBioTitle10": "Figure 9-12: FLOWER details (Page 73)",
+    "fieldInfoBioText2": "BIOBUZZ FIELD yaklaşık:<br/>\n144 in × 144 in<br/>\n365.75 cm × 365.75 cm<br/>\nalanındadır.<br/>\nZemin:<br/>\n36 interlocking soft foam TILES<br/>\nHer TILE yaklaşık:<br/>\n24 in × 24 in × 0.59 in<br/>\n60.95 cm × 60.95 cm × 1.50 cm<br/>\nFIELD’de:<br/>\n• 1 HIVE Structure<br/>\n◦ 1 Frame<br/>\n◦ 2 HIVE<br/>\n• 4 FLOWERS<br/>\nbulunur.<br/>\nOfficial event’lerde AndyMark am-5850_Full veya<br/>\nofficially licensed equivalent kullanılabilir.<br/>\nFIELD perimeter için ana model am-0481’dir.<br/>\nBazı etkinliklerde FIELD platform/risers üzerine<br/>\nyükseltilebilir; ALLIANCE AREAS ground level’da<br/>\nkalabilir.<br/>\nAynı event’teki competition FIELDS, Section 9.1<br/>\nve T404’e uygun ve birbirleriyle consistent<br/>\nolmalıdır.",
+    "fieldInfoBioText16": "FIRST Event Management System; MATCH<br/>\nskorlarını ve diğer event verilerini yöneten<br/>\nsistemdir.<br/>\nSistem; FIELD electronics, bilgisayarlar, ekranlar,<br/>\nREFEREE/volunteer cihazları, wireless access<br/>\npoint ve ethernet bağlantılarını kapsar.<br/>\nÖnemli nokta:<br/>\nSesli uyarılar (audio cues) sadece katılımcılara<br/>\nyardımcı olmak içindir; resmî MATCH zaman<br/>\ngöstergeleri değildir.<br/>\nEğer sesli uyarı ile FIELD üzerindeki görsel timer<br/>\narasında fark varsa:<br/>\nVisual FIELD timers are the authority.<br/>\nMATCH sesli uyarıları arasında:<br/>\n•   MATCH start — 2:30<br/>\n•   AUTO ends — 2:00<br/>\n•   AUTO → TELEOP geçişi — 0:08–0:01<br/>\n•   TELEOP begins — 2:00<br/>\n•   FLOWER Ownership Unlocked — 1:00<br/>\n•   Final 20 seconds — 0:20<br/>\n•   MATCH end — 0:00<br/>\n•   MATCH stopped — Foghorn",
+    "fieldInfoBioText8": "Her HIVE:<br/>\n• bi-stable,<br/>\n• 2 CELL içeren,<br/>\n• pivot üzerinde dönen<br/>\nbir yapıdır.<br/>\nİki CELL aynı renktedir:<br/>\n• ikisi de red veya<br/>\n• ikisi de blue.<br/>\nCELL’ler yaklaşık:<br/>\n18.8 in (47.8 cm)<br/>\naralıkla bulunur.<br/>\nHIVE’ın iki stabil pozisyonu vardır ve her<br/>\npozisyonda bir CELL yukarı bakar.<br/>\nCELL opening yaklaşık:<br/>\n20 in wide × 14 in tall × 12 in deep<br/>\nyani yaklaşık:<br/>\n50.8 cm × 35.6 cm × 30.5 cm<br/>\nboyutlarındadır.<br/>\nSayfa 71–80<br/>\n9.6.2 HIVE and CELL<br/>\n• HIVE yapısındaki CELL’lerin temel ölçüleri ve<br/>\nbirbirlerine göre konumları gösterilir.<br/>\n• CELL’ler yaklaşık 18.84 in. aralıklıdır.<br/>\n• HIVE’ların merkezden merkeze mesafesi<br/>\nyaklaşık 25.5 in.<br/>\n• HIVE’ın alt ve üst noktalarının TILE’lara göre<br/>\nyükseklikleri şekillerde belirtilmiştir.<br/>\n• CELL’ler yaklaşık 30° açıyla konumlanabilir.",
+    "fieldInfoBioText13": "CELL<br/>\nAprilTag’lerin FIELD üzerindeki konumları:<br/>\n• Red CELL — FIELD’in audience tarafının<br/>\nkarşısı: ID 30, 31, 32, 33<br/>\n• Red CELL — audience tarafı: ID 34, 35, 36,<br/>\n37<br/>\n• Blue CELL — audience tarafı: ID 38, 39, 40,<br/>\n41<br/>\n• Blue CELL — FIELD’in audience tarafının<br/>\nkarşısı: ID 42, 43, 44, 45<br/>\nBu yerleşim ROBOT’ların AprilTag tabanlı<br/>\nlocalization/targeting sistemleri için önemlidir.",
+    "fieldInfoBioText1": "ARENA, BIOBUZZ oynanması için gereken tüm<br/>\ngame infrastructure’ı kapsar:<br/>\n•   FIELD<br/>\n•   SCORING ELEMENTS<br/>\n•   queue area<br/>\n•   team media area<br/>\n•   event management equipment<br/>\n9.1 Dimensions and Accuracy<br/>\nFIELD için resmi kaynaklar:<br/>\n1. 3D CAD model — FIELD’in resmi<br/>\nrepresentation’ı.<br/>\n2. Event Field Setup Guide<br/>\n3. Field Acceptance Checklist<br/>\n4. Field Mitigation Guide<br/>\n3D CAD modelden alınan ölçümlerde genel<br/>\ntolerance:<br/>\n±1 in. (±2.5 cm)<br/>\nManual’daki çizimler genel görsel anlayış içindir;<br/>\naksi belirtilmedikçe gösterilen ölçüler nominaldir<br/>\nve yine ±1 in. tolerance taşır.",
+    "fieldInfoBioTitle3": "9.3 Areas, Zones, & Markings (Page 65)",
+    "fieldInfoBioTitle1": "9 ARENA (Page 63)",
+    "fieldInfoBioText6": "ALLIANCE AREA, MATCH sırasında DRIVE<br/>\nTEAM’in bulunduğu red veya blue alandır.<br/>\nFIELD, ana seyirci bakış açısından:<br/>\nred ALLIANCE AREA solda<br/>\nolacak şekilde konumlandırılır.<br/>\nEvent tarafından OPERATOR CONSOLE için:<br/>\n• short tables,<br/>\n• stands,<br/>\n• stools<br/>\nsağlanabilir.<br/>\nBunlar event tarafından sağlandıysa takım izinsiz<br/>\nşekilde yerlerini değiştiremez.<br/>\nİzin için:<br/>\n• Head REFEREE,<br/>\n• FIELD Supervisor,<br/>\n• FTA<br/>\nile iletişim kurulmalıdır.",
+    "fieldInfoBioText12": "Reference Hole layout<br/>\n• AprilTag Cluster’ın CELL üzerindeki konumu<br/>\nve Reference Hole’ların yerleşimi gösterilir.<br/>\n• Her AprilTag Cluster, CELL’in alt tarafında,<br/>\nTILE’lara bakacak şekilde yerleştirilir.<br/>\n• Cluster’ın alt kenarı FIELD merkezine doğru<br/>\nyönlendirilmiştir.<br/>\n• Manual içindeki bu görseller örnektir, ölçekli<br/>\ndeğildir ve practice amacıyla basılmak<br/>\nüzere tasarlanmamıştır.<br/>\n• Practice için resmi printable FIELD<br/>\nkaynaklarının kullanılması gerekir."
+  },
+  "en": {
+    "navGameRules": "Match Rules",
+    "navFieldInfo": "Field Element Information",
+    "navMatchProcedures": "Match Procedures",
+    "navScoringSystem": "How to Score",
+    "fieldInfoTitle": "Field Element Information",
+    "navHome": "Awards & Definitions",
+    "navTeam": "General Rules",
+    "navRobots": "Robot Construction",
+    "navDecode": "Go back",
+    "asterisk": "* QuickManual is not the official Game Manual and should never be treated as a complete or final source of rules. It does not replace the official document published by FIRST. For any official decision, inspection, or dispute, teams must always refer to the latest version of the official Game Manual.",
+    "dateUpdate": "** Last updated: August 5, 2026, Game Manual V0",
+    "pageSearch": "Search this page... (Example: rules, rewards, bots)",
+    "clear": "Clear",
+    "footerTitle": "QuickManual",
+    "footerDescription": "A community resource by Asteria Robotics\nThis is not an official FIRST document.",
+    "contactTitle": "Contact Us",
+    "addressText": "Our address",
+    "instagramText": "Instagram",
+    "copyrightText": "© 2026 Asteria Robotics FTC Team 32334. All Rights Reserved.",
+    "fieldInfoBioText1": "ARENA includes all game infrastructure required to play BIOBUZZ: • FIELD • SCORING ELEMENTS • queue area • team media area • event management equipment. 9.1 Dimensions and Accuracy — Official FIELD references are: 1. 3D CAD model — the official representation of the FIELD. 2. Event Field Setup Guide 3. Field Acceptance Checklist 4. Field Mitigation Guide. The general tolerance for dimensions taken from the 3D CAD model is ±1 in. (±2.5 cm). Drawings in the manual are for general visual understanding; unless otherwise stated, shown dimensions are nominal and also carry a ±1 in. tolerance.",
+    "fieldInfoBioText2": "The BIOBUZZ FIELD is approximately 144 in × 144 in (365.75 cm × 365.75 cm). The floor is made of 36 interlocking soft foam TILES. Each TILE is approximately 24 in × 24 in × 0.59 in (60.95 cm × 60.95 cm × 1.50 cm). The FIELD contains 1 HIVE Structure (1 Frame and 2 HIVES) and 4 FLOWERS. Official events may use AndyMark am-5850_Full or an officially licensed equivalent. The primary FIELD perimeter model is am-0481. At some events the FIELD may be raised on platforms/risers while ALLIANCE AREAS remain at ground level. Competition FIELDS at the same event must comply with Section 9.1 and T404 and be consistent with one another.",
+    "fieldInfoBioText3": "In the manual, “zone” refers to spaces inside the FIELD and “area” refers to spaces outside the FIELD. Tape on the FIELD may be approximately 1 in or 2 in wide and may be red or electric blue. On the BIOBUZZ FIELD, tape lines do not cross TILE seams and are shown as continuous in the specification. ALLIANCE AREA: approximately 97 in × 54 in × infinitely tall, outside the FIELD and marked with ALLIANCE-colored tape. LOADING ZONE: approximately 23 in × 11 in × infinitely tall, bounded by red or blue tape and the FIELD perimeter. Each LOADING ZONE is ALLIANCE-specific and belongs to the adjacent ALLIANCE AREA.",
+    "fieldInfoBioText4": "The GARDEN is approximately 23 in × 2 in × infinitely tall. It is defined by the outside edge of red or blue tape in opposite corners of the FIELD. This page includes Figure 9-3, showing the geometry and dimensions of the LOADING ZONE and GARDEN.",
+    "fieldInfoBioText5": "TILE coordinates are used when setting up the FIELD. Two coordinate systems are shown: TILE seam/tab-line locations indicate the seam/tab points where TILES interlock; TILE locations indicate each TILE’s position on the grid. The figure uses V, W, X, Y, Z in one horizontal coordinate system, A, B, C, D, E, F in the other, and numbers vertically.",
+    "fieldInfoBioText6": "The ALLIANCE AREA is the red or blue area where the DRIVE TEAM stands during a MATCH. From the primary audience viewpoint, the FIELD is oriented with the red ALLIANCE AREA on the left. The event may provide short tables, stands, or stools for the OPERATOR CONSOLE. If provided by the event, teams may not move them without permission. Contact the Head REFEREE, FIELD Supervisor, or FTA for approval.",
+    "fieldInfoBioText7": "The HIVE Structure is located at the center of the FIELD. One Frame supports a red HIVE and a blue HIVE. Each HIVE has 2 CELLS. Each CELL is a three-dimensional scoring structure that can hold NECTAR and POLLEN. A HIVE rotates around a pivot and can TIP. Each HIVE is bi-stable and rests in one of two stable positions with one CELL facing upward. When enough POLLEN/NECTAR is LAUNCHED into the upward-facing CELL, the HIVE may move to the other position. The underside of each CELL has an AprilTag Cluster containing 4 distinct AprilTags. 9.6.1 Frame — The Frame consists of two triangular metal structures, mounting strips, and a crossbar at the top. Approximate dimensions: 49.46 in (125.65 cm) wide, 38.95 in (98.95 cm) deep, with the pivot axis about 43.95 in (111.65 cm) above the TILES. Panels with the BIOBUZZ logo may appear on both sides of the Frame, but the graphic may not be present at every event.",
+    "fieldInfoBioText8": "Each HIVE is bi-stable, contains 2 CELLS, and rotates on a pivot. Both CELLS are the same color: both red or both blue. CELLS are about 18.8 in (47.8 cm) apart. The HIVE has two stable positions, with one CELL facing upward in each position. The CELL opening is approximately 20 in wide × 14 in tall × 12 in deep (50.8 cm × 35.6 cm × 30.5 cm). The manual also shows the main CELL dimensions and their relative locations: CELLS are approximately 18.84 in apart, the HIVE center-to-center distance is about 25.5 in, the top and bottom heights relative to the TILES are shown in the figures, and CELLS may be positioned at about a 30° angle.",
+    "fieldInfoBioText9": "There are 4 FLOWERS on the FIELD, attached to the perimeter wall. POLLEN and NECTAR may be placed through the top of a FLOWER. POLLEN can be removed by a ROBOT through the Retrieval Opening at the bottom. The top opening is about 4 in in diameter and about 21.5 in above the TILES. A backstop helps guide POLLEN and NECTAR into the FLOWER. The lower section has a Retrieval Opening about 3.55 in high and 3.57 in deep for ROBOTS to remove SCORING ELEMENTS. The bottom ring is about 0.4 in high, and the opening where POLLEN rests is about 2.79 in in diameter.",
+    "fieldInfoBioText10": "FLOWER dimensions: top opening approximately 4.0 in; top of FLOWER approximately 21.5 in above the TILE; Retrieval Opening approximately 3.55 in; Retrieval Opening depth approximately 3.57 in; bottom ring thickness approximately 0.43 in; bottom ring opening where POLLEN rests approximately 2.79 in.",
+    "fieldInfoBioText11": "BIOBUZZ SCORING ELEMENTS: • POLLEN — yellow Gopher ResisDent™ polyethylene balls, approximately 2.8 in (7.1 cm) in diameter. • NECTAR — red and blue Gopher ResisDent™ polyethylene balls, approximately 3.6 in (9.1 cm) in diameter. • A MATCH contains a total of 40 POLLEN, 8 red NECTAR, and 8 blue NECTAR. POLLEN and NECTAR are not perfectly spherical and may vary slightly in size, so ROBOT designs should account for this tolerance. 9.9 AprilTags — BIOBUZZ AprilTags are 3.25 in (8.25 cm) square targets using the 36h11 tag family. They are used for ROBOT navigation and targeting. Each AprilTag Cluster contains 4 AprilTags on one sticker. Clusters on CELLS are aligned using Reference Holes.",
+    "fieldInfoBioText12": "Reference Hole layout: the figure shows the AprilTag Cluster position on the CELL and the Reference Hole locations. Each AprilTag Cluster is mounted on the underside of the CELL facing the TILES. The lower edge of the cluster points toward the center of the FIELD. These manual images are examples, are not to scale, and are not intended to be printed for practice. Use the official printable FIELD resources for practice.",
+    "fieldInfoBioText13": "CELL AprilTag locations on the FIELD: • Red CELL — opposite the audience side: IDs 30, 31, 32, 33 • Red CELL — audience side: IDs 34, 35, 36, 37 • Blue CELL — audience side: IDs 38, 39, 40, 41 • Blue CELL — opposite the audience side: IDs 42, 43, 44, 45. This layout is important for AprilTag-based ROBOT localization and targeting systems.",
+    "fieldInfoBioText14": "BIOBUZZ FIELD AprilTag groups: • Red Scoring Tags: 33, 32, 31, 30 • Blue Scoring Tags: 45, 44, 43, 42 • Red Audience Tags: 34, 35, 36, 37 • Blue Audience Tags: 38, 39, 40, 41. This page provides a FIELD layout reference useful when designing vision-based ROBOT navigation and scoring mechanisms.",
+    "fieldInfoBioText15": "FIELD STAFF are volunteers who help MATCHES run efficiently, fairly, and safely. Three key roles: Head REFEREE — manages REFEREES and Official Scorers, oversees scoring, and has final authority over MATCH scores, FOULS, YELLOW CARDS, and RED CARDS. FIRST Technical Advisor (FTA) — helps the event operate safely and in accordance with FIRST requirements, focuses on technical FIELD/ROBOT/game issues, and serves as a technical resource and team advocate. FIELD Supervisor — manages MATCH activity on the FIELD, helps maintain event flow and pace, and manages FIELD reset crews.",
+    "fieldInfoBioText16": "The FIRST Event Management System manages MATCH scores and other event data. It includes FIELD electronics, computers, displays, REFEREE/volunteer devices, wireless access points, and Ethernet connections. Important: audio cues are only aids for participants and are not the official MATCH time indicators. If an audio cue differs from the visual timer on the FIELD, the visual FIELD timer is authoritative. Typical audio cues include: MATCH start — 2:30; AUTO ends — 2:00; AUTO → TELEOP transition — 0:08–0:01; TELEOP begins — 2:00; FLOWER Ownership Unlocked — 1:00; final 20 seconds — 0:20; MATCH end — 0:00; MATCH stopped — foghorn.",
+    "navPanel": "Categories"
+  },
+  "es": {
+    "navGameRules": "Reglas del partido",
+    "navFieldInfo": "Elementos del campo",
+    "navMatchProcedures": "Procedimientos del partido",
+    "navScoringSystem": "Cómo puntuar",
+    "fieldInfoTitle": "Información de Elementos del Campo",
+    "navHome": "Premios y definiciones",
+    "navTeam": "Reglas generales",
+    "navRobots": "Construcción del robot",
+    "navDecode": "Volver",
+    "asterisk": "* QuickManual no es el Manual de Juego oficial y nunca debe considerarse una fuente completa o definitiva de reglas. No reemplaza el documento oficial publicado por FIRST. Para cualquier decisión oficial, inspección o disputa, los equipos deben consultar siempre la versión más reciente del Manual de Juego oficial.",
+    "dateUpdate": "** Fecha de la última actualización: 5 de agosto de 2026, Manual del juego V0",
+    "pageSearch": "Buscar en la página... (Ejemplo: normas, premios, bots)",
+    "clear": "limpiar",
+    "footerTitle": "QuickManual",
+    "footerDescription": "A community resource by Asteria Robotics\nThis is not an official FIRST document.",
+    "contactTitle": "Contacto",
+    "addressText": "Dirección de nuestro taller",
+    "instagramText": "Instagram",
+    "copyrightText": "© 2026 Asteria Robotics FTC Team 32334. Todos los derechos reservados.",
+    "fieldInfoBioText1": "ARENA incluye toda la infraestructura necesaria para jugar BIOBUZZ: • FIELD • SCORING ELEMENTS • zona de espera • zona de medios de los equipos • equipo de gestión del evento. 9.1 Dimensions and Accuracy — Las referencias oficiales del FIELD son: 1. modelo CAD 3D — representación oficial del FIELD; 2. Event Field Setup Guide; 3. Field Acceptance Checklist; 4. Field Mitigation Guide. La tolerancia general para medidas obtenidas del CAD es ±1 in. (±2,5 cm). Los dibujos del manual son de referencia visual; salvo indicación contraria, las dimensiones mostradas son nominales y también tienen una tolerancia de ±1 in.",
+    "fieldInfoBioText2": "El FIELD de BIOBUZZ mide aproximadamente 144 in × 144 in (365,75 cm × 365,75 cm). El suelo está formado por 36 TILES de espuma blanda entrelazados. Cada TILE mide aproximadamente 24 in × 24 in × 0,59 in (60,95 cm × 60,95 cm × 1,50 cm). El FIELD contiene 1 HIVE Structure (1 Frame y 2 HIVES) y 4 FLOWERS. En eventos oficiales puede usarse AndyMark am-5850_Full o un equivalente con licencia oficial. El modelo principal del perímetro es am-0481. En algunos eventos el FIELD puede elevarse sobre plataformas, mientras las ALLIANCE AREAS permanecen a nivel del suelo. Los competition FIELDS de un mismo evento deben cumplir la Sección 9.1 y T404 y ser consistentes entre sí.",
+    "fieldInfoBioText3": "En el manual, “zone” se usa para zonas dentro del FIELD y “area” para zonas fuera del FIELD. La cinta puede medir aproximadamente 1 o 2 in de ancho y ser roja o azul eléctrico. En BIOBUZZ las líneas de cinta no cruzan las juntas de los TILES y se muestran continuas en la especificación. ALLIANCE AREA: aproximadamente 97 in × 54 in × altura infinita, fuera del FIELD y marcada con cinta del color de la ALLIANCE. LOADING ZONE: aproximadamente 23 in × 11 in × altura infinita, limitada por cinta roja o azul y el perímetro del FIELD. Cada LOADING ZONE es específica de la ALLIANCE y corresponde al ALLIANCE AREA contiguo.",
+    "fieldInfoBioText4": "El GARDEN mide aproximadamente 23 in × 2 in × altura infinita. Está definido por el borde exterior de la cinta roja o azul en esquinas opuestas del FIELD. La página incluye la Figure 9-3 con la geometría y dimensiones de LOADING ZONE y GARDEN.",
+    "fieldInfoBioText5": "Las coordenadas de TILE se usan para montar el FIELD. Se muestran dos sistemas: TILE seam/tab-line locations indica los puntos de unión donde encajan los TILES; TILE locations indica la posición de cada TILE en la cuadrícula. La figura usa V, W, X, Y, Z en un sistema horizontal, A, B, C, D, E, F en el otro y números en el eje vertical.",
+    "fieldInfoBioText6": "ALLIANCE AREA es la zona roja o azul donde permanece el DRIVE TEAM durante un MATCH. Desde la vista principal del público, el FIELD se orienta con el ALLIANCE AREA rojo a la izquierda. El evento puede proporcionar mesas bajas, soportes o taburetes para el OPERATOR CONSOLE. Si los proporciona el evento, los equipos no pueden moverlos sin permiso. Para autorización, contacte al Head REFEREE, FIELD Supervisor o FTA.",
+    "fieldInfoBioText7": "La HIVE Structure está en el centro del FIELD. Un Frame sostiene un HIVE rojo y un HIVE azul. Cada HIVE tiene 2 CELLS. Cada CELL es una estructura tridimensional de puntuación que puede contener NECTAR y POLLEN. El HIVE gira sobre un pivote y puede hacer TIP. Cada HIVE es biestable y descansa en una de dos posiciones estables con una CELL orientada hacia arriba. Cuando se LAUNCH suficiente POLLEN/NECTAR a la CELL superior, el HIVE puede pasar a la otra posición. La parte inferior de cada CELL tiene un AprilTag Cluster con 4 AprilTags distintos. 9.6.1 Frame — El Frame consta de dos estructuras metálicas triangulares, tiras de montaje y una barra transversal superior. Dimensiones aproximadas: 49,46 in (125,65 cm) de ancho, 38,95 in (98,95 cm) de profundidad y eje de pivote a unos 43,95 in (111,65 cm) sobre los TILES. Puede haber paneles con el logo BIOBUZZ a ambos lados, aunque no necesariamente en todos los eventos.",
+    "fieldInfoBioText8": "Cada HIVE es biestable, contiene 2 CELLS y gira sobre un pivote. Ambas CELLS son del mismo color: rojas o azules. Están separadas aproximadamente 18,8 in (47,8 cm). El HIVE tiene dos posiciones estables y en cada una una CELL mira hacia arriba. La abertura de la CELL mide aproximadamente 20 in de ancho × 14 in de alto × 12 in de profundidad (50,8 cm × 35,6 cm × 30,5 cm). El manual también muestra sus dimensiones y posiciones relativas: separación de unas 18,84 in, distancia entre centros del HIVE de unas 25,5 in, alturas superior e inferior respecto a los TILES y una posible inclinación de aproximadamente 30°.",
+    "fieldInfoBioText9": "Hay 4 FLOWERS en el FIELD, fijadas al muro perimetral. POLLEN y NECTAR pueden introducirse por la parte superior. El ROBOT puede retirar POLLEN por la Retrieval Opening inferior. La abertura superior tiene unos 4 in de diámetro y está a unos 21,5 in sobre los TILES. Un backstop ayuda a guiar POLLEN y NECTAR. La parte inferior tiene una Retrieval Opening de unas 3,55 in de alto y 3,57 in de profundidad. El anillo inferior mide unos 0,4 in de alto y la abertura donde descansa POLLEN tiene unos 2,79 in de diámetro.",
+    "fieldInfoBioText10": "Dimensiones de FLOWER: abertura superior ≈ 4,0 in; altura de la parte superior sobre el TILE ≈ 21,5 in; Retrieval Opening ≈ 3,55 in; profundidad ≈ 3,57 in; grosor del anillo inferior ≈ 0,43 in; abertura del anillo inferior donde descansa POLLEN ≈ 2,79 in.",
+    "fieldInfoBioText11": "SCORING ELEMENTS de BIOBUZZ: • POLLEN — bolas amarillas Gopher ResisDent™ de polietileno de aproximadamente 2,8 in (7,1 cm) de diámetro. • NECTAR — bolas rojas y azules Gopher ResisDent™ de aproximadamente 3,6 in (9,1 cm). • Un MATCH contiene 40 POLLEN, 8 NECTAR rojos y 8 NECTAR azules. No son perfectamente esféricos y pueden variar ligeramente de tamaño; el diseño del ROBOT debe considerar esta tolerancia. 9.9 AprilTags — Los AprilTags de BIOBUZZ son objetivos cuadrados de 3,25 in (8,25 cm), familia 36h11, usados para navegación y apuntado del ROBOT. Cada AprilTag Cluster contiene 4 tags en una sola pegatina y los clusters de las CELLS se alinean con Reference Holes.",
+    "fieldInfoBioText12": "Reference Hole layout: se muestra la posición del AprilTag Cluster en la CELL y la ubicación de los Reference Holes. Cada cluster se coloca en la parte inferior de la CELL mirando hacia los TILES. Su borde inferior apunta al centro del FIELD. Las imágenes del manual son ejemplos, no están a escala y no están diseñadas para imprimirse para práctica. Para práctica deben usarse los recursos oficiales imprimibles del FIELD.",
+    "fieldInfoBioText13": "Ubicación de AprilTags de las CELLS: • CELL roja — lado opuesto al público: IDs 30, 31, 32, 33 • CELL roja — lado del público: 34, 35, 36, 37 • CELL azul — lado del público: 38, 39, 40, 41 • CELL azul — lado opuesto al público: 42, 43, 44, 45. Esta distribución es importante para sistemas de localización y apuntado del ROBOT basados en AprilTag.",
+    "fieldInfoBioText14": "Grupos de AprilTags en el BIOBUZZ FIELD: • Red Scoring Tags: 33, 32, 31, 30 • Blue Scoring Tags: 45, 44, 43, 42 • Red Audience Tags: 34, 35, 36, 37 • Blue Audience Tags: 38, 39, 40, 41. Esta página muestra la distribución del FIELD como referencia para diseñar navegación por visión y mecanismos de scoring.",
+    "fieldInfoBioText15": "FIELD STAFF son los voluntarios que ayudan a que los MATCHES se desarrollen de forma eficiente, justa y segura. Tres funciones clave: Head REFEREE — dirige a REFEREES y Official Scorers, supervisa el scoring y tiene autoridad final sobre puntuaciones, FOULS, YELLOW CARDS y RED CARDS. FIRST Technical Advisor (FTA) — ayuda a que el evento funcione de forma segura y conforme a FIRST, se centra en asuntos técnicos de FIELD/ROBOTS/juego y actúa como recurso técnico y defensor de los equipos. FIELD Supervisor — gestiona la actividad de MATCH en el FIELD, el ritmo del evento y los equipos de reset.",
+    "fieldInfoBioText16": "FIRST Event Management System gestiona puntuaciones de MATCH y otros datos del evento. Incluye electrónica del FIELD, ordenadores, pantallas, dispositivos de REFEREE/voluntarios, puntos de acceso inalámbricos y conexiones Ethernet. Importante: las señales de audio solo ayudan a los participantes y no son los indicadores oficiales de tiempo. Si difieren del temporizador visual del FIELD, manda el temporizador visual. Señales típicas: inicio — 2:30; fin de AUTO — 2:00; transición AUTO → TELEOP — 0:08–0:01; inicio TELEOP — 2:00; FLOWER Ownership Unlocked — 1:00; últimos 20 s — 0:20; fin — 0:00; MATCH detenido — bocina.",
+    "navPanel": "Categorías"
+  },
+  "pt": {
+    "navGameRules": "Regras da partida",
+    "navFieldInfo": "Elementos do campo",
+    "navMatchProcedures": "Procedimentos da partida",
+    "navScoringSystem": "Como pontuar",
+    "fieldInfoTitle": "Informações dos Elementos do Campo",
+    "navHome": "Prêmios e definições",
+    "navTeam": "Regras gerais",
+    "navRobots": "Construção do robô",
+    "navDecode": "Voltar",
+    "asterisk": "* QuickManual não é o Manual de Jogo oficial e nunca deve ser tratado como uma fonte completa ou definitiva de regras. Ele não substitui o documento oficial publicado pela FIRST. Para qualquer decisão oficial, inspeção ou contestação, as equipes devem sempre consultar a versão mais recente do Manual de Jogo oficial.",
+    "dateUpdate": "** Data da última atualização: 5 de agosto de 2026, Manual do Jogo V0",
+    "pageSearch": "Pesquisar nesta página... (Exemplo: regras, prémios, bots)",
+    "clear": "limpar",
+    "footerTitle": "QuickManual",
+    "footerDescription": "A community resource by Asteria Robotics\nThis is not an official FIRST document.",
+    "contactTitle": "Contato",
+    "addressText": "Endereço da nossa oficina",
+    "instagramText": "Instagram",
+    "copyrightText": "© 2026 Asteria Robotics FTC Team 32334. Todos os direitos reservados.",
+    "fieldInfoBioText1": "A ARENA inclui toda a infraestrutura necessária para jogar BIOBUZZ: • FIELD • SCORING ELEMENTS • área de fila • área de mídia das equipes • equipamentos de gerenciamento do evento. 9.1 Dimensions and Accuracy — As referências oficiais do FIELD são: 1. modelo CAD 3D — representação oficial do FIELD; 2. Event Field Setup Guide; 3. Field Acceptance Checklist; 4. Field Mitigation Guide. A tolerância geral para medidas obtidas do CAD é ±1 in. (±2,5 cm). Os desenhos do manual servem para referência visual; salvo indicação em contrário, as dimensões mostradas são nominais e também têm tolerância de ±1 in.",
+    "fieldInfoBioText2": "O FIELD BIOBUZZ mede aproximadamente 144 in × 144 in (365,75 cm × 365,75 cm). O piso é formado por 36 TILES de espuma macia intertravados. Cada TILE mede aproximadamente 24 in × 24 in × 0,59 in (60,95 cm × 60,95 cm × 1,50 cm). O FIELD contém 1 HIVE Structure (1 Frame e 2 HIVES) e 4 FLOWERS. Eventos oficiais podem usar o AndyMark am-5850_Full ou equivalente oficialmente licenciado. O modelo principal de perímetro é am-0481. Em alguns eventos o FIELD pode ficar elevado em plataformas, enquanto as ALLIANCE AREAS permanecem no nível do chão. Os competition FIELDS do mesmo evento devem cumprir a Seção 9.1 e T404 e ser consistentes entre si.",
+    "fieldInfoBioText3": "No manual, “zone” é usado para áreas dentro do FIELD e “area” para áreas fora dele. A fita pode ter cerca de 1 ou 2 in de largura e ser vermelha ou azul elétrico. No BIOBUZZ, as linhas de fita não cruzam as emendas dos TILES e aparecem contínuas na especificação. ALLIANCE AREA: aproximadamente 97 in × 54 in × altura infinita, fora do FIELD e marcada com fita da cor da ALLIANCE. LOADING ZONE: aproximadamente 23 in × 11 in × altura infinita, limitada por fita vermelha ou azul e pelo perímetro do FIELD. Cada LOADING ZONE é específica da ALLIANCE e pertence à ALLIANCE AREA adjacente.",
+    "fieldInfoBioText4": "O GARDEN mede aproximadamente 23 in × 2 in × altura infinita. É definido pela borda externa da fita vermelha ou azul em cantos opostos do FIELD. A página inclui a Figure 9-3, mostrando a geometria e as dimensões da LOADING ZONE e do GARDEN.",
+    "fieldInfoBioText5": "As coordenadas de TILE são usadas na montagem do FIELD. São mostrados dois sistemas: TILE seam/tab-line locations indica os pontos de encaixe entre TILES; TILE locations indica a posição de cada TILE na grade. A figura usa V, W, X, Y, Z em um sistema horizontal, A, B, C, D, E, F no outro e números no eixo vertical.",
+    "fieldInfoBioText6": "A ALLIANCE AREA é a área vermelha ou azul onde o DRIVE TEAM fica durante um MATCH. Vista do público principal, a FIELD é orientada com a ALLIANCE AREA vermelha à esquerda. O evento pode fornecer mesas baixas, suportes ou bancos para o OPERATOR CONSOLE. Se forem fornecidos pelo evento, as equipes não podem movê-los sem autorização. Para permissão, contate o Head REFEREE, FIELD Supervisor ou FTA.",
+    "fieldInfoBioText7": "A HIVE Structure fica no centro do FIELD. Um Frame sustenta um HIVE vermelho e um HIVE azul. Cada HIVE possui 2 CELLS. Cada CELL é uma estrutura tridimensional de pontuação que pode conter NECTAR e POLLEN. O HIVE gira em um pivô e pode TIP. Cada HIVE é biestável e repousa em uma de duas posições estáveis com uma CELL voltada para cima. Quando POLLEN/NECTAR suficiente é LAUNCHED na CELL superior, o HIVE pode mudar para a outra posição. A parte inferior de cada CELL tem um AprilTag Cluster com 4 AprilTags distintos. 9.6.1 Frame — O Frame é composto por duas estruturas metálicas triangulares, tiras de montagem e uma barra transversal superior. Dimensões aproximadas: 49,46 in (125,65 cm) de largura, 38,95 in (98,95 cm) de profundidade e eixo do pivô a cerca de 43,95 in (111,65 cm) acima dos TILES. Painéis com o logo BIOBUZZ podem aparecer nos dois lados, mas não necessariamente em todos os eventos.",
+    "fieldInfoBioText8": "Cada HIVE é biestável, contém 2 CELLS e gira em um pivô. As duas CELLS têm a mesma cor: ambas vermelhas ou ambas azuis. Elas ficam a cerca de 18,8 in (47,8 cm) uma da outra. O HIVE possui duas posições estáveis, com uma CELL voltada para cima em cada uma. A abertura da CELL mede aproximadamente 20 in de largura × 14 in de altura × 12 in de profundidade (50,8 cm × 35,6 cm × 30,5 cm). O manual também mostra dimensões e posições relativas: separação de cerca de 18,84 in, distância entre centros de aproximadamente 25,5 in, alturas superior/inferior em relação aos TILES e possível inclinação de cerca de 30°.",
+    "fieldInfoBioText9": "Há 4 FLOWERS no FIELD, fixadas à parede do perímetro. POLLEN e NECTAR podem ser inseridos pela parte superior. O ROBOT pode remover POLLEN pela Retrieval Opening inferior. A abertura superior tem cerca de 4 in de diâmetro e fica a aproximadamente 21,5 in acima dos TILES. Um backstop ajuda a direcionar POLLEN e NECTAR. A parte inferior possui uma Retrieval Opening de cerca de 3,55 in de altura e 3,57 in de profundidade. O anel inferior tem cerca de 0,4 in de altura e a abertura onde o POLLEN repousa tem aproximadamente 2,79 in de diâmetro.",
+    "fieldInfoBioText10": "Dimensões da FLOWER: abertura superior ≈ 4,0 in; topo da FLOWER ≈ 21,5 in acima do TILE; Retrieval Opening ≈ 3,55 in; profundidade ≈ 3,57 in; espessura do anel inferior ≈ 0,43 in; abertura do anel inferior onde o POLLEN repousa ≈ 2,79 in.",
+    "fieldInfoBioText11": "SCORING ELEMENTS do BIOBUZZ: • POLLEN — bolas amarelas Gopher ResisDent™ de polietileno, aproximadamente 2,8 in (7,1 cm) de diâmetro. • NECTAR — bolas vermelhas e azuis Gopher ResisDent™ de aproximadamente 3,6 in (9,1 cm). • Um MATCH contém 40 POLLEN, 8 NECTAR vermelhos e 8 NECTAR azuis. POLLEN e NECTAR não são perfeitamente esféricos e podem variar ligeiramente de tamanho; o projeto do ROBOT deve considerar essa tolerância. 9.9 AprilTags — Os AprilTags BIOBUZZ são alvos quadrados de 3,25 in (8,25 cm), família 36h11, usados para navegação e mira do ROBOT. Cada AprilTag Cluster contém 4 tags em um único adesivo. Os clusters nas CELLS são alinhados usando Reference Holes.",
+    "fieldInfoBioText12": "Reference Hole layout: mostra a posição do AprilTag Cluster na CELL e a localização dos Reference Holes. Cada cluster é instalado na parte inferior da CELL voltado para os TILES. Sua borda inferior aponta para o centro do FIELD. As imagens do manual são exemplos, não estão em escala e não foram feitas para impressão de treino. Para treino, use os recursos oficiais imprimíveis do FIELD.",
+    "fieldInfoBioText13": "Posições dos AprilTags das CELLS no FIELD: • CELL vermelha — lado oposto ao público: IDs 30, 31, 32, 33 • CELL vermelha — lado do público: 34, 35, 36, 37 • CELL azul — lado do público: 38, 39, 40, 41 • CELL azul — lado oposto ao público: 42, 43, 44, 45. Essa disposição é importante para sistemas de localização e mira do ROBOT baseados em AprilTag.",
+    "fieldInfoBioText14": "Grupos de AprilTags no BIOBUZZ FIELD: • Red Scoring Tags: 33, 32, 31, 30 • Blue Scoring Tags: 45, 44, 43, 42 • Red Audience Tags: 34, 35, 36, 37 • Blue Audience Tags: 38, 39, 40, 41. Esta página mostra o layout do FIELD como referência para projetar navegação por visão e mecanismos de scoring.",
+    "fieldInfoBioText15": "FIELD STAFF são voluntários que ajudam os MATCHES a ocorrer de forma eficiente, justa e segura. Três funções principais: Head REFEREE — gerencia REFEREES e Official Scorers, supervisiona o scoring e tem autoridade final sobre pontuações, FOULS, YELLOW CARDS e RED CARDS. FIRST Technical Advisor (FTA) — ajuda o evento a operar com segurança e de acordo com os requisitos FIRST, concentra-se em questões técnicas de FIELD/ROBOTS/jogo e atua como recurso técnico e defensor das equipes. FIELD Supervisor — gerencia a atividade de MATCH no FIELD, o fluxo do evento e as equipes de reset.",
+    "fieldInfoBioText16": "O FIRST Event Management System gerencia pontuações de MATCH e outros dados do evento. Inclui eletrônica do FIELD, computadores, telas, dispositivos de REFEREE/voluntários, access points sem fio e conexões Ethernet. Importante: sinais sonoros servem apenas como auxílio e não são indicadores oficiais de tempo. Se houver diferença, o timer visual do FIELD é a autoridade. Sinais típicos: início — 2:30; fim de AUTO — 2:00; transição AUTO → TELEOP — 0:08–0:01; início de TELEOP — 2:00; FLOWER Ownership Unlocked — 1:00; últimos 20 s — 0:20; fim — 0:00; MATCH interrompido — buzina.",
+    "navPanel": "Categorias"
+  },
+  "zh": {
+    "navGameRules": "比赛规则",
+    "navFieldInfo": "场地元素信息",
+    "navMatchProcedures": "比赛流程",
+    "navScoringSystem": "如何得分",
+    "fieldInfoTitle": "场地元素信息",
+    "navHome": "奖项与定义",
+    "navTeam": "通用规则",
+    "navRobots": "机器人构建",
+    "navDecode": "返回",
+    "asterisk": "* QuickManual 不是官方比赛手册，绝不能被视为完整或最终的规则来源。它不能替代 FIRST 发布的官方文件。对于任何正式决定、检查或争议，队伍必须始终参考最新版本的官方比赛手册。",
+    "dateUpdate": "** 最后更新日期：2026年8月5日，游戏手册 V0",
+    "pageSearch": "在页面中搜索...（示例：规则、奖励、机器人）",
+    "clear": "清洁",
+    "footerTitle": "QuickManual",
+    "footerDescription": "A community resource by Asteria Robotics\nThis is not an official FIRST document.",
+    "contactTitle": "联系我们",
+    "addressText": "我们的工作室地址",
+    "instagramText": "Instagram",
+    "copyrightText": "© 2026 Asteria Robotics FTC Team 32334. 版权所有。",
+    "fieldInfoBioText1": "ARENA 包含进行 BIOBUZZ 比赛所需的全部基础设施：• FIELD • SCORING ELEMENTS • 排队区 • 队伍媒体区 • 赛事管理设备。9.1 Dimensions and Accuracy — FIELD 的官方参考资料包括：1. 3D CAD 模型（FIELD 的官方表示）；2. Event Field Setup Guide；3. Field Acceptance Checklist；4. Field Mitigation Guide。根据 3D CAD 模型取得的尺寸，一般公差为 ±1 in.（±2.5 cm）。手册中的图示主要用于帮助理解；除非另有说明，标注尺寸均为名义尺寸，同样具有 ±1 in. 公差。",
+    "fieldInfoBioText2": "BIOBUZZ FIELD 约为 144 in × 144 in（365.75 cm × 365.75 cm）。地面由 36 块互锁软泡沫 TILES 组成。每块 TILE 约为 24 in × 24 in × 0.59 in（60.95 cm × 60.95 cm × 1.50 cm）。FIELD 上有 1 个 HIVE Structure（1 个 Frame 和 2 个 HIVES）以及 4 个 FLOWERS。正式赛事可使用 AndyMark am-5850_Full 或官方授权的等效产品。主要 FIELD perimeter 型号为 am-0481。部分赛事可能将 FIELD 架高，而 ALLIANCE AREAS 仍保持在地面高度。同一赛事的 competition FIELDS 必须符合 Section 9.1 和 T404，并彼此保持一致。",
+    "fieldInfoBioText3": "手册中，“zone”指 FIELD 内的区域，“area”指 FIELD 外的区域。FIELD 上的胶带宽度约为 1 in 或 2 in，可为红色或电蓝色。在 BIOBUZZ FIELD 上，胶带线不会跨越 TILE 接缝，并在规范中表示为连续线。ALLIANCE AREA：约 97 in × 54 in × 无限高，位于 FIELD 外，由 ALLIANCE 颜色胶带标记。LOADING ZONE：约 23 in × 11 in × 无限高，由红色或蓝色胶带与 FIELD perimeter 围成。每个 LOADING ZONE 都是 ALLIANCE-specific，并对应相邻的 ALLIANCE AREA。",
+    "fieldInfoBioText4": "GARDEN 约为 23 in × 2 in × 无限高。它由 FIELD 对角位置的红色或蓝色胶带外边缘定义。本页的 Figure 9-3 展示了 LOADING ZONE 与 GARDEN 的几何形状和尺寸。",
+    "fieldInfoBioText5": "FIELD 搭建时会使用 TILE 坐标。手册展示两套坐标系统：TILE seam/tab-line locations 表示 TILES 相互连接的接缝/卡扣位置；TILE locations 表示各 TILE 在网格中的位置。图中一套水平坐标使用 V、W、X、Y、Z，另一套使用 A、B、C、D、E、F，纵向使用数字。",
+    "fieldInfoBioText6": "ALLIANCE AREA 是 MATCH 期间 DRIVE TEAM 所在的红色或蓝色区域。从主要观众视角看，FIELD 布置为红色 ALLIANCE AREA 在左侧。赛事方可能为 OPERATOR CONSOLE 提供矮桌、支架或凳子。若这些物品由赛事方提供，队伍未经许可不得移动。需要调整时应联系 Head REFEREE、FIELD Supervisor 或 FTA。",
+    "fieldInfoBioText7": "HIVE Structure 位于 FIELD 中央。一个 Frame 支撑一个红色 HIVE 和一个蓝色 HIVE。每个 HIVE 有 2 个 CELLS。每个 CELL 都是可容纳 NECTAR 和 POLLEN 的三维得分结构。HIVE 围绕枢轴旋转并可发生 TIP。每个 HIVE 为双稳态结构，在两个稳定位置之一停留，且总有一个 CELL 朝上。当足够的 POLLEN/NECTAR 被 LAUNCHED 到朝上的 CELL 中时，HIVE 可能切换到另一稳定位置。每个 CELL 底面都有一个 AprilTag Cluster，其中包含 4 个不同的 AprilTags。9.6.1 Frame — Frame 由两个三角金属结构、安装条和顶部横杆组成。约 49.46 in（125.65 cm）宽、38.95 in（98.95 cm）深，枢轴轴线约位于 TILES 上方 43.95 in（111.65 cm）。Frame 两侧可能有 BIOBUZZ 标志面板，但并非所有赛事都会安装。",
+    "fieldInfoBioText8": "每个 HIVE 都是双稳态结构，包含 2 个 CELLS，并绕枢轴旋转。两个 CELLS 颜色相同：均为红色或均为蓝色。CELLS 间距约 18.8 in（47.8 cm）。HIVE 有两个稳定位置，每个位置都有一个 CELL 朝上。CELL 开口约为 20 in 宽 × 14 in 高 × 12 in 深（50.8 cm × 35.6 cm × 30.5 cm）。手册还给出了 CELLS 的主要尺寸及相对位置：间距约 18.84 in，HIVE 中心距约 25.5 in，图中标出了相对于 TILES 的上下高度，并且 CELLS 可能以约 30° 角放置。",
+    "fieldInfoBioText9": "FIELD 上共有 4 个 FLOWERS，并固定在 perimeter wall 上。POLLEN 和 NECTAR 可从 FLOWER 顶部放入。ROBOT 可通过底部 Retrieval Opening 取出 POLLEN。顶部开口直径约 4 in，距 TILES 约 21.5 in。上方 backstop 有助于将 POLLEN 和 NECTAR 引导进入 FLOWER。底部有约 3.55 in 高、3.57 in 深的 Retrieval Opening，供 ROBOT 取出 SCORING ELEMENTS。底环高约 0.4 in，POLLEN 所在开口直径约 2.79 in。",
+    "fieldInfoBioText10": "FLOWER 尺寸：顶部开口约 4.0 in；FLOWER 顶部距 TILE 约 21.5 in；Retrieval Opening 约 3.55 in；其深度约 3.57 in；底环厚度约 0.43 in；POLLEN 所在的底环开口约 2.79 in。",
+    "fieldInfoBioText11": "BIOBUZZ 的 SCORING ELEMENTS：• POLLEN — 黄色 Gopher ResisDent™ 聚乙烯球，直径约 2.8 in（7.1 cm）。• NECTAR — 红色和蓝色 Gopher ResisDent™ 聚乙烯球，直径约 3.6 in（9.1 cm）。• 每场 MATCH 共使用 40 个 POLLEN、8 个红色 NECTAR、8 个蓝色 NECTAR。POLLEN 与 NECTAR 并非完全标准球体，尺寸可能略有差异，ROBOT 设计应考虑此公差。9.9 AprilTags — BIOBUZZ AprilTags 为 3.25 in（8.25 cm）方形目标，使用 36h11 tag family，用于 ROBOT 导航和瞄准。每个 AprilTag Cluster 在一张贴纸上包含 4 个 AprilTags；CELL 上的 cluster 通过 Reference Holes 对齐。",
+    "fieldInfoBioText12": "Reference Hole layout：图中显示 AprilTag Cluster 在 CELL 上的位置及 Reference Holes 的布局。每个 AprilTag Cluster 安装在 CELL 底部并朝向 TILES。Cluster 的下边缘朝向 FIELD 中心。手册中的这些图仅为示例，不按比例绘制，也不用于打印练习。练习时应使用官方可打印的 FIELD 资源。",
+    "fieldInfoBioText13": "CELL 的 AprilTag 在 FIELD 上的位置：• 红色 CELL — 观众侧对面：ID 30、31、32、33 • 红色 CELL — 观众侧：34、35、36、37 • 蓝色 CELL — 观众侧：38、39、40、41 • 蓝色 CELL — 观众侧对面：42、43、44、45。该布局对基于 AprilTag 的 ROBOT 定位和瞄准系统十分重要。",
+    "fieldInfoBioText14": "BIOBUZZ FIELD 上的 AprilTag 分组：• Red Scoring Tags：33、32、31、30 • Blue Scoring Tags：45、44、43、42 • Red Audience Tags：34、35、36、37 • Blue Audience Tags：38、39、40、41。本页 FIELD 布局可作为设计基于视觉的 ROBOT 导航和得分机构时的参考。",
+    "fieldInfoBioText15": "FIELD STAFF 是帮助 MATCH 高效、公平、安全进行的志愿者。三个重要角色：Head REFEREE — 管理 REFEREES 和 Official Scorers，监督计分，并对 MATCH 得分、FOULS、YELLOW CARDS 和 RED CARDS 拥有最终裁决权。FIRST Technical Advisor (FTA) — 帮助赛事安全并符合 FIRST 要求，负责 FIELD、ROBOTS 与比赛相关技术问题，也是队伍的技术资源与支持者。FIELD Supervisor — 管理 FIELD 上的 MATCH 活动，确保比赛流程和节奏顺畅，并管理 FIELD reset 队伍。",
+    "fieldInfoBioText16": "FIRST Event Management System 用于管理 MATCH 得分和其他赛事数据。系统包括 FIELD 电子设备、电脑、显示器、REFEREE/志愿者设备、无线接入点和以太网连接。重要：音频提示仅用于辅助参赛者，并不是官方 MATCH 计时依据。如果音频提示与 FIELD 上的可视计时器不同，以可视 FIELD timer 为准。常见提示：MATCH 开始 — 2:30；AUTO 结束 — 2:00；AUTO → TELEOP 过渡 — 0:08–0:01；TELEOP 开始 — 2:00；FLOWER Ownership Unlocked — 1:00；最后 20 秒 — 0:20；MATCH 结束 — 0:00；MATCH 停止 — 汽笛声。",
+    "navPanel": "分类"
+  }
+};
+
+function setLanguage(lang) {
+    if (!translations[lang]) return;
+    document.documentElement.lang = lang;
+
+    for (const id in translations[lang]) {
+        const element = document.getElementById(id);
+        if (!element) continue;
+        if (id === "pageSearch") {
+            element.placeholder = translations[lang][id];
+        } else {
+            element.innerHTML = translations[lang][id];
+        }
+    }
+
+    const langBtn = document.getElementById("langBtn");
+    if (langBtn) langBtn.textContent = lang.toUpperCase();
+
+    document.querySelectorAll(".lang-dropdown button").forEach(btn => {
+        btn.classList.toggle("active", btn.dataset.lang === lang);
+    });
+
+    localStorage.setItem("language", lang);
+
+    const quickManualIframe = document.getElementById("quickmanual-iframe");
+    if (quickManualIframe && quickManualIframe.contentWindow) {
+        quickManualIframe.contentWindow.postMessage({
+            type: "languageChange",
+            language: lang
+        }, "*");
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    setLanguage(localStorage.getItem("language") || "tr");
+
+    const langSwitch = document.getElementById("langSwitch");
+    const langBtn = document.getElementById("langBtn");
+
+    if (langBtn && langSwitch) {
+        langBtn.addEventListener("click", function (e) {
+            e.stopPropagation();
+            langSwitch.classList.toggle("open");
+        });
+
+        document.querySelectorAll(".lang-dropdown button").forEach(btn => {
+            btn.addEventListener("click", function () {
+                setLanguage(btn.dataset.lang);
+                langSwitch.classList.remove("open");
+            });
+        });
+
+        document.addEventListener("click", function (e) {
+            if (!langSwitch.contains(e.target)) langSwitch.classList.remove("open");
+        });
+    }
+
+    const searchInput = document.getElementById("pageSearch");
+    if (searchInput) searchInput.addEventListener("input", liveSearch);
+
+    // QuickManual AI widget - same behavior as the original page.
+    const widget = document.createElement("div");
+    widget.id = "quickmanual-widget";
+    widget.innerHTML = `
+        <div id="quickmanual-window">
+            <button id="quickmanual-close" aria-label="QuickManual AI'yi kapat" title="Kapat">×</button>
+            <iframe id="quickmanual-iframe" src="quickmanual/quickmanual-ai.html"
+                    title="QuickManual AI" loading="lazy"></iframe>
+        </div>
+        <button id="quickmanual-button" aria-label="QuickManual AI'yi aç" title="QuickManual AI">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 11.5C20 15.6421 16.1944 19 11.5 19C10.3065 19 9.17663 18.7881 8.16571 18.4049L4 20L5.20564 16.3878C4.44183 15.1111 4 13.6179 4 12C4 7.85786 7.80558 4.5 12.5 4.5C17.1944 4.5 20 7.35786 20 11.5Z"
+                      stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                <circle cx="9" cy="12" r="0.8" fill="currentColor"/>
+                <circle cx="12" cy="12" r="0.8" fill="currentColor"/>
+                <circle cx="15" cy="12" r="0.8" fill="currentColor"/>
+            </svg>
+        </button>`;
+    document.body.appendChild(widget);
+
+    const button = document.getElementById("quickmanual-button");
+    const windowBox = document.getElementById("quickmanual-window");
+    const closeButton = document.getElementById("quickmanual-close");
+
+    if (button && windowBox) button.addEventListener("click", () => windowBox.classList.toggle("open"));
+    if (closeButton && windowBox) closeButton.addEventListener("click", () => windowBox.classList.remove("open"));
+});
+
+function clearHighlights() {
+    document.querySelectorAll("mark.search-highlight").forEach(mark => {
+        const parent = mark.parentNode;
+        parent.replaceChild(document.createTextNode(mark.textContent), mark);
+        parent.normalize();
+    });
+}
+
+function liveSearch() {
+    clearHighlights();
+    const input = document.getElementById("pageSearch");
+    if (!input) return;
+    const query = input.value.trim();
+    if (!query) return;
+
+    const lowerQuery = query.toLocaleLowerCase();
+    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+        acceptNode(node) {
+            const parent = node.parentElement;
+            if (!parent) return NodeFilter.FILTER_REJECT;
+            if (
+                parent.closest("nav") ||
+                parent.closest("footer") ||
+                parent.closest(".search-section") ||
+                parent.closest(".language-switch") ||
+                parent.closest("#quickmanual-widget") ||
+                parent.tagName === "SCRIPT" ||
+                parent.tagName === "STYLE"
+            ) return NodeFilter.FILTER_REJECT;
+            return NodeFilter.FILTER_ACCEPT;
+        }
+    });
+
+    let firstMatch = null;
+    const nodes = [];
+    let n;
+    while ((n = walker.nextNode())) nodes.push(n);
+
+    for (const node of nodes) {
+        const text = node.nodeValue;
+        if (!text || !text.trim()) continue;
+        const index = text.toLocaleLowerCase().indexOf(lowerQuery);
+        if (index === -1) continue;
+
+        const before = text.slice(0, index);
+        const matchText = text.slice(index, index + query.length);
+        const after = text.slice(index + query.length);
+        const mark = document.createElement("mark");
+        mark.className = "search-highlight";
+        mark.textContent = matchText;
+
+        const parent = node.parentNode;
+        parent.insertBefore(document.createTextNode(before), node);
+        parent.insertBefore(mark, node);
+        node.nodeValue = after;
+        if (!firstMatch) firstMatch = mark;
+    }
+
+    if (firstMatch) firstMatch.scrollIntoView({ behavior: "smooth", block: "center" });
+}
+
+function clearSearch() {
+    const input = document.getElementById("pageSearch");
+    if (input) input.value = "";
+    clearHighlights();
+}
+
+</script>
+</body>
+</html>

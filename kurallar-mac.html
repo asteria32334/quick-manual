@@ -1,0 +1,1650 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>QuickManual</title>
+<link href="images/logo (2).png" rel="icon"/>
+<link href="manifest.json" rel="manifest"/>
+<link href="images/logo.png" rel="apple-touch-icon"/>
+<link href="kurallar.css" rel="stylesheet"/>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo"></div>
+    <ul class="nav-links">
+        <li><a href="kurallar.html" id="navPanel">Kategoriler</a></li>
+      <!-- <li><a href="kurallar-oduller.html" id="navHome">Ödüller ve Tanımlar</a></li>
+        <li><a href="kurallar-genel.html" id="navTeam">Genel Kurallar</a></li>
+        <li><a href="kurallar-robot.html" id="navRobots">Robot Yapımı</a></li>
+        <li><a href="kurallar-mac.html" id="navGameRules">Maç Kuralları</a></li>
+        <li><a href="kurallar-saha.html" id="navFieldInfo">Saha Eleman Bilgileri</a></li>
+        <li><a href="kurallar-prosedur.html" id="navMatchProcedures">Maç Prosedürleri</a></li>
+        <li><a href="kurallar-puanlama.html" id="navScoringSystem">Nasıl Puan Kazanılır</a></li>
+    --> <li><a href="index.html" id="navDecode">Geri dön</a></li>
+    </ul>
+</nav>
+
+
+<div class="language-switch" id="langSwitch">
+    <button class="lang-btn" id="langBtn">TR</button>
+    <div class="lang-dropdown">
+        <button data-lang="tr">Türkçe</button>
+        <button data-lang="en">English</button>
+        <button data-lang="es">Español</button>
+        <button data-lang="pt">Português</button>
+        <button data-lang="zh">中文</button>
+    </div>
+</div>
+
+
+<section class="search-section">
+    <div class="search-container">
+        <input type="text" id="pageSearch" placeholder="Sayfada ara... (örnek: kurallar, ödül, robot)" autocomplete="off">
+        <button onclick="clearSearch()" class="clear-btn" id="clear">Temizle</button>
+    </div>
+</section>
+
+<section class="section" id="gameRules">
+<h2 id="gameRulesTitle">Maç Kuralları</h2>
+<div class="card">
+<h3 id="gameRulesBioTitle1">10.6.1 YELLOW and RED (Page 93)</h3>
+<p id="gameRulesBioText1">CARDS<br/>
+RED CARD<br/>
+RED CARD:<br/>
+• Head REFEREE tarafından ciddi ROBOT<br/>
+veya takım davranışı/kural ihlali için verilir.<br/>
+• Takımın o MATCH için DISQUALIFIED<br/>
+olmasına neden olur.<br/>
+DISABLED<br/>
+REFEREE ROBOT’un durdurulmasını ister.<br/>
+ROBOT’un tüm output’ları devre dışı kalır ve<br/>
+MATCH’in geri kalanında kullanılamaz.<br/>
+DISQUALIFIED<br/>
+• Qualification MATCH’te takım 0 MATCH point<br/>
++ 0 RP alır.<br/>
+• Playoff MATCH’te ilgili ALLIANCE’ın 0 MATCH<br/>
+point almasına neden olur.</p>
+</div>
+<div class="card">
+<h3 id="gameRulesBioTitle2">10.6.1 YELLOW and RED CARDS (Page 93)</h3>
+<p id="gameRulesBioText2">YELLOW/RED CARD yalnızca doğrudan yazılmış<br/>
+ihlaller için değil, Competition Integrity Contract<br/>
+(CIC) ihlallerinde de kullanılabilir.<br/>
+• YELLOW CARD → warning<br/>
+• RED CARD → MATCH DISQUALIFICATION<br/>
+• Bir takım YELLOW/RED CARD aldıysa<br/>
+sonraki MATCH’lere YELLOW CARD taşır.<br/>
+• İkinci YELLOW CARD otomatik olarak RED<br/>
+CARD’a dönüşür.<br/>
+• Aynı MATCH içinde ikinci YELLOW CARD<br/>
+alınması da RED CARD oluşturur.<br/>
+• Eğer kartın nedeni ARENA FAULT olarak<br/>
+belirlenirse kart geri çekilir.</p>
+</div>
+<div class="card">
+<h3 id="gameRulesBioTitle3">10.6.2 YELLOW and RED (Page 94)</h3>
+<p id="gameRulesBioText3">CARD application<br/>
+Bir takım YELLOW/RED CARD aldığında, sonraki<br/>
+MATCH’lerde audience display üzerinde takım<br/>
+numarası sarı arka planla gösterilir.<br/>
+Kartların hangi MATCH’e uygulandığı<br/>
+• Qualification MATCH’lerden önce: Head<br/>
+REFEREE, özellikle ciddi durumlarda uyarı/<br/>
+kartı ilk Qualification MATCH’e taşıyabilir.<br/>
+• Qualification MATCH sırasında: takımın<br/>
+mevcut veya az önce tamamlanan MATCH’ine<br/>
+uygulanır.<br/>
+• SURROGATE MATCH: önceki Qualification<br/>
+MATCH’e uygulanır.<br/>
+• Qualification ile Playoff arası: ALLIANCE’ın<br/>
+ilk Playoff MATCH’ine uygulanır.<br/>
+• Playoff sırasında: ALLIANCE’ın mevcut veya<br/>
+az önce tamamlanan MATCH’ine uygulanır.</p>
+</div>
+<div class="card">
+<h3 id="gameRulesBioTitle4">Önemli: Bir MATCH, sonuçları yayınlandığında (Page 94)</h3>
+<p id="gameRulesBioText4">veya Head REFEREE/temsilcisi ROBOT’ların<br/>
+alınabileceğini söylediğinde — hangisi daha<br/>
+geçse — artık “current MATCH” değildir.</p>
+</div>
+<div class="card">
+<h3 id="gameRulesBioTitle5">10.6.3 YELLOW and RED (Page 95)</h3>
+<p id="gameRulesBioText5">CARDS during Playoff<br/>
+MATCHES<br/>
+Playoff MATCH’lerinde YELLOW ve RED CARD<br/>
+sadece ihlali yapan takıma değil, bütün<br/>
+ALLIANCE’a uygulanır.<br/>
+• ALLIANCE 2 YELLOW CARD alırsa → tüm<br/>
+ALLIANCE için RED CARD<br/>
+• RED CARD → ilgili MATCH için<br/>
+DISQUALIFICATION</p>
+</div>
+<div class="card">
+<h3 id="gameRulesBioTitle6">10.6.4 Violation Details (Page 95)</h3>
+<p id="gameRulesBioText6">Manual, penalty ifadelerinin nasıl yorumlanacağını<br/>
+örneklerle açıklıyor.<br/>
+Örneğin:<br/>
+MINOR FOUL per SCORING ELEMENT.<br/>
+Kuralı ihlal etmek için kullanılan her SCORING<br/>
+ELEMENT başına bir MINOR FOUL verilir.<br/>
+MAJOR FOUL per instance.<br/>
+Her ayrı ihlal olayı için bir MAJOR FOUL verilir.<br/>
+MAJOR FOUL per instance ... if<br/>
+REPEATED.<br/>
+İlk ihlal MAJOR FOUL; aynı ROBOT/MATCH<br/>
+içinde tekrar ederse ek MAJOR FOUL ve<br/>
+belirtilmişse YELLOW CARD uygulanabilir.<br/>
+Süreye bağlı penalty:<br/>
+Bazı durumlarda ilk MAJOR FOUL’dan sonra<br/>
+REFEREE saymaya başlar ve koşul<br/>
+düzeltilmediği her 3 saniye için ek MAJOR FOUL<br/>
+verilir. Örnekte 15 saniyelik ihlal toplam 6 MAJOR<br/>
+FOUL’a ulaşabiliyor.</p>
+</div>
+<div class="card">
+<h3 id="gameRulesBioTitle7">10.6.4 Violation (Page 96)</h3>
+<p id="gameRulesBioText7">Details<br/>
+devamı<br/>
+Bu sayfada farklı penalty kombinasyonlarının<br/>
+örnekleri devam ediyor.<br/>
+Önemli örnekler:<br/>
+VERBAL WARNING. MAJOR FOUL and<br/>
+YELLOW CARD per MATCH, if<br/>
+STRATEGIC.<br/>
+Normal durumda → VERBAL WARNING.<br/>
+Ancak REFEREE davranışı STRATEGIC görürse:<br/>
+• MAJOR FOUL<br/>
+• MATCH sonrasında YELLOW CARD<br/>
+verilebilir.</p>
+</div>
+<div class="card">
+<h3 id="gameRulesBioTitle8">VERBAL WARNING. YELLOW CARD if (Page 96)</h3>
+<p id="gameRulesBioText8">subsequent violations occur<br/>
+during the event.<br/>
+İlk ihlal → VERBAL WARNING.<br/>
+Aynı kural daha sonra tekrar ihlal edilirse →<br/>
+YELLOW CARD uygulanabilir.</p>
+</div>
+<div class="card">
+<h3 id="gameRulesBioTitle9">STRATEGIC + rakip ROBOT’un hareket (Page 96)</h3>
+<p id="gameRulesBioText9">edememesi<br/>
+Daha ağır durumda:<br/>
+• MAJOR FOUL<br/>
+• YELLOW CARD<br/>
+ve eğer durum STRATEGIC olup rakip ROBOT<br/>
+CONTINUOUS şekilde hareket edemiyorsa:<br/>
+• MAJOR FOUL<br/>
+• RED CARD<br/>
+uygulanabilir.</p>
+</div>
+<div class="card">
+<h3 id="gameRulesBioTitle10">10.7 Head REFEREE (Page 96)</h3>
+<p id="gameRulesBioText10">Head REFEREE, ARENA içinde ultimate<br/>
+authority sahibidir.<br/>
+• FIRST personnel, FTA, Event Director veya<br/>
+diğer event staff’tan bilgi alabilir.<br/>
+• Ancak Head REFEREE kararları finaldir.<br/>
+• Hiçbir event staff, Head REFEREE dahil,<br/>
+MATCH videosunu, fotoğrafını veya başka<br/>
+görsel kaydını inceleyerek kararı değiştirmez.</p>
+</div>
+<div class="card">
+<h3 id="gameRulesBioTitle11">10.8 Other Logistics (Page 97)</h3>
+<p id="gameRulesBioText11">10.8.1 Practice MATCH<br/>
+Participation<br/>
+FTA, LRI veya Head REFEREE ROBOT’un:<br/>
+• güvenli olmadığını veya<br/>
+• ARENA’ya zarar verme ihtimali olduğunu<br/>
+düşünürse takımın Practice MATCH’e katılmasını<br/>
+engelleyebilir.</p>
+</div>
+<div class="card">
+<h3 id="gameRulesBioTitle12">10.8.2 SCORING ELEMENT Logistics (Page 97)</h3>
+<p id="gameRulesBioText12">FIELD’dan çıkan:<br/>
+POLLEN<br/>
+• FIELD STAFF tarafından güvenli olan ilk<br/>
+fırsatta FIELD’a geri konur.<br/>
+• En yakın uygun konuma yerleştirilir.<br/>
+NECTAR<br/>
+• İlgili ALLIANCE’ın DRIVE TEAM’ine geri<br/>
+verilir.<br/>
+• 11.4.6 Human kapsamında yeniden oyuna<br/>
+sokulur.<br/>
+FIELD STAFF’ın bunları geri getirmesinde makul<br/>
+bir gecikme yaşanması tek başına ARENA FAULT<br/>
+değildir.</p>
+</div>
+<div class="card">
+<h3 id="gameRulesBioTitle13">Ayrıca MATCH yanlışlıkla: (Page 97)</h3>
+<p id="gameRulesBioText13">• hasarlı SCORING ELEMENTS,<br/>
+• yanlış sayıda SCORING ELEMENTS,<br/>
+• yanlış yerleştirilmiş SCORING ELEMENTS<br/>
+ile başlarsa, bu durum otomatik olarak ARENA<br/>
+FAULT kabul edilmez.<br/>
+10.8.3 FIELD Mitigation<br/>
+FIELD STAFF, MATCH sırasında bazı FIELD<br/>
+problemlerini çözmek için Field Mitigation<br/>
+Guide’daki prosedürleri kullanabilir.<br/>
+10.8.4 FIELD Reset<br/>
+MATCH bittikten ve Head REFEREE FIELD’in<br/>
+hazır olduğunu belirledikten sonra:<br/>
+1. DRIVE TEAM ROBOT’larını durdurur.<br/>
+2. Önceki MATCH’in ROBOTS ve OPERATOR<br/>
+CONSOLES’ı çıkarılır.<br/>
+3. Sonraki MATCH’in ekipmanları yerleştirilir.<br/>
+4. FIELD STAFF ARENA elementlerini resetler.</p>
+</div>
+<div class="card">
+<h3 id="gameRulesBioTitle14">Sayfa 98’i ayrıca kontrol ettim. PDF’nin bu sayfası (Page 98)</h3>
+<p id="gameRulesBioText14">için okunabilir metin veya render edilmiş sayfa<br/>
+görüntüsü sağlanmadı. Bu nedenle içerik tahmin<br/>
+etmiyorum.</p>
+</div>
+<div class="card">
+<h3 id="gameRulesBioTitle15">⚠ Dolayısıyla 98’i atlamış değiliz; kaynak (Page 99)</h3>
+<p id="gameRulesBioText15">dosyada okunabilir içerik olmadığı için bunu<br/>
+açıkça kaydediyoruz.<br/>
+11 Game Rules (G)<br/>
+Artık oyunun asıl numbered rules bölümüne<br/>
+giriyoruz.<br/>
+11.1 Personal Safety<br/>
+G101 — Humans, stay off the<br/>
+FIELD during the MATCH.<br/>
+Türkçe: MATCH sırasında insanlar FIELD’dan<br/>
+uzak durmalıdır.<br/>
+• Takım üyesi MATCH sırasında FIELD’a<br/>
+giremez.<br/>
+• FIELD perimeter dışındaki konumda<br/>
+kalmalıdır.<br/>
+• FIELD’a adım atmak veya vücudun büyük bir<br/>
+kısmını FIELD üzerine sarkıtmak ihlaldir.<br/>
+• Ancak kolunu FIELD üzerine uzatmak,<br/>
+sallamak veya perimeter wall üzerine eğilmek,<br/>
+MATCH’i etkilemiyorsa tek başına ihlal<br/>
+değildir.<br/>
+Violation: VERBAL WARNING</p>
+</div>
+<div class="card">
+<h3 id="gameRulesBioTitle16">G102 — Be careful when (Page 99)</h3>
+<p id="gameRulesBioText16">interacting with ARENA elements.<br/>
+Takım üyesi ARENA elementleriyle:<br/>
+• climbing on,<br/>
+• hanging from,<br/>
+• insan müdahalesi olmadan eski şekline<br/>
+dönemeyecek şekilde manipulating,<br/>
+• damaging<br/>
+eylemlerini yapamaz.<br/>
+Violation: VERBAL WARNING<br/>
+DRIVE TEAM üyeleri MATCH sırasında FIELD<br/>
+perimeter’ına destek almak amacıyla temas<br/>
+edebilir. Ancak perimeter’ı konumundan çıkarmak<br/>
+G102.C ihlalidir.</p>
+</div>
+<div class="card">
+<h3 id="gameRulesBioTitle17">11.2 Conduct (Page 99)</h3>
+<p id="gameRulesBioText17">G201 — Be a good person.<br/>
+Tüm takımlar:<br/>
+• herkese karşı medeni,<br/>
+• saygılı,<br/>
+• takım ve event ekipmanlarına karşı özenli<br/>
+davranmalıdır.<br/>
+Violation: VERBAL WARNING<br/>
+Aynı event sırasında tekrar → YELLOW CARD<br/>
+Çok ağır davranışlar kişinin ARENA’dan<br/>
+çıkarılmasına veya takımın DISQUALIFIED<br/>
+olmasına kadar gidebilir.</p>
+</div>
+<div class="card">
+<h3 id="gameRulesBioTitle18">11.2 Conduct (Page 100)</h3>
+<p id="gameRulesBioText18">G202 — Follow the Competition<br/>
+Integrity Contract (CIC).<br/>
+BIOBUZZ oynanırken takımlar hem oyun<br/>
+kurallarına hem de Competition Integrity<br/>
+Contract (CIC) kurallarına uymalıdır.<br/>
+İhlal örnekleri:<br/>
+•   Kuralların ruhunu bilerek ihlal etmek.<br/>
+•   MATCH atmak.<br/>
+•   Bilerek RP kaçırmak.<br/>
+•   Sıralamayı manipüle etmek için kapasitesinin<br/>
+altında oynamak.<br/>
+•   Başka takımlardan MATCH atmalarını<br/>
+istemek.<br/>
+•   Başka takımlardan bilerek RP kaçırmalarını<br/>
+istemek.<br/>
+•   Takımlardan MATCH’e gelmemelerini istemek.<br/>
+•   Rakipleri rahatsız etmek, bozmak veya taunt<br/>
+etmek.<br/>
+•   ARENA operasyonlarını bozmak.<br/>
+Violation: VERBAL WARNING<br/>
+Tekrar → YELLOW veya RED CARD<br/>
+Manual ayrıca bunun, normal oyun stratejilerini<br/>
+yasaklamadığını özellikle belirtiyor. Takımlar<br/>
+kurallara ve oyunun amacına uygun olduğu<br/>
+sürece alışılmadık ALLIANCE stratejileri<br/>
+uygulayabilir.</p>
+</div>
+<div class="card">
+<h3 id="gameRulesBioTitle19">G203 — Show up to your MATCHES. (Page 100)</h3>
+<p id="gameRulesBioText19">ROBOT’u initial complete inspection’dan geçmiş<br/>
+bir takımın, atanmış her Qualification MATCH’inde<br/>
+ARENA’ya en az 1 DRIVE TEAM üyesiyle<br/>
+katılması gerekir.<br/>
+Violation: DISQUALIFIED from the<br/>
+current MATCH.<br/>
+Takım ROBOT’unun katılamayacağını Lead<br/>
+Queuer’a bildirmelidir.<br/>
+Olağanüstü bir durum varsa FIELD STAFF ile<br/>
+accommodation olup olmadığı görüşülmelidir.</p>
+</div>
+<div class="card">
+<h3 id="gameRulesBioTitle20">G204 — Do not expect to gain by (Page 100)</h3>
+<p id="gameRulesBioText20">doing others harm.<br/>
+Rakip ALLIANCE’ı açıkça bir kuralı ihlal etmeye<br/>
+zorlamaya yönelik eylemler FIRST Tech<br/>
+Challenge ruhuna aykırıdır.<br/>
+• MAJOR FOUL per instance<br/>
+• REPEATED ise MAJOR FOUL per<br/>
+instance + YELLOW CARD per<br/>
+MATCH<br/>
+• Zorlanan rakip ALLIANCE’a penalty verilmez.<br/>
+Bu kural normal gameplay ile uyumlu stratejiler<br/>
+için geçerli değildir.<br/>
+G205 — Egregious or exceptional<br/>
+violations.<br/>
+Türkçe: Aşırı ciddi veya istisnai ihlaller yasaktır.<br/>
+Head REFEREE:<br/>
+• Manual’da açıkça yazılmamış olsa bile ciddi<br/>
+ROBOT/takım davranışları için,<br/>
+• veya bir kural/prosedürün tekrar tekrar ihlal<br/>
+edilmesi durumunda<br/>
+YELLOW CARD veya RED CARD verebilir.<br/>
+Devam eden ciddi ihlaller FIRST Headquarters’a<br/>
+bildirilebilir ve sonuçları:<br/>
+• award consideration’dan çıkarılma,<br/>
+• event’ten çıkarılma<br/>
+gibi daha ileri yaptırımlar olabilir.<br/>
+Özellikle “cezasından kazanacağı avantaj daha<br/>
+büyük olduğu için” bilerek kural ihlal etmek<br/>
+egregious behavior örneğidir.</p>
+</div>
+<div class="card">
+<h3 id="gameRulesBioTitle21">11.3 Pre-MATCH (Page 102)</h3>
+<p id="gameRulesBioText21">G301 — Don’t delay MATCHES.<br/>
+DRIVE TEAM, MATCH başlangıcını önemli ölçüde<br/>
+geciktiremez.<br/>
+Bir takımın gecikme ihlali değerlendirilmesi için:<br/>
+1. Beklenen MATCH başlangıç zamanı geçmiş<br/>
+olmalı.<br/>
+2. DRIVE TEAM’in ARENA’ya erişimi olmalı.<br/>
+Qualification MATCH için beklenen başlangıç:<br/>
+• schedule’daki saat veya<br/>
+• aynı FIELD’daki önceki MATCH’in bitiminden<br/>
+yaklaşık 3 dakika sonrası,<br/>
+hangisi daha geçse odur.<br/>
+Playoff MATCH için:<br/>
+• schedule’daki saat veya<br/>
+• ilgili ALLIANCE’ın önceki MATCH’inden 8<br/>
+dakika sonrası,<br/>
+hangisi daha geçse odur.<br/>
+Violation: İlk durumda VERBAL WARNING; aynı<br/>
+tournament phase içinde tekrar → yaklaşan<br/>
+MATCH için MAJOR FOUL.</p>
+</div>
+<div class="card">
+<h3 id="gameRulesBioTitle22">Uyarı/FOUL’dan sonra takım 2 dakika içinde (Page 102)</h3>
+<p id="gameRulesBioText22">MATCH ready olmaz ve iyi niyetli biçimde<br/>
+hazırlanmadığı düşünülürse ROBOT DISABLED<br/>
+edilebilir.</p>
+</div>
+<div class="card">
+<h3 id="gameRulesBioTitle23">11.3 Pre-MATCH (Page 103)</h3>
+<p id="gameRulesBioText23">G301<br/>
+— good faith examples<br/>
+Aşağıdakiler, hızlı şekilde MATCH ready olmaya<br/>
+yönelik good faith effort örnekleridir:<br/>
+• ROBOT’u aktif olarak değiştirmeden FIELD’a<br/>
+güvenli şekilde yürümek.<br/>
+• Tape veya cable tie ile hızlı düzeltme yapmak.<br/>
+• DRIVER STATION cihazının açılmasını<br/>
+beklemek.<br/>
+• FTA/FIELD teknik ekibiyle makul sürede<br/>
+problem çözmek.<br/>
+• DRIVER STATION ↔ ROBOT CONTROLLER<br/>
+iletişimini kontrol etmek için kısa bir “wiggle<br/>
+test” yapmak.<br/>
+Wiggle test sırasında ROBOT drive etmemeli<br/>
+veya SCORING ELEMENT ile etkileşmemelidir;<br/>
+yalnızca pre-loaded POLLEN ile temas istisnadır.</p>
+</div>
+<div class="card">
+<h3 id="gameRulesBioTitle24">G302 — Limit what you bring to (Page 103)</h3>
+<p id="gameRulesBioText24">the FIELD.<br/>
+MATCH için ROBOT ve OPERATOR CONSOLE<br/>
+dışında FIELD’a getirilen şeyler:<br/>
+• ALLIANCE AREA’ya sığmalı,<br/>
+• DRIVE TEAM tarafından giyilmeli/taşınmalı,<br/>
+• veya uygun bir accommodation olmalı.<br/>
+Örneğin:<br/>
+• crutches,<br/>
+• cushion,<br/>
+• kneeling mat,<br/>
+• maksimum 12 in. / 30.5 cm yüksekliğinde,<br/>
+devrilmeyen/katlanmayan küçük step stool.<br/>
+Ayrıca ekipman:<br/>
+• ARENA operasyonlarını bozamaz veya safety<br/>
+hazard oluşturamaz.<br/>
+• TILE’dan 6 ft 6 in. (~198 cm) üzerine<br/>
+çıkamaz.<br/>
+• Medical equipment dışında ARENA dışıyla<br/>
+iletişim kuramaz.<br/>
+• FIELD STAFF veya audience görüşünü<br/>
+engelleyemez.<br/>
+• Başka takımın remote sensing sistemini<br/>
+bozamaz.<br/>
+Örneğin FIELD AprilTag’lerini taklit etmek veya<br/>
+MATCH sırasında FIELD’a güçlü ışık/laser<br/>
+yöneltmek yasaktır.</p>
+</div>
+<div class="card">
+<h3 id="gameRulesBioTitle25">11.3 Pre-MATCH (Page 104)</h3>
+<p id="gameRulesBioText25">G303 — ROBOTS on the FIELD must<br/>
+come ready to play a MATCH.<br/>
+ROBOT:<br/>
+• insanlar, ARENA veya diğer ROBOT’lar için<br/>
+tehlike oluşturmamalı,<br/>
+• Section 3.3 inspection/re-inspection şartlarını<br/>
+karşılamalı,<br/>
+• FIELD’da takım tarafından bırakılan tek team-<br/>
+provided item olmalı,<br/>
+• doğru ALLIANCE rengini gösteren ROBOT<br/>
+SIGNS taşımalı.<br/>
+Violation:<br/>
+• Hızlı çözülebiliyorsa MATCH başlamaz.<br/>
+• Hızlı çözülemiyorsa DISABLED.<br/>
+• G303.B şartını karşılamayan ROBOT<br/>
+MATCH’e katılırsa Head REFEREE takdirine<br/>
+göre RED CARD uygulanabilir.</p>
+</div>
+<div class="card">
+<h3 id="gameRulesBioTitle26">G304 — ROBOTS must be set up (Page 104)</h3>
+<p id="gameRulesBioText26">correctly on the FIELD.<br/>
+ROBOT:<br/>
+1. Kendi ALLIANCE tarafında tamamen FIELD<br/>
+içinde olmalı.<br/>
+◦ Red → columns A, B, C<br/>
+◦ Blue → columns D, E, F<br/>
+2. FIELD elementine bağlı/entangled/suspended<br/>
+olmamalı.<br/>
+3. FIELD perimeter wall’a temas etmeli.<br/>
+4. FLOWER scoring volume’a temas etmemeli<br/>
+veya içinde olmamalı.<br/>
+5. LOADING ZONE içinde olmamalı.<br/>
+6. STARTING CONFIGURATION içinde<br/>
+olmalı.<br/>
+7. Tam olarak 4 POLLEN pre-load ile temas<br/>
+halinde olmalı.<br/>
+8. OpMode initialization bittikten sonra tamamen<br/>
+hareketsiz olmalı.<br/>
+Hızlı çözülebiliyorsa MATCH bekletilir;<br/>
+çözülemiyorsa ROBOT DISABLED edilebilir veya<br/>
+FIELD’dan çıkarılabilir.</p>
+</div>
+<div class="card">
+<h3 id="gameRulesBioTitle27">11.3 Pre-MATCH (Page 105)</h3>
+<p id="gameRulesBioText27">G305 — Teams must select an<br/>
+OpMode.<br/>
+• DRIVER STATION uygulamasında bir<br/>
+OpMode seçilmeli.<br/>
+• INIT butonuna basılarak initialize edilmeli.<br/>
+• Seçilen OpMode bir AUTO OpMode ise 30-<br/>
+second AUTO timer enabled olmalı.<br/>
+Violation:<br/>
+• Durum düzeltilene kadar MATCH başlamaz.<br/>
+• ROBOT initialize olamıyorsa veya hızlı<br/>
+çözülemiyorsa DISABLED.</p>
+</div>
+<div class="card">
+<h3 id="gameRulesBioTitle28">Önemli ayrıntı: Takım AUTO oynatmayacak olsa (Page 105)</h3>
+<p id="gameRulesBioText28">bile bir OpMode seçip INIT etmelidir. FIELD<br/>
+STAFF bunu takımın MATCH’e hazır olup<br/>
+olmadığını anlamak için kullanır.<br/>
+AUTO OpMode’u olmayan takımların default<br/>
+AUTO OpMode oluşturup TELEOP OpMode’unu<br/>
+otomatik sıraya alması öneriliyor.</p>
+</div>
+<div class="card">
+<h3 id="gameRulesBioTitle29">11.4 In-MATCH (Page 106)</h3>
+<p id="gameRulesBioText29">11.4.1 AUTO<br/>
+AUTO, MATCH’in ilk 30 saniyesidir.<br/>
+Bu sırada DRIVER’lar ROBOT’a input veremez;<br/>
+ROBOT yalnızca önceden programlanmış<br/>
+talimatlarla çalışır.<br/>
+G401 — Don’t interact with a<br/>
+ROBOT during AUTO.<br/>
+MATCH countdown başladığı andan AUTO bitene<br/>
+kadar DRIVE TEAM, ROBOT veya OPERATOR<br/>
+CONSOLE ile doğrudan/dolaylı etkileşimde<br/>
+bulunamaz.<br/>
+İstisnalar:<br/>
+• MATCH başlangıcında ▶ start butonuna<br/>
+MOMENTARY şekilde basmak,<br/>
+• ■ stop butonuna basmak,<br/>
+• kişisel veya OPERATOR CONSOLE<br/>
+güvenliği.<br/>
+Violation: VERBAL WARNING<br/>
+STRATEGIC ise → MAJOR FOUL + YELLOW<br/>
+CARD per MATCH.</p>
+</div>
+<div class="card">
+<h3 id="gameRulesBioTitle30">G402 — No AUTO opponent (Page 106)</h3>
+<p id="gameRulesBioText30">interference.<br/>
+AUTO sırasında bir ALLIANCE, rakip<br/>
+ALLIANCE’ın AUTO’sunu bozamaz.<br/>
+Violation:<br/>
+• MAJOR FOUL per MATCH<br/>
+• STRATEGIC ise ayrıca YELLOW CARD<br/>
+AUTO sırasında:<br/>
+• Red → columns A, B, C<br/>
+• Blue → columns D, E, F<br/>
+kendi tarafındaki FIELD ve SCORING<br/>
+ELEMENTS üzerinde önceliğe sahiptir. Rakip<br/>
+tarafa girmek riskli bir stratejidir ve STRATEGIC<br/>
+olarak değerlendirilebilir.</p>
+</div>
+<div class="card">
+<h3 id="gameRulesBioTitle31">11.4.2 TELEOP (Page 106)</h3>
+<p id="gameRulesBioText31">G403 — ROBOTS are motionless<br/>
+between AUTO and TELEOP.<br/>
+AUTO → TELEOP geçişinde ROBOT veya<br/>
+mekanizmalarının powered movement<br/>
+yapmasına izin verilmez.<br/>
+• İnertia,<br/>
+• gravity,<br/>
+• actuator’ların enerjisinin kesilmesi<br/>
+kaynaklı hareketler powered movement sayılmaz.<br/>
+Violation: VERBAL WARNING; STRATEGIC ise<br/>
+MAJOR FOUL + YELLOW CARD.</p>
+</div>
+<div class="card">
+<h3 id="gameRulesBioTitle32">11.4.2 (Page 107)</h3>
+<p id="gameRulesBioText32">TELEOP<br/>
+/<br/>
+11.4.3 SCORING ELEMENT<br/>
+G404 — ROBOTS are motionless at<br/>
+the end of TELEOP.<br/>
+TELEOP bittikten sonra Head REFEREE veya<br/>
+görevlisi ROBOT’ların alınabileceğini söyleyene<br/>
+kadar ROBOT’larda powered movement<br/>
+olmamalıdır.<br/>
+Violation: VERBAL WARNING; STRATEGIC ise<br/>
+MAJOR FOUL + YELLOW CARD.</p>
+</div>
+<div class="card">
+<h3 id="gameRulesBioTitle33">G405 — Keep SCORING ELEMENTS In (Page 107)</h3>
+<p id="gameRulesBioText33">bounds.<br/>
+ROBOT, SCORING ELEMENT’ı bilerek FIELD<br/>
+dışına çıkaramaz.<br/>
+Bu:<br/>
+• doğrudan,<br/>
+• FIELD elementinden sektirerek,<br/>
+• başka ROBOT’tan sektirerek<br/>
+yapılamaz.<br/>
+Violation: SCORING ELEMENT başına MAJOR<br/>
+FOUL.<br/>
+Scoring sırasında veya ROBOT-ROBOT etkileşimi<br/>
+nedeniyle elementin kazara FIELD dışına çıkması<br/>
+deliberate ejection sayılmaz.</p>
+</div>
+<div class="card">
+<h3 id="gameRulesBioTitle34">G406 — Do not damage or make a (Page 107)</h3>
+<p id="gameRulesBioText34">mess in the ARENA.<br/>
+Ne ROBOT ne de DRIVE TEAM ARENA’yı<br/>
+kirletebilir veya zarar verebilir.<br/>
+Violation:<br/>
+• VERBAL WARNING<br/>
+• STRATEGIC ise MAJOR FOUL + YELLOW<br/>
+CARD<br/>
+• ROBOT’un hasar vermesi devam edecekse<br/>
+DISABLED<br/>
+Ayrıca sonraki MATCH’ler öncesinde corrective<br/>
+action veya re-inspection istenebilir.</p>
+</div>
+<div class="card">
+<h3 id="gameRulesBioTitle35">11.4.3 SCORING ELEMENT (Page 108)</h3>
+<p id="gameRulesBioText35">G407 — No more than 4 at a time.<br/>
+Bir ROBOT aynı anda 4’ten fazla SCORING<br/>
+ELEMENT CONTROL edemez.<br/>
+Violation: VERBAL WARNING<br/>
+STRATEGIC ise MAJOR FOUL + YELLOW<br/>
+CARD per MATCH.<br/>
+5 veya daha fazla elementin kontrolü özellikle<br/>
+STRATEGIC olup olmadığı açısından incelenir.<br/>
+STRATEGIC sayılabilecek örnek:<br/>
+• 6+ element alıp scoring location’a taşımak.<br/>
+• MATCH boyunca 5+ element üzerinde tekrar<br/>
+tekrar MOMENTARY’den uzun CONTROL<br/>
+yapmak.<br/>
+STRATEGIC sayılmayabilecek örnek:<br/>
+• ROBOT’un MOMENTARY olarak 5 element<br/>
+tutup hızlıca birini geri bırakması.</p>
+</div>
+<div class="card">
+<h3 id="gameRulesBioTitle36">G408 — Don’t CONTROL opponent (Page 108)</h3>
+<p id="gameRulesBioText36">NECTAR.<br/>
+ROBOT rakip ALLIANCE’ın NECTAR’ını<br/>
+CONTROL edemez.<br/>
+Violation: VERBAL WARNING<br/>
+STRATEGIC ise YELLOW CARD per MATCH.</p>
+</div>
+<div class="card">
+<h3 id="gameRulesBioTitle37">G409 — Don’t catch SCORING (Page 108)</h3>
+<p id="gameRulesBioText37">ELEMENTS.<br/>
+TIPPED HIVE’dan çıkan SCORING ELEMENT,<br/>
+başka bir şeye temas etmeden önce ROBOT<br/>
+tarafından catch/deflect edilemez.<br/>
+Violation: VERBAL WARNING<br/>
+STRATEGIC ise YELLOW CARD per MATCH.</p>
+</div>
+<div class="card">
+<h3 id="gameRulesBioTitle38">11.4.3 SCORING ELEMENT (Page 109)</h3>
+<p id="gameRulesBioText38">G409<br/>
+— devam<br/>
+Kuralın amacı, TIPPED HIVE’dan düşen<br/>
+POLLEN/NECTAR’ın önce TILE floor’a temas<br/>
+etmesi, sonra ROBOT tarafından alınmasıdır.<br/>
+Özellikle STRATEGIC kabul edilebilecek örnekler:<br/>
+• ROBOT’un HIVE altında tekrar tekrar bekleyip<br/>
+TIP sonrası düşen elementleri toplaması.<br/>
+• ROBOT’un üstünde geniş bir mekanizma açıp<br/>
+düşen elementleri yakalaması.<br/>
+• ROBOT’un tekrar tekrar pozisyon alarak<br/>
+düşen elementlerin yönünü avantajlı biçimde<br/>
+değiştirmesi.<br/>
+STRATEGIC sayılmayabilecek örnekler:<br/>
+• ROBOT geçerken üzerine 1–2 POLLEN’ın<br/>
+tesadüfen düşmesi.<br/>
+• Çalışmayan bir ROBOT’un HIVE altında sabit<br/>
+kalması ve elementlerin üstünde birikmesi.</p>
+</div>
+<div class="card">
+<h3 id="gameRulesBioTitle39">G410 — NECTAR only goes into (Page 109)</h3>
+<p id="gameRulesBioText39">FLOWERS with one minute left.<br/>
+NECTAR, MATCH’in son 60 saniyesinden önce<br/>
+FLOWER scoring volume’a sokulamaz.<br/>
+Violation: MAJOR FOUL per NECTAR<br/>
+60 saniyenin başladığını belirlemek için primary<br/>
+FIELD timer display kullanılır.</p>
+</div>
+<div class="card">
+<h3 id="gameRulesBioTitle40">G411 — Do not hoard SCORING (Page 109)</h3>
+<p id="gameRulesBioText40">ELEMENTS.<br/>
+Bir ALLIANCE, rakip ALLIANCE’ın SCORING<br/>
+ELEMENTS’e erişimini STRATEGICALLY<br/>
+engelleyemez.<br/>
+Violation: MAJOR FOUL + YELLOW CARD<br/>
+per MATCH.</p>
+</div>
+<div class="card">
+<h3 id="gameRulesBioTitle41">11.4.3 (Page 110)</h3>
+<p id="gameRulesBioText41">SCORING<br/>
+ELEMENT<br/>
+/<br/>
+11.4.4 ROBOT<br/>
+G411 devamı:<br/>
+• Kendi NECTAR/POLLEN’ını scoring için<br/>
+kullanmak ihlal değildir.<br/>
+• SCORING ELEMENTS’i FIELD’ın küçük bir<br/>
+bölümünde toplamak ve/veya rakip<br/>
+ROBOT’un erişimini aktif olarak engellemek<br/>
+ihlaldir.<br/>
+• GARDEN protected zone değildir.</p>
+</div>
+<div class="card">
+<h3 id="gameRulesBioTitle42">11.4.4 ROBOT (Page 110)</h3>
+<p id="gameRulesBioText42">G412 — ROBOTS must be under<br/>
+control.<br/>
+ROBOT MATCH sırasında insan veya ARENA<br/>
+elementi için undue hazard oluşturmamalıdır.<br/>
+İhlal örnekleri:<br/>
+• ROBOT veya CONTROL ettiği SCORING<br/>
+ELEMENT’ın FIELD dışındaki bir şeye/insana<br/>
+çarpması,<br/>
+• tehlikeli ROBOT operasyonu,<br/>
+• kontrolsüz şekilde dışarı savrulan mekanizma,<br/>
+• DRIVER STATION standını devirmek,<br/>
+• FIELD timer display’e zarar vermek,<br/>
+• FIELD STAFF veya FIELD dışındaki DRIVE<br/>
+TEAM üyesine temas etmek.<br/>
+Violation: DISABLED + VERBAL WARNING<br/>
+Event içinde tekrar → YELLOW CARD per<br/>
+MATCH.<br/>
+FIELD dışındaki DRIVER STATION standı, zemin<br/>
+veya FIELD wall perimeter’a ROBOT’un temas<br/>
+etmesi tek başına bu kuralın ihlali değildir.</p>
+</div>
+<div class="card">
+<h3 id="gameRulesBioTitle43">G413 — ROBOTS must stop when (Page 110)</h3>
+<p id="gameRulesBioText43">instructed.<br/>
+REFEREE T402 kapsamında ROBOT’un<br/>
+DISABLE edilmesini isterse:<br/>
+• DRIVE TEAM üyesi DRIVER STATION’daki ■<br/>
+stop butonuna basmalı,<br/>
+• controller’ları bırakmalıdır.<br/>
+Violation: VERBAL WARNING<br/>
+STRATEGIC ise RED CARD.</p>
+</div>
+<div class="card">
+<h3 id="gameRulesBioTitle44">G414 — ROBOTS must be (Page 110)</h3>
+<p id="gameRulesBioText44">identifiable.<br/>
+ROBOT’un:<br/>
+• takım numarası,<br/>
+• ALLIANCE rengi<br/>
+Head REFEREE açısından belirsiz hale<br/>
+gelmemelidir.<br/>
+Violation: VERBAL WARNING<br/>
+STRATEGIC ise YELLOW CARD.<br/>
+ROBOT SIGNS’ın sağlam, görünür ve normal<br/>
+gameplay sırasında düşmeyecek şekilde<br/>
+takılması önerilir. Gerekirse sonraki MATCH<br/>
+öncesi düzeltme istenebilir.<br/>
+G415 — Watch your ARENA interaction.<br/>
+• ROBOT, SCORING ELEMENTS dışındaki<br/>
+ARENA parçalarını:<br/>
+◦ tutamaz/grab edemez,<br/>
+◦ kavrayamaz,<br/>
+◦ bağlanamaz,<br/>
+◦ dolanamaz,<br/>
+◦ üzerinden asılamaz.<br/>
+• STRATEGIC ihlalde YELLOW CARD; hasar<br/>
+ihtimali varsa DISABLED olabilir.<br/>
+• Bazı hizalama amaçlı FLOWER temasları ihlal<br/>
+sayılmaz.</p>
+</div>
+<div class="card">
+<h3 id="gameRulesBioTitle45">G416 — ROBOTS have construction limits. (Page 110)</h3>
+<p id="gameRulesBioText45">• MATCH sırasında ROBOT, R105’teki<br/>
+genişleme sınırlarını aşamaz.<br/>
+• Parçalar kasıtlı olarak ROBOT’tan ayrılamaz.<br/>
+• İhlal: VERBAL WARNING; STRATEGIC ise<br/>
+her olay için MAJOR FOUL.<br/>
+• MATCH başladıktan sonra hareket eden<br/>
+parçalar STARTING CONFIGURATION dışına<br/>
+çıkabilir, ancak expansion limitleri içinde<br/>
+kalmalıdır.</p>
+</div>
+<div class="card">
+<h3 id="gameRulesBioTitle46">G417 — ROBOTS may not meddle with the (Page 110)</h3>
+<p id="gameRulesBioText46">HIVE Structure.<br/>
+• ROBOT, HIVE’ın hareketini yalnızca upward-<br/>
+facing CELL’e SCORING ELEMENT<br/>
+fırlatarak etkileyebilir.<br/>
+• HIVE’a başka şekilde temas etmek veya TIP’i<br/>
+engellemek/oluşturmak ihlaldir.<br/>
+• Örneğin HIVE’a hızlı çarpmak, tekrar tekrar<br/>
+çarpmak veya rakibin HIVE TIP’ini engellemek<br/>
+STRATEGIC kabul edilebilir.<br/>
+• İhlal: VERBAL WARNING; STRATEGIC ise<br/>
+MAJOR FOUL + YELLOW CARD.</p>
+</div>
+<div class="card">
+<h3 id="gameRulesBioTitle47">G417 — HIVE Structure (devam). (Page 112)</h3>
+<p id="gameRulesBioText47">• HIVE’a yanlış şekilde müdahale etmek<br/>
+STRATEGIC olarak değerlendirilebilir.<br/>
+• HIVE’a yanlışlıkla çarpmak veya izin verilen<br/>
+bir LAUNCH sırasında CELL’i ıskalamak, tek<br/>
+başına STRATEGIC ihlal olarak<br/>
+görülmeyebilir.</p>
+</div>
+<div class="card">
+<h3 id="gameRulesBioTitle48">G418 — ROBOTS may not meddle with (Page 112)</h3>
+<p id="gameRulesBioText48">FLOWERS.<br/>
+• FLOWER’a SCORING ELEMENT yalnızca<br/>
+üstten sokulabilir.<br/>
+• FLOWER’dan yalnızca POLLEN alttan<br/>
+çıkarılabilir.<br/>
+• Yanlardan çekmek, FLOWER’ı sallamak veya<br/>
+NECTAR’ı mekanizma ile çıkarmak gibi<br/>
+hareketler ihlaldir.<br/>
+• İhlal: VERBAL WARNING; STRATEGIC ise<br/>
+MAJOR FOUL + YELLOW CARD.<br/>
+• İzin verilen scoring işlemleri sırasında<br/>
+FLOWER’a veya içindeki SCORING<br/>
+ELEMENTS’e temas etmek ihlal değildir.</p>
+</div>
+<div class="card">
+<h3 id="gameRulesBioTitle49">11.4.5 Opponent Interaction (Page 113)</h3>
+<p id="gameRulesBioText49">G419 — Do not damage an opponent ROBOT.<br/>
+• ROBOT, rakip ROBOT’a hasar veremez veya<br/>
+işlevsel olarak çalışamaz hale getiremez.<br/>
+• BIOBUZZ yüksek temaslı ve savunmalı bir<br/>
+oyun olduğundan normal temas serbesttir;<br/>
+ancak kasıtlı hasar yasaktır.<br/>
+• Açıkta/korumasız ve normal oyun sırasında<br/>
+zarar görebilecek parçaların hasar görmesi<br/>
+genellikle ihlal sayılmaz.<br/>
+• STRATEGIC hasar: MAJOR FOUL +<br/>
+YELLOW CARD.<br/>
+• STRATEGIC olup rakip ROBOT’un sürüşünü<br/>
+engellerse: MAJOR FOUL + RED CARD.<br/>
+• Head REFEREE, MATCH sonunda ROBOT’u<br/>
+inceleyebilir; hasar doğrulanamazsa ihlali<br/>
+kaldırabilir.</p>
+</div>
+<div class="card">
+<h3 id="gameRulesBioTitle50">G420 — Do not tip or entangle. (Page 114)</h3>
+<p id="gameRulesBioText50">• ROBOT, rakip ROBOT’a bağlanamaz,<br/>
+deviremez veya dolaştıramaz.<br/>
+• STRATEGIC ise MAJOR FOUL + YELLOW<br/>
+CARD.<br/>
+• Sürekli yapılırsa veya rakip ROBOT artık<br/>
+sürülemiyorsa RED CARD uygulanabilir.<br/>
+• Normal ROBOT-to-ROBOT etkileşiminde<br/>
+istemeden gerçekleşen tek bir devrilme,<br/>
+REFEREE tarafından STRATEGIC<br/>
+görülmezse ihlal değildir.</p>
+</div>
+<div class="card">
+<h3 id="gameRulesBioTitle51">G421 — There is a 3-count on PINS. (Page 115)</h3>
+<p id="gameRulesBioText51">• Bir ROBOT rakip ROBOT’u 3 saniyeden<br/>
+fazla PIN edemez.<br/>
+• PIN, rakibin hareketini temas yoluyla<br/>
+engellemektir.<br/>
+• PIN sayacı; ROBOT’lar yeterince ayrıldığında,<br/>
+ROBOT’lardan biri başlangıç noktasından<br/>
+yeterince uzaklaştığında veya PIN yapan<br/>
+ROBOT kendisi PIN’lendiğinde sona erer/ara<br/>
+verir.<br/>
+• İhlal: MAJOR FOUL; durum düzeltilmezse her<br/>
+ek 3 saniye için bir MAJOR FOUL daha.<br/>
+11.4.6 Human<br/>
+G422 — DRIVE TEAM stays in the ALLIANCE<br/>
+AREA.<br/>
+• MATCH başladıktan sonra DRIVE TEAM<br/>
+üyeleri kendi belirlenmiş ALLIANCE<br/>
+AREA’larından çıkamaz.<br/>
+• Alanın sınır çizgisini normal oyun sırasında<br/>
+yalnızca geçici olarak aşmak tek başına ihlal<br/>
+değildir.<br/>
+• Güvenlik durumlarında istisna uygulanabilir.<br/>
+• Kendi ALLIANCE’ının FIELD dışına çıkan ve<br/>
+ALLIANCE AREA’dan ulaşılabilen NECTAR’ı<br/>
+alınabilir.<br/>
+• İhlal: VERBAL WARNING; STRATEGIC ise<br/>
+her olay için MINOR FOUL.</p>
+</div>
+<div class="card">
+<h3 id="gameRulesBioTitle52">G423 — DRIVE COACHES and other teams: (Page 115)</h3>
+<p id="gameRulesBioText52">hands off the controls.<br/>
+• MATCH başladıktan sonra DRIVE COACH<br/>
+veya başka bir takım üyesi OPERATOR<br/>
+CONSOLE gamepad’lerine dokunamaz.<br/>
+• DRIVE COACH; DRIVER STATION cihazını<br/>
+tutabilir, sorun giderebilir, OpMode seçebilir ve<br/>
+INIT/START/STOP butonlarına basabilir.<br/>
+• İhlal: VERBAL WARNING; STRATEGIC ise<br/>
+MAJOR FOUL + YELLOW CARD.</p>
+</div>
+<div class="card">
+<h3 id="gameRulesBioTitle53">G424 — DRIVE COACHES, SCORING (Page 115)</h3>
+<p id="gameRulesBioText53">ELEMENTS are off limits.<br/>
+• DRIVE COACH’lar güvenlik amacı dışında<br/>
+SCORING ELEMENTS’e dokunamaz.<br/>
+• İhlal: VERBAL WARNING; STRATEGIC ise<br/>
+MINOR FOUL.</p>
+</div>
+<div class="card">
+<h3 id="gameRulesBioTitle54">G425 — DRIVE TEAMS, watch your reach. (Page 115)</h3>
+<p id="gameRulesBioText54">• MATCH başladıktan sonra DRIVE TEAM<br/>
+üyesi doğrudan veya dolaylı olarak:<br/>
+◦ ROBOT’a,<br/>
+◦ ROBOT/TILE ile temas eden SCORING<br/>
+ELEMENT’e,<br/>
+◦ scoring işlemlerine,<br/>
+◦ FIELD elementlerine<br/>
+dokunamaz.<br/>
+•<br/>
+• İhlal: VERBAL WARNING; STRATEGIC ise<br/>
+MAJOR FOUL + YELLOW CARD.</p>
+</div>
+<div class="card">
+<h3 id="gameRulesBioTitle55">G425 — Watch your reach (devam). (Page 116)</h3>
+<p id="gameRulesBioText55">• El kumandaları, sarkan kablolar, kıyafetler vb.<br/>
+üzerinden ROBOT’a dolaylı temas etmek de<br/>
+ihlal olabilir.<br/>
+• SCORING’i bozmak; örneğin ROBOT’un<br/>
+FLOWER’a scoring yapmasını engellemek<br/>
+veya FLOWER’daki NECTAR/POLLEN’i<br/>
+düşürmek için perimeter wall’a kasıtlı olarak<br/>
+vurmak/sallamak gibi hareketleri içerir.</p>
+</div>
+<div class="card">
+<h3 id="gameRulesBioTitle56">G426 — Humans may not enter NECTAR onto (Page 116)</h3>
+<p id="gameRulesBioText56">the FIELD early.<br/>
+• DRIVE TEAM, NECTAR’ı FIELD’e ancak:<br/>
+1. kendi ALLIANCE rengindeki HIVE her<br/>
+TIPPED olduğunda 1 NECTAR, veya<br/>
+2. MATCH’te 60 saniye veya daha az<br/>
+kaldığında kalan tüm NECTAR<br/>
+sokabilir.<br/>
+• Hangisi önce gerçekleşirse o uygulanır.<br/>
+• İhlal: FIELD’e erken sokulan her NECTAR için<br/>
+MINOR FOUL.</p>
+</div>
+<div class="card">
+<h3 id="gameRulesBioTitle57">G427 — Humans, only enter NECTAR via the (Page 116)</h3>
+<p id="gameRulesBioText57">LOADING ZONE.<br/>
+• NECTAR FIELD’e yalnızca:<br/>
+◦ herhangi bir araç kullanmadan,<br/>
+◦ ilgili ALLIANCE’ın DRIVE TEAM üyesi<br/>
+tarafından,<br/>
+◦ NECTAR önce LOADING ZONE içindeki<br/>
+TILE’a temas edecek şekilde sokulabilir.<br/>
+• İnsanların HIVE veya FLOWER’a scoring<br/>
+yapması asla izinli değildir ve G202<br/>
+kapsamında değerlendirilir.<br/>
+• İhlal: Her NECTAR için MINOR FOUL.</p>
+</div>
+<div class="card">
+<h3 id="gameRulesBioTitle58">G427 — Humans, only enter NECTAR via the (Page 117)</h3>
+<p id="gameRulesBioText58">LOADING ZONE (devam).<br/>
+• DRIVE TEAM’in eline geçen POLLEN veya<br/>
+rakip ALLIANCE’ın FIELD dışına çıkmış<br/>
+NECTAR’ı, FIELD STAFF’a verilmelidir.<br/>
+• NECTAR yerleştirilirken TILE ile temas eden<br/>
+başka bir SCORING ELEMENT’e<br/>
+dokunmamaya dikkat edilmelidir; aksi halde<br/>
+G425 ihlali oluşabilir.</p>
+</div>
+<div class="card">
+<h3 id="gameRulesBioTitle59">G428 — Humans, don’t remove SCORING (Page 117)</h3>
+<p id="gameRulesBioText59">ELEMENTS from the FIELD.<br/>
+• DRIVE TEAM üyeleri SCORING ELEMENTS’i<br/>
+FIELD’den çıkaramaz.<br/>
+• SCORING ELEMENT; TILE’a, ROBOT’a,<br/>
+FIELD elementine veya başka bir SCORING<br/>
+ELEMENT’e temas ediyorsa FIELD üzerinde<br/>
+kabul edilir.<br/>
+• İhlal: Çıkarılan her SCORING ELEMENT için<br/>
+MINOR FOUL.</p>
+</div>
+</section>
+<footer class="footer">
+<div class="footer-container">
+<div class="footer-column">
+<h3 id="footerTitle">QuickManual</h3>
+<p id="footerDescription">
+            A community resource by Asteria Robotics
+            This is not an official FIRST document.
+        </p>
+</div>
+<div class="footer-column">
+<h3 id="contactTitle">İletişim</h3>
+<p><a href="mailto:asteria.32334@gmail.com">
+    asteria.32334@gmail.com
+</a></p>
+<p><a href="tel:+905057770038">
+    +90 (505) 777 00 38
+</a></p>
+<a href="https://maps.app.goo.gl/HN1VrrvqUwMMbExA6?g_st=ic" id="addressText" target="_blank">
+
+Atölyemizin Adresi
+
+</a>
+</div>
+<div class="footer-column">
+<h3> </h3>
+<a href="https://www.instagram.com/asteria_32334/" id="instagramText" target="_blank">
+
+Instagram
+
+</a>
+<p><a href="https://theorangealliance.org/teams/32334" target="_blank">
+        The Orange Alliance
+    </a></p>
+<p><a href="https://ftcscout.org/teams/32334" target="_blank">
+        FTCScout
+    </a></p>
+
+<p><a href="https://www.youtube.com/@asteria32334" target="_blank">
+        YouTube
+    </a></p>
+</div>
+</div>
+<div class="footer-bottom" id="copyrightText">
+© 2026 Asteria Robotics FTC Team 32334. All Rights Reserved.
+</div>
+<div class="footer-bottom-asterisk" id="asterisk">
+        * QuickManual resmi Oyun Kılavuzu değildir ve hiçbir zaman eksiksiz ya da kesin kural kaynağı olarak kabul edilmemelidir. FIRST tarafından yayınlanan resmi belgenin yerini tutmaz. Resmi kararlar, muayene süreçleri veya itirazlar için takımlar her zaman en güncel resmi Game Manual’a başvurmalıdır.
+    </div>
+<!--<div class="footer-bottom-asterisk" id="dateUpdate">
+        ** Son güncellenme tarihi: 5 ağustos 2026, Game Manual V0
+    </div> -->
+<img alt="biobuzz" class="center-image" src="images/biobuzz.png" style="max-width: 50%; height: auto; display: block;"/>
+</footer>
+<script>
+const translations = {
+  "tr": {
+    "navGameRules": "Maç Kuralları",
+    "navFieldInfo": "Saha Eleman Bilgileri",
+    "navMatchProcedures": "Maç Prosedürleri",
+    "navScoringSystem": "Nasıl Puan Kazanılır",
+    "gameRulesTitle": "Maç Kuralları",
+    "navHome": "Ödüller ve Tanımlar",
+    "navTeam": "Genel Kurallar",
+    "navRobots": "Robot Yapımı",
+    "navDecode": "Geri dön",
+    "asterisk": "* QuickManual resmi Oyun Kılavuzu değildir ve hiçbir zaman eksiksiz ya da kesin kural kaynağı olarak kabul edilmemelidir. FIRST tarafından yayınlanan resmi belgenin yerini tutmaz. Resmi kararlar, muayene süreçleri veya itirazlar için takımlar her zaman en güncel resmi Game Manual’a başvurmalıdır.",
+    "dateUpdate": "** Son güncellenme tarihi: 5 ağustos 2026, Game Manual V0",
+    "pageSearch": "Sayfada ara... (örnek: kurallar, ödül, robot)",
+    "clear": "Temizle",
+    "footerTitle": "QuickManual",
+    "footerDescription": "A community resource by Asteria Robotics\nThis is not an official FIRST document.",
+    "contactTitle": "İletişim",
+    "addressText": "Atölyemizin Adresi",
+    "instagramText": "Instagram",
+    "copyrightText": "© 2026 Asteria Robotics FTC Team 32334. Tüm Hakları Saklıdır.",
+    "navPanel": "Kategoriler",
+    "gameRulesBioTitle38": "11.4.3 SCORING ELEMENT (Page 109)",
+    "gameRulesBioTitle34": "G406 — Do not damage or make a (Page 107)",
+    "gameRulesBioTitle55": "G425 — Watch your reach (devam). (Page 116)",
+    "gameRulesBioTitle24": "G302 — Limit what you bring to (Page 103)",
+    "gameRulesBioText51": "• Bir ROBOT rakip ROBOT’u 3 saniyeden<br/>\nfazla PIN edemez.<br/>\n• PIN, rakibin hareketini temas yoluyla<br/>\nengellemektir.<br/>\n• PIN sayacı; ROBOT’lar yeterince ayrıldığında,<br/>\nROBOT’lardan biri başlangıç noktasından<br/>\nyeterince uzaklaştığında veya PIN yapan<br/>\nROBOT kendisi PIN’lendiğinde sona erer/ara<br/>\nverir.<br/>\n• İhlal: MAJOR FOUL; durum düzeltilmezse her<br/>\nek 3 saniye için bir MAJOR FOUL daha.<br/>\n11.4.6 Human<br/>\nG422 — DRIVE TEAM stays in the ALLIANCE<br/>\nAREA.<br/>\n• MATCH başladıktan sonra DRIVE TEAM<br/>\nüyeleri kendi belirlenmiş ALLIANCE<br/>\nAREA’larından çıkamaz.<br/>\n• Alanın sınır çizgisini normal oyun sırasında<br/>\nyalnızca geçici olarak aşmak tek başına ihlal<br/>\ndeğildir.<br/>\n• Güvenlik durumlarında istisna uygulanabilir.<br/>\n• Kendi ALLIANCE’ının FIELD dışına çıkan ve<br/>\nALLIANCE AREA’dan ulaşılabilen NECTAR’ı<br/>\nalınabilir.<br/>\n• İhlal: VERBAL WARNING; STRATEGIC ise<br/>\nher olay için MINOR FOUL.",
+    "gameRulesBioTitle52": "G423 — DRIVE COACHES and other teams: (Page 115)",
+    "gameRulesBioTitle56": "G426 — Humans may not enter NECTAR onto (Page 116)",
+    "gameRulesBioTitle16": "G102 — Be careful when (Page 99)",
+    "gameRulesBioText39": "FLOWERS with one minute left.<br/>\nNECTAR, MATCH’in son 60 saniyesinden önce<br/>\nFLOWER scoring volume’a sokulamaz.<br/>\nViolation: MAJOR FOUL per NECTAR<br/>\n60 saniyenin başladığını belirlemek için primary<br/>\nFIELD timer display kullanılır.",
+    "gameRulesBioText22": "MATCH ready olmaz ve iyi niyetli biçimde<br/>\nhazırlanmadığı düşünülürse ROBOT DISABLED<br/>\nedilebilir.",
+    "gameRulesBioTitle25": "11.3 Pre-MATCH (Page 104)",
+    "gameRulesBioTitle23": "11.3 Pre-MATCH (Page 103)",
+    "gameRulesBioTitle58": "G427 — Humans, only enter NECTAR via the (Page 117)",
+    "gameRulesBioText43": "instructed.<br/>\nREFEREE T402 kapsamında ROBOT’un<br/>\nDISABLE edilmesini isterse:<br/>\n• DRIVE TEAM üyesi DRIVER STATION’daki ■<br/>\nstop butonuna basmalı,<br/>\n• controller’ları bırakmalıdır.<br/>\nViolation: VERBAL WARNING<br/>\nSTRATEGIC ise RED CARD.",
+    "gameRulesBioText32": "TELEOP<br/>\n/<br/>\n11.4.3 SCORING ELEMENT<br/>\nG404 — ROBOTS are motionless at<br/>\nthe end of TELEOP.<br/>\nTELEOP bittikten sonra Head REFEREE veya<br/>\ngörevlisi ROBOT’ların alınabileceğini söyleyene<br/>\nkadar ROBOT’larda powered movement<br/>\nolmamalıdır.<br/>\nViolation: VERBAL WARNING; STRATEGIC ise<br/>\nMAJOR FOUL + YELLOW CARD.",
+    "gameRulesBioTitle11": "10.8 Other Logistics (Page 97)",
+    "gameRulesBioText30": "interference.<br/>\nAUTO sırasında bir ALLIANCE, rakip<br/>\nALLIANCE’ın AUTO’sunu bozamaz.<br/>\nViolation:<br/>\n• MAJOR FOUL per MATCH<br/>\n• STRATEGIC ise ayrıca YELLOW CARD<br/>\nAUTO sırasında:<br/>\n• Red → columns A, B, C<br/>\n• Blue → columns D, E, F<br/>\nkendi tarafındaki FIELD ve SCORING<br/>\nELEMENTS üzerinde önceliğe sahiptir. Rakip<br/>\ntarafa girmek riskli bir stratejidir ve STRATEGIC<br/>\nolarak değerlendirilebilir.",
+    "gameRulesBioTitle50": "G420 — Do not tip or entangle. (Page 114)",
+    "gameRulesBioTitle37": "G409 — Don’t catch SCORING (Page 108)",
+    "gameRulesBioTitle10": "10.7 Head REFEREE (Page 96)",
+    "gameRulesBioText15": "dosyada okunabilir içerik olmadığı için bunu<br/>\naçıkça kaydediyoruz.<br/>\n11 Game Rules (G)<br/>\nArtık oyunun asıl numbered rules bölümüne<br/>\ngiriyoruz.<br/>\n11.1 Personal Safety<br/>\nG101 — Humans, stay off the<br/>\nFIELD during the MATCH.<br/>\nTürkçe: MATCH sırasında insanlar FIELD’dan<br/>\nuzak durmalıdır.<br/>\n• Takım üyesi MATCH sırasında FIELD’a<br/>\ngiremez.<br/>\n• FIELD perimeter dışındaki konumda<br/>\nkalmalıdır.<br/>\n• FIELD’a adım atmak veya vücudun büyük bir<br/>\nkısmını FIELD üzerine sarkıtmak ihlaldir.<br/>\n• Ancak kolunu FIELD üzerine uzatmak,<br/>\nsallamak veya perimeter wall üzerine eğilmek,<br/>\nMATCH’i etkilemiyorsa tek başına ihlal<br/>\ndeğildir.<br/>\nViolation: VERBAL WARNING",
+    "gameRulesBioTitle5": "10.6.3 YELLOW and RED (Page 95)",
+    "gameRulesBioTitle40": "G411 — Do not hoard SCORING (Page 109)",
+    "gameRulesBioText40": "ELEMENTS.<br/>\nBir ALLIANCE, rakip ALLIANCE’ın SCORING<br/>\nELEMENTS’e erişimini STRATEGICALLY<br/>\nengelleyemez.<br/>\nViolation: MAJOR FOUL + YELLOW CARD<br/>\nper MATCH.",
+    "gameRulesBioText57": "LOADING ZONE.<br/>\n• NECTAR FIELD’e yalnızca:<br/>\n◦ herhangi bir araç kullanmadan,<br/>\n◦ ilgili ALLIANCE’ın DRIVE TEAM üyesi<br/>\ntarafından,<br/>\n◦ NECTAR önce LOADING ZONE içindeki<br/>\nTILE’a temas edecek şekilde sokulabilir.<br/>\n• İnsanların HIVE veya FLOWER’a scoring<br/>\nyapması asla izinli değildir ve G202<br/>\nkapsamında değerlendirilir.<br/>\n• İhlal: Her NECTAR için MINOR FOUL.",
+    "gameRulesBioTitle54": "G425 — DRIVE TEAMS, watch your reach. (Page 115)",
+    "gameRulesBioText59": "ELEMENTS from the FIELD.<br/>\n• DRIVE TEAM üyeleri SCORING ELEMENTS’i<br/>\nFIELD’den çıkaramaz.<br/>\n• SCORING ELEMENT; TILE’a, ROBOT’a,<br/>\nFIELD elementine veya başka bir SCORING<br/>\nELEMENT’e temas ediyorsa FIELD üzerinde<br/>\nkabul edilir.<br/>\n• İhlal: Çıkarılan her SCORING ELEMENT için<br/>\nMINOR FOUL.",
+    "gameRulesBioTitle31": "11.4.2 TELEOP (Page 106)",
+    "gameRulesBioText37": "ELEMENTS.<br/>\nTIPPED HIVE’dan çıkan SCORING ELEMENT,<br/>\nbaşka bir şeye temas etmeden önce ROBOT<br/>\ntarafından catch/deflect edilemez.<br/>\nViolation: VERBAL WARNING<br/>\nSTRATEGIC ise YELLOW CARD per MATCH.",
+    "gameRulesBioText27": "G305 — Teams must select an<br/>\nOpMode.<br/>\n• DRIVER STATION uygulamasında bir<br/>\nOpMode seçilmeli.<br/>\n• INIT butonuna basılarak initialize edilmeli.<br/>\n• Seçilen OpMode bir AUTO OpMode ise 30-<br/>\nsecond AUTO timer enabled olmalı.<br/>\nViolation:<br/>\n• Durum düzeltilene kadar MATCH başlamaz.<br/>\n• ROBOT initialize olamıyorsa veya hızlı<br/>\nçözülemiyorsa DISABLED.",
+    "gameRulesBioText35": "G407 — No more than 4 at a time.<br/>\nBir ROBOT aynı anda 4’ten fazla SCORING<br/>\nELEMENT CONTROL edemez.<br/>\nViolation: VERBAL WARNING<br/>\nSTRATEGIC ise MAJOR FOUL + YELLOW<br/>\nCARD per MATCH.<br/>\n5 veya daha fazla elementin kontrolü özellikle<br/>\nSTRATEGIC olup olmadığı açısından incelenir.<br/>\nSTRATEGIC sayılabilecek örnek:<br/>\n• 6+ element alıp scoring location’a taşımak.<br/>\n• MATCH boyunca 5+ element üzerinde tekrar<br/>\ntekrar MOMENTARY’den uzun CONTROL<br/>\nyapmak.<br/>\nSTRATEGIC sayılmayabilecek örnek:<br/>\n• ROBOT’un MOMENTARY olarak 5 element<br/>\ntutup hızlıca birini geri bırakması.",
+    "gameRulesBioText10": "Head REFEREE, ARENA içinde ultimate<br/>\nauthority sahibidir.<br/>\n• FIRST personnel, FTA, Event Director veya<br/>\ndiğer event staff’tan bilgi alabilir.<br/>\n• Ancak Head REFEREE kararları finaldir.<br/>\n• Hiçbir event staff, Head REFEREE dahil,<br/>\nMATCH videosunu, fotoğrafını veya başka<br/>\ngörsel kaydını inceleyerek kararı değiştirmez.",
+    "gameRulesBioText6": "Manual, penalty ifadelerinin nasıl yorumlanacağını<br/>\nörneklerle açıklıyor.<br/>\nÖrneğin:<br/>\nMINOR FOUL per SCORING ELEMENT.<br/>\nKuralı ihlal etmek için kullanılan her SCORING<br/>\nELEMENT başına bir MINOR FOUL verilir.<br/>\nMAJOR FOUL per instance.<br/>\nHer ayrı ihlal olayı için bir MAJOR FOUL verilir.<br/>\nMAJOR FOUL per instance ... if<br/>\nREPEATED.<br/>\nİlk ihlal MAJOR FOUL; aynı ROBOT/MATCH<br/>\niçinde tekrar ederse ek MAJOR FOUL ve<br/>\nbelirtilmişse YELLOW CARD uygulanabilir.<br/>\nSüreye bağlı penalty:<br/>\nBazı durumlarda ilk MAJOR FOUL’dan sonra<br/>\nREFEREE saymaya başlar ve koşul<br/>\ndüzeltilmediği her 3 saniye için ek MAJOR FOUL<br/>\nverilir. Örnekte 15 saniyelik ihlal toplam 6 MAJOR<br/>\nFOUL’a ulaşabiliyor.",
+    "gameRulesBioText20": "doing others harm.<br/>\nRakip ALLIANCE’ı açıkça bir kuralı ihlal etmeye<br/>\nzorlamaya yönelik eylemler FIRST Tech<br/>\nChallenge ruhuna aykırıdır.<br/>\n• MAJOR FOUL per instance<br/>\n• REPEATED ise MAJOR FOUL per<br/>\ninstance + YELLOW CARD per<br/>\nMATCH<br/>\n• Zorlanan rakip ALLIANCE’a penalty verilmez.<br/>\nBu kural normal gameplay ile uyumlu stratejiler<br/>\niçin geçerli değildir.<br/>\nG205 — Egregious or exceptional<br/>\nviolations.<br/>\nTürkçe: Aşırı ciddi veya istisnai ihlaller yasaktır.<br/>\nHead REFEREE:<br/>\n• Manual’da açıkça yazılmamış olsa bile ciddi<br/>\nROBOT/takım davranışları için,<br/>\n• veya bir kural/prosedürün tekrar tekrar ihlal<br/>\nedilmesi durumunda<br/>\nYELLOW CARD veya RED CARD verebilir.<br/>\nDevam eden ciddi ihlaller FIRST Headquarters’a<br/>\nbildirilebilir ve sonuçları:<br/>\n• award consideration’dan çıkarılma,<br/>\n• event’ten çıkarılma<br/>\ngibi daha ileri yaptırımlar olabilir.<br/>\nÖzellikle “cezasından kazanacağı avantaj daha<br/>\nbüyük olduğu için” bilerek kural ihlal etmek<br/>\negregious behavior örneğidir.",
+    "gameRulesBioText28": "bile bir OpMode seçip INIT etmelidir. FIELD<br/>\nSTAFF bunu takımın MATCH’e hazır olup<br/>\nolmadığını anlamak için kullanır.<br/>\nAUTO OpMode’u olmayan takımların default<br/>\nAUTO OpMode oluşturup TELEOP OpMode’unu<br/>\notomatik sıraya alması öneriliyor.",
+    "gameRulesBioText33": "bounds.<br/>\nROBOT, SCORING ELEMENT’ı bilerek FIELD<br/>\ndışına çıkaramaz.<br/>\nBu:<br/>\n• doğrudan,<br/>\n• FIELD elementinden sektirerek,<br/>\n• başka ROBOT’tan sektirerek<br/>\nyapılamaz.<br/>\nViolation: SCORING ELEMENT başına MAJOR<br/>\nFOUL.<br/>\nScoring sırasında veya ROBOT-ROBOT etkileşimi<br/>\nnedeniyle elementin kazara FIELD dışına çıkması<br/>\ndeliberate ejection sayılmaz.",
+    "gameRulesBioTitle35": "11.4.3 SCORING ELEMENT (Page 108)",
+    "gameRulesBioTitle45": "G416 — ROBOTS have construction limits. (Page 110)",
+    "gameRulesBioText54": "• MATCH başladıktan sonra DRIVE TEAM<br/>\nüyesi doğrudan veya dolaylı olarak:<br/>\n◦ ROBOT’a,<br/>\n◦ ROBOT/TILE ile temas eden SCORING<br/>\nELEMENT’e,<br/>\n◦ scoring işlemlerine,<br/>\n◦ FIELD elementlerine<br/>\ndokunamaz.<br/>\n•<br/>\n• İhlal: VERBAL WARNING; STRATEGIC ise<br/>\nMAJOR FOUL + YELLOW CARD.",
+    "gameRulesBioText2": "YELLOW/RED CARD yalnızca doğrudan yazılmış<br/>\nihlaller için değil, Competition Integrity Contract<br/>\n(CIC) ihlallerinde de kullanılabilir.<br/>\n• YELLOW CARD → warning<br/>\n• RED CARD → MATCH DISQUALIFICATION<br/>\n• Bir takım YELLOW/RED CARD aldıysa<br/>\nsonraki MATCH’lere YELLOW CARD taşır.<br/>\n• İkinci YELLOW CARD otomatik olarak RED<br/>\nCARD’a dönüşür.<br/>\n• Aynı MATCH içinde ikinci YELLOW CARD<br/>\nalınması da RED CARD oluşturur.<br/>\n• Eğer kartın nedeni ARENA FAULT olarak<br/>\nbelirlenirse kart geri çekilir.",
+    "gameRulesBioTitle32": "11.4.2 (Page 107)",
+    "gameRulesBioText56": "the FIELD early.<br/>\n• DRIVE TEAM, NECTAR’ı FIELD’e ancak:<br/>\n1. kendi ALLIANCE rengindeki HIVE her<br/>\nTIPPED olduğunda 1 NECTAR, veya<br/>\n2. MATCH’te 60 saniye veya daha az<br/>\nkaldığında kalan tüm NECTAR<br/>\nsokabilir.<br/>\n• Hangisi önce gerçekleşirse o uygulanır.<br/>\n• İhlal: FIELD’e erken sokulan her NECTAR için<br/>\nMINOR FOUL.",
+    "gameRulesBioTitle51": "G421 — There is a 3-count on PINS. (Page 115)",
+    "gameRulesBioText38": "G409<br/>\n— devam<br/>\nKuralın amacı, TIPPED HIVE’dan düşen<br/>\nPOLLEN/NECTAR’ın önce TILE floor’a temas<br/>\netmesi, sonra ROBOT tarafından alınmasıdır.<br/>\nÖzellikle STRATEGIC kabul edilebilecek örnekler:<br/>\n• ROBOT’un HIVE altında tekrar tekrar bekleyip<br/>\nTIP sonrası düşen elementleri toplaması.<br/>\n• ROBOT’un üstünde geniş bir mekanizma açıp<br/>\ndüşen elementleri yakalaması.<br/>\n• ROBOT’un tekrar tekrar pozisyon alarak<br/>\ndüşen elementlerin yönünü avantajlı biçimde<br/>\ndeğiştirmesi.<br/>\nSTRATEGIC sayılmayabilecek örnekler:<br/>\n• ROBOT geçerken üzerine 1–2 POLLEN’ın<br/>\ntesadüfen düşmesi.<br/>\n• Çalışmayan bir ROBOT’un HIVE altında sabit<br/>\nkalması ve elementlerin üstünde birikmesi.",
+    "gameRulesBioTitle15": "⚠ Dolayısıyla 98’i atlamış değiliz; kaynak (Page 99)",
+    "gameRulesBioTitle3": "10.6.2 YELLOW and RED (Page 94)",
+    "gameRulesBioTitle29": "11.4 In-MATCH (Page 106)",
+    "gameRulesBioText21": "G301 — Don’t delay MATCHES.<br/>\nDRIVE TEAM, MATCH başlangıcını önemli ölçüde<br/>\ngeciktiremez.<br/>\nBir takımın gecikme ihlali değerlendirilmesi için:<br/>\n1. Beklenen MATCH başlangıç zamanı geçmiş<br/>\nolmalı.<br/>\n2. DRIVE TEAM’in ARENA’ya erişimi olmalı.<br/>\nQualification MATCH için beklenen başlangıç:<br/>\n• schedule’daki saat veya<br/>\n• aynı FIELD’daki önceki MATCH’in bitiminden<br/>\nyaklaşık 3 dakika sonrası,<br/>\nhangisi daha geçse odur.<br/>\nPlayoff MATCH için:<br/>\n• schedule’daki saat veya<br/>\n• ilgili ALLIANCE’ın önceki MATCH’inden 8<br/>\ndakika sonrası,<br/>\nhangisi daha geçse odur.<br/>\nViolation: İlk durumda VERBAL WARNING; aynı<br/>\ntournament phase içinde tekrar → yaklaşan<br/>\nMATCH için MAJOR FOUL.",
+    "gameRulesBioText19": "ROBOT’u initial complete inspection’dan geçmiş<br/>\nbir takımın, atanmış her Qualification MATCH’inde<br/>\nARENA’ya en az 1 DRIVE TEAM üyesiyle<br/>\nkatılması gerekir.<br/>\nViolation: DISQUALIFIED from the<br/>\ncurrent MATCH.<br/>\nTakım ROBOT’unun katılamayacağını Lead<br/>\nQueuer’a bildirmelidir.<br/>\nOlağanüstü bir durum varsa FIELD STAFF ile<br/>\naccommodation olup olmadığı görüşülmelidir.",
+    "gameRulesBioText24": "the FIELD.<br/>\nMATCH için ROBOT ve OPERATOR CONSOLE<br/>\ndışında FIELD’a getirilen şeyler:<br/>\n• ALLIANCE AREA’ya sığmalı,<br/>\n• DRIVE TEAM tarafından giyilmeli/taşınmalı,<br/>\n• veya uygun bir accommodation olmalı.<br/>\nÖrneğin:<br/>\n• crutches,<br/>\n• cushion,<br/>\n• kneeling mat,<br/>\n• maksimum 12 in. / 30.5 cm yüksekliğinde,<br/>\ndevrilmeyen/katlanmayan küçük step stool.<br/>\nAyrıca ekipman:<br/>\n• ARENA operasyonlarını bozamaz veya safety<br/>\nhazard oluşturamaz.<br/>\n• TILE’dan 6 ft 6 in. (~198 cm) üzerine<br/>\nçıkamaz.<br/>\n• Medical equipment dışında ARENA dışıyla<br/>\niletişim kuramaz.<br/>\n• FIELD STAFF veya audience görüşünü<br/>\nengelleyemez.<br/>\n• Başka takımın remote sensing sistemini<br/>\nbozamaz.<br/>\nÖrneğin FIELD AprilTag’lerini taklit etmek veya<br/>\nMATCH sırasında FIELD’a güçlü ışık/laser<br/>\nyöneltmek yasaktır.",
+    "gameRulesBioTitle42": "11.4.4 ROBOT (Page 110)",
+    "gameRulesBioText29": "11.4.1 AUTO<br/>\nAUTO, MATCH’in ilk 30 saniyesidir.<br/>\nBu sırada DRIVER’lar ROBOT’a input veremez;<br/>\nROBOT yalnızca önceden programlanmış<br/>\ntalimatlarla çalışır.<br/>\nG401 — Don’t interact with a<br/>\nROBOT during AUTO.<br/>\nMATCH countdown başladığı andan AUTO bitene<br/>\nkadar DRIVE TEAM, ROBOT veya OPERATOR<br/>\nCONSOLE ile doğrudan/dolaylı etkileşimde<br/>\nbulunamaz.<br/>\nİstisnalar:<br/>\n• MATCH başlangıcında ▶ start butonuna<br/>\nMOMENTARY şekilde basmak,<br/>\n• ■ stop butonuna basmak,<br/>\n• kişisel veya OPERATOR CONSOLE<br/>\ngüvenliği.<br/>\nViolation: VERBAL WARNING<br/>\nSTRATEGIC ise → MAJOR FOUL + YELLOW<br/>\nCARD per MATCH.",
+    "gameRulesBioText44": "identifiable.<br/>\nROBOT’un:<br/>\n• takım numarası,<br/>\n• ALLIANCE rengi<br/>\nHead REFEREE açısından belirsiz hale<br/>\ngelmemelidir.<br/>\nViolation: VERBAL WARNING<br/>\nSTRATEGIC ise YELLOW CARD.<br/>\nROBOT SIGNS’ın sağlam, görünür ve normal<br/>\ngameplay sırasında düşmeyecek şekilde<br/>\ntakılması önerilir. Gerekirse sonraki MATCH<br/>\nöncesi düzeltme istenebilir.<br/>\nG415 — Watch your ARENA interaction.<br/>\n• ROBOT, SCORING ELEMENTS dışındaki<br/>\nARENA parçalarını:<br/>\n◦ tutamaz/grab edemez,<br/>\n◦ kavrayamaz,<br/>\n◦ bağlanamaz,<br/>\n◦ dolanamaz,<br/>\n◦ üzerinden asılamaz.<br/>\n• STRATEGIC ihlalde YELLOW CARD; hasar<br/>\nihtimali varsa DISABLED olabilir.<br/>\n• Bazı hizalama amaçlı FLOWER temasları ihlal<br/>\nsayılmaz.",
+    "gameRulesBioTitle46": "G417 — ROBOTS may not meddle with the (Page 110)",
+    "gameRulesBioText53": "ELEMENTS are off limits.<br/>\n• DRIVE COACH’lar güvenlik amacı dışında<br/>\nSCORING ELEMENTS’e dokunamaz.<br/>\n• İhlal: VERBAL WARNING; STRATEGIC ise<br/>\nMINOR FOUL.",
+    "gameRulesBioTitle4": "Önemli: Bir MATCH, sonuçları yayınlandığında (Page 94)",
+    "gameRulesBioText25": "G303 — ROBOTS on the FIELD must<br/>\ncome ready to play a MATCH.<br/>\nROBOT:<br/>\n• insanlar, ARENA veya diğer ROBOT’lar için<br/>\ntehlike oluşturmamalı,<br/>\n• Section 3.3 inspection/re-inspection şartlarını<br/>\nkarşılamalı,<br/>\n• FIELD’da takım tarafından bırakılan tek team-<br/>\nprovided item olmalı,<br/>\n• doğru ALLIANCE rengini gösteren ROBOT<br/>\nSIGNS taşımalı.<br/>\nViolation:<br/>\n• Hızlı çözülebiliyorsa MATCH başlamaz.<br/>\n• Hızlı çözülemiyorsa DISABLED.<br/>\n• G303.B şartını karşılamayan ROBOT<br/>\nMATCH’e katılırsa Head REFEREE takdirine<br/>\ngöre RED CARD uygulanabilir.",
+    "gameRulesBioTitle19": "G203 — Show up to your MATCHES. (Page 100)",
+    "gameRulesBioTitle30": "G402 — No AUTO opponent (Page 106)",
+    "gameRulesBioText48": "FLOWERS.<br/>\n• FLOWER’a SCORING ELEMENT yalnızca<br/>\nüstten sokulabilir.<br/>\n• FLOWER’dan yalnızca POLLEN alttan<br/>\nçıkarılabilir.<br/>\n• Yanlardan çekmek, FLOWER’ı sallamak veya<br/>\nNECTAR’ı mekanizma ile çıkarmak gibi<br/>\nhareketler ihlaldir.<br/>\n• İhlal: VERBAL WARNING; STRATEGIC ise<br/>\nMAJOR FOUL + YELLOW CARD.<br/>\n• İzin verilen scoring işlemleri sırasında<br/>\nFLOWER’a veya içindeki SCORING<br/>\nELEMENTS’e temas etmek ihlal değildir.",
+    "gameRulesBioText42": "G412 — ROBOTS must be under<br/>\ncontrol.<br/>\nROBOT MATCH sırasında insan veya ARENA<br/>\nelementi için undue hazard oluşturmamalıdır.<br/>\nİhlal örnekleri:<br/>\n• ROBOT veya CONTROL ettiği SCORING<br/>\nELEMENT’ın FIELD dışındaki bir şeye/insana<br/>\nçarpması,<br/>\n• tehlikeli ROBOT operasyonu,<br/>\n• kontrolsüz şekilde dışarı savrulan mekanizma,<br/>\n• DRIVER STATION standını devirmek,<br/>\n• FIELD timer display’e zarar vermek,<br/>\n• FIELD STAFF veya FIELD dışındaki DRIVE<br/>\nTEAM üyesine temas etmek.<br/>\nViolation: DISABLED + VERBAL WARNING<br/>\nEvent içinde tekrar → YELLOW CARD per<br/>\nMATCH.<br/>\nFIELD dışındaki DRIVER STATION standı, zemin<br/>\nveya FIELD wall perimeter’a ROBOT’un temas<br/>\netmesi tek başına bu kuralın ihlali değildir.",
+    "gameRulesBioText36": "NECTAR.<br/>\nROBOT rakip ALLIANCE’ın NECTAR’ını<br/>\nCONTROL edemez.<br/>\nViolation: VERBAL WARNING<br/>\nSTRATEGIC ise YELLOW CARD per MATCH.",
+    "gameRulesBioText17": "G201 — Be a good person.<br/>\nTüm takımlar:<br/>\n• herkese karşı medeni,<br/>\n• saygılı,<br/>\n• takım ve event ekipmanlarına karşı özenli<br/>\ndavranmalıdır.<br/>\nViolation: VERBAL WARNING<br/>\nAynı event sırasında tekrar → YELLOW CARD<br/>\nÇok ağır davranışlar kişinin ARENA’dan<br/>\nçıkarılmasına veya takımın DISQUALIFIED<br/>\nolmasına kadar gidebilir.",
+    "gameRulesBioTitle57": "G427 — Humans, only enter NECTAR via the (Page 116)",
+    "gameRulesBioTitle1": "10.6.1 YELLOW and RED (Page 93)",
+    "gameRulesBioText18": "G202 — Follow the Competition<br/>\nIntegrity Contract (CIC).<br/>\nBIOBUZZ oynanırken takımlar hem oyun<br/>\nkurallarına hem de Competition Integrity<br/>\nContract (CIC) kurallarına uymalıdır.<br/>\nİhlal örnekleri:<br/>\n•   Kuralların ruhunu bilerek ihlal etmek.<br/>\n•   MATCH atmak.<br/>\n•   Bilerek RP kaçırmak.<br/>\n•   Sıralamayı manipüle etmek için kapasitesinin<br/>\naltında oynamak.<br/>\n•   Başka takımlardan MATCH atmalarını<br/>\nistemek.<br/>\n•   Başka takımlardan bilerek RP kaçırmalarını<br/>\nistemek.<br/>\n•   Takımlardan MATCH’e gelmemelerini istemek.<br/>\n•   Rakipleri rahatsız etmek, bozmak veya taunt<br/>\netmek.<br/>\n•   ARENA operasyonlarını bozmak.<br/>\nViolation: VERBAL WARNING<br/>\nTekrar → YELLOW veya RED CARD<br/>\nManual ayrıca bunun, normal oyun stratejilerini<br/>\nyasaklamadığını özellikle belirtiyor. Takımlar<br/>\nkurallara ve oyunun amacına uygun olduğu<br/>\nsürece alışılmadık ALLIANCE stratejileri<br/>\nuygulayabilir.",
+    "gameRulesBioText14": "için okunabilir metin veya render edilmiş sayfa<br/>\ngörüntüsü sağlanmadı. Bu nedenle içerik tahmin<br/>\netmiyorum.",
+    "gameRulesBioTitle13": "Ayrıca MATCH yanlışlıkla: (Page 97)",
+    "gameRulesBioText16": "interacting with ARENA elements.<br/>\nTakım üyesi ARENA elementleriyle:<br/>\n• climbing on,<br/>\n• hanging from,<br/>\n• insan müdahalesi olmadan eski şekline<br/>\ndönemeyecek şekilde manipulating,<br/>\n• damaging<br/>\neylemlerini yapamaz.<br/>\nViolation: VERBAL WARNING<br/>\nDRIVE TEAM üyeleri MATCH sırasında FIELD<br/>\nperimeter’ına destek almak amacıyla temas<br/>\nedebilir. Ancak perimeter’ı konumundan çıkarmak<br/>\nG102.C ihlalidir.",
+    "gameRulesBioTitle26": "G304 — ROBOTS must be set up (Page 104)",
+    "gameRulesBioTitle28": "Önemli ayrıntı: Takım AUTO oynatmayacak olsa (Page 105)",
+    "gameRulesBioTitle6": "10.6.4 Violation Details (Page 95)",
+    "gameRulesBioTitle17": "11.2 Conduct (Page 99)",
+    "gameRulesBioTitle12": "10.8.2 SCORING ELEMENT Logistics (Page 97)",
+    "gameRulesBioTitle48": "G418 — ROBOTS may not meddle with (Page 112)",
+    "gameRulesBioTitle33": "G405 — Keep SCORING ELEMENTS In (Page 107)",
+    "gameRulesBioTitle47": "G417 — HIVE Structure (devam). (Page 112)",
+    "gameRulesBioTitle7": "10.6.4 Violation (Page 96)",
+    "gameRulesBioText34": "mess in the ARENA.<br/>\nNe ROBOT ne de DRIVE TEAM ARENA’yı<br/>\nkirletebilir veya zarar verebilir.<br/>\nViolation:<br/>\n• VERBAL WARNING<br/>\n• STRATEGIC ise MAJOR FOUL + YELLOW<br/>\nCARD<br/>\n• ROBOT’un hasar vermesi devam edecekse<br/>\nDISABLED<br/>\nAyrıca sonraki MATCH’ler öncesinde corrective<br/>\naction veya re-inspection istenebilir.",
+    "gameRulesBioText4": "veya Head REFEREE/temsilcisi ROBOT’ların<br/>\nalınabileceğini söylediğinde — hangisi daha<br/>\ngeçse — artık “current MATCH” değildir.",
+    "gameRulesBioTitle53": "G424 — DRIVE COACHES, SCORING (Page 115)",
+    "gameRulesBioText58": "LOADING ZONE (devam).<br/>\n• DRIVE TEAM’in eline geçen POLLEN veya<br/>\nrakip ALLIANCE’ın FIELD dışına çıkmış<br/>\nNECTAR’ı, FIELD STAFF’a verilmelidir.<br/>\n• NECTAR yerleştirilirken TILE ile temas eden<br/>\nbaşka bir SCORING ELEMENT’e<br/>\ndokunmamaya dikkat edilmelidir; aksi halde<br/>\nG425 ihlali oluşabilir.",
+    "gameRulesBioText8": "subsequent violations occur<br/>\nduring the event.<br/>\nİlk ihlal → VERBAL WARNING.<br/>\nAynı kural daha sonra tekrar ihlal edilirse →<br/>\nYELLOW CARD uygulanabilir.",
+    "gameRulesBioText52": "hands off the controls.<br/>\n• MATCH başladıktan sonra DRIVE COACH<br/>\nveya başka bir takım üyesi OPERATOR<br/>\nCONSOLE gamepad’lerine dokunamaz.<br/>\n• DRIVE COACH; DRIVER STATION cihazını<br/>\ntutabilir, sorun giderebilir, OpMode seçebilir ve<br/>\nINIT/START/STOP butonlarına basabilir.<br/>\n• İhlal: VERBAL WARNING; STRATEGIC ise<br/>\nMAJOR FOUL + YELLOW CARD.",
+    "gameRulesBioTitle20": "G204 — Do not expect to gain by (Page 100)",
+    "gameRulesBioTitle39": "G410 — NECTAR only goes into (Page 109)",
+    "gameRulesBioText12": "FIELD’dan çıkan:<br/>\nPOLLEN<br/>\n• FIELD STAFF tarafından güvenli olan ilk<br/>\nfırsatta FIELD’a geri konur.<br/>\n• En yakın uygun konuma yerleştirilir.<br/>\nNECTAR<br/>\n• İlgili ALLIANCE’ın DRIVE TEAM’ine geri<br/>\nverilir.<br/>\n• 11.4.6 Human kapsamında yeniden oyuna<br/>\nsokulur.<br/>\nFIELD STAFF’ın bunları geri getirmesinde makul<br/>\nbir gecikme yaşanması tek başına ARENA FAULT<br/>\ndeğildir.",
+    "gameRulesBioText23": "G301<br/>\n— good faith examples<br/>\nAşağıdakiler, hızlı şekilde MATCH ready olmaya<br/>\nyönelik good faith effort örnekleridir:<br/>\n• ROBOT’u aktif olarak değiştirmeden FIELD’a<br/>\ngüvenli şekilde yürümek.<br/>\n• Tape veya cable tie ile hızlı düzeltme yapmak.<br/>\n• DRIVER STATION cihazının açılmasını<br/>\nbeklemek.<br/>\n• FTA/FIELD teknik ekibiyle makul sürede<br/>\nproblem çözmek.<br/>\n• DRIVER STATION ↔ ROBOT CONTROLLER<br/>\niletişimini kontrol etmek için kısa bir “wiggle<br/>\ntest” yapmak.<br/>\nWiggle test sırasında ROBOT drive etmemeli<br/>\nveya SCORING ELEMENT ile etkileşmemelidir;<br/>\nyalnızca pre-loaded POLLEN ile temas istisnadır.",
+    "gameRulesBioTitle27": "11.3 Pre-MATCH (Page 105)",
+    "gameRulesBioTitle41": "11.4.3 (Page 110)",
+    "gameRulesBioTitle18": "11.2 Conduct (Page 100)",
+    "gameRulesBioText55": "• El kumandaları, sarkan kablolar, kıyafetler vb.<br/>\nüzerinden ROBOT’a dolaylı temas etmek de<br/>\nihlal olabilir.<br/>\n• SCORING’i bozmak; örneğin ROBOT’un<br/>\nFLOWER’a scoring yapmasını engellemek<br/>\nveya FLOWER’daki NECTAR/POLLEN’i<br/>\ndüşürmek için perimeter wall’a kasıtlı olarak<br/>\nvurmak/sallamak gibi hareketleri içerir.",
+    "gameRulesBioText1": "CARDS<br/>\nRED CARD<br/>\nRED CARD:<br/>\n• Head REFEREE tarafından ciddi ROBOT<br/>\nveya takım davranışı/kural ihlali için verilir.<br/>\n• Takımın o MATCH için DISQUALIFIED<br/>\nolmasına neden olur.<br/>\nDISABLED<br/>\nREFEREE ROBOT’un durdurulmasını ister.<br/>\nROBOT’un tüm output’ları devre dışı kalır ve<br/>\nMATCH’in geri kalanında kullanılamaz.<br/>\nDISQUALIFIED<br/>\n• Qualification MATCH’te takım 0 MATCH point<br/>\n+ 0 RP alır.<br/>\n• Playoff MATCH’te ilgili ALLIANCE’ın 0 MATCH<br/>\npoint almasına neden olur.",
+    "gameRulesBioText31": "G403 — ROBOTS are motionless<br/>\nbetween AUTO and TELEOP.<br/>\nAUTO → TELEOP geçişinde ROBOT veya<br/>\nmekanizmalarının powered movement<br/>\nyapmasına izin verilmez.<br/>\n• İnertia,<br/>\n• gravity,<br/>\n• actuator’ların enerjisinin kesilmesi<br/>\nkaynaklı hareketler powered movement sayılmaz.<br/>\nViolation: VERBAL WARNING; STRATEGIC ise<br/>\nMAJOR FOUL + YELLOW CARD.",
+    "gameRulesBioText50": "• ROBOT, rakip ROBOT’a bağlanamaz,<br/>\ndeviremez veya dolaştıramaz.<br/>\n• STRATEGIC ise MAJOR FOUL + YELLOW<br/>\nCARD.<br/>\n• Sürekli yapılırsa veya rakip ROBOT artık<br/>\nsürülemiyorsa RED CARD uygulanabilir.<br/>\n• Normal ROBOT-to-ROBOT etkileşiminde<br/>\nistemeden gerçekleşen tek bir devrilme,<br/>\nREFEREE tarafından STRATEGIC<br/>\ngörülmezse ihlal değildir.",
+    "gameRulesBioText45": "• MATCH sırasında ROBOT, R105’teki<br/>\ngenişleme sınırlarını aşamaz.<br/>\n• Parçalar kasıtlı olarak ROBOT’tan ayrılamaz.<br/>\n• İhlal: VERBAL WARNING; STRATEGIC ise<br/>\nher olay için MAJOR FOUL.<br/>\n• MATCH başladıktan sonra hareket eden<br/>\nparçalar STARTING CONFIGURATION dışına<br/>\nçıkabilir, ancak expansion limitleri içinde<br/>\nkalmalıdır.",
+    "gameRulesBioTitle22": "Uyarı/FOUL’dan sonra takım 2 dakika içinde (Page 102)",
+    "gameRulesBioTitle44": "G414 — ROBOTS must be (Page 110)",
+    "gameRulesBioText46": "HIVE Structure.<br/>\n• ROBOT, HIVE’ın hareketini yalnızca upward-<br/>\nfacing CELL’e SCORING ELEMENT<br/>\nfırlatarak etkileyebilir.<br/>\n• HIVE’a başka şekilde temas etmek veya TIP’i<br/>\nengellemek/oluşturmak ihlaldir.<br/>\n• Örneğin HIVE’a hızlı çarpmak, tekrar tekrar<br/>\nçarpmak veya rakibin HIVE TIP’ini engellemek<br/>\nSTRATEGIC kabul edilebilir.<br/>\n• İhlal: VERBAL WARNING; STRATEGIC ise<br/>\nMAJOR FOUL + YELLOW CARD.",
+    "gameRulesBioTitle21": "11.3 Pre-MATCH (Page 102)",
+    "gameRulesBioTitle2": "10.6.1 YELLOW and RED CARDS (Page 93)",
+    "gameRulesBioTitle14": "Sayfa 98’i ayrıca kontrol ettim. PDF’nin bu sayfası (Page 98)",
+    "gameRulesBioText13": "• hasarlı SCORING ELEMENTS,<br/>\n• yanlış sayıda SCORING ELEMENTS,<br/>\n• yanlış yerleştirilmiş SCORING ELEMENTS<br/>\nile başlarsa, bu durum otomatik olarak ARENA<br/>\nFAULT kabul edilmez.<br/>\n10.8.3 FIELD Mitigation<br/>\nFIELD STAFF, MATCH sırasında bazı FIELD<br/>\nproblemlerini çözmek için Field Mitigation<br/>\nGuide’daki prosedürleri kullanabilir.<br/>\n10.8.4 FIELD Reset<br/>\nMATCH bittikten ve Head REFEREE FIELD’in<br/>\nhazır olduğunu belirledikten sonra:<br/>\n1. DRIVE TEAM ROBOT’larını durdurur.<br/>\n2. Önceki MATCH’in ROBOTS ve OPERATOR<br/>\nCONSOLES’ı çıkarılır.<br/>\n3. Sonraki MATCH’in ekipmanları yerleştirilir.<br/>\n4. FIELD STAFF ARENA elementlerini resetler.",
+    "gameRulesBioTitle36": "G408 — Don’t CONTROL opponent (Page 108)",
+    "gameRulesBioText26": "correctly on the FIELD.<br/>\nROBOT:<br/>\n1. Kendi ALLIANCE tarafında tamamen FIELD<br/>\niçinde olmalı.<br/>\n◦ Red → columns A, B, C<br/>\n◦ Blue → columns D, E, F<br/>\n2. FIELD elementine bağlı/entangled/suspended<br/>\nolmamalı.<br/>\n3. FIELD perimeter wall’a temas etmeli.<br/>\n4. FLOWER scoring volume’a temas etmemeli<br/>\nveya içinde olmamalı.<br/>\n5. LOADING ZONE içinde olmamalı.<br/>\n6. STARTING CONFIGURATION içinde<br/>\nolmalı.<br/>\n7. Tam olarak 4 POLLEN pre-load ile temas<br/>\nhalinde olmalı.<br/>\n8. OpMode initialization bittikten sonra tamamen<br/>\nhareketsiz olmalı.<br/>\nHızlı çözülebiliyorsa MATCH bekletilir;<br/>\nçözülemiyorsa ROBOT DISABLED edilebilir veya<br/>\nFIELD’dan çıkarılabilir.",
+    "gameRulesBioText5": "CARDS during Playoff<br/>\nMATCHES<br/>\nPlayoff MATCH’lerinde YELLOW ve RED CARD<br/>\nsadece ihlali yapan takıma değil, bütün<br/>\nALLIANCE’a uygulanır.<br/>\n• ALLIANCE 2 YELLOW CARD alırsa → tüm<br/>\nALLIANCE için RED CARD<br/>\n• RED CARD → ilgili MATCH için<br/>\nDISQUALIFICATION",
+    "gameRulesBioText7": "Details<br/>\ndevamı<br/>\nBu sayfada farklı penalty kombinasyonlarının<br/>\nörnekleri devam ediyor.<br/>\nÖnemli örnekler:<br/>\nVERBAL WARNING. MAJOR FOUL and<br/>\nYELLOW CARD per MATCH, if<br/>\nSTRATEGIC.<br/>\nNormal durumda → VERBAL WARNING.<br/>\nAncak REFEREE davranışı STRATEGIC görürse:<br/>\n• MAJOR FOUL<br/>\n• MATCH sonrasında YELLOW CARD<br/>\nverilebilir.",
+    "gameRulesBioTitle59": "G428 — Humans, don’t remove SCORING (Page 117)",
+    "gameRulesBioTitle49": "11.4.5 Opponent Interaction (Page 113)",
+    "gameRulesBioText49": "G419 — Do not damage an opponent ROBOT.<br/>\n• ROBOT, rakip ROBOT’a hasar veremez veya<br/>\nişlevsel olarak çalışamaz hale getiremez.<br/>\n• BIOBUZZ yüksek temaslı ve savunmalı bir<br/>\noyun olduğundan normal temas serbesttir;<br/>\nancak kasıtlı hasar yasaktır.<br/>\n• Açıkta/korumasız ve normal oyun sırasında<br/>\nzarar görebilecek parçaların hasar görmesi<br/>\ngenellikle ihlal sayılmaz.<br/>\n• STRATEGIC hasar: MAJOR FOUL +<br/>\nYELLOW CARD.<br/>\n• STRATEGIC olup rakip ROBOT’un sürüşünü<br/>\nengellerse: MAJOR FOUL + RED CARD.<br/>\n• Head REFEREE, MATCH sonunda ROBOT’u<br/>\ninceleyebilir; hasar doğrulanamazsa ihlali<br/>\nkaldırabilir.",
+    "gameRulesBioText41": "SCORING<br/>\nELEMENT<br/>\n/<br/>\n11.4.4 ROBOT<br/>\nG411 devamı:<br/>\n• Kendi NECTAR/POLLEN’ını scoring için<br/>\nkullanmak ihlal değildir.<br/>\n• SCORING ELEMENTS’i FIELD’ın küçük bir<br/>\nbölümünde toplamak ve/veya rakip<br/>\nROBOT’un erişimini aktif olarak engellemek<br/>\nihlaldir.<br/>\n• GARDEN protected zone değildir.",
+    "gameRulesBioTitle9": "STRATEGIC + rakip ROBOT’un hareket (Page 96)",
+    "gameRulesBioText9": "edememesi<br/>\nDaha ağır durumda:<br/>\n• MAJOR FOUL<br/>\n• YELLOW CARD<br/>\nve eğer durum STRATEGIC olup rakip ROBOT<br/>\nCONTINUOUS şekilde hareket edemiyorsa:<br/>\n• MAJOR FOUL<br/>\n• RED CARD<br/>\nuygulanabilir.",
+    "gameRulesBioText3": "CARD application<br/>\nBir takım YELLOW/RED CARD aldığında, sonraki<br/>\nMATCH’lerde audience display üzerinde takım<br/>\nnumarası sarı arka planla gösterilir.<br/>\nKartların hangi MATCH’e uygulandığı<br/>\n• Qualification MATCH’lerden önce: Head<br/>\nREFEREE, özellikle ciddi durumlarda uyarı/<br/>\nkartı ilk Qualification MATCH’e taşıyabilir.<br/>\n• Qualification MATCH sırasında: takımın<br/>\nmevcut veya az önce tamamlanan MATCH’ine<br/>\nuygulanır.<br/>\n• SURROGATE MATCH: önceki Qualification<br/>\nMATCH’e uygulanır.<br/>\n• Qualification ile Playoff arası: ALLIANCE’ın<br/>\nilk Playoff MATCH’ine uygulanır.<br/>\n• Playoff sırasında: ALLIANCE’ın mevcut veya<br/>\naz önce tamamlanan MATCH’ine uygulanır.",
+    "gameRulesBioText11": "10.8.1 Practice MATCH<br/>\nParticipation<br/>\nFTA, LRI veya Head REFEREE ROBOT’un:<br/>\n• güvenli olmadığını veya<br/>\n• ARENA’ya zarar verme ihtimali olduğunu<br/>\ndüşünürse takımın Practice MATCH’e katılmasını<br/>\nengelleyebilir.",
+    "gameRulesBioTitle8": "VERBAL WARNING. YELLOW CARD if (Page 96)",
+    "gameRulesBioText47": "• HIVE’a yanlış şekilde müdahale etmek<br/>\nSTRATEGIC olarak değerlendirilebilir.<br/>\n• HIVE’a yanlışlıkla çarpmak veya izin verilen<br/>\nbir LAUNCH sırasında CELL’i ıskalamak, tek<br/>\nbaşına STRATEGIC ihlal olarak<br/>\ngörülmeyebilir.",
+    "gameRulesBioTitle43": "G413 — ROBOTS must stop when (Page 110)"
+  },
+  "en": {
+    "navGameRules": "Match Rules",
+    "navFieldInfo": "Field Element Information",
+    "navMatchProcedures": "Match Procedures",
+    "navScoringSystem": "How to Score",
+    "gameRulesTitle": "Match Rules",
+    "navHome": "Awards & Definitions",
+    "navTeam": "General Rules",
+    "navRobots": "Robot Construction",
+    "navDecode": "Go back",
+    "asterisk": "* QuickManual is not the official Game Manual and should never be treated as a complete or final source of rules. It does not replace the official document published by FIRST. For any official decision, inspection, or dispute, teams must always refer to the latest version of the official Game Manual.",
+    "dateUpdate": "** Last updated: August 5, 2026, Game Manual V0",
+    "pageSearch": "Search this page... (Example: rules, rewards, bots)",
+    "clear": "Clear",
+    "footerTitle": "QuickManual",
+    "footerDescription": "A community resource by Asteria Robotics\nThis is not an official FIRST document.",
+    "contactTitle": "Contact Us",
+    "addressText": "Our address",
+    "instagramText": "Instagram",
+    "copyrightText": "© 2026 Asteria Robotics FTC Team 32334. All Rights Reserved.",
+    "gameRulesBioText1": "CARDS — RED CARD: issued by the Head REFEREE for egregious ROBOT/team behavior or rule violations and causes the team to be DISQUALIFIED for that MATCH. DISABLED: the REFEREE instructs the team to stop the ROBOT; all outputs are deactivated and the ROBOT cannot operate for the rest of the MATCH. DISQUALIFIED: in a Qualification MATCH the team receives 0 MATCH points and 0 RP; in a Playoff MATCH the affected ALLIANCE receives 0 MATCH points.",
+    "gameRulesBioText2": "YELLOW/RED CARDS may be used not only for explicitly listed violations but also for Competition Integrity Contract (CIC) violations. • YELLOW CARD → warning • RED CARD → MATCH DISQUALIFICATION • A team carrying a YELLOW/RED CARD carries a YELLOW CARD into later MATCHES. • A second YELLOW CARD automatically becomes a RED CARD. • A second YELLOW CARD in the same MATCH also creates a RED CARD. • If the reason for the card is later determined to be an ARENA FAULT, the card is withdrawn.",
+    "gameRulesBioText3": "CARD application: when a team receives a YELLOW/RED CARD, its team number is shown with a yellow background on the audience display in later MATCHES. Application timing: • Before Qualification MATCHES: the Head REFEREE may carry a warning/card into the first Qualification MATCH, especially for serious situations. • During a Qualification MATCH: it applies to the current or just-completed MATCH. • SURROGATE MATCH: it applies to the previous Qualification MATCH. • Between Qualifications and Playoffs: it applies to the ALLIANCE’s first Playoff MATCH. • During Playoffs: it applies to the ALLIANCE’s current or just-completed MATCH.",
+    "gameRulesBioText4": "A MATCH is no longer the “current MATCH” once its results are posted or the Head REFEREE/their designee says the ROBOTS may be retrieved, whichever happens later.",
+    "gameRulesBioText5": "CARDS during Playoff MATCHES: in Playoffs, YELLOW and RED CARDS apply to the entire ALLIANCE, not just the violating team. • If an ALLIANCE receives 2 YELLOW CARDS, the entire ALLIANCE receives a RED CARD. • A RED CARD causes DISQUALIFICATION for that MATCH.",
+    "gameRulesBioText6": "The manual gives examples of how violation language is interpreted. “MINOR FOUL per SCORING ELEMENT” means one MINOR FOUL for each SCORING ELEMENT used in the violation. “MAJOR FOUL per instance” means one MAJOR FOUL for each separate occurrence. “MAJOR FOUL per instance … if REPEATED” means the first violation gets a MAJOR FOUL and repeating it in the same ROBOT/MATCH can add another MAJOR FOUL plus a YELLOW CARD when specified. For time-based penalties, after the first MAJOR FOUL the REFEREE may begin counting and issue an additional MAJOR FOUL for every 3 seconds the condition is not corrected; a 15-second example can total 6 MAJOR FOULS.",
+    "gameRulesBioText7": "Violation Details continued: examples include “VERBAL WARNING. MAJOR FOUL and YELLOW CARD per MATCH, if STRATEGIC.” Under normal circumstances the result is a VERBAL WARNING. If the REFEREE considers the behavior STRATEGIC, a MAJOR FOUL and a YELLOW CARD after the MATCH may be issued.",
+    "gameRulesBioText8": "“VERBAL WARNING. YELLOW CARD if subsequent violations occur during the event.” The first violation receives a VERBAL WARNING. If the same rule is violated again later in the event, a YELLOW CARD may be issued.",
+    "gameRulesBioText9": "For a more serious STRATEGIC situation: a MAJOR FOUL and YELLOW CARD may apply; if the behavior is STRATEGIC and leaves the opponent ROBOT unable to move CONTINUOUSLY, a MAJOR FOUL and RED CARD may be issued.",
+    "gameRulesBioText10": "The Head REFEREE has ultimate authority inside the ARENA. They may receive information from FIRST personnel, the FTA, Event Director, or other event staff, but Head REFEREE rulings are final. No event staff member, including the Head REFEREE, changes a decision by reviewing MATCH video, photographs, or other visual recordings.",
+    "gameRulesBioText11": "10.8.1 Practice MATCH Participation — the FTA, LRI, or Head REFEREE may prevent a team from participating in a Practice MATCH if they believe the ROBOT is unsafe or likely to damage the ARENA.",
+    "gameRulesBioText12": "SCORING ELEMENTS that leave the FIELD: POLLEN is returned to the FIELD by FIELD STAFF at the first safe opportunity and placed in the nearest appropriate location. NECTAR is returned to the appropriate ALLIANCE DRIVE TEAM and may be re-entered under 11.4.6 Human. A reasonable delay by FIELD STAFF in returning these elements is not, by itself, an ARENA FAULT.",
+    "gameRulesBioText13": "If a MATCH accidentally begins with damaged SCORING ELEMENTS, an incorrect number of SCORING ELEMENTS, or incorrectly positioned SCORING ELEMENTS, that does not automatically constitute an ARENA FAULT. 10.8.3 FIELD Mitigation — FIELD STAFF may use procedures in the Field Mitigation Guide to address certain FIELD issues during a MATCH. 10.8.4 FIELD Reset — after the MATCH ends and the Head REFEREE declares the FIELD ready: 1. DRIVE TEAM stops its ROBOTS. 2. ROBOTS and OPERATOR CONSOLES from the previous MATCH are removed. 3. Equipment for the next MATCH is placed. 4. FIELD STAFF reset ARENA elements.",
+    "gameRulesBioText14": "No readable text or rendered page image was available for this page, so no content was inferred.",
+    "gameRulesBioText15": "This records that page 98 was not skipped; the source file did not provide readable content. 11 Game Rules (G) begins the numbered game rules. 11.1 Personal Safety — G101: Humans, stay off the FIELD during the MATCH. Team members may not enter the FIELD during a MATCH and must remain outside the FIELD perimeter. Stepping onto the FIELD or leaning a large part of the body over it is a violation. Reaching an arm over the FIELD, waving, or leaning on the perimeter wall is not by itself a violation if it does not affect the MATCH. Violation: VERBAL WARNING.",
+    "gameRulesBioText16": "G102 — Be careful when interacting with ARENA elements. Team members may not climb on, hang from, manipulate an ARENA element so it cannot return to its original shape without human intervention, or damage it. Violation: VERBAL WARNING. DRIVE TEAM members may touch the FIELD perimeter for support during a MATCH, but moving the perimeter out of position violates G102.C.",
+    "gameRulesBioText17": "G201 — Be a good person. All teams must be civil to everyone, respectful, and careful with team/event equipment. Violation: VERBAL WARNING; a repeat during the same event → YELLOW CARD. Very serious behavior may lead to removal from the ARENA or team DISQUALIFICATION.",
+    "gameRulesBioText18": "G202 — Follow the Competition Integrity Contract (CIC). While playing BIOBUZZ, teams must follow both the game rules and the CIC. Examples of violations include knowingly violating the spirit of the rules, throwing a MATCH, intentionally missing RP, playing below capability to manipulate rankings, asking other teams to throw MATCHES or intentionally miss RP, asking teams not to attend a MATCH, harassing/disrupting/taunting opponents, or disrupting ARENA operations. Violation: VERBAL WARNING; repeated behavior → YELLOW or RED CARD. The rule does not ban normal game strategies; unusual ALLIANCE strategies are allowed when consistent with the rules and intended game.",
+    "gameRulesBioText19": "G203 — Show up to your MATCHES. A team whose ROBOT has passed initial complete inspection must attend every assigned Qualification MATCH with at least 1 DRIVE TEAM member in the ARENA. Violation: DISQUALIFIED from the current MATCH. The team should tell the Lead Queuer if its ROBOT cannot participate. In exceptional circumstances, ask FIELD STAFF whether an accommodation is available.",
+    "gameRulesBioText20": "G204 — Do not expect to gain by doing others harm. Actions clearly intended to force the opposing ALLIANCE to violate a rule are contrary to the spirit of FIRST Tech Challenge. • MAJOR FOUL per instance • If REPEATED: MAJOR FOUL per instance + YELLOW CARD per MATCH • The forced opposing ALLIANCE receives no penalty. This does not apply to normal gameplay strategies. G205 — Egregious or exceptional violations: the Head REFEREE may issue a YELLOW or RED CARD for serious ROBOT/team behavior not explicitly listed or for repeated violations of a rule/procedure. Continuing serious violations may be escalated to FIRST Headquarters and can lead to removal from award consideration or the event. Intentionally breaking a rule because the competitive gain exceeds the penalty is an example of egregious behavior.",
+    "gameRulesBioText21": "G301 — Don’t delay MATCHES. A DRIVE TEAM may not significantly delay the start of a MATCH. A delay violation can be considered when the expected start time has passed and the DRIVE TEAM has access to the ARENA. For a Qualification MATCH, expected start is the scheduled time or about 3 minutes after the previous MATCH on that FIELD ends, whichever is later. For a Playoff MATCH, it is the scheduled time or 8 minutes after that ALLIANCE’s previous MATCH, whichever is later. Violation: first instance → VERBAL WARNING; repeat in the same tournament phase → MAJOR FOUL in the upcoming MATCH.",
+    "gameRulesBioText22": "After the warning/FOUL, if the team is still not MATCH ready within 2 minutes and is not making a good-faith effort to become ready, the ROBOT may be DISABLED.",
+    "gameRulesBioText23": "G301 good-faith examples include safely walking to the FIELD without actively modifying the ROBOT, making a quick fix with tape or a cable tie, waiting for the DRIVER STATION device to boot, troubleshooting with the FTA/FIELD technical staff for a reasonable amount of time, or performing a brief “wiggle test” to verify DRIVER STATION ↔ ROBOT CONTROLLER communication. During a wiggle test the ROBOT should not drive or interact with SCORING ELEMENTS, except contact with pre-loaded POLLEN.",
+    "gameRulesBioText24": "G302 — Limit what you bring to the FIELD. Items other than the ROBOT and OPERATOR CONSOLE must fit in the ALLIANCE AREA, be worn/carried by the DRIVE TEAM, or be an appropriate accommodation. Examples include crutches, a cushion, kneeling mat, or a stable non-folding step stool no more than 12 in (30.5 cm) tall. Equipment may not disrupt ARENA operations or create a safety hazard, extend more than 6 ft 6 in (~198 cm) above the TILE, communicate outside the ARENA except for medical equipment, block FIELD STAFF/audience views, or interfere with another team’s remote sensing. Mimicking FIELD AprilTags or shining strong lights/lasers onto the FIELD during a MATCH is prohibited.",
+    "gameRulesBioText25": "G303 — ROBOTS on the FIELD must come ready to play a MATCH. A ROBOT must not endanger people, the ARENA, or other ROBOTS; must meet Section 3.3 inspection/re-inspection requirements; must be the only team-provided item left on the FIELD; and must carry ROBOT SIGNS showing the correct ALLIANCE color. Violation: if quickly correctable, the MATCH does not start until fixed; if not quickly correctable, the ROBOT is DISABLED. If a ROBOT that does not satisfy G303.B participates, the Head REFEREE may issue a RED CARD.",
+    "gameRulesBioText26": "G304 — ROBOTS must be set up correctly on the FIELD. The ROBOT must: 1. be fully inside the FIELD on its ALLIANCE side (Red → columns A, B, C; Blue → D, E, F); 2. not be attached to, entangled with, or suspended from a FIELD element; 3. touch the FIELD perimeter wall; 4. not touch or be inside a FLOWER scoring volume; 5. not be in the LOADING ZONE; 6. be within STARTING CONFIGURATION; 7. be touching exactly 4 pre-loaded POLLEN; and 8. be completely motionless after OpMode initialization. If quickly fixable the MATCH is held; otherwise the ROBOT may be DISABLED or removed from the FIELD.",
+    "gameRulesBioText27": "G305 — Teams must select an OpMode. An OpMode must be selected in the DRIVER STATION app and initialized with INIT. If the selected OpMode is an AUTO OpMode, the 30-second AUTO timer must be enabled. Violation: the MATCH does not begin until corrected; if the ROBOT cannot initialize or the issue cannot be fixed quickly, it is DISABLED.",
+    "gameRulesBioText28": "Even a team that will not run AUTO must select and INIT an OpMode. FIELD STAFF use this to determine whether the team is MATCH ready. Teams without an AUTO OpMode are encouraged to create a default AUTO OpMode that automatically queues their TELEOP OpMode.",
+    "gameRulesBioText29": "11.4.1 AUTO — AUTO is the first 30 seconds of the MATCH. DRIVERS may not provide ROBOT input; the ROBOT operates only from pre-programmed instructions. G401 — Don’t interact with a ROBOT during AUTO. From the MATCH countdown until AUTO ends, the DRIVE TEAM may not directly or indirectly interact with the ROBOT or OPERATOR CONSOLE, except a MOMENTARY press of ▶ start at MATCH start, pressing ■ stop, or actions needed for personal/OPERATOR CONSOLE safety. Violation: VERBAL WARNING; if STRATEGIC → MAJOR FOUL + YELLOW CARD per MATCH.",
+    "gameRulesBioText30": "G402 — No AUTO opponent interference. During AUTO, an ALLIANCE may not interfere with the opposing ALLIANCE’s AUTO. Violation: MAJOR FOUL per MATCH; if STRATEGIC, also YELLOW CARD. During AUTO, Red has priority over FIELD/SCORING ELEMENTS in columns A, B, C and Blue in D, E, F. Entering the opponent side is risky and may be judged STRATEGIC.",
+    "gameRulesBioText31": "G403 — ROBOTS are motionless between AUTO and TELEOP. During the AUTO → TELEOP transition, powered movement by the ROBOT or its mechanisms is not allowed. Motion caused by inertia, gravity, or actuators losing power is not considered powered movement. Violation: VERBAL WARNING; if STRATEGIC → MAJOR FOUL + YELLOW CARD.",
+    "gameRulesBioText32": "G404 — ROBOTS are motionless at the end of TELEOP. After TELEOP ends, ROBOTS may not make powered movement until the Head REFEREE or designee says they may be retrieved. Violation: VERBAL WARNING; if STRATEGIC → MAJOR FOUL + YELLOW CARD.",
+    "gameRulesBioText33": "G405 — Keep SCORING ELEMENTS in bounds. A ROBOT may not deliberately eject a SCORING ELEMENT from the FIELD, whether directly, by bouncing it off a FIELD element, or by bouncing it off another ROBOT. Violation: MAJOR FOUL per SCORING ELEMENT. Accidental elements leaving the FIELD during scoring or ROBOT-to-ROBOT interaction are not deliberate ejection.",
+    "gameRulesBioText34": "G406 — Do not damage or make a mess in the ARENA. Neither ROBOT nor DRIVE TEAM may damage or create a mess in the ARENA. Violation: VERBAL WARNING; if STRATEGIC → MAJOR FOUL + YELLOW CARD; if the ROBOT is likely to continue causing damage → DISABLED. Corrective action or re-inspection may be required before later MATCHES.",
+    "gameRulesBioText35": "G407 — No more than 4 at a time. A ROBOT may not CONTROL more than 4 SCORING ELEMENTS simultaneously. Violation: VERBAL WARNING; if STRATEGIC → MAJOR FOUL + YELLOW CARD per MATCH. CONTROL of 5 or more is evaluated for STRATEGIC intent. STRATEGIC examples include collecting 6+ elements and carrying them to a scoring location or repeatedly CONTROLLING 5+ elements longer than MOMENTARY. A non-STRATEGIC example is MOMENTARILY holding 5 and quickly releasing one.",
+    "gameRulesBioText36": "G408 — Don’t CONTROL opponent NECTAR. A ROBOT may not CONTROL the opposing ALLIANCE’s NECTAR. Violation: VERBAL WARNING; if STRATEGIC → YELLOW CARD per MATCH.",
+    "gameRulesBioText37": "G409 — Don’t catch SCORING ELEMENTS. A ROBOT may not catch or deflect a SCORING ELEMENT falling from a TIPPED HIVE before that element touches something else. Violation: VERBAL WARNING; if STRATEGIC → YELLOW CARD per MATCH.",
+    "gameRulesBioText38": "G409 continued: POLLEN/NECTAR falling from a TIPPED HIVE should first touch the TILE floor before being collected by a ROBOT. STRATEGIC examples include repeatedly waiting under the HIVE to collect falling elements after a TIP, opening a large mechanism to catch them, or repeatedly positioning to redirect them advantageously. Examples that may not be STRATEGIC include 1–2 POLLEN accidentally falling onto a passing ROBOT or elements collecting on a disabled ROBOT that remains under the HIVE.",
+    "gameRulesBioText39": "G410 — NECTAR only goes into FLOWERS with one minute left. NECTAR may not enter the FLOWER scoring volume before the final 60 seconds of the MATCH. Violation: MAJOR FOUL per NECTAR. Use the primary FIELD timer display to determine when the final 60 seconds begin.",
+    "gameRulesBioText40": "G411 — Do not hoard SCORING ELEMENTS. An ALLIANCE may not STRATEGICALLY prevent the opposing ALLIANCE from accessing SCORING ELEMENTS. Violation: MAJOR FOUL + YELLOW CARD per MATCH.",
+    "gameRulesBioText41": "G411 continued: using your own NECTAR/POLLEN for scoring is not a violation. Collecting SCORING ELEMENTS in a small part of the FIELD and/or actively blocking the opponent ROBOT from reaching them is a violation. The GARDEN is not a protected zone.",
+    "gameRulesBioText42": "G412 — ROBOTS must be under control. A ROBOT may not create an undue hazard to a person or ARENA element during a MATCH. Examples include the ROBOT or a CONTROLLED SCORING ELEMENT hitting a person/object outside the FIELD, dangerous ROBOT operation, an uncontrolled mechanism swinging outside, knocking over a DRIVER STATION stand, damaging the FIELD timer display, or contacting FIELD STAFF/a DRIVE TEAM member outside the FIELD. Violation: DISABLED + VERBAL WARNING; repeat in the event → YELLOW CARD per MATCH. Merely touching a DRIVER STATION stand, floor, or outside surface of the FIELD perimeter is not by itself a violation.",
+    "gameRulesBioText43": "G413 — ROBOTS must stop when instructed. If a REFEREE instructs the ROBOT to DISABLE under T402, a DRIVE TEAM member must press ■ stop on the DRIVER STATION and release the controllers. Violation: VERBAL WARNING; if STRATEGIC → RED CARD.",
+    "gameRulesBioText44": "G414 — ROBOTS must be identifiable. The ROBOT’s team number and ALLIANCE color must not become ambiguous to the Head REFEREE. Violation: VERBAL WARNING; if STRATEGIC → YELLOW CARD. ROBOT SIGNS should be secure, visible, and unlikely to fall off during normal gameplay; correction may be required before the next MATCH. G415 — Watch your ARENA interaction. A ROBOT may not grab, grasp, attach to, become entangled with, or hang from ARENA parts other than SCORING ELEMENTS. STRATEGIC violations can receive a YELLOW CARD and the ROBOT may be DISABLED if damage is likely. Some FLOWER contact for alignment is not a violation.",
+    "gameRulesBioText45": "G416 — ROBOTS have construction limits. During a MATCH, a ROBOT may not exceed the expansion limits in R105. Parts may not intentionally separate from the ROBOT. Violation: VERBAL WARNING; if STRATEGIC → MAJOR FOUL per instance. Moving parts may leave STARTING CONFIGURATION after the MATCH begins as long as they remain within expansion limits.",
+    "gameRulesBioText46": "G417 — ROBOTS may not meddle with the HIVE Structure. A ROBOT may affect HIVE movement only by LAUNCHING SCORING ELEMENTS into the upward-facing CELL. Touching the HIVE another way or creating/preventing a TIP by another method is a violation. Examples such as striking the HIVE at speed, repeatedly hitting it, or preventing an opponent HIVE TIP may be STRATEGIC. Violation: VERBAL WARNING; if STRATEGIC → MAJOR FOUL + YELLOW CARD.",
+    "gameRulesBioText47": "G417 continued: improper interference with the HIVE may be judged STRATEGIC. Accidentally bumping the HIVE or missing the CELL during an otherwise legal LAUNCH is not necessarily a STRATEGIC violation by itself.",
+    "gameRulesBioText48": "G418 — ROBOTS may not meddle with FLOWERS. SCORING ELEMENTS may enter a FLOWER only from the top. Only POLLEN may be removed from the bottom. Pulling from the sides, shaking the FLOWER, or using a mechanism to remove NECTAR is a violation. Violation: VERBAL WARNING; if STRATEGIC → MAJOR FOUL + YELLOW CARD. Contact with a FLOWER or its SCORING ELEMENTS during an otherwise legal scoring action is not a violation.",
+    "gameRulesBioText49": "G419 — Do not damage an opponent ROBOT. A ROBOT may not damage or functionally disable an opponent ROBOT. BIOBUZZ is a high-contact defensive game, so normal contact is allowed, but intentional damage is prohibited. Damage to exposed/unprotected parts that could reasonably be damaged during normal play is generally not a violation. STRATEGIC damage → MAJOR FOUL + YELLOW CARD. If STRATEGIC damage prevents the opponent ROBOT from driving → MAJOR FOUL + RED CARD. The Head REFEREE may inspect the ROBOT after the MATCH and remove the violation if damage cannot be verified.",
+    "gameRulesBioText50": "G420 — Do not tip or entangle. A ROBOT may not attach to, tip, or entangle an opponent ROBOT. If STRATEGIC → MAJOR FOUL + YELLOW CARD. If continued or if the opponent ROBOT can no longer drive, a RED CARD may be issued. A single accidental tip during normal ROBOT-to-ROBOT interaction is not a violation if the REFEREE does not consider it STRATEGIC.",
+    "gameRulesBioText51": "G421 — There is a 3-count on PINS. A ROBOT may not PIN an opponent ROBOT for more than 3 seconds. PINNING is preventing opponent movement through contact. The PIN count ends/pauses when the ROBOTS separate sufficiently, one ROBOT moves far enough from the pin location, or the pinning ROBOT itself becomes PINNED. Violation: MAJOR FOUL; if not corrected, another MAJOR FOUL for every additional 3 seconds. 11.4.6 Human — G422: DRIVE TEAM stays in the ALLIANCE AREA. After the MATCH begins, DRIVE TEAM members may not leave their designated ALLIANCE AREA. Momentarily crossing a boundary during normal play is not by itself a violation, and safety exceptions may apply. They may retrieve their own ALLIANCE NECTAR that leaves the FIELD and is reachable from the ALLIANCE AREA. Violation: VERBAL WARNING; if STRATEGIC → MINOR FOUL per instance.",
+    "gameRulesBioText52": "G423 — DRIVE COACHES and other teams: hands off the controls. After the MATCH begins, the DRIVE COACH or any other team member may not touch OPERATOR CONSOLE gamepads. The DRIVE COACH may hold/troubleshoot the DRIVER STATION device, select an OpMode, and press INIT/START/STOP. Violation: VERBAL WARNING; if STRATEGIC → MAJOR FOUL + YELLOW CARD.",
+    "gameRulesBioText53": "G424 — DRIVE COACHES, SCORING ELEMENTS are off limits. DRIVE COACHES may not touch SCORING ELEMENTS except for safety. Violation: VERBAL WARNING; if STRATEGIC → MINOR FOUL.",
+    "gameRulesBioText54": "G425 — DRIVE TEAMS, watch your reach. After the MATCH begins, a DRIVE TEAM member may not directly or indirectly touch the ROBOT, a SCORING ELEMENT touching a ROBOT/TILE, scoring actions, or FIELD elements. Violation: VERBAL WARNING; if STRATEGIC → MAJOR FOUL + YELLOW CARD.",
+    "gameRulesBioText55": "G425 continued: indirect contact with the ROBOT through handheld controllers, dangling cables, clothing, etc. can also be a violation. Interfering with scoring includes intentionally striking/shaking the perimeter wall to prevent a ROBOT from scoring in a FLOWER or to knock NECTAR/POLLEN out of a FLOWER.",
+    "gameRulesBioText56": "G426 — Humans may not enter NECTAR onto the FIELD early. The DRIVE TEAM may enter NECTAR only when: 1. its ALLIANCE-color HIVE becomes TIPPED — 1 NECTAR for each TIP; or 2. 60 seconds or less remain in the MATCH — all remaining NECTAR. Whichever condition occurs first applies. Violation: MINOR FOUL for each NECTAR entered early.",
+    "gameRulesBioText57": "G427 — Humans, only enter NECTAR via the LOADING ZONE. NECTAR may enter the FIELD only without using a tool, by a DRIVE TEAM member of the appropriate ALLIANCE, and with the NECTAR first contacting a TILE inside the LOADING ZONE. Humans may never score directly in the HIVE or FLOWER; doing so is handled under G202. Violation: MINOR FOUL per NECTAR.",
+    "gameRulesBioText58": "G427 continued: POLLEN that reaches the DRIVE TEAM, or opponent ALLIANCE NECTAR that leaves the FIELD, must be given to FIELD STAFF. When entering NECTAR, take care not to touch another SCORING ELEMENT that is contacting the TILE, or a G425 violation may occur.",
+    "gameRulesBioText59": "G428 — Humans, don’t remove SCORING ELEMENTS from the FIELD. DRIVE TEAM members may not remove SCORING ELEMENTS from the FIELD. A SCORING ELEMENT is considered on the FIELD if it is touching a TILE, ROBOT, FIELD element, or another SCORING ELEMENT. Violation: MINOR FOUL for each removed SCORING ELEMENT.",
+    "navPanel": "Categories"
+  },
+  "es": {
+    "navGameRules": "Reglas del partido",
+    "navFieldInfo": "Elementos del campo",
+    "navMatchProcedures": "Procedimientos del partido",
+    "navScoringSystem": "Cómo puntuar",
+    "gameRulesTitle": "Reglas del Partido",
+    "navHome": "Premios y definiciones",
+    "navTeam": "Reglas generales",
+    "navRobots": "Construcción del robot",
+    "navDecode": "Volver",
+    "asterisk": "* QuickManual no es el Manual de Juego oficial y nunca debe considerarse una fuente completa o definitiva de reglas. No reemplaza el documento oficial publicado por FIRST. Para cualquier decisión oficial, inspección o disputa, los equipos deben consultar siempre la versión más reciente del Manual de Juego oficial.",
+    "dateUpdate": "** Fecha de la última actualización: 5 de agosto de 2026, Manual del juego V0",
+    "pageSearch": "Buscar en la página... (Ejemplo: normas, premios, bots)",
+    "clear": "limpiar",
+    "footerTitle": "QuickManual",
+    "footerDescription": "A community resource by Asteria Robotics\nThis is not an official FIRST document.",
+    "contactTitle": "Contacto",
+    "addressText": "Dirección de nuestro taller",
+    "instagramText": "Instagram",
+    "copyrightText": "© 2026 Asteria Robotics FTC Team 32334. Todos los derechos reservados.",
+    "gameRulesBioText1": "CARDS — RED CARD: la emite el Head REFEREE por conducta grave del ROBOT/equipo o infracciones, y causa que el equipo quede DISQUALIFIED en ese MATCH. DISABLED: el REFEREE ordena detener el ROBOT; se desactivan todas las salidas y no puede operar durante el resto del MATCH. DISQUALIFIED: en Qualification el equipo recibe 0 MATCH points y 0 RP; en Playoffs la ALLIANCE afectada recibe 0 MATCH points.",
+    "gameRulesBioText2": "YELLOW/RED CARDS pueden utilizarse no solo por infracciones escritas expresamente, sino también por violaciones del Competition Integrity Contract (CIC). • YELLOW CARD → advertencia • RED CARD → MATCH DISQUALIFICATION • Un equipo que recibe YELLOW/RED CARD lleva una YELLOW CARD a los siguientes MATCHES. • Una segunda YELLOW CARD se convierte automáticamente en RED CARD. • Una segunda YELLOW CARD dentro del mismo MATCH también produce RED CARD. • Si la causa se determina como ARENA FAULT, la tarjeta se retira.",
+    "gameRulesBioText3": "Aplicación de CARDS: tras una YELLOW/RED CARD, el número del equipo aparece con fondo amarillo en el audience display de los siguientes MATCHES. • Antes de Qualifications: el Head REFEREE puede trasladar una advertencia/tarjeta al primer Qualification MATCH, especialmente en casos graves. • Durante Qualification: se aplica al MATCH actual o recién terminado. • SURROGATE MATCH: se aplica al Qualification MATCH anterior. • Entre Qualifications y Playoffs: se aplica al primer Playoff MATCH de la ALLIANCE. • Durante Playoffs: se aplica al MATCH actual o recién terminado de la ALLIANCE.",
+    "gameRulesBioText4": "Un MATCH deja de ser el “current MATCH” cuando se publican los resultados o cuando el Head REFEREE/su representante indica que pueden retirarse los ROBOTS, lo que ocurra más tarde.",
+    "gameRulesBioText5": "CARDS durante Playoff MATCHES: las YELLOW y RED CARDS se aplican a toda la ALLIANCE, no solo al equipo infractor. • Si una ALLIANCE recibe 2 YELLOW CARDS → RED CARD para toda la ALLIANCE. • Una RED CARD causa DISQUALIFICATION en ese MATCH.",
+    "gameRulesBioText6": "El manual explica cómo interpretar el lenguaje de las penalizaciones. “MINOR FOUL per SCORING ELEMENT” significa un MINOR FOUL por cada SCORING ELEMENT usado en la infracción. “MAJOR FOUL per instance” significa uno por cada ocurrencia separada. “MAJOR FOUL per instance … if REPEATED” significa que la primera infracción recibe MAJOR FOUL y una repetición en el mismo ROBOT/MATCH puede añadir otro MAJOR FOUL y, si se indica, YELLOW CARD. En penalizaciones por tiempo, después del primer MAJOR FOUL el REFEREE puede contar y añadir un MAJOR FOUL por cada 3 segundos sin corregir; un ejemplo de 15 segundos puede sumar 6 MAJOR FOULS.",
+    "gameRulesBioText7": "Violation Details, continuación: un ejemplo es “VERBAL WARNING. MAJOR FOUL and YELLOW CARD per MATCH, if STRATEGIC.” Normalmente → VERBAL WARNING. Si el REFEREE considera la acción STRATEGIC → MAJOR FOUL y puede emitirse YELLOW CARD después del MATCH.",
+    "gameRulesBioText8": "“VERBAL WARNING. YELLOW CARD if subsequent violations occur during the event.” Primera infracción → VERBAL WARNING. Si la misma regla vuelve a infringirse más tarde → puede emitirse YELLOW CARD.",
+    "gameRulesBioText9": "En un caso STRATEGIC más grave pueden aplicarse MAJOR FOUL + YELLOW CARD; si además el ROBOT rival queda incapaz de moverse CONTINUOUSLY → MAJOR FOUL + RED CARD.",
+    "gameRulesBioText10": "El Head REFEREE tiene la autoridad máxima dentro de la ARENA. Puede recibir información de personal FIRST, FTA, Event Director u otro staff, pero sus decisiones son finales. Ningún miembro del staff, incluido el Head REFEREE, cambia una decisión revisando video, fotos u otras grabaciones del MATCH.",
+    "gameRulesBioText11": "10.8.1 Practice MATCH Participation — FTA, LRI o Head REFEREE puede impedir la participación en un Practice MATCH si considera que el ROBOT no es seguro o puede dañar la ARENA.",
+    "gameRulesBioText12": "SCORING ELEMENTS que salen del FIELD: POLLEN es devuelto por FIELD STAFF en la primera oportunidad segura y colocado en la ubicación apropiada más cercana. NECTAR se devuelve al DRIVE TEAM de la ALLIANCE correspondiente y puede reintroducirse según 11.4.6 Human. Un retraso razonable del FIELD STAFF no constituye por sí solo ARENA FAULT.",
+    "gameRulesBioText13": "Si un MATCH comienza por error con SCORING ELEMENTS dañados, cantidad incorrecta o posición incorrecta, no se considera automáticamente ARENA FAULT. 10.8.3 FIELD Mitigation — FIELD STAFF puede aplicar procedimientos del Field Mitigation Guide. 10.8.4 FIELD Reset — cuando termina el MATCH y el Head REFEREE declara el FIELD listo: 1. DRIVE TEAM detiene los ROBOTS. 2. Se retiran ROBOTS y OPERATOR CONSOLES anteriores. 3. Se coloca el equipo del siguiente MATCH. 4. FIELD STAFF restablece los elementos de ARENA.",
+    "gameRulesBioText14": "No había texto legible ni imagen renderizada disponible para esta página, por lo que no se infirió contenido.",
+    "gameRulesBioText15": "Se deja constancia de que la página 98 no se omitió; el archivo fuente no ofrecía contenido legible. 11 Game Rules (G) inicia las reglas numeradas. 11.1 Personal Safety — G101: Humans, stay off the FIELD during the MATCH. Los miembros no pueden entrar al FIELD durante un MATCH y deben permanecer fuera del perímetro. Pisar el FIELD o inclinar gran parte del cuerpo sobre él es infracción. Extender un brazo, hacer gestos o apoyarse en la pared no lo es por sí solo si no afecta el MATCH. Violation: VERBAL WARNING.",
+    "gameRulesBioText16": "G102 — Be careful when interacting with ARENA elements. No se puede subir, colgarse, manipular un elemento de ARENA de modo que no vuelva a su forma sin intervención humana, ni dañarlo. Violation: VERBAL WARNING. DRIVE TEAM puede tocar el perímetro para apoyarse durante un MATCH, pero desplazarlo de su posición viola G102.C.",
+    "gameRulesBioText17": "G201 — Be a good person. Todos deben comportarse de forma civil, respetuosa y cuidar el equipo propio y del evento. Violation: VERBAL WARNING; repetición en el mismo evento → YELLOW CARD. Conductas muy graves pueden causar expulsión de la ARENA o DISQUALIFICATION del equipo.",
+    "gameRulesBioText18": "G202 — Follow the Competition Integrity Contract (CIC). Los equipos deben cumplir reglas y CIC. Ejemplos: violar deliberadamente el espíritu de las reglas, tirar un MATCH, evitar RP intencionadamente, jugar por debajo de capacidad para manipular rankings, pedir a otros que tiren MATCHES o eviten RP, pedir que no se presenten, hostigar/alterar/burlarse del rival o perturbar la ARENA. Violation: VERBAL WARNING; repetición → YELLOW o RED CARD. Las estrategias normales y estrategias ALLIANCE inusuales siguen permitidas si son coherentes con reglas e intención del juego.",
+    "gameRulesBioText19": "G203 — Show up to your MATCHES. Un equipo cuyo ROBOT haya superado la inspección inicial completa debe asistir a cada Qualification MATCH asignado con al menos 1 miembro del DRIVE TEAM en la ARENA. Violation: DISQUALIFIED from the current MATCH. Debe avisarse al Lead Queuer si el ROBOT no puede participar. En circunstancias excepcionales, consulte a FIELD STAFF sobre posibles accommodations.",
+    "gameRulesBioText20": "G204 — Do not expect to gain by doing others harm. Forzar claramente a la ALLIANCE rival a infringir una regla va contra el espíritu de FTC. • MAJOR FOUL per instance • Si REPEATED: MAJOR FOUL per instance + YELLOW CARD per MATCH • La ALLIANCE forzada no recibe penalización. No se aplica a estrategias normales. G205 — Egregious or exceptional violations: el Head REFEREE puede emitir YELLOW/RED CARD por conducta grave no escrita explícitamente o por infracciones repetidas. Casos persistentes pueden escalarse a FIRST Headquarters y causar exclusión de premios o del evento. Romper deliberadamente una regla porque la ventaja supera la sanción es conducta grave.",
+    "gameRulesBioText21": "G301 — Don’t delay MATCHES. El DRIVE TEAM no puede retrasar significativamente el inicio. Se considera retraso cuando pasó la hora prevista y el equipo tiene acceso a la ARENA. Qualification: hora programada o ~3 minutos tras terminar el MATCH anterior en ese FIELD, lo que sea más tarde. Playoff: hora programada o 8 minutos tras el MATCH anterior de esa ALLIANCE. Violation: primera vez → VERBAL WARNING; repetición en la misma fase → MAJOR FOUL en el siguiente MATCH.",
+    "gameRulesBioText22": "Tras la advertencia/FOUL, si el equipo no está MATCH ready en 2 minutos y no hace un esfuerzo de buena fe, el ROBOT puede quedar DISABLED.",
+    "gameRulesBioText23": "Ejemplos de good faith en G301: caminar de forma segura al FIELD sin modificar activamente el ROBOT, reparación rápida con cinta/brida, esperar a que arranque DRIVER STATION, solucionar problemas con FTA/FIELD staff durante un tiempo razonable o hacer un breve “wiggle test” de comunicación DRIVER STATION ↔ ROBOT CONTROLLER. Durante este test el ROBOT no debe conducir ni interactuar con SCORING ELEMENTS, salvo contacto con POLLEN preloaded.",
+    "gameRulesBioText24": "G302 — Limit what you bring to the FIELD. Los objetos aparte de ROBOT y OPERATOR CONSOLE deben caber en ALLIANCE AREA, ser llevados/vestidos por DRIVE TEAM o ser una accommodation apropiada. Ejemplos: muletas, cojín, kneeling mat o pequeño escalón estable no plegable de máximo 12 in (30,5 cm). El equipo no puede interferir con la ARENA ni crear peligro, superar 6 ft 6 in (~198 cm) sobre TILE, comunicarse fuera de ARENA salvo equipo médico, bloquear vistas o interferir sensores remotos de otros equipos. Está prohibido imitar AprilTags o proyectar luces/láseres fuertes al FIELD durante un MATCH.",
+    "gameRulesBioText25": "G303 — ROBOTS on the FIELD must come ready to play a MATCH. El ROBOT no debe ser peligroso para personas, ARENA u otros ROBOTS; debe cumplir inspección/reinspección de Section 3.3; debe ser el único objeto del equipo dejado en el FIELD; y llevar ROBOT SIGNS con el color correcto. Si se corrige rápido, el MATCH espera; si no, DISABLED. Si participa sin cumplir G303.B, el Head REFEREE puede emitir RED CARD.",
+    "gameRulesBioText26": "G304 — ROBOTS must be set up correctly on the FIELD. El ROBOT debe: 1. estar totalmente dentro del FIELD en su lado (Red A/B/C; Blue D/E/F); 2. no estar unido/enredado/suspendido de elementos; 3. tocar la pared perimetral; 4. no tocar ni estar dentro del volumen de una FLOWER; 5. no estar en LOADING ZONE; 6. estar en STARTING CONFIGURATION; 7. tocar exactamente 4 POLLEN preloaded; 8. quedar completamente inmóvil tras INIT. Si se corrige rápido se retrasa el inicio; si no, puede ser DISABLED o retirado.",
+    "gameRulesBioText27": "G305 — Teams must select an OpMode. Debe seleccionarse un OpMode en DRIVER STATION y pulsar INIT. Si es AUTO, debe tener activado el timer de 30 s. Violation: el MATCH no empieza hasta corregirse; si no puede inicializar o no se corrige rápido → DISABLED.",
+    "gameRulesBioText28": "Incluso si no se ejecutará AUTO, debe seleccionarse e inicializarse un OpMode. FIELD STAFF lo usa para comprobar que el equipo está MATCH ready. Se recomienda a equipos sin AUTO crear uno por defecto que ponga en cola automáticamente TELEOP.",
+    "gameRulesBioText29": "11.4.1 AUTO — primeros 30 s. DRIVERS no dan input; ROBOT usa instrucciones preprogramadas. G401 — Don’t interact with a ROBOT during AUTO. Desde countdown hasta fin de AUTO, DRIVE TEAM no puede interactuar directa/indirectamente con ROBOT u OPERATOR CONSOLE, salvo pulsación MOMENTARY de ▶ start, ■ stop o acciones necesarias por seguridad. Violation: VERBAL WARNING; si STRATEGIC → MAJOR FOUL + YELLOW CARD per MATCH.",
+    "gameRulesBioText30": "G402 — No AUTO opponent interference. Durante AUTO, una ALLIANCE no puede interferir con el AUTO rival. Violation: MAJOR FOUL per MATCH; si STRATEGIC, también YELLOW CARD. Red tiene prioridad en columnas A/B/C y Blue en D/E/F sobre FIELD y SCORING ELEMENTS. Entrar al lado rival es arriesgado y puede considerarse STRATEGIC.",
+    "gameRulesBioText31": "G403 — ROBOTS are motionless between AUTO and TELEOP. Durante la transición no se permite powered movement del ROBOT o mecanismos. Movimiento por inercia, gravedad o pérdida de energía de actuadores no cuenta como powered movement. Violation: VERBAL WARNING; si STRATEGIC → MAJOR FOUL + YELLOW CARD.",
+    "gameRulesBioText32": "G404 — ROBOTS are motionless at the end of TELEOP. Tras terminar TELEOP, no puede haber powered movement hasta que Head REFEREE o representante autorice retirar ROBOTS. Violation: VERBAL WARNING; si STRATEGIC → MAJOR FOUL + YELLOW CARD.",
+    "gameRulesBioText33": "G405 — Keep SCORING ELEMENTS in bounds. Un ROBOT no puede expulsar deliberadamente un SCORING ELEMENT fuera del FIELD, directamente, rebotándolo en un elemento del FIELD o en otro ROBOT. Violation: MAJOR FOUL per SCORING ELEMENT. Salidas accidentales durante scoring o interacción ROBOT-ROBOT no se consideran expulsión deliberada.",
+    "gameRulesBioText34": "G406 — Do not damage or make a mess in the ARENA. ROBOT y DRIVE TEAM no pueden dañar ni ensuciar la ARENA. Violation: VERBAL WARNING; si STRATEGIC → MAJOR FOUL + YELLOW CARD; si puede continuar causando daño → DISABLED. Puede exigirse acción correctiva o reinspección antes de siguientes MATCHES.",
+    "gameRulesBioText35": "G407 — No more than 4 at a time. Un ROBOT no puede CONTROL más de 4 SCORING ELEMENTS simultáneamente. Violation: VERBAL WARNING; si STRATEGIC → MAJOR FOUL + YELLOW CARD per MATCH. CONTROL de 5+ se analiza por intención STRATEGIC. Ejemplos STRATEGIC: recoger 6+ y llevarlos a scoring, o CONTROL repetido de 5+ por más de MOMENTARY. No STRATEGIC: sostener MOMENTARILY 5 y soltar uno rápidamente.",
+    "gameRulesBioText36": "G408 — Don’t CONTROL opponent NECTAR. El ROBOT no puede CONTROL el NECTAR de la ALLIANCE rival. Violation: VERBAL WARNING; si STRATEGIC → YELLOW CARD per MATCH.",
+    "gameRulesBioText37": "G409 — Don’t catch SCORING ELEMENTS. Un ROBOT no puede atrapar o desviar un SCORING ELEMENT que cae de un TIPPED HIVE antes de que toque otra cosa. Violation: VERBAL WARNING; si STRATEGIC → YELLOW CARD per MATCH.",
+    "gameRulesBioText38": "G409 continuación: POLLEN/NECTAR que cae de un TIPPED HIVE debe tocar primero el suelo TILE antes de ser recogido. Ejemplos STRATEGIC: esperar repetidamente debajo para recogerlos, abrir un mecanismo grande para atraparlos o posicionarse repetidamente para redirigirlos con ventaja. Puede no ser STRATEGIC que 1–2 POLLEN caigan accidentalmente sobre un ROBOT que pasa o se acumulen sobre un ROBOT averiado bajo el HIVE.",
+    "gameRulesBioText39": "G410 — NECTAR only goes into FLOWERS with one minute left. NECTAR no puede entrar al scoring volume de FLOWER antes de los últimos 60 s. Violation: MAJOR FOUL per NECTAR. Se usa el primary FIELD timer display para determinar el inicio de esos 60 s.",
+    "gameRulesBioText40": "G411 — Do not hoard SCORING ELEMENTS. Una ALLIANCE no puede impedir STRATEGICALLY que el rival acceda a SCORING ELEMENTS. Violation: MAJOR FOUL + YELLOW CARD per MATCH.",
+    "gameRulesBioText41": "G411 continuación: usar tu propio NECTAR/POLLEN para scoring no es infracción. Acumular SCORING ELEMENTS en una pequeña zona del FIELD y/o bloquear activamente el acceso del ROBOT rival sí lo es. GARDEN no es protected zone.",
+    "gameRulesBioText42": "G412 — ROBOTS must be under control. Un ROBOT no puede crear un peligro indebido para personas o elementos de ARENA. Ejemplos: ROBOT o SCORING ELEMENT CONTROLLED golpea fuera del FIELD; operación peligrosa; mecanismo sale descontrolado; derriba stand de DRIVER STATION; daña timer display; contacta FIELD STAFF o DRIVE TEAM fuera del FIELD. Violation: DISABLED + VERBAL WARNING; repetición → YELLOW CARD per MATCH. Tocar simplemente stand, suelo o superficie exterior del perímetro no es infracción por sí solo.",
+    "gameRulesBioText43": "G413 — ROBOTS must stop when instructed. Si REFEREE ordena DISABLE bajo T402, un miembro del DRIVE TEAM debe pulsar ■ stop en DRIVER STATION y soltar controles. Violation: VERBAL WARNING; si STRATEGIC → RED CARD.",
+    "gameRulesBioText44": "G414 — ROBOTS must be identifiable. Número de equipo y color de ALLIANCE no deben volverse ambiguos para Head REFEREE. Violation: VERBAL WARNING; si STRATEGIC → YELLOW CARD. ROBOT SIGNS deben quedar seguros y visibles. G415 — Watch your ARENA interaction. El ROBOT no puede agarrar, sujetar, engancharse, enredarse ni colgarse de partes de ARENA que no sean SCORING ELEMENTS. Infracción STRATEGIC puede recibir YELLOW CARD y DISABLED si hay riesgo de daño. Algunos contactos con FLOWER para alineación son permitidos.",
+    "gameRulesBioText45": "G416 — ROBOTS have construction limits. Durante un MATCH no puede superar límites de expansión de R105. Las piezas no pueden separarse intencionadamente. Violation: VERBAL WARNING; si STRATEGIC → MAJOR FOUL per instance. Partes móviles pueden salir de STARTING CONFIGURATION tras comenzar, siempre dentro del límite de expansión.",
+    "gameRulesBioText46": "G417 — ROBOTS may not meddle with the HIVE Structure. Solo puede afectar el movimiento del HIVE LAUNCHING SCORING ELEMENTS a la CELL superior. Tocar de otro modo o crear/impedir TIP por otro método es infracción. Golpear a velocidad, repetidamente o impedir un TIP rival puede ser STRATEGIC. Violation: VERBAL WARNING; si STRATEGIC → MAJOR FOUL + YELLOW CARD.",
+    "gameRulesBioText47": "G417 continuación: interferencia incorrecta con HIVE puede considerarse STRATEGIC. Golpearlo accidentalmente o fallar la CELL durante un LAUNCH permitido no es necesariamente STRATEGIC por sí solo.",
+    "gameRulesBioText48": "G418 — ROBOTS may not meddle with FLOWERS. SCORING ELEMENTS solo pueden entrar por arriba. Solo POLLEN puede retirarse por abajo. Tirar de lados, sacudir FLOWER o usar mecanismo para extraer NECTAR es infracción. Violation: VERBAL WARNING; si STRATEGIC → MAJOR FOUL + YELLOW CARD. Contactar FLOWER o elementos dentro durante scoring legal no es infracción.",
+    "gameRulesBioText49": "G419 — Do not damage an opponent ROBOT. No se puede dañar o inutilizar funcionalmente un ROBOT rival. BIOBUZZ es de alto contacto, por lo que contacto normal está permitido, daño intencional no. Daño a piezas expuestas que razonablemente pueden dañarse en juego normal suele no ser infracción. Daño STRATEGIC → MAJOR FOUL + YELLOW CARD; si impide conducir → MAJOR FOUL + RED CARD. Head REFEREE puede inspeccionar tras el MATCH y retirar la infracción si no se confirma daño.",
+    "gameRulesBioText50": "G420 — Do not tip or entangle. No se puede enganchar, volcar ni enredar un ROBOT rival. Si STRATEGIC → MAJOR FOUL + YELLOW CARD. Si continúa o el rival ya no puede conducir, puede emitirse RED CARD. Un vuelco accidental único durante interacción normal no es infracción si REFEREE no lo considera STRATEGIC.",
+    "gameRulesBioText51": "G421 — There is a 3-count on PINS. No se puede PIN al rival más de 3 s. PINNING es impedir movimiento por contacto. La cuenta termina/pausa cuando se separan suficiente, uno se aleja bastante del punto o el que PINNING queda PINNED. Violation: MAJOR FOUL; si no se corrige, otro MAJOR FOUL cada 3 s adicionales. 11.4.6 Human — G422: DRIVE TEAM stays in the ALLIANCE AREA. Tras comenzar el MATCH, miembros no pueden salir de su ALLIANCE AREA. Cruzar momentáneamente el límite en juego normal no es por sí solo infracción; hay excepciones de seguridad. Pueden recuperar NECTAR propio que salió y es alcanzable desde el ALLIANCE AREA. Violation: VERBAL WARNING; si STRATEGIC → MINOR FOUL per instance.",
+    "gameRulesBioText52": "G423 — DRIVE COACHES and other teams: hands off the controls. Tras comenzar, DRIVE COACH u otros miembros no pueden tocar gamepads del OPERATOR CONSOLE. DRIVE COACH puede sujetar/solucionar problemas del DRIVER STATION, seleccionar OpMode y pulsar INIT/START/STOP. Violation: VERBAL WARNING; si STRATEGIC → MAJOR FOUL + YELLOW CARD.",
+    "gameRulesBioText53": "G424 — DRIVE COACHES, SCORING ELEMENTS are off limits. DRIVE COACH no puede tocar SCORING ELEMENTS salvo por seguridad. Violation: VERBAL WARNING; si STRATEGIC → MINOR FOUL.",
+    "gameRulesBioText54": "G425 — DRIVE TEAMS, watch your reach. Después del inicio, un miembro del DRIVE TEAM no puede tocar directa o indirectamente el ROBOT, un SCORING ELEMENT que toque ROBOT/TILE, acciones de scoring o elementos del FIELD. Violation: VERBAL WARNING; si STRATEGIC → MAJOR FOUL + YELLOW CARD.",
+    "gameRulesBioText55": "G425 continuación: contacto indirecto con ROBOT mediante mandos, cables colgantes, ropa, etc. también puede ser infracción. Interferir con scoring incluye golpear/sacudir intencionadamente la perimeter wall para impedir scoring en FLOWER o hacer caer NECTAR/POLLEN de una FLOWER.",
+    "gameRulesBioText56": "G426 — Humans may not enter NECTAR onto the FIELD early. DRIVE TEAM puede introducir NECTAR solo cuando: 1. su HIVE del color de ALLIANCE queda TIPPED — 1 NECTAR por TIP; o 2. quedan 60 s o menos — todo NECTAR restante. Se aplica la condición que ocurra primero. Violation: MINOR FOUL por cada NECTAR introducido antes.",
+    "gameRulesBioText57": "G427 — Humans, only enter NECTAR via the LOADING ZONE. NECTAR solo puede entrar sin herramientas, por un miembro del DRIVE TEAM de la ALLIANCE correcta y tocando primero un TILE dentro de LOADING ZONE. Humanos nunca pueden puntuar directamente en HIVE o FLOWER; se trata bajo G202. Violation: MINOR FOUL per NECTAR.",
+    "gameRulesBioText58": "G427 continuación: POLLEN que llegue al DRIVE TEAM o NECTAR rival que salga del FIELD debe entregarse a FIELD STAFF. Al introducir NECTAR, evite tocar otro SCORING ELEMENT que esté tocando TILE o puede producirse infracción G425.",
+    "gameRulesBioText59": "G428 — Humans, don’t remove SCORING ELEMENTS from the FIELD. DRIVE TEAM no puede retirar SCORING ELEMENTS del FIELD. Un elemento se considera en FIELD si toca TILE, ROBOT, elemento del FIELD u otro SCORING ELEMENT. Violation: MINOR FOUL por cada elemento retirado.",
+    "navPanel": "Categorías"
+  },
+  "pt": {
+    "navGameRules": "Regras da partida",
+    "navFieldInfo": "Elementos do campo",
+    "navMatchProcedures": "Procedimentos da partida",
+    "navScoringSystem": "Como pontuar",
+    "gameRulesTitle": "Regras da Partida",
+    "navHome": "Prêmios e definições",
+    "navTeam": "Regras gerais",
+    "navRobots": "Construção do robô",
+    "navDecode": "Voltar",
+    "asterisk": "* QuickManual não é o Manual de Jogo oficial e nunca deve ser tratado como uma fonte completa ou definitiva de regras. Ele não substitui o documento oficial publicado pela FIRST. Para qualquer decisão oficial, inspeção ou contestação, as equipes devem sempre consultar a versão mais recente do Manual de Jogo oficial.",
+    "dateUpdate": "** Data da última atualização: 5 de agosto de 2026, Manual do Jogo V0",
+    "pageSearch": "Pesquisar nesta página... (Exemplo: regras, prémios, bots)",
+    "clear": "limpar",
+    "footerTitle": "QuickManual",
+    "footerDescription": "A community resource by Asteria Robotics\nThis is not an official FIRST document.",
+    "contactTitle": "Contato",
+    "addressText": "Endereço da nossa oficina",
+    "instagramText": "Instagram",
+    "copyrightText": "© 2026 Asteria Robotics FTC Team 32334. Todos os direitos reservados.",
+    "gameRulesBioText1": "CARDS — RED CARD: emitido pelo Head REFEREE por comportamento grave do ROBOT/equipe ou violações de regra e faz a equipe ficar DISQUALIFIED naquele MATCH. DISABLED: o REFEREE ordena parar o ROBOT; todas as saídas são desativadas e ele não pode operar pelo restante do MATCH. DISQUALIFIED: em Qualification a equipe recebe 0 MATCH points e 0 RP; em Playoffs a ALLIANCE afetada recebe 0 MATCH points.",
+    "gameRulesBioText2": "YELLOW/RED CARDS podem ser usados não apenas para violações explicitamente escritas, mas também para violações do Competition Integrity Contract (CIC). • YELLOW CARD → aviso • RED CARD → MATCH DISQUALIFICATION • Uma equipe que recebe YELLOW/RED CARD leva uma YELLOW CARD para MATCHES seguintes. • Uma segunda YELLOW CARD vira automaticamente RED CARD. • Uma segunda YELLOW CARD no mesmo MATCH também gera RED CARD. • Se a causa for considerada ARENA FAULT, a card é retirada.",
+    "gameRulesBioText3": "Aplicação de CARD: quando uma equipe recebe YELLOW/RED CARD, seu número aparece com fundo amarelo no audience display nos MATCHES seguintes. • Antes das Qualifications: o Head REFEREE pode levar um aviso/card para o primeiro Qualification MATCH, especialmente em casos graves. • Durante Qualification: aplica-se ao MATCH atual ou recém-terminado. • SURROGATE MATCH: aplica-se ao Qualification MATCH anterior. • Entre Qualifications e Playoffs: aplica-se ao primeiro Playoff MATCH da ALLIANCE. • Durante Playoffs: aplica-se ao MATCH atual ou recém-terminado da ALLIANCE.",
+    "gameRulesBioText4": "Um MATCH deixa de ser o “current MATCH” quando os resultados são publicados ou quando o Head REFEREE/seu representante diz que os ROBOTS podem ser retirados, o que acontecer por último.",
+    "gameRulesBioText5": "CARDS durante Playoff MATCHES: YELLOW e RED CARDS se aplicam à ALLIANCE inteira, não apenas à equipe infratora. • Se uma ALLIANCE receber 2 YELLOW CARDS → RED CARD para toda a ALLIANCE. • RED CARD causa DISQUALIFICATION naquele MATCH.",
+    "gameRulesBioText6": "O manual explica como interpretar a linguagem das penalidades. “MINOR FOUL per SCORING ELEMENT” significa um MINOR FOUL por cada SCORING ELEMENT usado na infração. “MAJOR FOUL per instance” significa um MAJOR FOUL por cada ocorrência separada. “MAJOR FOUL per instance … if REPEATED” significa que a primeira infração recebe MAJOR FOUL e a repetição no mesmo ROBOT/MATCH pode adicionar outro MAJOR FOUL e, quando indicado, YELLOW CARD. Em penalidades por tempo, após o primeiro MAJOR FOUL o REFEREE pode iniciar uma contagem e aplicar outro MAJOR FOUL a cada 3 segundos sem correção; um exemplo de 15 segundos pode totalizar 6 MAJOR FOULS.",
+    "gameRulesBioText7": "Violation Details, continuação: exemplo “VERBAL WARNING. MAJOR FOUL and YELLOW CARD per MATCH, if STRATEGIC.” Normalmente → VERBAL WARNING. Se o REFEREE considerar a ação STRATEGIC → MAJOR FOUL e pode haver YELLOW CARD após o MATCH.",
+    "gameRulesBioText8": "“VERBAL WARNING. YELLOW CARD if subsequent violations occur during the event.” Primeira infração → VERBAL WARNING. Se a mesma regra for violada novamente depois → pode ser aplicado YELLOW CARD.",
+    "gameRulesBioText9": "Em uma situação STRATEGIC mais grave, podem ser aplicados MAJOR FOUL + YELLOW CARD; se o ROBOT adversário ficar incapaz de se mover CONTINUOUSLY → MAJOR FOUL + RED CARD.",
+    "gameRulesBioText10": "O Head REFEREE tem autoridade máxima dentro da ARENA. Pode receber informações de pessoal FIRST, FTA, Event Director ou outros staffs, mas suas decisões são finais. Nenhum staff, inclusive o Head REFEREE, muda uma decisão analisando vídeo, foto ou outra gravação visual do MATCH.",
+    "gameRulesBioText11": "10.8.1 Practice MATCH Participation — FTA, LRI ou Head REFEREE pode impedir uma equipe de participar de Practice MATCH se considerar o ROBOT inseguro ou com chance de danificar a ARENA.",
+    "gameRulesBioText12": "SCORING ELEMENTS que saem do FIELD: POLLEN é devolvido ao FIELD pelo FIELD STAFF na primeira oportunidade segura e colocado na posição adequada mais próxima. NECTAR é devolvido ao DRIVE TEAM da ALLIANCE correspondente e pode ser recolocado conforme 11.4.6 Human. Um atraso razoável do FIELD STAFF não é, por si só, ARENA FAULT.",
+    "gameRulesBioText13": "Se um MATCH começar acidentalmente com SCORING ELEMENTS danificados, quantidade incorreta ou posição incorreta, isso não é automaticamente ARENA FAULT. 10.8.3 FIELD Mitigation — FIELD STAFF pode usar os procedimentos do Field Mitigation Guide. 10.8.4 FIELD Reset — depois do fim do MATCH e quando o Head REFEREE declarar o FIELD pronto: 1. DRIVE TEAM para os ROBOTS. 2. ROBOTS e OPERATOR CONSOLES do MATCH anterior são retirados. 3. O equipamento do próximo MATCH é colocado. 4. FIELD STAFF reseta os elementos da ARENA.",
+    "gameRulesBioText14": "Não havia texto legível nem imagem renderizada disponível para esta página, então nenhum conteúdo foi inferido.",
+    "gameRulesBioText15": "Este registro deixa claro que a página 98 não foi ignorada; o arquivo fonte não fornecia conteúdo legível. 11 Game Rules (G) inicia as regras numeradas. 11.1 Personal Safety — G101: Humans, stay off the FIELD during the MATCH. Membros da equipe não podem entrar no FIELD durante um MATCH e devem permanecer fora do perímetro. Pisar no FIELD ou inclinar grande parte do corpo sobre ele é infração. Estender um braço, acenar ou apoiar-se na perimeter wall não é por si só infração se não afetar o MATCH. Violation: VERBAL WARNING.",
+    "gameRulesBioText16": "G102 — Be careful when interacting with ARENA elements. Membros não podem subir, pendurar-se, manipular um elemento da ARENA de forma que ele não volte ao formato original sem intervenção humana, nem danificá-lo. Violation: VERBAL WARNING. DRIVE TEAM pode tocar o FIELD perimeter para apoio durante o MATCH, mas deslocá-lo da posição viola G102.C.",
+    "gameRulesBioText17": "G201 — Be a good person. Todos devem agir civilizadamente, com respeito, e cuidar dos equipamentos da equipe e do evento. Violation: VERBAL WARNING; repetição no mesmo evento → YELLOW CARD. Comportamento muito grave pode levar à remoção da ARENA ou DISQUALIFICATION da equipe.",
+    "gameRulesBioText18": "G202 — Follow the Competition Integrity Contract (CIC). As equipes devem seguir as regras do jogo e o CIC. Exemplos: violar conscientemente o espírito das regras, entregar um MATCH, evitar RP de propósito, jogar abaixo da capacidade para manipular rankings, pedir a outros que entreguem MATCHES ou evitem RP, pedir que equipes não apareçam, assediar/perturbar/provocar adversários ou atrapalhar a ARENA. Violation: VERBAL WARNING; repetição → YELLOW ou RED CARD. Estratégias normais e estratégias incomuns de ALLIANCE continuam permitidas quando compatíveis com regras e intenção do jogo.",
+    "gameRulesBioText19": "G203 — Show up to your MATCHES. Uma equipe cujo ROBOT passou pela inspeção inicial completa deve comparecer a cada Qualification MATCH designado com pelo menos 1 membro do DRIVE TEAM na ARENA. Violation: DISQUALIFIED from the current MATCH. A equipe deve avisar o Lead Queuer se seu ROBOT não puder participar. Em circunstâncias excepcionais, pergunte ao FIELD STAFF sobre accommodations.",
+    "gameRulesBioText20": "G204 — Do not expect to gain by doing others harm. Ações claramente destinadas a forçar a ALLIANCE adversária a violar uma regra contrariam o espírito do FTC. • MAJOR FOUL per instance • Se REPEATED: MAJOR FOUL per instance + YELLOW CARD per MATCH • A ALLIANCE forçada não recebe penalidade. Não se aplica a estratégias normais. G205 — Egregious or exceptional violations: o Head REFEREE pode aplicar YELLOW/RED CARD por comportamento grave não explicitamente listado ou violações repetidas. Casos contínuos podem ser escalados à FIRST Headquarters e resultar em exclusão de awards ou do evento. Quebrar uma regra de propósito porque a vantagem supera a penalidade é exemplo de comportamento grave.",
+    "gameRulesBioText21": "G301 — Don’t delay MATCHES. O DRIVE TEAM não pode atrasar significativamente o início. Considera-se atraso quando a hora prevista passou e a equipe tem acesso à ARENA. Qualification: horário agendado ou ~3 min após o MATCH anterior no mesmo FIELD, o que for mais tarde. Playoff: horário agendado ou 8 min após o MATCH anterior da ALLIANCE. Violation: primeira vez → VERBAL WARNING; repetição na mesma fase → MAJOR FOUL no próximo MATCH.",
+    "gameRulesBioText22": "Após o aviso/FOUL, se a equipe ainda não estiver MATCH ready em 2 minutos e não estiver fazendo esforço de boa-fé, o ROBOT pode ficar DISABLED.",
+    "gameRulesBioText23": "Exemplos de good faith em G301: caminhar com segurança até o FIELD sem modificar ativamente o ROBOT, fazer reparo rápido com fita ou abraçadeira, esperar o DRIVER STATION iniciar, solucionar problemas com FTA/FIELD staff por tempo razoável ou realizar um breve “wiggle test” da comunicação DRIVER STATION ↔ ROBOT CONTROLLER. Durante o teste, o ROBOT não deve dirigir nem interagir com SCORING ELEMENTS, exceto contato com POLLEN preloaded.",
+    "gameRulesBioText24": "G302 — Limit what you bring to the FIELD. Itens além do ROBOT e OPERATOR CONSOLE devem caber na ALLIANCE AREA, ser usados/carregados pelo DRIVE TEAM ou ser accommodation apropriada. Exemplos: muletas, almofada, kneeling mat ou pequeno degrau estável e não dobrável de até 12 in (30,5 cm). Equipamentos não podem atrapalhar a ARENA ou criar risco, ultrapassar 6 ft 6 in (~198 cm) acima do TILE, comunicar-se para fora da ARENA salvo equipamento médico, bloquear a visão ou interferir em sensores remotos de outra equipe. Imitar AprilTags ou direcionar luz/laser forte ao FIELD durante MATCH é proibido.",
+    "gameRulesBioText25": "G303 — ROBOTS on the FIELD must come ready to play a MATCH. O ROBOT não pode colocar pessoas, ARENA ou outros ROBOTS em risco; deve cumprir inspeção/reinspeção da Section 3.3; deve ser o único item da equipe deixado no FIELD; e usar ROBOT SIGNS com a cor correta. Se corrigível rapidamente, o MATCH espera; caso contrário, DISABLED. Se participar sem cumprir G303.B, o Head REFEREE pode aplicar RED CARD.",
+    "gameRulesBioText26": "G304 — ROBOTS must be set up correctly on the FIELD. O ROBOT deve: 1. estar totalmente dentro do FIELD no lado de sua ALLIANCE (Red A/B/C; Blue D/E/F); 2. não estar preso/enroscado/suspenso em elemento; 3. tocar a parede do perímetro; 4. não tocar nem estar dentro do scoring volume da FLOWER; 5. não estar na LOADING ZONE; 6. estar em STARTING CONFIGURATION; 7. tocar exatamente 4 POLLEN preloaded; 8. ficar totalmente parado após INIT. Se for corrigível rápido, o início espera; caso contrário, pode ser DISABLED ou removido.",
+    "gameRulesBioText27": "G305 — Teams must select an OpMode. Deve-se selecionar um OpMode no DRIVER STATION e pressionar INIT. Se for AUTO, o timer de 30 s deve estar habilitado. Violation: o MATCH não começa até corrigir; se não inicializar ou não puder ser corrigido rapidamente → DISABLED.",
+    "gameRulesBioText28": "Mesmo que a equipe não rode AUTO, deve selecionar e INIT um OpMode. FIELD STAFF usa isso para verificar se está MATCH ready. Equipes sem AUTO são incentivadas a criar um AUTO padrão que coloque TELEOP automaticamente na fila.",
+    "gameRulesBioText29": "11.4.1 AUTO — primeiros 30 s. DRIVERS não fornecem input; o ROBOT usa apenas instruções pré-programadas. G401 — Don’t interact with a ROBOT during AUTO. Do countdown ao fim de AUTO, DRIVE TEAM não pode interagir direta/indiretamente com ROBOT ou OPERATOR CONSOLE, exceto toque MOMENTARY em ▶ start, ■ stop ou ações necessárias por segurança. Violation: VERBAL WARNING; se STRATEGIC → MAJOR FOUL + YELLOW CARD per MATCH.",
+    "gameRulesBioText30": "G402 — No AUTO opponent interference. Durante AUTO, uma ALLIANCE não pode interferir no AUTO adversário. Violation: MAJOR FOUL per MATCH; se STRATEGIC, também YELLOW CARD. Red tem prioridade nas colunas A/B/C e Blue em D/E/F sobre FIELD e SCORING ELEMENTS. Entrar no lado adversário é arriscado e pode ser considerado STRATEGIC.",
+    "gameRulesBioText31": "G403 — ROBOTS are motionless between AUTO and TELEOP. Na transição, powered movement do ROBOT ou mecanismos não é permitido. Movimento por inércia, gravidade ou perda de energia dos atuadores não conta como powered movement. Violation: VERBAL WARNING; se STRATEGIC → MAJOR FOUL + YELLOW CARD.",
+    "gameRulesBioText32": "G404 — ROBOTS are motionless at the end of TELEOP. Após o fim de TELEOP, não pode haver powered movement até o Head REFEREE ou representante autorizar a retirada. Violation: VERBAL WARNING; se STRATEGIC → MAJOR FOUL + YELLOW CARD.",
+    "gameRulesBioText33": "G405 — Keep SCORING ELEMENTS in bounds. Um ROBOT não pode ejetar deliberadamente SCORING ELEMENT para fora do FIELD, diretamente, rebatendo em elemento do FIELD ou em outro ROBOT. Violation: MAJOR FOUL per SCORING ELEMENT. Saídas acidentais durante scoring ou interação ROBOT-ROBOT não são ejection deliberada.",
+    "gameRulesBioText34": "G406 — Do not damage or make a mess in the ARENA. ROBOT e DRIVE TEAM não podem danificar nem fazer sujeira na ARENA. Violation: VERBAL WARNING; se STRATEGIC → MAJOR FOUL + YELLOW CARD; se o ROBOT puder continuar causando dano → DISABLED. Pode ser exigida ação corretiva ou reinspeção antes de MATCHES seguintes.",
+    "gameRulesBioText35": "G407 — No more than 4 at a time. Um ROBOT não pode CONTROL mais de 4 SCORING ELEMENTS ao mesmo tempo. Violation: VERBAL WARNING; se STRATEGIC → MAJOR FOUL + YELLOW CARD per MATCH. CONTROL de 5+ é avaliado quanto à intenção STRATEGIC. Exemplos: coletar 6+ e levar a área de scoring ou CONTROL repetido de 5+ por mais de MOMENTARY. Não STRATEGIC: segurar MOMENTARILY 5 e soltar um rapidamente.",
+    "gameRulesBioText36": "G408 — Don’t CONTROL opponent NECTAR. O ROBOT não pode CONTROL o NECTAR da ALLIANCE adversária. Violation: VERBAL WARNING; se STRATEGIC → YELLOW CARD per MATCH.",
+    "gameRulesBioText37": "G409 — Don’t catch SCORING ELEMENTS. Um ROBOT não pode pegar ou desviar um SCORING ELEMENT caindo de um TIPPED HIVE antes de ele tocar outra coisa. Violation: VERBAL WARNING; se STRATEGIC → YELLOW CARD per MATCH.",
+    "gameRulesBioText38": "G409 continuação: POLLEN/NECTAR que cai de um TIPPED HIVE deve primeiro tocar o piso TILE antes de ser coletado. Exemplos STRATEGIC: esperar repetidamente sob o HIVE, abrir mecanismo grande para capturar ou posicionar-se repetidamente para redirecionar com vantagem. Pode não ser STRATEGIC 1–2 POLLEN caírem por acaso sobre um ROBOT passando ou acumularem sobre um ROBOT parado sob o HIVE.",
+    "gameRulesBioText39": "G410 — NECTAR only goes into FLOWERS with one minute left. NECTAR não pode entrar no scoring volume da FLOWER antes dos últimos 60 s. Violation: MAJOR FOUL per NECTAR. Use o primary FIELD timer display para determinar o início dos 60 s.",
+    "gameRulesBioText40": "G411 — Do not hoard SCORING ELEMENTS. Uma ALLIANCE não pode impedir STRATEGICALLY o acesso da ALLIANCE adversária aos SCORING ELEMENTS. Violation: MAJOR FOUL + YELLOW CARD per MATCH.",
+    "gameRulesBioText41": "G411 continuação: usar o próprio NECTAR/POLLEN para scoring não é infração. Concentrar SCORING ELEMENTS em pequena parte do FIELD e/ou bloquear ativamente o acesso do ROBOT adversário é infração. GARDEN não é protected zone.",
+    "gameRulesBioText42": "G412 — ROBOTS must be under control. Um ROBOT não pode criar risco indevido a pessoas ou elementos da ARENA. Exemplos: ROBOT ou SCORING ELEMENT CONTROLLED atinge pessoa/objeto fora do FIELD; operação perigosa; mecanismo sai de forma descontrolada; derruba stand do DRIVER STATION; danifica FIELD timer; toca FIELD STAFF ou DRIVE TEAM fora do FIELD. Violation: DISABLED + VERBAL WARNING; repetição → YELLOW CARD per MATCH. Apenas tocar stand, chão ou superfície externa do perímetro não é infração por si só.",
+    "gameRulesBioText43": "G413 — ROBOTS must stop when instructed. Se REFEREE ordenar DISABLE sob T402, um membro do DRIVE TEAM deve pressionar ■ stop no DRIVER STATION e soltar os controles. Violation: VERBAL WARNING; se STRATEGIC → RED CARD.",
+    "gameRulesBioText44": "G414 — ROBOTS must be identifiable. Número da equipe e cor da ALLIANCE não podem ficar ambíguos para o Head REFEREE. Violation: VERBAL WARNING; se STRATEGIC → YELLOW CARD. ROBOT SIGNS devem ficar firmes e visíveis. G415 — Watch your ARENA interaction. O ROBOT não pode agarrar, prender, fixar-se, enroscar-se ou pendurar-se em partes da ARENA que não sejam SCORING ELEMENTS. Infrações STRATEGIC podem receber YELLOW CARD e DISABLED se houver risco de dano. Alguns contatos com FLOWER para alinhamento são permitidos.",
+    "gameRulesBioText45": "G416 — ROBOTS have construction limits. Durante o MATCH, o ROBOT não pode exceder os limites de expansão de R105. Partes não podem se separar intencionalmente. Violation: VERBAL WARNING; se STRATEGIC → MAJOR FOUL per instance. Partes móveis podem sair da STARTING CONFIGURATION após o início, desde que fiquem dentro dos limites.",
+    "gameRulesBioText46": "G417 — ROBOTS may not meddle with the HIVE Structure. O ROBOT só pode afetar o movimento do HIVE LAUNCHING SCORING ELEMENTS na CELL voltada para cima. Tocar de outra forma ou criar/impedir TIP por outro método é infração. Bater com velocidade, repetidamente ou impedir TIP adversário pode ser STRATEGIC. Violation: VERBAL WARNING; se STRATEGIC → MAJOR FOUL + YELLOW CARD.",
+    "gameRulesBioText47": "G417 continuação: interferência inadequada com HIVE pode ser STRATEGIC. Tocar acidentalmente ou errar a CELL durante LAUNCH permitido não é necessariamente STRATEGIC por si só.",
+    "gameRulesBioText48": "G418 — ROBOTS may not meddle with FLOWERS. SCORING ELEMENTS só entram pela parte superior. Apenas POLLEN pode ser retirado por baixo. Puxar pelas laterais, sacudir FLOWER ou usar mecanismo para retirar NECTAR é infração. Violation: VERBAL WARNING; se STRATEGIC → MAJOR FOUL + YELLOW CARD. Contato com FLOWER ou elementos internos durante scoring legal não é infração.",
+    "gameRulesBioText49": "G419 — Do not damage an opponent ROBOT. Não se pode danificar ou tornar funcionalmente inoperante um ROBOT adversário. BIOBUZZ é de alto contato, então contato normal é permitido, dano intencional não. Dano a peças expostas que poderiam sofrer dano em jogo normal geralmente não é infração. Dano STRATEGIC → MAJOR FOUL + YELLOW CARD; se impedir condução → MAJOR FOUL + RED CARD. Head REFEREE pode inspecionar após o MATCH e remover a infração se o dano não for confirmado.",
+    "gameRulesBioText50": "G420 — Do not tip or entangle. Não se pode prender, virar ou enroscar um ROBOT adversário. Se STRATEGIC → MAJOR FOUL + YELLOW CARD. Se continuar ou o adversário não puder mais dirigir, pode haver RED CARD. Um único tombamento acidental em interação normal não é infração se REFEREE não considerar STRATEGIC.",
+    "gameRulesBioText51": "G421 — There is a 3-count on PINS. Um ROBOT não pode PIN o adversário por mais de 3 s. PINNING é impedir movimento por contato. A contagem termina/pausa quando os ROBOTS se separam o suficiente, um se afasta do local ou o ROBOT que fazia PIN fica PINNED. Violation: MAJOR FOUL; se não corrigido, outro MAJOR FOUL a cada 3 s. 11.4.6 Human — G422: DRIVE TEAM stays in the ALLIANCE AREA. Após início, membros não podem sair da sua ALLIANCE AREA. Cruzar momentaneamente a linha em jogo normal não é por si só infração; exceções de segurança podem ocorrer. Podem recuperar NECTAR da própria ALLIANCE que saiu e é alcançável. Violation: VERBAL WARNING; se STRATEGIC → MINOR FOUL per instance.",
+    "gameRulesBioText52": "G423 — DRIVE COACHES and other teams: hands off the controls. Após o início, DRIVE COACH ou outro membro não pode tocar os gamepads do OPERATOR CONSOLE. DRIVE COACH pode segurar/solucionar DRIVER STATION, selecionar OpMode e pressionar INIT/START/STOP. Violation: VERBAL WARNING; se STRATEGIC → MAJOR FOUL + YELLOW CARD.",
+    "gameRulesBioText53": "G424 — DRIVE COACHES, SCORING ELEMENTS are off limits. DRIVE COACHES não podem tocar SCORING ELEMENTS, exceto por segurança. Violation: VERBAL WARNING; se STRATEGIC → MINOR FOUL.",
+    "gameRulesBioText54": "G425 — DRIVE TEAMS, watch your reach. Após o início, membro do DRIVE TEAM não pode tocar direta/indiretamente o ROBOT, SCORING ELEMENT tocando ROBOT/TILE, ações de scoring ou elementos do FIELD. Violation: VERBAL WARNING; se STRATEGIC → MAJOR FOUL + YELLOW CARD.",
+    "gameRulesBioText55": "G425 continuação: contato indireto com ROBOT por controles de mão, cabos soltos, roupa etc. também pode ser infração. Interferir no scoring inclui bater/sacudir intencionalmente a perimeter wall para impedir scoring em FLOWER ou derrubar NECTAR/POLLEN de uma FLOWER.",
+    "gameRulesBioText56": "G426 — Humans may not enter NECTAR onto the FIELD early. DRIVE TEAM só pode colocar NECTAR quando: 1. o HIVE da cor da ALLIANCE fica TIPPED — 1 NECTAR por TIP; ou 2. restam 60 s ou menos — todo NECTAR restante. Vale a condição que ocorrer primeiro. Violation: MINOR FOUL por cada NECTAR colocado cedo.",
+    "gameRulesBioText57": "G427 — Humans, only enter NECTAR via the LOADING ZONE. NECTAR só pode entrar sem ferramenta, por membro do DRIVE TEAM da ALLIANCE correta, e tocando primeiro um TILE dentro da LOADING ZONE. Humanos nunca podem fazer scoring direto no HIVE ou FLOWER; isso é tratado em G202. Violation: MINOR FOUL per NECTAR.",
+    "gameRulesBioText58": "G427 continuação: POLLEN que chegar ao DRIVE TEAM ou NECTAR adversário que sair do FIELD deve ser entregue ao FIELD STAFF. Ao inserir NECTAR, evite tocar outro SCORING ELEMENT que esteja tocando o TILE, ou pode ocorrer violação G425.",
+    "gameRulesBioText59": "G428 — Humans, don’t remove SCORING ELEMENTS from the FIELD. DRIVE TEAM não pode retirar SCORING ELEMENTS do FIELD. Um elemento é considerado no FIELD se toca TILE, ROBOT, elemento do FIELD ou outro SCORING ELEMENT. Violation: MINOR FOUL por cada elemento removido.",
+    "navPanel": "Categorias"
+  },
+  "zh": {
+    "navGameRules": "比赛规则",
+    "navFieldInfo": "场地元素信息",
+    "navMatchProcedures": "比赛流程",
+    "navScoringSystem": "如何得分",
+    "gameRulesTitle": "比赛规则",
+    "navHome": "奖项与定义",
+    "navTeam": "通用规则",
+    "navRobots": "机器人构建",
+    "navDecode": "返回",
+    "asterisk": "* QuickManual 不是官方比赛手册，绝不能被视为完整或最终的规则来源。它不能替代 FIRST 发布的官方文件。对于任何正式决定、检查或争议，队伍必须始终参考最新版本的官方比赛手册。",
+    "dateUpdate": "** 最后更新日期：2026年8月5日，游戏手册 V0",
+    "pageSearch": "在页面中搜索...（示例：规则、奖励、机器人）",
+    "clear": "清洁",
+    "footerTitle": "QuickManual",
+    "footerDescription": "A community resource by Asteria Robotics\nThis is not an official FIRST document.",
+    "contactTitle": "联系我们",
+    "addressText": "我们的工作室地址",
+    "instagramText": "Instagram",
+    "copyrightText": "© 2026 Asteria Robotics FTC Team 32334. 版权所有。",
+    "gameRulesBioText1": "CARDS — RED CARD：由 Head REFEREE 因严重 ROBOT/队伍行为或规则违规而发出，并使队伍在该 MATCH 中 DISQUALIFIED。DISABLED：REFEREE 要求停止 ROBOT；所有输出被关闭，ROBOT 在剩余 MATCH 中无法继续运行。DISQUALIFIED：Qualification MATCH 中该队获得 0 MATCH points 与 0 RP；Playoff MATCH 中相关 ALLIANCE 获得 0 MATCH points。",
+    "gameRulesBioText2": "YELLOW/RED CARDS 不仅可用于明确列出的违规，也可用于 Competition Integrity Contract (CIC) 违规。• YELLOW CARD → 警告 • RED CARD → MATCH DISQUALIFICATION • 队伍收到 YELLOW/RED CARD 后，会带着一张 YELLOW CARD 进入后续 MATCHES。• 第二张 YELLOW CARD 自动变为 RED CARD。• 同一 MATCH 内第二张 YELLOW CARD 也会形成 RED CARD。• 如果该 card 的原因最终被认定为 ARENA FAULT，则 card 撤销。",
+    "gameRulesBioText3": "CARD 的适用：队伍收到 YELLOW/RED CARD 后，后续 MATCH 的 audience display 会以黄色背景显示队号。• Qualification 开始前：Head REFEREE 可把警告/card 带入首场 Qualification MATCH，尤其是严重情况。• Qualification 期间：适用于当前或刚结束的 MATCH。• SURROGATE MATCH：适用于前一场 Qualification MATCH。• Qualifications 与 Playoffs 之间：适用于 ALLIANCE 的第一场 Playoff MATCH。• Playoffs 期间：适用于当前或刚结束的 Playoff MATCH。",
+    "gameRulesBioText4": "当 MATCH 结果已发布，或 Head REFEREE/其代表宣布可以取回 ROBOTS（以较晚发生者为准）后，该场就不再是“current MATCH”。",
+    "gameRulesBioText5": "Playoff MATCHES 中的 CARDS：YELLOW 与 RED CARDS 适用于整个 ALLIANCE，而不仅是违规队伍。• ALLIANCE 收到 2 张 YELLOW CARDS → 整个 ALLIANCE 获 RED CARD。• RED CARD → 该 MATCH DISQUALIFICATION。",
+    "gameRulesBioText6": "手册用例子说明处罚措辞如何解释。“MINOR FOUL per SCORING ELEMENT”表示每个用于违规的 SCORING ELEMENT 对应一个 MINOR FOUL。“MAJOR FOUL per instance”表示每次独立违规各一个 MAJOR FOUL。“MAJOR FOUL per instance … if REPEATED”表示首次违规为 MAJOR FOUL，同一 ROBOT/MATCH 再次发生时可增加 MAJOR FOUL，并在规则规定时加 YELLOW CARD。时间型处罚中，首次 MAJOR FOUL 后 REFEREE 可开始计时，条件每持续 3 秒可再给一个 MAJOR FOUL；示例中持续 15 秒可能累计 6 个 MAJOR FOULS。",
+    "gameRulesBioText7": "Violation Details 续：例如“VERBAL WARNING. MAJOR FOUL and YELLOW CARD per MATCH, if STRATEGIC.” 一般情况 → VERBAL WARNING。若 REFEREE 认为行为为 STRATEGIC → MAJOR FOUL，并可在 MATCH 后发 YELLOW CARD。",
+    "gameRulesBioText8": "“VERBAL WARNING. YELLOW CARD if subsequent violations occur during the event.” 首次违规 → VERBAL WARNING。若赛事中再次违反同一规则 → 可发 YELLOW CARD。",
+    "gameRulesBioText9": "更严重的 STRATEGIC 情况可能为 MAJOR FOUL + YELLOW CARD；如果该行为是 STRATEGIC 且使对方 ROBOT CONTINUOUSLY 无法移动 → MAJOR FOUL + RED CARD。",
+    "gameRulesBioText10": "Head REFEREE 在 ARENA 内拥有最终权力。可以从 FIRST personnel、FTA、Event Director 或其他 event staff 获取信息，但其裁决为最终裁决。包括 Head REFEREE 在内的任何 event staff 都不会通过回看 MATCH 视频、照片或其他影像来改变裁决。",
+    "gameRulesBioText11": "10.8.1 Practice MATCH Participation — 如果 FTA、LRI 或 Head REFEREE 认为 ROBOT 不安全或可能损坏 ARENA，可禁止队伍参加 Practice MATCH。",
+    "gameRulesBioText12": "离开 FIELD 的 SCORING ELEMENTS：POLLEN 由 FIELD STAFF 在第一个安全机会放回 FIELD，并置于最近的适当位置。NECTAR 归还给相应 ALLIANCE 的 DRIVE TEAM，并可按 11.4.6 Human 重新进入 FIELD。FIELD STAFF 合理延迟归还这些元素，本身不构成 ARENA FAULT。",
+    "gameRulesBioText13": "如果 MATCH 因失误在 SCORING ELEMENTS 损坏、数量错误或位置错误的情况下开始，并不会自动构成 ARENA FAULT。10.8.3 FIELD Mitigation — FIELD STAFF 可使用 Field Mitigation Guide 的程序处理比赛中的某些 FIELD 问题。10.8.4 FIELD Reset — MATCH 结束且 Head REFEREE 宣布 FIELD 可重置后：1. DRIVE TEAM 停止 ROBOTS。2. 移走上一场的 ROBOTS 与 OPERATOR CONSOLES。3. 放置下一场设备。4. FIELD STAFF 重置 ARENA 元素。",
+    "gameRulesBioText14": "该页没有可读取文字或可用的渲染页面图像，因此没有推测内容。",
+    "gameRulesBioText15": "此处明确记录第 98 页并未跳过，只是源文件没有可读内容。11 Game Rules (G) 从这里进入编号规则。11.1 Personal Safety — G101: Humans, stay off the FIELD during the MATCH. 队伍成员在 MATCH 中不得进入 FIELD，必须留在 FIELD perimeter 外。踏入 FIELD 或将大部分身体伸入 FIELD 属于违规。若不影响 MATCH，仅把手臂伸过 FIELD、挥手或靠在 perimeter wall 上本身不构成违规。Violation: VERBAL WARNING。",
+    "gameRulesBioText16": "G102 — Be careful when interacting with ARENA elements. 队伍成员不得攀爬、悬挂在 ARENA 元素上，不得将其操纵到需要人为干预才能恢复原状，也不得损坏。Violation: VERBAL WARNING。DRIVE TEAM 可在 MATCH 中接触 FIELD perimeter 作为支撑，但把 perimeter 移出位置违反 G102.C。",
+    "gameRulesBioText17": "G201 — Be a good person. 所有队伍都应文明、尊重他人，并爱护队伍和赛事设备。Violation: VERBAL WARNING；同一赛事再次发生 → YELLOW CARD。极其严重的行为可能导致人员被移出 ARENA 或队伍 DISQUALIFIED。",
+    "gameRulesBioText18": "G202 — Follow the Competition Integrity Contract (CIC). 参加 BIOBUZZ 时必须同时遵守比赛规则和 CIC。违规示例：故意违背规则精神、故意输 MATCH、故意放弃 RP、为了操纵排名而低于能力比赛、要求其他队伍故意输或放弃 RP、要求队伍不参加 MATCH、骚扰/干扰/挑衅对手、干扰 ARENA 运行。Violation: VERBAL WARNING；重复发生 → YELLOW 或 RED CARD。该规则不禁止正常策略；只要符合规则和比赛本意，非传统 ALLIANCE 策略仍允许。",
+    "gameRulesBioText19": "G203 — Show up to your MATCHES. ROBOT 已通过 initial complete inspection 的队伍，必须在每场被分配的 Qualification MATCH 中至少有 1 名 DRIVE TEAM 成员进入 ARENA。Violation: DISQUALIFIED from the current MATCH。若 ROBOT 无法参赛，应通知 Lead Queuer。特殊情况下可询问 FIELD STAFF 是否有 accommodation。",
+    "gameRulesBioText20": "G204 — Do not expect to gain by doing others harm. 明显意图迫使对方 ALLIANCE 违反规则的行为违背 FTC 精神。• 每次 MAJOR FOUL • 若 REPEATED：每次 MAJOR FOUL + 每场 YELLOW CARD • 被迫违规的对方 ALLIANCE 不受处罚。正常策略不受此限制。G205 — Egregious or exceptional violations：对手册未明确列出的严重 ROBOT/队伍行为或反复违反规则/程序，Head REFEREE 可给 YELLOW 或 RED CARD。持续严重违规可上报 FIRST Headquarters，并可能取消奖项资格或移出赛事。因为收益大于处罚而故意违规属于严重行为。",
+    "gameRulesBioText21": "G301 — Don’t delay MATCHES. DRIVE TEAM 不得明显拖延 MATCH 开始。当预定开始时间已过且 DRIVE TEAM 已可进入 ARENA 时，可认定拖延。Qualification：预定时间或同一 FIELD 上一场结束约 3 分钟后，以较晚者为准。Playoff：预定时间或该 ALLIANCE 上一场后 8 分钟，以较晚者为准。Violation：首次 → VERBAL WARNING；同一 tournament phase 再犯 → 下一场 MAJOR FOUL。",
+    "gameRulesBioText22": "收到警告/FOUL 后，如果队伍 2 分钟内仍未 MATCH ready，且没有以善意努力准备，ROBOT 可能被 DISABLED。",
+    "gameRulesBioText23": "G301 的 good-faith 示例：不继续改 ROBOT 而安全走向 FIELD；用胶带或扎带做快速修复；等待 DRIVER STATION 启动；与 FTA/FIELD 技术人员进行合理时间的故障排查；做简短 “wiggle test” 检查 DRIVER STATION ↔ ROBOT CONTROLLER 通信。wiggle test 中 ROBOT 不应行驶或与 SCORING ELEMENTS 交互，预装 POLLEN 接触除外。",
+    "gameRulesBioText24": "G302 — Limit what you bring to the FIELD. 除 ROBOT 与 OPERATOR CONSOLE 外的物品必须能放入 ALLIANCE AREA、由 DRIVE TEAM 穿戴/携带，或属于合理 accommodation。例：拐杖、坐垫、kneeling mat、高度不超过 12 in（30.5 cm）的稳定不可折叠小台阶。设备不得干扰 ARENA 或造成安全风险，不得高于 TILE 上方 6 ft 6 in（约198 cm），除医疗设备外不得与 ARENA 外通信，不得遮挡 FIELD STAFF/观众视线，不得干扰其他队伍的远程传感。禁止伪造 FIELD AprilTags 或在 MATCH 中向 FIELD 照射强光/激光。",
+    "gameRulesBioText25": "G303 — ROBOTS on the FIELD must come ready to play a MATCH. ROBOT 不得危及人员、ARENA 或其他 ROBOTS；必须满足 Section 3.3 inspection/re-inspection；必须是队伍留在 FIELD 上的唯一自带物品；并携带显示正确 ALLIANCE 颜色的 ROBOT SIGNS。若可快速修正，MATCH 等待修正；若不能，则 DISABLED。若不满足 G303.B 的 ROBOT 仍参赛，Head REFEREE 可给 RED CARD。",
+    "gameRulesBioText26": "G304 — ROBOTS must be set up correctly on the FIELD. ROBOT 必须：1. 完全位于本 ALLIANCE 一侧（Red A/B/C；Blue D/E/F）；2. 不与 FIELD 元素连接、缠绕或悬挂；3. 接触 FIELD perimeter wall；4. 不接触/进入 FLOWER scoring volume；5. 不在 LOADING ZONE；6. 位于 STARTING CONFIGURATION；7. 正好接触 4 个预装 POLLEN；8. OpMode INIT 后完全静止。若可快速修正则等待，否则可 DISABLED 或移出 FIELD。",
+    "gameRulesBioText27": "G305 — Teams must select an OpMode. 必须在 DRIVER STATION app 中选择 OpMode 并按 INIT 初始化。若为 AUTO OpMode，必须启用 30 秒 AUTO timer。Violation：未修正前 MATCH 不开始；若 ROBOT 无法初始化或无法快速修正 → DISABLED。",
+    "gameRulesBioText28": "即使不运行 AUTO，也必须选择并 INIT 一个 OpMode。FIELD STAFF 用此判断队伍是否 MATCH ready。没有 AUTO OpMode 的队伍建议创建默认 AUTO，使其自动排队进入 TELEOP OpMode。",
+    "gameRulesBioText29": "11.4.1 AUTO — MATCH 前 30 秒。DRIVERS 不得向 ROBOT 输入；ROBOT 仅按预编程指令运行。G401 — Don’t interact with a ROBOT during AUTO. 从 countdown 开始到 AUTO 结束，DRIVE TEAM 不得直接或间接与 ROBOT/OPERATOR CONSOLE 交互，除 MATCH 开始时 MOMENTARY 按 ▶ start、按 ■ stop，或为人员/OPERATOR CONSOLE 安全采取必要动作。Violation: VERBAL WARNING；若 STRATEGIC → MAJOR FOUL + YELLOW CARD per MATCH。",
+    "gameRulesBioText30": "G402 — No AUTO opponent interference. AUTO 中 ALLIANCE 不得干扰对方 AUTO。Violation：每场 MAJOR FOUL；若 STRATEGIC 再加 YELLOW CARD。AUTO 中 Red 对 A/B/C 列，Blue 对 D/E/F 列的 FIELD 与 SCORING ELEMENTS 具有优先权。进入对方一侧风险很高，可能被判 STRATEGIC。",
+    "gameRulesBioText31": "G403 — ROBOTS are motionless between AUTO and TELEOP. AUTO → TELEOP 过渡期间，ROBOT 或机构不得有 powered movement。由惯性、重力或执行器断电造成的运动不算 powered movement。Violation：VERBAL WARNING；若 STRATEGIC → MAJOR FOUL + YELLOW CARD。",
+    "gameRulesBioText32": "G404 — ROBOTS are motionless at the end of TELEOP. TELEOP 结束后，直到 Head REFEREE 或代表允许取回 ROBOTS 前，不得有 powered movement。Violation：VERBAL WARNING；若 STRATEGIC → MAJOR FOUL + YELLOW CARD。",
+    "gameRulesBioText33": "G405 — Keep SCORING ELEMENTS in bounds. ROBOT 不得故意把 SCORING ELEMENT 弹出 FIELD，无论直接弹出、借 FIELD 元素反弹或借另一 ROBOT 反弹。Violation：每个 SCORING ELEMENT 一个 MAJOR FOUL。得分或 ROBOT-ROBOT 接触中意外出界不视为故意弹出。",
+    "gameRulesBioText34": "G406 — Do not damage or make a mess in the ARENA. ROBOT 与 DRIVE TEAM 均不得损坏 ARENA 或造成需要清理的混乱。Violation：VERBAL WARNING；若 STRATEGIC → MAJOR FOUL + YELLOW CARD；若 ROBOT 可能继续造成损坏 → DISABLED。后续 MATCH 前可能要求整改或 re-inspection。",
+    "gameRulesBioText35": "G407 — No more than 4 at a time. ROBOT 同时不得 CONTROL 超过 4 个 SCORING ELEMENTS。Violation：VERBAL WARNING；若 STRATEGIC → MAJOR FOUL + YELLOW CARD per MATCH。对 5 个或更多元素的 CONTROL 会重点判断是否 STRATEGIC。STRATEGIC 示例：收集 6+ 并带到 scoring 区，或反复对 5+ 元素进行超过 MOMENTARY 的 CONTROL。非 STRATEGIC 示例：MOMENTARILY 持有 5 个并迅速放掉一个。",
+    "gameRulesBioText36": "G408 — Don’t CONTROL opponent NECTAR. ROBOT 不得 CONTROL 对方 ALLIANCE 的 NECTAR。Violation：VERBAL WARNING；若 STRATEGIC → YELLOW CARD per MATCH。",
+    "gameRulesBioText37": "G409 — Don’t catch SCORING ELEMENTS. 从 TIPPED HIVE 落下的 SCORING ELEMENT 在接触其他物体前，不得被 ROBOT 接住或偏转。Violation：VERBAL WARNING；若 STRATEGIC → YELLOW CARD per MATCH。",
+    "gameRulesBioText38": "G409 续：从 TIPPED HIVE 落下的 POLLEN/NECTAR 应先接触 TILE 地面，再由 ROBOT 收集。STRATEGIC 示例：反复在 HIVE 下等待并收集落下元素、展开大型机构接住元素、反复调整位置以有利方向改变落点。可能不属于 STRATEGIC：ROBOT 路过时偶然有 1–2 个 POLLEN 落在其上，或故障 ROBOT 停在 HIVE 下导致元素堆积。",
+    "gameRulesBioText39": "G410 — NECTAR only goes into FLOWERS with one minute left. 在 MATCH 最后 60 秒之前，NECTAR 不得进入 FLOWER scoring volume。Violation：每个 NECTAR 一个 MAJOR FOUL。以 primary FIELD timer display 判断最后 60 秒开始时间。",
+    "gameRulesBioText40": "G411 — Do not hoard SCORING ELEMENTS. ALLIANCE 不得 STRATEGICALLY 阻止对方 ALLIANCE 接触 SCORING ELEMENTS。Violation：MAJOR FOUL + YELLOW CARD per MATCH。",
+    "gameRulesBioText41": "G411 续：使用自己的 NECTAR/POLLEN 得分不违规。把 SCORING ELEMENTS 集中在 FIELD 小区域和/或主动阻挡对方 ROBOT 接近它们属于违规。GARDEN 不是 protected zone。",
+    "gameRulesBioText42": "G412 — ROBOTS must be under control. MATCH 中 ROBOT 不得对人员或 ARENA 元素造成不合理危险。示例：ROBOT 或 CONTROL 的 SCORING ELEMENT 撞到 FIELD 外的人/物；危险操作；机构失控甩出；撞倒 DRIVER STATION stand；损坏 FIELD timer display；接触 FIELD STAFF 或 FIELD 外 DRIVE TEAM。Violation：DISABLED + VERBAL WARNING；赛事中再次发生 → YELLOW CARD per MATCH。仅接触 FIELD 外的 stand、地面或 perimeter 外侧本身不违规。",
+    "gameRulesBioText43": "G413 — ROBOTS must stop when instructed. 若 REFEREE 按 T402 要求 ROBOT DISABLE，DRIVE TEAM 成员必须在 DRIVER STATION 按 ■ stop 并放下控制器。Violation：VERBAL WARNING；若 STRATEGIC → RED CARD。",
+    "gameRulesBioText44": "G414 — ROBOTS must be identifiable. ROBOT 的队号与 ALLIANCE 颜色不得让 Head REFEREE 无法辨识。Violation：VERBAL WARNING；若 STRATEGIC → YELLOW CARD。ROBOT SIGNS 应牢固、清晰且不易在正常比赛中掉落。G415 — Watch your ARENA interaction. ROBOT 不得抓住、夹住、连接、缠绕或悬挂在 SCORING ELEMENTS 以外的 ARENA 部件上。STRATEGIC 违规可获 YELLOW CARD；若可能损坏可 DISABLED。某些用于对齐的 FLOWER 接触不违规。",
+    "gameRulesBioText45": "G416 — ROBOTS have construction limits. MATCH 中 ROBOT 不得超过 R105 的扩展限制。部件不得故意与 ROBOT 分离。Violation：VERBAL WARNING；若 STRATEGIC → 每次 MAJOR FOUL。MATCH 开始后活动部件可离开 STARTING CONFIGURATION，但必须保持在扩展限制内。",
+    "gameRulesBioText46": "G417 — ROBOTS may not meddle with the HIVE Structure. ROBOT 只能通过向朝上的 CELL LAUNCHING SCORING ELEMENTS 来影响 HIVE 运动。以其他方式接触 HIVE，或制造/阻止 TIP，均违规。高速撞击、反复撞击或阻止对方 HIVE TIP 可能被判 STRATEGIC。Violation：VERBAL WARNING；若 STRATEGIC → MAJOR FOUL + YELLOW CARD。",
+    "gameRulesBioText47": "G417 续：不当干预 HIVE 可能被判 STRATEGIC。意外碰到 HIVE，或合法 LAUNCH 时未命中 CELL，本身不一定是 STRATEGIC 违规。",
+    "gameRulesBioText48": "G418 — ROBOTS may not meddle with FLOWERS. SCORING ELEMENTS 只能从 FLOWER 顶部进入。只有 POLLEN 可从底部取出。从侧面拉、摇晃 FLOWER 或用机构取出 NECTAR 都违规。Violation：VERBAL WARNING；若 STRATEGIC → MAJOR FOUL + YELLOW CARD。合法得分过程中接触 FLOWER 或其内部元素不违规。",
+    "gameRulesBioText49": "G419 — Do not damage an opponent ROBOT. ROBOT 不得损坏或使对方 ROBOT 功能失效。BIOBUZZ 为高接触防守型比赛，正常接触允许，但故意损坏禁止。暴露/无保护且在正常比赛中本来就可能受损的部件，其损坏通常不算违规。STRATEGIC 损坏 → MAJOR FOUL + YELLOW CARD；若使对方无法驾驶 → MAJOR FOUL + RED CARD。Head REFEREE 可在 MATCH 后检查 ROBOT；若无法确认损坏，可撤销违规。",
+    "gameRulesBioText50": "G420 — Do not tip or entangle. ROBOT 不得连接、掀翻或缠绕对方 ROBOT。若 STRATEGIC → MAJOR FOUL + YELLOW CARD。若持续发生或对方已无法驾驶，可发 RED CARD。正常 ROBOT-ROBOT 接触中一次意外翻倒，若 REFEREE 不认为是 STRATEGIC，则不违规。",
+    "gameRulesBioText51": "G421 — There is a 3-count on PINS. ROBOT 不得 PIN 对方超过 3 秒。PINNING 是通过接触阻止对方移动。当 ROBOTS 充分分开、一方离开原 PIN 位置足够远，或执行 PIN 的 ROBOT 自己被 PINNED 时，计数结束/暂停。Violation：MAJOR FOUL；若未纠正，每再持续 3 秒增加一个 MAJOR FOUL。11.4.6 Human — G422: DRIVE TEAM stays in the ALLIANCE AREA. MATCH 开始后，DRIVE TEAM 不得离开指定 ALLIANCE AREA。正常比赛中短暂越线本身不违规，安全情况可例外。可取回从 FIELD 出界且能从 ALLIANCE AREA 够到的本方 NECTAR。Violation：VERBAL WARNING；若 STRATEGIC → 每次 MINOR FOUL。",
+    "gameRulesBioText52": "G423 — DRIVE COACHES and other teams: hands off the controls. MATCH 开始后，DRIVE COACH 或其他队员不得触碰 OPERATOR CONSOLE gamepads。DRIVE COACH 可拿着/排查 DRIVER STATION、选择 OpMode，并按 INIT/START/STOP。Violation：VERBAL WARNING；若 STRATEGIC → MAJOR FOUL + YELLOW CARD。",
+    "gameRulesBioText53": "G424 — DRIVE COACHES, SCORING ELEMENTS are off limits. 除安全原因外，DRIVE COACHES 不得触碰 SCORING ELEMENTS。Violation：VERBAL WARNING；若 STRATEGIC → MINOR FOUL。",
+    "gameRulesBioText54": "G425 — DRIVE TEAMS, watch your reach. MATCH 开始后，DRIVE TEAM 成员不得直接或间接触碰 ROBOT、与 ROBOT/TILE 接触的 SCORING ELEMENT、得分动作或 FIELD 元素。Violation：VERBAL WARNING；若 STRATEGIC → MAJOR FOUL + YELLOW CARD。",
+    "gameRulesBioText55": "G425 续：通过手持控制器、悬垂电缆、衣物等间接接触 ROBOT 也可能违规。干扰得分包括故意撞击/摇晃 perimeter wall，以阻止 ROBOT 向 FLOWER 得分，或使 FLOWER 中的 NECTAR/POLLEN 掉落。",
+    "gameRulesBioText56": "G426 — Humans may not enter NECTAR onto the FIELD early. DRIVE TEAM 只有在以下情况可把 NECTAR 放入 FIELD：1. 本 ALLIANCE 颜色的 HIVE 每次 TIPPED 时可放 1 个；或 2. MATCH 剩余 60 秒或更少时，可放入全部剩余 NECTAR。以先发生的条件为准。Violation：每个过早放入的 NECTAR 一个 MINOR FOUL。",
+    "gameRulesBioText57": "G427 — Humans, only enter NECTAR via the LOADING ZONE. NECTAR 只能由相应 ALLIANCE 的 DRIVE TEAM 成员、不使用工具，并让 NECTAR 首先接触 LOADING ZONE 内的 TILE 后进入 FIELD。人不得直接向 HIVE 或 FLOWER 得分；此行为按 G202 处理。Violation：每个 NECTAR 一个 MINOR FOUL。",
+    "gameRulesBioText58": "G427 续：到达 DRIVE TEAM 手中的 POLLEN，或出界的对方 ALLIANCE NECTAR，必须交给 FIELD STAFF。放入 NECTAR 时应避免触碰另一个正在接触 TILE 的 SCORING ELEMENT，否则可能违反 G425。",
+    "gameRulesBioText59": "G428 — Humans, don’t remove SCORING ELEMENTS from the FIELD. DRIVE TEAM 成员不得从 FIELD 取走 SCORING ELEMENTS。只要 SCORING ELEMENT 正接触 TILE、ROBOT、FIELD 元素或另一个 SCORING ELEMENT，就视为仍在 FIELD 上。Violation：每移走一个 SCORING ELEMENT 一个 MINOR FOUL。",
+    "navPanel": "分类"
+  }
+};
+
+function setLanguage(lang) {
+    if (!translations[lang]) return;
+    document.documentElement.lang = lang;
+
+    for (const id in translations[lang]) {
+        const element = document.getElementById(id);
+        if (!element) continue;
+        if (id === "pageSearch") {
+            element.placeholder = translations[lang][id];
+        } else {
+            element.innerHTML = translations[lang][id];
+        }
+    }
+
+    const langBtn = document.getElementById("langBtn");
+    if (langBtn) langBtn.textContent = lang.toUpperCase();
+
+    document.querySelectorAll(".lang-dropdown button").forEach(btn => {
+        btn.classList.toggle("active", btn.dataset.lang === lang);
+    });
+
+    localStorage.setItem("language", lang);
+
+    const quickManualIframe = document.getElementById("quickmanual-iframe");
+    if (quickManualIframe && quickManualIframe.contentWindow) {
+        quickManualIframe.contentWindow.postMessage({
+            type: "languageChange",
+            language: lang
+        }, "*");
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    setLanguage(localStorage.getItem("language") || "tr");
+
+    const langSwitch = document.getElementById("langSwitch");
+    const langBtn = document.getElementById("langBtn");
+
+    if (langBtn && langSwitch) {
+        langBtn.addEventListener("click", function (e) {
+            e.stopPropagation();
+            langSwitch.classList.toggle("open");
+        });
+
+        document.querySelectorAll(".lang-dropdown button").forEach(btn => {
+            btn.addEventListener("click", function () {
+                setLanguage(btn.dataset.lang);
+                langSwitch.classList.remove("open");
+            });
+        });
+
+        document.addEventListener("click", function (e) {
+            if (!langSwitch.contains(e.target)) langSwitch.classList.remove("open");
+        });
+    }
+
+    const searchInput = document.getElementById("pageSearch");
+    if (searchInput) searchInput.addEventListener("input", liveSearch);
+
+    // QuickManual AI widget - same behavior as the original page.
+    const widget = document.createElement("div");
+    widget.id = "quickmanual-widget";
+    widget.innerHTML = `
+        <div id="quickmanual-window">
+            <button id="quickmanual-close" aria-label="QuickManual AI'yi kapat" title="Kapat">×</button>
+            <iframe id="quickmanual-iframe" src="quickmanual/quickmanual-ai.html"
+                    title="QuickManual AI" loading="lazy"></iframe>
+        </div>
+        <button id="quickmanual-button" aria-label="QuickManual AI'yi aç" title="QuickManual AI">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 11.5C20 15.6421 16.1944 19 11.5 19C10.3065 19 9.17663 18.7881 8.16571 18.4049L4 20L5.20564 16.3878C4.44183 15.1111 4 13.6179 4 12C4 7.85786 7.80558 4.5 12.5 4.5C17.1944 4.5 20 7.35786 20 11.5Z"
+                      stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                <circle cx="9" cy="12" r="0.8" fill="currentColor"/>
+                <circle cx="12" cy="12" r="0.8" fill="currentColor"/>
+                <circle cx="15" cy="12" r="0.8" fill="currentColor"/>
+            </svg>
+        </button>`;
+    document.body.appendChild(widget);
+
+    const button = document.getElementById("quickmanual-button");
+    const windowBox = document.getElementById("quickmanual-window");
+    const closeButton = document.getElementById("quickmanual-close");
+
+    if (button && windowBox) button.addEventListener("click", () => windowBox.classList.toggle("open"));
+    if (closeButton && windowBox) closeButton.addEventListener("click", () => windowBox.classList.remove("open"));
+});
+
+function clearHighlights() {
+    document.querySelectorAll("mark.search-highlight").forEach(mark => {
+        const parent = mark.parentNode;
+        parent.replaceChild(document.createTextNode(mark.textContent), mark);
+        parent.normalize();
+    });
+}
+
+function liveSearch() {
+    clearHighlights();
+    const input = document.getElementById("pageSearch");
+    if (!input) return;
+    const query = input.value.trim();
+    if (!query) return;
+
+    const lowerQuery = query.toLocaleLowerCase();
+    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+        acceptNode(node) {
+            const parent = node.parentElement;
+            if (!parent) return NodeFilter.FILTER_REJECT;
+            if (
+                parent.closest("nav") ||
+                parent.closest("footer") ||
+                parent.closest(".search-section") ||
+                parent.closest(".language-switch") ||
+                parent.closest("#quickmanual-widget") ||
+                parent.tagName === "SCRIPT" ||
+                parent.tagName === "STYLE"
+            ) return NodeFilter.FILTER_REJECT;
+            return NodeFilter.FILTER_ACCEPT;
+        }
+    });
+
+    let firstMatch = null;
+    const nodes = [];
+    let n;
+    while ((n = walker.nextNode())) nodes.push(n);
+
+    for (const node of nodes) {
+        const text = node.nodeValue;
+        if (!text || !text.trim()) continue;
+        const index = text.toLocaleLowerCase().indexOf(lowerQuery);
+        if (index === -1) continue;
+
+        const before = text.slice(0, index);
+        const matchText = text.slice(index, index + query.length);
+        const after = text.slice(index + query.length);
+        const mark = document.createElement("mark");
+        mark.className = "search-highlight";
+        mark.textContent = matchText;
+
+        const parent = node.parentNode;
+        parent.insertBefore(document.createTextNode(before), node);
+        parent.insertBefore(mark, node);
+        node.nodeValue = after;
+        if (!firstMatch) firstMatch = mark;
+    }
+
+    if (firstMatch) firstMatch.scrollIntoView({ behavior: "smooth", block: "center" });
+}
+
+function clearSearch() {
+    const input = document.getElementById("pageSearch");
+    if (input) input.value = "";
+    clearHighlights();
+}
+
+</script>
+</body>
+</html>

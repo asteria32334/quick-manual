@@ -1,0 +1,1764 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>QuickManual</title>
+<link href="images/logo (2).png" rel="icon"/>
+<link href="manifest.json" rel="manifest"/>
+<link href="images/logo.png" rel="apple-touch-icon"/>
+<link href="kurallar.css" rel="stylesheet"/>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo"></div>
+    <ul class="nav-links">
+        <li><a href="kurallar.html" id="navPanel">Kategoriler</a></li>
+      <!--  <li><a href="kurallar-oduller.html" id="navHome">Ödüller ve Tanımlar</a></li>
+        <li><a href="kurallar-genel.html" id="navTeam">Genel Kurallar</a></li>
+        <li><a href="kurallar-robot.html" id="navRobots">Robot Yapımı</a></li>
+        <li><a href="kurallar-mac.html" id="navGameRules">Maç Kuralları</a></li>
+        <li><a href="kurallar-saha.html" id="navFieldInfo">Saha Eleman Bilgileri</a></li>
+        <li><a href="kurallar-prosedur.html" id="navMatchProcedures">Maç Prosedürleri</a></li>
+        <li><a href="kurallar-puanlama.html" id="navScoringSystem">Nasıl Puan Kazanılır</a></li>
+    --> <li><a href="index.html" id="navDecode">Geri dön</a></li>
+    </ul>
+</nav>
+
+
+<div class="language-switch" id="langSwitch">
+    <button class="lang-btn" id="langBtn">TR</button>
+    <div class="lang-dropdown">
+        <button data-lang="tr">Türkçe</button>
+        <button data-lang="en">English</button>
+        <button data-lang="es">Español</button>
+        <button data-lang="pt">Português</button>
+        <button data-lang="zh">中文</button>
+    </div>
+</div>
+
+
+<section class="search-section">
+    <div class="search-container">
+        <input type="text" id="pageSearch" placeholder="Sayfada ara... (örnek: kurallar, ödül, robot)" autocomplete="off">
+        <button onclick="clearSearch()" class="clear-btn" id="clear">Temizle</button>
+    </div>
+</section>
+
+<section class="section" id="generalRules">
+<h2 id="generalRulesTitle">Genel Kurallar</h2>
+<div class="card">
+<h3 id="generalRulesBioTitle1">1 Introduction (Page 5)</h3>
+<p id="generalRulesBioText1">1.1 About FIRST®<br/>
+Bilgi<br/>
+FIRST, gençlerin bilim ve teknolojiye olan ilgisini<br/>
+artırmak amacıyla kurulmuş bir organizasyondur.<br/>
+FIRST’in amacı öğrencilerin inovasyon<br/>
+yapmasını, özgüven kazanmasını ve geleceğe<br/>
+hazırlanmasını sağlamaktır.<br/>
+FIRST programları; öğrenciler, mentorlar,<br/>
+öğretmenler, gönüllüler ve sponsorların desteğiyle<br/>
+yürütülür.</p>
+</div>
+<div class="card">
+<h3 id="generalRulesBioTitle2">1.2 FIRST® Tech Challenge (Page 5)</h3>
+<p id="generalRulesBioText2">Bilgi<br/>
+FIRST Tech Challenge; sınıf ortamına uygun<br/>
+boyutta FIELD ve robotlarla öğrencilerin robotik<br/>
+yarışmasına katılmasını sağlar.<br/>
+Takımlar:<br/>
+•   küçük ekipler halinde çalışabilir,<br/>
+•   farklı görevlerde uzmanlaşabilir,<br/>
+•   Starter Kit kullanabilir,<br/>
+•   tamamen özel robot üretebilir,<br/>
+•   iki yaklaşımı birleştirebilir.<br/>
+Robot yapımında ileri üretim araçları kullanılabilir<br/>
+ancak bunlar zorunlu değildir.</p>
+</div>
+<div class="card">
+<h3 id="generalRulesBioTitle3">1.2 FIRST® Tech Challenge (Page 6)</h3>
+<p id="generalRulesBioText3">Student Ownership<br/>
+FTC’de öğrencilerin kendi öğrenme süreçlerinin<br/>
+sorumluluğunu alması önemlidir.<br/>
+Takımlar sezon boyunca robotlarını geliştirir, test<br/>
+eder ve değiştirir. Robotun gelişimi öğrencilerin<br/>
+kendi deneyimlerini ve öğrendiklerini<br/>
+yansıtmalıdır.</p>
+</div>
+<div class="card">
+<h3 id="generalRulesBioTitle4">1.3 FIRST Ethos and Core Values (Page 6)</h3>
+<p id="generalRulesBioText4">1.3.1 Gracious Professionalism®<br/>
+Bilgi<br/>
+Gracious Professionalism®, yüksek kaliteli iş<br/>
+yaparken diğer insanlara değer vermeyi ve<br/>
+topluluğa saygı göstermeyi ifade eder.<br/>
+FTC’de güçlü rekabet ile saygı ve empati aynı<br/>
+anda bulunmalıdır.</p>
+</div>
+<div class="card">
+<h3 id="generalRulesBioTitle5">1.3.1 Gracious Professionalism® (Page 7)</h3>
+<p id="generalRulesBioText5">Bilgi<br/>
+Gracious Professionalism bir “kazanılması<br/>
+gereken unvan” değildir. Takımlar ve kişiler bu<br/>
+yaklaşımın farklı özelliklerini davranışlarıyla<br/>
+göstermeye çalışmalıdır.<br/>
+FTC bağlamında:<br/>
+•   güçlü bir rakip ol,<br/>
+•   diğer insanlara saygı göster,<br/>
+•   takım arkadaşlarını destekle,<br/>
+•   kimsenin dışlanmış veya değersiz<br/>
+hissetmesine neden olma.</p>
+</div>
+<div class="card">
+<h3 id="generalRulesBioTitle6">1.3.2 Coopertition® (Page 8)</h3>
+<p id="generalRulesBioText6">Bilgi<br/>
+Coopertition®, yoğun rekabet sırasında bile<br/>
+rakiplere yardım edebilme ve saygılı<br/>
+davranabilme anlayışıdır.<br/>
+FTC alliance sistemi nedeniyle bugün rakip olan<br/>
+bir takım, başka bir MATCH’te alliance partneri<br/>
+olabilir.</p>
+</div>
+<div class="card">
+<h3 id="generalRulesBioTitle7">1.3.3 Core Values (Page 8)</h3>
+<p id="generalRulesBioText7">FIRST Core Values:<br/>
+• Discovery — Yeni beceri ve fikirler<br/>
+keşfetmek.<br/>
+• Innovation — Yaratıcılık ve azimle problem<br/>
+çözmek.<br/>
+• Impact — Öğrendiklerini dünyayı geliştirmek<br/>
+için kullanmak.<br/>
+• Inclusion — Farklılıklara saygı göstermek.<br/>
+• Teamwork — Birlikte daha güçlü olmak.<br/>
+• Fun — Yapılan işi ve başarıları kutlamak.</p>
+</div>
+<div class="card">
+<h3 id="generalRulesBioTitle8">1.3.4 Why Embrace the FIRST Ethos and (Page 9)</h3>
+<p id="generalRulesBioText8">Gracious Professionalism?<br/>
+Bilgi<br/>
+FIRST, Gracious Professionalism ve Core<br/>
+Values’ın yalnızca yarışma sırasında değil, günlük<br/>
+yaşamda da uygulanmasını teşvik eder.<br/>
+Takımların kutlaması gereken değerler:<br/>
+•   hard work,<br/>
+•   integrity,<br/>
+•   fair play,<br/>
+•   sportsmanship,<br/>
+•   empathy.</p>
+</div>
+<div class="card">
+<h3 id="generalRulesBioTitle9">1.4 The Spirit of the Competition (Page 10)</h3>
+<p id="generalRulesBioText9">1.4.1 A Note from the FIRST Staff<br/>
+BIOBUZZ sezonunun amacı<br/>
+FIRST, BIOBUZZ ile hem deneyimli<br/>
+Championship seviyesindeki takımlara hem de<br/>
+FTC’ye yeni başlayan takımlara anlamlı bir<br/>
+yarışma deneyimi sunmayı amaçlıyor.<br/>
+Takımların robotlarını sürekli geliştirerek<br/>
+alliance’larına anlamlı katkı sağlamaları<br/>
+hedefleniyor.</p>
+</div>
+<div class="card">
+<h3 id="generalRulesBioTitle10">Changes for 2026-2027 (and beyond) (Page 11)</h3>
+<p id="generalRulesBioText10">BIOBUZZ’ta önemli değişiklik<br/>
+BIOBUZZ Competition Manual, önceki sezonlara<br/>
+göre “spirit of the rule” anlayışına daha fazla<br/>
+önem veriyor.<br/>
+Kurallar her olası durumu tek tek tanımlamak<br/>
+yerine:<br/>
+• intended gameplay,<br/>
+• kuralların amacı,<br/>
+• yarışmanın ruhu<br/>
+üzerinden değerlendirme yapılmasını hedefliyor.<br/>
+Gönüllülerden her küçük hareketi kaydetmek<br/>
+yerine yarışmanın ruhuna aykırı büyük<br/>
+davranışlara ve stratejilere odaklanmaları<br/>
+bekleniyor.</p>
+</div>
+<div class="card">
+<h3 id="generalRulesBioTitle11">1.4.2 Framework of Behaviors (Page 12)</h3>
+<p id="generalRulesBioText11">FTC davranış çerçevesi dört ana parçadan oluşur:<br/>
+Gracious Professionalism &amp; FIRST Core<br/>
+Values<br/>
+Takımların temel davranış anlayışını oluşturur.<br/>
+FIRST Code of Conduct<br/>
+Özellikle yetişkinler ve öğrencilerin güvenliği ile<br/>
+davranış standartlarını kapsar.<br/>
+Competition Integrity Contract<br/>
+Her FTC takımının uyması gereken Competition<br/>
+Integrity Contract’tır.<br/>
+Competition Rules<br/>
+Sezonun kuralları:<br/>
+• Competition Manual<br/>
+• Team Updates<br/>
+• Q&amp;A<br/>
+üzerinden belirlenir.</p>
+</div>
+<div class="card">
+<h3 id="generalRulesBioTitle12">1.4.3 The Role of Mentors (Page 12)</h3>
+<p id="generalRulesBioText12">Bilgi<br/>
+Mentorların robot yapımına katılım miktarı takımın<br/>
+ihtiyaçlarına göre değişebilir.<br/>
+FIRST, mentorlar için tek bir zorunlu çalışma<br/>
+modeli belirlemez. Mentorun temel görevi<br/>
+öğrencilerin öğrenmesini ve gelişmesini<br/>
+desteklemektir.</p>
+</div>
+<div class="card">
+<h3 id="generalRulesBioTitle13">1.4.4 The Sprit of FIRST Volunteers (Page 13)</h3>
+<p id="generalRulesBioText13">Bilgi<br/>
+FIRST gönüllülerinin amacı takımların başarılı<br/>
+olmasına yardımcı olmaktır.<br/>
+Gönüllüler ve takımlar birbirine karşı değil,<br/>
+yarışmanın iyi işlemesi için birlikte çalışmalıdır.<br/>
+Gönüllüler kuralları uygularken saygılı,<br/>
+destekleyici, adil ve takım odaklı davranmalıdır.</p>
+</div>
+<div class="card">
+<h3 id="generalRulesBioTitle14">1.5 Competition Integrity Contract (Page 14)</h3>
+<p id="generalRulesBioText14">(CIC)<br/>
+Bilgi<br/>
+Competition Integrity Contract iki ana bölümden<br/>
+oluşur:<br/>
+1. Sporting Ethics Code<br/>
+2. Behavior Guidelines<br/>
+Amaç yarışmanın bütünlüğünü korumak ve<br/>
+takımların Gracious Professionalism anlayışına<br/>
+uygun davranmasını sağlamaktır.</p>
+</div>
+<div class="card">
+<h3 id="generalRulesBioTitle15">1.5.1 Sporting Ethics Code (Page 14)</h3>
+<p id="generalRulesBioText15">We Don’t Cheat.<br/>
+Takım:<br/>
+•   kuralların ruhunu bilerek ihlal etmemeli,<br/>
+•   FIRST sistemlerini dolanmamalı,<br/>
+•   hile ile kazanmayı kabul etmemeli,<br/>
+•   fair play ve integrity’yi korumalıdır.</p>
+</div>
+<div class="card">
+<h3 id="generalRulesBioTitle16">We Always Behave with Integrity. (Page 14)</h3>
+<p id="generalRulesBioText16">Kuralların kontrol edilmediği durumlarda bile takım<br/>
+kurallara uymalıdır.<br/>
+Amaç:<br/>
+“Ne yapabiliriz?” değil, “Doğru olan nedir?”<br/>
+olmalıdır.</p>
+</div>
+<div class="card">
+<h3 id="generalRulesBioTitle17">We Play the Game as Intended. (Page 14)</h3>
+<p id="generalRulesBioText17">Takımlar kurallardaki boşlukları kullanarak avantaj<br/>
+sağlamaya çalışmamalıdır.<br/>
+Bir kuralın ifadesi ile amacı arasında belirsizlik<br/>
+varsa intent ve spirit of the competition dikkate<br/>
+alınmalıdır.</p>
+</div>
+<div class="card">
+<h3 id="generalRulesBioTitle18">We Know Our Team Doesn’t Enforce the (Page 14)</h3>
+<p id="generalRulesBioText18">Rules.<br/>
+Takımlar kural ihlali gördüklerinde bunu yarışma<br/>
+görevlilerine bildirebilir.<br/>
+Ancak:<br/>
+•   başka takımı suçlamak,<br/>
+•   soruşturma yapmak,<br/>
+•   kamuya açık şekilde hedef göstermek,<br/>
+•   kendi başına ceza vermeye çalışmak<br/>
+takımın görevi değildir.</p>
+</div>
+<div class="card">
+<h3 id="generalRulesBioTitle19">1.5.2 Behavior Guidelines (Page 15)</h3>
+<p id="generalRulesBioText19">We Focus on Journey, Before<br/>
+Destination.<br/>
+Takım kazanmak için mücadele etmeli ve<br/>
+excellence peşinde koşmalıdır.<br/>
+Ancak takımın başarısı yalnızca competition result<br/>
+ile ölçülmez. Öğrenilenler ve kurulan arkadaşlıklar<br/>
+da başarının parçasıdır.</p>
+</div>
+<div class="card">
+<h3 id="generalRulesBioTitle20">We Behave with Respect and Good (Page 15)</h3>
+<p id="generalRulesBioText20">Sportsmanship.<br/>
+Sonuç ne olursa olsun takım üyeleri saygılı ve<br/>
+profesyonel davranmalıdır.<br/>
+Takım arkadaşlarını destekle.<br/>
+Partnerlerini takdir et.<br/>
+Rakiplerini kutla.</p>
+</div>
+<div class="card">
+<h3 id="generalRulesBioTitle21">We Help Each Other. (Page 15)</h3>
+<p id="generalRulesBioText21">Takımlar birbirlerinin başarılı olmasına yardımcı<br/>
+olmalıdır.<br/>
+Amaç, başkasının başarısızlığından yararlanarak<br/>
+kazanmak değil; herkesin mümkün olan en iyi<br/>
+performansı göstermesini sağlamaktır.</p>
+</div>
+<div class="card">
+<h3 id="generalRulesBioTitle22">We ‘Take the High Road.’ (Page 15)</h3>
+<p id="generalRulesBioText22">Bir başkasının davranışı kötü olsa bile takım kendi<br/>
+davranış standartlarını korumalıdır.<br/>
+Saygılı, anlayışlı ve empatik davranmak gerekir.</p>
+</div>
+<div class="card">
+<h3 id="generalRulesBioTitle23">We Respect Property and Facilities. (Page 15)</h3>
+<p id="generalRulesBioText23">Takım:<br/>
+•   etkinlik alanına zarar vermemeli,<br/>
+•   kullandığı alanı temiz bırakmalı,<br/>
+•   yaptığı kazaları bildirmeli,<br/>
+•   ekipman ve tesislere saygılı davranmalıdır.</p>
+</div>
+<div class="card">
+<h3 id="generalRulesBioTitle24">We Build a Positive Culture of Safety. (Page 15)</h3>
+<p id="generalRulesBioText24">Güvenlik yalnızca kurallara uymak değil, güvenli<br/>
+karar verme kültürü oluşturmaktır.<br/>
+Takım kendi güvenliğini veya çevresindeki kişilerin<br/>
+güvenliğini bilerek tehlikeye atmamalıdır.</p>
+</div>
+<div class="card">
+<h3 id="generalRulesBioTitle25">We Make Healthy Choices. (Page 15)</h3>
+<p id="generalRulesBioText25">Yoğun yarışma dönemlerinde bile takım üyeleri:<br/>
+•   yeterince su içmeli,<br/>
+•   iyi beslenmeli,<br/>
+•   aktif kalmalı,<br/>
+•   yeterince uyumalı,<br/>
+•   düzenli mola vermelidir.</p>
+</div>
+<div class="card">
+<h3 id="generalRulesBioTitle26">We’re All on the Same Team. (Page 16)</h3>
+<p id="generalRulesBioText26">FIELD üzerinde takımlar birbirlerine karşı yarışır.<br/>
+FIELD dışında ise tüm öğrenciler, mentorlar,<br/>
+gönüllüler ve organizatörler aynı FIRST<br/>
+topluluğunun parçasıdır.<br/>
+Amaç birlikte:<br/>
+•   robot yapmak,<br/>
+•   öğrenmek,<br/>
+•   deneyimleri paylaşmak,<br/>
+•   eğlenmek,<br/>
+•   birbirimizi geliştirmek<br/>
+ve birbirimize iyi davranmaktır.</p>
+</div>
+<div class="card">
+<h3 id="generalRulesBioTitle27">1.5.3 Infractions, Mitigations, &amp; (Page 16)</h3>
+<p id="generalRulesBioText27">Escalation<br/>
+Bilgi<br/>
+CIC ihlalleri durumun ciddiyetine göre mitigation<br/>
+veya escalation gerektirebilir.<br/>
+Daha ciddi ihlaller:<br/>
+• Event Director’a,<br/>
+• FIRST Headquarters’a<br/>
+aktarılabilir.<br/>
+Ciddi durumlarda takım veya kişiler mevcut ya da<br/>
+gelecekteki etkinliklerden men edilebilir veya<br/>
+FIRST Tech Challenge programından<br/>
+uzaklaştırılabilir.</p>
+</div>
+<div class="card">
+<h3 id="generalRulesBioTitle28">1.6 Accessibility and Inclusion (Page 16)</h3>
+<p id="generalRulesBioText28">Bilgi<br/>
+FIRST, engelli katılımcılar için makul<br/>
+accommodations sağlamaya çalışır.<br/>
+Gerekli durumda etkinlikten önce yerel FIRST<br/>
+liderliği ile iletişime geçilmelidir.<br/>
+Güvenlik sorunu veya undue hardship<br/>
+oluşturmaması koşuluyla bazı kurallarda<br/>
+reasonable accommodation yapılabilir.</p>
+</div>
+<div class="card">
+<h3 id="generalRulesBioTitle29">1.7 Understanding &amp; Using the (Page 17)</h3>
+<p id="generalRulesBioText29">Competition Manual<br/>
+1.7.1 This Document &amp; Its Conventions<br/>
+Competition Manual şu bilgileri içerir:<br/>
+• BIOBUZZ game overview,<br/>
+• BIOBUZZ FIELD bilgileri,<br/>
+• oyunun nasıl oynandığı,<br/>
+• safety, conduct, gameplay, inspection ve<br/>
+event kuralları,<br/>
+• ROBOT construction rules,<br/>
+• season advancement sistemi.</p>
+</div>
+<div class="card">
+<h3 id="generalRulesBioTitle30">Competition Manual = “Source of Truth” (Page 17)</h3>
+<p id="generalRulesBioText30">Manual, destekleyici belgelerle çelişirse<br/>
+önceliklidir.<br/>
+Takımların resmi kuralları değerlendirirken<br/>
+Competition Manual’ı temel alması gerekir.</p>
+</div>
+<div class="card">
+<h3 id="generalRulesBioTitle31">Rule Numbering Method (Page 17)</h3>
+<p id="generalRulesBioText31">Manualdaki rule ID’lerinin harfleri ilgili bölümü<br/>
+gösterir:<br/>
+• I → Competition Eligibility and Inspection<br/>
+• E → Event Rules<br/>
+• A → Awards<br/>
+• G → Game Rules<br/>
+• R → ROBOT Construction Rules<br/>
+• T → Tournament<br/>
+• L → League Play Tournaments<br/>
+• C → FIRST Championship<br/>
+Rule ID’nin sonraki rakamları subsection ve rule<br/>
+sırasını gösterir.</p>
+</div>
+<div class="card">
+<h3 id="generalRulesBioTitle32">Warnings, Cautions, and Notes (Page 18)</h3>
+<p id="generalRulesBioText32">Manualdaki turuncu kutular:<br/>
+• kuralların mantığını açıklayabilir,<br/>
+• bir kuralın nasıl yorumlanacağını anlatabilir,<br/>
+• best practice önerebilir.<br/>
+Ancak turuncu kutu ile gerçek rule language<br/>
+arasında çelişki varsa rule language geçerlidir.</p>
+</div>
+<div class="card">
+<h3 id="generalRulesBioTitle33">Imperial vs Metric Dimensions (Page 18)</h3>
+<p id="generalRulesBioText33">Manualda imperial ölçüler esas alınır.<br/>
+Metric karşılıklar yalnızca yaklaşık referans olarak<br/>
+verilir. Imperial ölçüler ile metric dönüşüm<br/>
+arasında fark varsa imperial measurement ve<br/>
+resmi çizimler esas alınır.</p>
+</div>
+<div class="card">
+<h3 id="generalRulesBioTitle34">Rule Headlines (Page 18)</h3>
+<p id="generalRulesBioText34">Kuralların yanında kısa headlines bulunabilir.<br/>
+• Evergreen rules → yeşil ve * ile gösterilir.<br/>
+• Diğer rule headlines → turuncu gösterilir.<br/>
+Headline ile gerçek rule language arasında<br/>
+anlaşmazlık varsa spesifik rule language<br/>
+üstündür.</p>
+</div>
+<div class="card">
+<h3 id="generalRulesBioTitle35">1.7.3 Team Updates (Page 19)</h3>
+<p id="generalRulesBioText35">Team Updates, sezon boyunca resmi<br/>
+dokümanlarda yapılan değişiklikleri ve önemli<br/>
+sezon bilgilerini duyurmak için kullanılır.<br/>
+BIOBUZZ sezonunda Team Updates, Kickoff’tan<br/>
+başlayarak FIRST Championship’ten iki hafta<br/>
+öncesine kadar her Perşembe yayınlanır.<br/>
+• Yeni eklemeler sarı ile gösterilir.<br/>
+• Silinen kısımlar üzeri çizili gösterilir.</p>
+</div>
+<div class="card">
+<h3 id="generalRulesBioTitle36">Önemli (Page 19)</h3>
+<p id="generalRulesBioText36">Bir etkinlikte driver’s meeting sonrasında<br/>
+yayınlanan Team Update, o etkinlik için geçerli<br/>
+değildir.</p>
+</div>
+<div class="card">
+<h3 id="generalRulesBioTitle37">1.7.4 Question &amp; Answer System (Page 19)</h3>
+<p id="generalRulesBioText37">Q&amp;A sistemi takımların şu konularda soru sorması<br/>
+için kullanılır:<br/>
+•   gameplay,<br/>
+•   competition rules,<br/>
+•   judging,<br/>
+•   advancement,<br/>
+•   ROBOT build rules,<br/>
+•   FIELD setup.<br/>
+Takımlar daha önce sorulmuş soruları da<br/>
+arayabilir.</p>
+</div>
+<div class="card">
+<h3 id="generalRulesBioTitle38">Q&amp;A Opening (Page 19)</h3>
+<p id="generalRulesBioText38">September 28, 2026 — 12:00 p.m. ET<br/>
+Q&amp;A erişimi Lead Coach 1 veya Lead Coach 2<br/>
+hesabı üzerinden yapılır.</p>
+</div>
+<div class="card">
+<h3 id="generalRulesBioTitle39">Q&amp;A Authority (Page 19)</h3>
+<p id="generalRulesBioText39">Q&amp;A cevapları Competition Manual’ın yerine<br/>
+geçmez.<br/>
+Manualdaki kurallar temel kaynaktır; event<br/>
+sırasında REFEREES ve INSPECTORS kendi<br/>
+görev alanlarında nihai otoritedir.</p>
+</div>
+<div class="card">
+<h3 id="generalRulesBioTitle40">Q&amp;A’da genellikle cevaplanmayacak (Page 19)</h3>
+<p id="generalRulesBioText40">sorular<br/>
+Örneğin:<br/>
+• tamamen belirsiz durumlar,<br/>
+• geçmiş maç kararlarına itirazlar,<br/>
+• bir robot tasarımının tamamen legality<br/>
+review’ı,<br/>
+• aşırı geniş veya kural referansı içermeyen<br/>
+sorular,<br/>
+• geçmiş bir maçta referee’nin nasıl karar<br/>
+vermesi gerektiği,<br/>
+• manualda zaten açıkça cevaplanmış sorular.</p>
+</div>
+<div class="card">
+<h3 id="generalRulesBioTitle41">Q&amp;A — Good Question Example (Page 20)</h3>
+<p id="generalRulesBioText41">İyi bir Q&amp;A sorusu genellikle:<br/>
+• belirli bir ROBOT özelliğini,<br/>
+• belirli bir gameplay senaryosunu,<br/>
+• belirli bir rule’u<br/>
+ele alır ve mümkünse ilgili rule ID’lerini belirtir.<br/>
+Manual örneğinde robotta kullanılan belirli bir<br/>
+wire’ın ilgili robot kurallarına uyup uymadığı veya<br/>
+belirli bir gameplay davranışının bir tanıma girip<br/>
+girmediği gibi sorular örnek gösteriliyor.</p>
+</div>
+<div class="card">
+<h3 id="generalRulesBioTitle42">2 FIRST Season Overview (Page 21)</h3>
+<p id="generalRulesBioText42">2026–2027 FIRST sezonunun teması FIRST<br/>
+CANOPY™. Sezon doğadan ve biyolojik<br/>
+çeşitlilikten ilham alıyor. Ana fikir; STEM, problem<br/>
+çözme ve takım çalışmasıyla dünyamızın<br/>
+sürdürülebilirliğine katkı sağlayan çözümler<br/>
+geliştirmek.<br/>
+Kart özeti:<br/>
+2026–2027 sezonu FIRST CANOPY teması<br/>
+altında yürütülüyor ve BIOBUZZ oyunu bu<br/>
+sezonun FTC oyunudur.</p>
+</div>
+<div class="card">
+<h3 id="generalRulesBioTitle43">3 Competition Eligibility and (Page 22)</h3>
+<p id="generalRulesBioText43">Inspection (I)<br/>
+3.1 Team Eligibility Rules<br/>
+I101 — Teams must be registered with<br/>
+FIRST.<br/>
+Bir takım resmi FIRST Tech Challenge<br/>
+etkinliklerinde yarışabilmek ve MATCH puanı/<br/>
+judged award kazanabilmek için “competition<br/>
+ready” olmalıdır.<br/>
+Kuzey Amerika için temel şartlar:<br/>
+• Yıllık kayıt tamamlanmalı.<br/>
+• Yıllık kayıt ücreti ödenmeli.<br/>
+• Lead Coach 1 ve Lead Coach 2 olarak iki<br/>
+yetişkin atanmalı ve YPP taramasından<br/>
+geçmeli.<br/>
+• Gerekli diğer Youth Protection kontrolleri<br/>
+tamamlanmalı.<br/>
+• Tüm öğrenciler FIRST dashboard’a<br/>
+kaydedilmeli.<br/>
+Kuzey Amerika dışındaki bölgelerde yerel<br/>
+Program Delivery Partner’ın ek şartları olabilir.<br/>
+Önemli: Yıllık kayıt ücretini ödememiş takımlar<br/>
+resmi sezon kaydı elde edemez ve<br/>
+advancement’a ilerleyemez.<br/>
+I102 — Check-in at the event on time.<br/>
+Takım yetişkini, Qualification MATCH’leri<br/>
+başlamadan en geç 45 dakika önce check-in<br/>
+yapmalıdır; aksi belirtilmedikçe veya Event<br/>
+Director izin vermedikçe.<br/>
+Check-in sırasında:<br/>
+• Takım yetişkini bulunmalı.<br/>
+• En az bir STUDENT mekânda bulunmalı.<br/>
+• Bölgeye göre roster, kayıt belgeleri, ROBOT<br/>
+ve PORTFOLIO istenebilir.<br/>
+Takımların inspection/judging gibi check-in’den<br/>
+önce gerçekleşebilecek etkinlikleri de dikkate<br/>
+alması gerekir.</p>
+</div>
+<div class="card">
+<h3 id="generalRulesBioTitle44">I103 — A responsible adult must be (Page 23)</h3>
+<p id="generalRulesBioText44">present for the whole event.<br/>
+Etkinliğin tamamı boyunca öğrencilerden sorumlu<br/>
+en az 1, tercihen 2 yetişkin bulunmalıdır.<br/>
+3.2 Awards Eligibility Rules<br/>
+Judged Award’lara uygun olmak için takımın<br/>
+Initial Interview (A203) sürecine katılması<br/>
+gerekir.<br/>
+Bazı ödüller için PORTFOLIO (A201) da<br/>
+gereklidir.<br/>
+Birden fazla qualifying/league etkinliğine veya<br/>
+HOME REGION dışındaki etkinliklere katılan<br/>
+takımlar için A213 ve A214 kuralları uygulanabilir.<br/>
+3.3 MATCH Eligibility Rules<br/>
+Qualification veya Playoff MATCH’lerine girmeden<br/>
+önce ROBOT inspection’dan geçmelidir.<br/>
+Bazı etkinliklerde scheduled Practice MATCH<br/>
+yapılabilir. Inspection geçmeden:<br/>
+• scheduled Practice MATCH’e katılmak<br/>
+mümkün olabilir,<br/>
+• ancak unscheduled / “filler line” Practice<br/>
+MATCH’e katılamazsınız.<br/>
+ROBOT’un güvenliğinden takım sorumludur.<br/>
+3.3.1 Inspection<br/>
+Inspection sırasında:<br/>
+• ROBOT,<br/>
+• ROBOT ile kullanılacak COMPONENTS,<br/>
+• OPERATOR CONSOLE<br/>
+INSPECTOR’lara gösterilir.<br/>
+ROBOT construction konusunda Lead ROBOT<br/>
+INSPECTOR (LRI) son yetkiye sahiptir. Inspection<br/>
+sırasında ROBOT’un açılması gerekiyorsa takım<br/>
+bunu INSPECTOR’a bildirmelidir. Stored energy<br/>
+bulunan sistemler de bildirilmelidir.</p>
+</div>
+<div class="card">
+<h3 id="generalRulesBioTitle45">Inspection kapsamlı bir garanti kontrolü (Page 24)</h3>
+<p id="generalRulesBioText45">değildir. INSPECTOR her parçayı kontrol etmese<br/>
+bile takım Section 12’deki kuralların ruhuna<br/>
+uymak zorundadır.<br/>
+Kuralları STRATEGICALLY circumvent etmek<br/>
+Competition Integrity Contract’a aykırı olabilir ve<br/>
+mitigation uygulanabilir.<br/>
+Takımlar her etkinlikten önce ROBOT’larını<br/>
+kendileri kontrol etmeye teşvik edilir.<br/>
+I301 — Bring the complete ROBOT and<br/>
+supporting equipment to inspection.<br/>
+Inspection’a MATCH’lerde kullanılacak:<br/>
+•   ROBOT,<br/>
+•   OPERATOR CONSOLE,<br/>
+•   bütün COMPONENTS,<br/>
+•   decorative parts<br/>
+getirilmelidir.<br/>
+Inspection’dan geçmemiş yeni COMPONENTS<br/>
+sonradan ROBOT’a eklenemez; eklenirse yeniden<br/>
+inspection gerekir.<br/>
+I302 — Certain limits apply to all<br/>
+configurations.<br/>
+ROBOT’un farklı MECHANISM’lerinde kullanılan<br/>
+toplam elektronik miktarı, ROBOT’un aynı anda<br/>
+kullanmasa bile Section 12’de belirtilen sınırları<br/>
+aşamaz.</p>
+</div>
+<div class="card">
+<h3 id="generalRulesBioTitle46">3.3.2 Re-Inspection (Page 25)</h3>
+<p id="generalRulesBioText46">Takım event sırasında ROBOT üzerinde değişiklik<br/>
+yapabilir. Ancak çoğu değişiklikten sonra yeniden<br/>
+inspection gerekir.<br/>
+I303 — Request re-inspection for most<br/>
+changes to the ROBOT.<br/>
+Şu değişiklikler genellikle yeniden inspection<br/>
+gerektirmez (ROBOT’un boyutunu, legality’sini<br/>
+veya güvenliğini önemli ölçüde<br/>
+değiştirmiyorsa):<br/>
+• Fastener ekleme/çıkarma/değiştirme<br/>
+• Label/marking değişiklikleri<br/>
+• Team SIGN değişimi<br/>
+• ROBOT code değişikliği<br/>
+• Aynı COMPONENT’in değiştirilmesi<br/>
+• Aynı ölçü, ağırlık ve malzemeye sahip aynı<br/>
+MECHANISM’in değiştirilmesi<br/>
+• Önceden inspect edilmiş MECHANISM’lerin<br/>
+subset’leriyle ROBOT’u yeniden<br/>
+yapılandırmak<br/>
+Şüphe varsa LRI veya FIELD STAFF’a<br/>
+sorulmalıdır.<br/>
+I304 — Do not exploit re-inspection.<br/>
+Re-inspection süreci başka kuralları aşmak için<br/>
+kullanılamaz.<br/>
+Özellikle inspection’dan sonra rekabet avantajı<br/>
+elde etmek amacıyla değişiklik yapıp yeniden<br/>
+inspection istememek yarışmanın ruhuna<br/>
+aykırıdır.</p>
+</div>
+<div class="card">
+<h3 id="generalRulesBioTitle47">4 Advancement (Page 27)</h3>
+<p id="generalRulesBioText47">Takımlar yalnızca HOME REGION içindeki<br/>
+etkinliklerden advancement için uygundur.<br/>
+HOME REGION dışındaki etkinliklere davet<br/>
+edilebilirsiniz ancak bu etkinliklerden<br/>
+advancement kazanamazsınız.<br/>
+Takımlar FTC-Events üzerinden hangi HOME<br/>
+REGION’a ait olduklarını kontrol edebilir.<br/>
+İlk üç entry-level event:<br/>
+• Qualifying Tournament (QT)<br/>
+• League Tournament (LT)<br/>
+üzerinden advancement mümkündür.<br/>
+Takım sezon boyunca 3’ten fazla entry-level<br/>
+event’e katılabilir; ancak advancement açısından<br/>
+yalnızca kronolojik ilk üç event dikkate alınır.<br/>
+Bir takım sezon başına yalnızca bir League’e<br/>
+katılabilir.<br/>
+Advancement yapısında:<br/>
+•   QT<br/>
+•   LT<br/>
+•   SQT<br/>
+•   Regional Championship (RCMP)<br/>
+•   FIRST Championship (FCMP)<br/>
+•   FIRST Premier Event (FPE)<br/>
+•   bazı bölgelerde Pilot<br/>
+gibi seviyeler bulunur.</p>
+</div>
+<div class="card">
+<h3 id="generalRulesBioTitle48">4.1 Advancement Points Calculation (Page 28)</h3>
+<p id="generalRulesBioText48">Advancing event’lerde takımlar, o etkinlikte<br/>
+topladıkları Advancement Points üzerinden<br/>
+sıralanır.<br/>
+Qualification Phase Performance<br/>
+• En yüksek: 16<br/>
+• En düşük: 2<br/>
+ALLIANCE lead<br/>
+21 − ALLIANCE lead number<br/>
+Örneğin ALLIANCE #3 lead → 18 puan.<br/>
+Draft Order Acceptance<br/>
+21 − draft position<br/>
+Örneğin üçüncü draft pozisyonunu kabul eden<br/>
+takım → 18 puan.<br/>
+Playoff Advancement<br/>
+• 1st Place → 40<br/>
+• 2nd Place → 20<br/>
+• 3rd Place → 10<br/>
+• 4th Place → 5<br/>
+Team Judged Awards<br/>
+• Inspire Award 1st → 60<br/>
+• Inspire Award 2nd → 30<br/>
+• Inspire Award 3rd → 15<br/>
+• Diğer 1st Place → 12<br/>
+• Diğer 2nd Place → 6<br/>
+• Diğer 3rd Place → 3<br/>
+Bu puanlar advancement sıralamasında kullanılır.</p>
+</div>
+<div class="card">
+<h3 id="generalRulesBioTitle49">Table 4-2 Advancement Sorting Criteria (Page 29)</h3>
+<p id="generalRulesBioText49">Including Tiebreakers<br/>
+Advancement puanları eşitse sırasıyla:<br/>
+1. Total Advancement Points<br/>
+2. Judged Team Award Points<br/>
+3. Playoff Advancement Points<br/>
+4. ALLIANCE Selection Results Points<br/>
+5. Qualification Phase Performance Points<br/>
+6. Average Qualification MATCH Points<br/>
+(excluding FOULS)<br/>
+7. Average Qualification AUTO Points<br/>
+8. Highest individual Qualification MATCH<br/>
+Points (excluding FOULS)<br/>
+9. Second Highest individual Qualification<br/>
+MATCH Points (excluding FOULS)<br/>
+10.Random Selection by Event Management<br/>
+System<br/>
+4.1.1 Qualification Phase Performance<br/>
+Qualification Phase Performance; takımın:<br/>
+• qualification rank’ı (R),<br/>
+• etkinlikteki takım sayısı (N),<br/>
+• sabit α değeri (1.07)<br/>
+kullanılarak hesaplanır.<br/>
+Amaç, sıralamaya göre yaklaşık normal dağılımlı<br/>
+bir Advancement Point sistemi oluşturmaktır.</p>
+</div>
+<div class="card">
+<h3 id="generalRulesBioTitle50">Table 4-3 Sample Qualification Round (Page 30)</h3>
+<p id="generalRulesBioText50">Point Assignments<br/>
+28 takımlı örnekte:<br/>
+Rank                     Points<br/>
+1                        16<br/>
+2                        15<br/>
+3                        14<br/>
+4                        14<br/>
+12                        10<br/>
+13                        10<br/>
+14                        10<br/>
+25                         6<br/>
+26                         5<br/>
+27                         5<br/>
+28                         4<br/>
+4.1.2 ALLIANCE Selection Results<br/>
+Bu sistem hem Qualification sıralamasındaki<br/>
+performansı hem de diğer takımların takımınızı<br/>
+seçmesini dikkate alır.<br/>
+ALLIANCE lead puanı ile aynı sırada draft edilen<br/>
+takımın puanı aynıdır.<br/>
+4.1.3 Playoff Performance<br/>
+Takımın ALLIANCE içindeki Playoff performansını<br/>
+ölçer. ALLIANCE’daki tüm takımlar ilgili puanı alır.<br/>
+4.1.4 Team Judged Awards<br/>
+Judged Award’lar da Advancement sıralamasına<br/>
+katkı sağlar. Ancak bu puanlar ödülün tüm<br/>
+değerini temsil etmek için değil, award kazanan<br/>
+takımların advancement sisteminde dikkate<br/>
+alınmasını sağlamak için kullanılır.</p>
+</div>
+<div class="card">
+<h3 id="generalRulesBioTitle51">4.2 Advancement Distribution by Region (Page 31)</h3>
+<p id="generalRulesBioText51">Bir bölgeden kaç takımın advancement edeceğini<br/>
+Program Delivery Partner belirler.<br/>
+Minimum advancement sayıları mümkün<br/>
+olduğunca erken açıklanmalı ve en geç<br/>
+ALLIANCE selection başladığında takımlar<br/>
+tarafından bilinmelidir.<br/>
+FIRST Championship / FIRST Premier Event<br/>
+advancement’ı FIRST Headquarters tarafından şu<br/>
+faktörler dikkate alınarak belirlenir:<br/>
+• Global ve regional representation<br/>
+• Yeni gelişen bölgeler<br/>
+• Bölgedeki kayıtlı takım sayısı<br/>
+• Minimum registration şartlarını karşılayan<br/>
+bölgeler<br/>
+• Bölgedeki toplam takım sayısı<br/>
+BIOBUZZ için kayıt cutoff tarihi: 17 Kasım<br/>
+2026.<br/>
+Regional advancement slot bilgileri Aralık<br/>
+başından itibaren FTC-Events sayfasında<br/>
+yayınlanacaktır. Kullanılmayan slotlar FIRST HQ<br/>
+veya Premier Event Host’a geri dönebilir ve<br/>
+yeniden dağıtılabilir.</p>
+</div>
+<div class="card">
+<h3 id="generalRulesBioTitle52">5 Event Rules (E) (Page 33)</h3>
+<p id="generalRulesBioText52">Bu bölüm, takımlar etkinliğe geldiği andan<br/>
+ayrılana kadar geçerli genel event kurallarını<br/>
+içerir.<br/>
+Universal Violation Note: Event Rule ihlali<br/>
+normalde VERBAL WARNING ile sonuçlanır. Ağır<br/>
+veya tekrarlanan ihlaller:<br/>
+• FIRST Headquarters’a escalation,<br/>
+• MATCH ve award’lardan disqualification<br/>
+ile sonuçlanabilir.<br/>
+5.1 General Rules<br/>
+E101 — Personal safety comes first.<br/>
+Etkinlik boyunca:<br/>
+• Belirlenen alanlarda uygun safety glasses<br/>
+kullanılmalı.<br/>
+• Kapalı burun ve topuklu ayakkabı giyilmeli.<br/>
+• Uzun saç ve takılma riski oluşturan nesneler<br/>
+kontrol edilmeli.<br/>
+• Uygun kıyafet kullanılmalı.<br/>
+• Venue içinde yürünmeli.<br/>
+• Yerel sağlık/güvenlik kurallarına uyulmalı.<br/>
+Safety glasses için mekân açıldığında 10<br/>
+dakikalık grace period bulunur.<br/>
+Takımlar kendi kişisel koruyucu ekipmanlarını<br/>
+getirmekten sorumludur.</p>
+</div>
+<div class="card">
+<h3 id="generalRulesBioTitle53">E102 — Be Respectful. (Page 34)</h3>
+<p id="generalRulesBioText53">Section 1.4’teki davranış çerçevesine uyulmalı.<br/>
+Örnek uygunsuz davranışlar:<br/>
+• Offensive language<br/>
+• Başka birine “not GP” diyerek Gracious<br/>
+Professionalism’ı silah olarak kullanmak<br/>
+• Başkalarının görüşünü uzun süre kasıtlı olarak<br/>
+engellemek<br/>
+• ROBOT veya ARENA operasyonlarını<br/>
+engellemek<br/>
+Özellikle ağır davranışlar arasında:<br/>
+•   Assault<br/>
+•   Threat<br/>
+•   Harassment<br/>
+•   Bullying<br/>
+•   Insulting<br/>
+•   Başkasına küfür etmek<br/>
+•   Öfkeyle bağırmak<br/>
+bulunur.<br/>
+E103 — Children with adults, please.<br/>
+12 yaşından küçük çocuklar pitlerde her zaman<br/>
+yetişkin eşliğinde olmalıdır.<br/>
+E104 — Respect the venue.<br/>
+Tribün, zemin, duvar, korkuluk vb. venue<br/>
+bölümlerine zarar verilemez. Takım<br/>
+giveaways’lerinin ortalığa atılması da yasaktır.<br/>
+E105 — Event resources are for<br/>
+competing teams only.<br/>
+Competition FIELD, practice FIELD ve inspection<br/>
+kaynakları yalnızca kayıtlı takımlar içindir;<br/>
+istisnalar Event Director/Program Delivery Partner<br/>
+onayına bağlıdır.<br/>
+E106 — Practice only when/where<br/>
+permitted.<br/>
+ROBOT ile yalnızca:<br/>
+• kendi pit alanında,<br/>
+• belirlenmiş practice alanlarında,<br/>
+• Practice MATCH sırasında<br/>
+practice yapılabilir.</p>
+</div>
+<div class="card">
+<h3 id="generalRulesBioTitle54">E107 — Work in designated areas only. (Page 35)</h3>
+<p id="generalRulesBioText54">FABRICATED ITEMS yalnızca izin verilen<br/>
+alanlarda üretilebilir:<br/>
+•   kendi pit’i,<br/>
+•   izin alınmış başka takımın pit’i,<br/>
+•   MATCH/practice FIELD kuyruğu,<br/>
+•   event staff tarafından belirlenmiş alan,<br/>
+•   herkese açık uygun machine shop.<br/>
+E108 — Some things do not belong at<br/>
+events.<br/>
+Getirilmesi/kullanılması yasak örnekler:<br/>
+•   Skateboards<br/>
+•   Hoverboards<br/>
+•   Drones<br/>
+•   Bottled gas tanks<br/>
+•   Loud noisemakers<br/>
+•   Scooter’lar (accommodation harici)<br/>
+•   Yaklaşık saniyede 5’ten hızlı yanıp sönen<br/>
+parlak ışıklar<br/>
+E109 — Do not arrange for additional<br/>
+services or utilities.<br/>
+Venue’dan ayrıca power, internet veya phone<br/>
+service ayarlanamaz.<br/>
+E110 — Do not sell stuff.<br/>
+Event’te satış yapılamaz; Event Director özel izin<br/>
+vermedikçe raffle ticket, yiyecek, kıyafet, candy,<br/>
+içecek vb. satılamaz.<br/>
+E111 — No Loud Music.<br/>
+Yüksek sesli müzik veya seyircide canlı müzik<br/>
+grubu yok.<br/>
+E112 — Hang banners with care.<br/>
+Banner:<br/>
+• başka takımın/sponsorun işaretini<br/>
+kapatmamalı,<br/>
+• alan adil paylaşılmalı,<br/>
+• seyirci görüşünü kapatmamalı,<br/>
+• pit dışındaysa Event Director izni olmalı,<br/>
+• güvenli şekilde asılmalı.<br/>
+Pit dışındaki banner’lar 25 ft² (~2.3 m²) sınırını<br/>
+aşmamalıdır.</p>
+</div>
+<div class="card">
+<h3 id="generalRulesBioTitle55">E113 — Limit flag and flagpole size if (Page 36)</h3>
+<p id="generalRulesBioText55">used in the ARENA.<br/>
+Guideline olarak:<br/>
+•   Flag &lt; 3 ft × 5 ft<br/>
+•   Flag weight &lt; 2 lb<br/>
+•   Flagpole ≤ 8 ft<br/>
+•   Flagpole weight &lt; 3 lb<br/>
+E114 — No firearms or other weapons.<br/>
+FIRST etkinliklerinde silahlar yasaktır. Gerçek gibi<br/>
+görünen prop/simulated weapons da bu<br/>
+kapsamdadır.<br/>
+E115 — Inspection required for practice<br/>
+FIELD access.<br/>
+Scheduled inspection kullanılmayan event’lerde<br/>
+Practice FIELD’e girebilmek için ROBOT initial<br/>
+complete inspection’dan geçmiş olmalıdır.<br/>
+E116 — Do not record anyone at the<br/>
+event without their consent.<br/>
+Bir kişinin konuşmasını veya etkileşimini izinsiz<br/>
+kaydetmek yasaktır.<br/>
+Event’in livestream edilmesi, bireysel konuşmaları<br/>
+ayrıca kaydetme izni anlamına gelmez.<br/>
+E117 — Enter only 1 ROBOT in the<br/>
+tournament.<br/>
+Bir takım aynı event’te yalnızca 1 ROBOT ile<br/>
+inspection ve MATCH oynayabilir.<br/>
+Takım aynı anda yalnızca 1 concurrent event’e<br/>
+katılabilir.<br/>
+Başka ROBOT’lar venue’ya display/award gibi<br/>
+amaçlarla getirilebilir; ancak MATCH için<br/>
+kullanılmaz.<br/>
+E118 — No saving seats.<br/>
+Takımlar aktif olarak kullanılmayan koltukları takım<br/>
+üyeleri için ayıramaz.</p>
+</div>
+<div class="card">
+<h3 id="generalRulesBioTitle56">5.2 Machine Shops and Host Team Build (Page 37)</h3>
+<p id="generalRulesBioText56">Spaces<br/>
+Bazı etkinliklerde ROBOT tamiri/üretimi için<br/>
+machine shop veya host team’s build space<br/>
+bulunabilir.<br/>
+Tüm yarışan takımların mümkün olduğunca aynı<br/>
+kaynaklara erişebilmesi gerekir.<br/>
+5.3 Wireless Rules<br/>
+E301 — No wireless communication.<br/>
+Venue içinde takım kendi:<br/>
+•   Wi-Fi,<br/>
+•   access point,<br/>
+•   ad-hoc network,<br/>
+•   Bluetooth,<br/>
+•   2.4 GHz / 5 GHz communication<br/>
+sistemlerini kuramaz.<br/>
+Cellular cihazların oluşturduğu hotspot’lar da<br/>
+access point sayılır.<br/>
+Bazı smart TV’lerde access point fabrika çıkışında<br/>
+açık olabilir; kapatılmalıdır.<br/>
+E302 — Don’t interfere with wireless<br/>
+networks.<br/>
+Başka takımın veya FIRST wireless network’ünün<br/>
+çalışmasına müdahale etmek, bağlanmaya<br/>
+çalışmak veya interferans yaratmak yasaktır.<br/>
+Şüpheli wireless security sorunları FTA/Event<br/>
+Director’a bildirilmelidir.</p>
+</div>
+<div class="card">
+<h3 id="generalRulesBioTitle57">5.4 Load-In (Page 38)</h3>
+<p id="generalRulesBioText57">Bazı büyük etkinliklerde ROBOT ve ekipmanların<br/>
+pitlere önceden taşınması için özel load-in saatleri<br/>
+olabilir.<br/>
+Takımların özellikle güvenli, hazırlıklı, gracious ve<br/>
+professional olması beklenir.<br/>
+5.5 Pits<br/>
+Takım pit’i genellikle yaklaşık:<br/>
+10 ft × 10 ft × 10 ft (~3 m × 3 m × 3 m)<br/>
+alanındadır.<br/>
+Pit area; pitler arasındaki koridorları, Pit Admin,<br/>
+inspection, practice FIELD ve ROBOT’ların<br/>
+çalıştığı diğer alanları da kapsar.<br/>
+E501 — Pits are unavailable if closed.<br/>
+Pit alanına yalnızca izin verilen saatlerde girilebilir.<br/>
+E502 — Pit set ups should be self-<br/>
+contained within the space assigned by<br/>
+the Event Organizers.<br/>
+Takım ekipmanı kendi pit alanında tutulmalıdır.<br/>
+Pit’ten başka alana:<br/>
+• power/internet kablosu çekilemez,<br/>
+• numaralı pitler değiştirilemez,<br/>
+• boş bir pit’e Event Director izni olmadan<br/>
+taşınılamaz.<br/>
+E503 — Keep aisles and exit pathways<br/>
+clear.<br/>
+Koridor ve çıkışlar kapatılamaz.<br/>
+E504 — Open flames and spark emitting<br/>
+devices must be limited and carefully<br/>
+controlled.<br/>
+Açık alev ve kıvılcım çıkaran araçlar genel olarak<br/>
+yasaktır; sınırlı ve güvenli kullanım ancak belirli<br/>
+durumlarda kabul edilir.</p>
+</div>
+<div class="card">
+<h3 id="generalRulesBioTitle58">E505 — Only small benchtop machinery (Page 39)</h3>
+<p id="generalRulesBioText58">is permitted in team pits.<br/>
+Yalnızca küçük, bir kişinin kolayca kaldırabileceği<br/>
+benchtop machinery kullanılabilir.<br/>
+Örnek:<br/>
+•   3D printer<br/>
+•   Small band saw<br/>
+•   Small drill press<br/>
+•   Desktop CNC mill<br/>
+•   Sander<br/>
+Floor-standing büyük makineler yasaktır.<br/>
+E506 — No brazing or welding.<br/>
+Brazing/welding yasaktır.<br/>
+E507 — Solder with specific tools only.<br/>
+Soldering yalnızca electric iron/gun ile yapılabilir.<br/>
+E508 — Pit structures must be safe.<br/>
+İnsan ağırlığı taşıyan veya üstte eşya depolayan<br/>
+yapılar yapılamaz. Sprinkler sistemleri<br/>
+engellenemez.<br/>
+E509 — Only use aerosol or other<br/>
+chemicals with noxious fumes in<br/>
+approved areas.<br/>
+Noxious fumes veya partikül üreten aerosol/<br/>
+chemical ürünler yalnızca izin verilen alanlarda<br/>
+kullanılabilir.<br/>
+E510 — Don’t heat or cool ROBOT<br/>
+components to gain an advantage.<br/>
+ROBOT parçalarını venue’nun ambient<br/>
+temperature’ından yapay şekilde daha sıcak/<br/>
+soğuk hale getirerek competitive advantage elde<br/>
+etmek yasaktır.<br/>
+Örnek ihlaller:<br/>
+• Fuse’ları soğutup daha geç atmalarını<br/>
+sağlamak<br/>
+• Battery’leri performans için ısıtmak<br/>
+• Heatsink’leri dondurmak<br/>
+Normal kullanım sonucu sıcak olan battery/<br/>
+component’ler ise bu kapsamda değildir.</p>
+</div>
+<div class="card">
+<h3 id="generalRulesBioTitle59">E511 — Charge batteries in a safe and (Page 40)</h3>
+<p id="generalRulesBioText59">fair manner.<br/>
+Battery charging sırasında:<br/>
+• Üreticinin önerilerine uygun güvenli rate<br/>
+kullanılmalı.<br/>
+• Charger, 3-amp average channel current<br/>
+değerini aşmamalı.<br/>
+• Güvenli connector kullanılmalı.<br/>
+• Battery, alligator clip veya benzeri<br/>
+yöntemlerle şarj edilmemeli.<br/>
+5.6 ROBOT Carts<br/>
+E601 — Carts must not be a nuisance.<br/>
+ROBOT cart:<br/>
+• kolay kontrol edilmeli,<br/>
+• çevredeki insanlar için risk oluşturmamalı,<br/>
+• 30-inch (762 mm) standart kapıdan<br/>
+geçebilmeli,<br/>
+• kullanılmadığında pit’te kalmalı,<br/>
+• müzik/ses üreten cihaz taşımamalı,<br/>
+• powered propulsion kullanmamalıdır.</p>
+</div>
+<div class="card">
+<h3 id="generalRulesBioTitle60">5.7 Ceremonies (Page 41)</h3>
+<p id="generalRulesBioText60">Opening/closing/award ceremonies; ülkeleri,<br/>
+sponsorları, takımları, mentorları, gönüllüleri ve<br/>
+award winners’ı onurlandırmak için yapılır.<br/>
+E701 — Quiet in the pits during<br/>
+ceremonies.<br/>
+Ceremony sırasında pitlerde:<br/>
+• power tools,<br/>
+• loud hand tools,<br/>
+• disruptive şekilde bağırma/yüksek ses<br/>
+kullanılamaz.<br/>
+E702 — Pit person limit during<br/>
+ceremonies is 5.<br/>
+Playoff MATCH dışındaki ceremony sırasında<br/>
+pit’te en fazla 5 takım üyesi bulunabilir.<br/>
+Her takımın en az 1 temsilcisi ceremony’yi takip<br/>
+etmelidir.<br/>
+E703 — Be respectful during anthems.<br/>
+National anthem sırasında peaceful ve non-<br/>
+disruptive davranılmalıdır. Geleneksel anthem<br/>
+davranışlarına katılmak istemeyenler bunu<br/>
+yapabilir; ancak sessiz ve rahatsız etmeyecek<br/>
+şekilde kalmalıdır.</p>
+</div>
+</section>
+<footer class="footer">
+<div class="footer-container">
+<div class="footer-column">
+<h3 id="footerTitle">QuickManual</h3>
+<p id="footerDescription">
+            A community resource by Asteria Robotics
+            This is not an official FIRST document.
+        </p>
+</div>
+<div class="footer-column">
+<h3 id="contactTitle">İletişim</h3>
+<p><a href="mailto:asteria.32334@gmail.com">
+    asteria.32334@gmail.com
+</a></p>
+<p><a href="tel:+905057770038">
+    +90 (505) 777 00 38
+</a></p>
+<a href="https://maps.app.goo.gl/HN1VrrvqUwMMbExA6?g_st=ic" id="addressText" target="_blank">
+
+Atölyemizin Adresi
+
+</a>
+</div>
+<div class="footer-column">
+<h3> </h3>
+<a href="https://www.instagram.com/asteria_32334/" id="instagramText" target="_blank">
+
+Instagram
+
+</a>
+<p><a href="https://theorangealliance.org/teams/32334" target="_blank">
+        The Orange Alliance
+    </a></p>
+<p><a href="https://ftcscout.org/teams/32334" target="_blank">
+        FTCScout
+    </a></p>
+
+<p><a href="https://www.youtube.com/@asteria32334" target="_blank">
+        YouTube
+    </a></p>
+</div>
+</div>
+<div class="footer-bottom" id="copyrightText">
+© 2026 Asteria Robotics FTC Team 32334. All Rights Reserved.
+</div>
+<div class="footer-bottom-asterisk" id="asterisk">
+        * QuickManual resmi Oyun Kılavuzu değildir ve hiçbir zaman eksiksiz ya da kesin kural kaynağı olarak kabul edilmemelidir. FIRST tarafından yayınlanan resmi belgenin yerini tutmaz. Resmi kararlar, muayene süreçleri veya itirazlar için takımlar her zaman en güncel resmi Game Manual’a başvurmalıdır.
+    </div>
+<!-- <div class="footer-bottom-asterisk" id="dateUpdate">
+        ** Son güncellenme tarihi: 5 ağustos 2026, Game Manual V0
+    </div> -->
+<img alt="biobuzz" class="center-image" src="images/biobuzz.png" style="max-width: 50%; height: auto; display: block;"/>
+</footer>
+<script>
+const translations = {
+  "tr": {
+    "navGameRules": "Maç Kuralları",
+    "navFieldInfo": "Saha Eleman Bilgileri",
+    "navMatchProcedures": "Maç Prosedürleri",
+    "navScoringSystem": "Nasıl Puan Kazanılır",
+    "navHome": "Ödüller ve Tanımlar",
+    "navTeam": "Genel Kurallar",
+    "navRobots": "Robot Yapımı",
+    "navDecode": "Geri dön",
+    "asterisk": "* QuickManual resmi Oyun Kılavuzu değildir ve hiçbir zaman eksiksiz ya da kesin kural kaynağı olarak kabul edilmemelidir. FIRST tarafından yayınlanan resmi belgenin yerini tutmaz. Resmi kararlar, muayene süreçleri veya itirazlar için takımlar her zaman en güncel resmi Game Manual’a başvurmalıdır.",
+    "dateUpdate": "** Son güncellenme tarihi: 5 ağustos 2026, Game Manual V0",
+    "pageSearch": "Sayfada ara... (örnek: kurallar, ödül, robot)",
+    "clear": "Temizle",
+    "generalRulesTitle": "Genel Kurallar",
+    "footerTitle": "QuickManual",
+    "footerDescription": "A community resource by Asteria Robotics\nThis is not an official FIRST document.",
+    "contactTitle": "İletişim",
+    "addressText": "Atölyemizin Adresi",
+    "instagramText": "Instagram",
+    "copyrightText": "© 2026 Asteria Robotics FTC Team 32334. Tüm Hakları Saklıdır.",
+    "navPanel": "Kategoriler",
+    "generalRulesBioText50": "Point Assignments<br/>\n28 takımlı örnekte:<br/>\nRank                     Points<br/>\n1                        16<br/>\n2                        15<br/>\n3                        14<br/>\n4                        14<br/>\n12                        10<br/>\n13                        10<br/>\n14                        10<br/>\n25                         6<br/>\n26                         5<br/>\n27                         5<br/>\n28                         4<br/>\n4.1.2 ALLIANCE Selection Results<br/>\nBu sistem hem Qualification sıralamasındaki<br/>\nperformansı hem de diğer takımların takımınızı<br/>\nseçmesini dikkate alır.<br/>\nALLIANCE lead puanı ile aynı sırada draft edilen<br/>\ntakımın puanı aynıdır.<br/>\n4.1.3 Playoff Performance<br/>\nTakımın ALLIANCE içindeki Playoff performansını<br/>\nölçer. ALLIANCE’daki tüm takımlar ilgili puanı alır.<br/>\n4.1.4 Team Judged Awards<br/>\nJudged Award’lar da Advancement sıralamasına<br/>\nkatkı sağlar. Ancak bu puanlar ödülün tüm<br/>\ndeğerini temsil etmek için değil, award kazanan<br/>\ntakımların advancement sisteminde dikkate<br/>\nalınmasını sağlamak için kullanılır.",
+    "generalRulesBioTitle40": "Q&A’da genellikle cevaplanmayacak (Page 19)",
+    "generalRulesBioText28": "Bilgi<br/>\nFIRST, engelli katılımcılar için makul<br/>\naccommodations sağlamaya çalışır.<br/>\nGerekli durumda etkinlikten önce yerel FIRST<br/>\nliderliği ile iletişime geçilmelidir.<br/>\nGüvenlik sorunu veya undue hardship<br/>\noluşturmaması koşuluyla bazı kurallarda<br/>\nreasonable accommodation yapılabilir.",
+    "generalRulesBioTitle12": "1.4.3 The Role of Mentors (Page 12)",
+    "generalRulesBioText35": "Team Updates, sezon boyunca resmi<br/>\ndokümanlarda yapılan değişiklikleri ve önemli<br/>\nsezon bilgilerini duyurmak için kullanılır.<br/>\nBIOBUZZ sezonunda Team Updates, Kickoff’tan<br/>\nbaşlayarak FIRST Championship’ten iki hafta<br/>\nöncesine kadar her Perşembe yayınlanır.<br/>\n• Yeni eklemeler sarı ile gösterilir.<br/>\n• Silinen kısımlar üzeri çizili gösterilir.",
+    "generalRulesBioTitle32": "Warnings, Cautions, and Notes (Page 18)",
+    "generalRulesBioTitle45": "Inspection kapsamlı bir garanti kontrolü (Page 24)",
+    "generalRulesBioText46": "Takım event sırasında ROBOT üzerinde değişiklik<br/>\nyapabilir. Ancak çoğu değişiklikten sonra yeniden<br/>\ninspection gerekir.<br/>\nI303 — Request re-inspection for most<br/>\nchanges to the ROBOT.<br/>\nŞu değişiklikler genellikle yeniden inspection<br/>\ngerektirmez (ROBOT’un boyutunu, legality’sini<br/>\nveya güvenliğini önemli ölçüde<br/>\ndeğiştirmiyorsa):<br/>\n• Fastener ekleme/çıkarma/değiştirme<br/>\n• Label/marking değişiklikleri<br/>\n• Team SIGN değişimi<br/>\n• ROBOT code değişikliği<br/>\n• Aynı COMPONENT’in değiştirilmesi<br/>\n• Aynı ölçü, ağırlık ve malzemeye sahip aynı<br/>\nMECHANISM’in değiştirilmesi<br/>\n• Önceden inspect edilmiş MECHANISM’lerin<br/>\nsubset’leriyle ROBOT’u yeniden<br/>\nyapılandırmak<br/>\nŞüphe varsa LRI veya FIELD STAFF’a<br/>\nsorulmalıdır.<br/>\nI304 — Do not exploit re-inspection.<br/>\nRe-inspection süreci başka kuralları aşmak için<br/>\nkullanılamaz.<br/>\nÖzellikle inspection’dan sonra rekabet avantajı<br/>\nelde etmek amacıyla değişiklik yapıp yeniden<br/>\ninspection istememek yarışmanın ruhuna<br/>\naykırıdır.",
+    "generalRulesBioText2": "Bilgi<br/>\nFIRST Tech Challenge; sınıf ortamına uygun<br/>\nboyutta FIELD ve robotlarla öğrencilerin robotik<br/>\nyarışmasına katılmasını sağlar.<br/>\nTakımlar:<br/>\n•   küçük ekipler halinde çalışabilir,<br/>\n•   farklı görevlerde uzmanlaşabilir,<br/>\n•   Starter Kit kullanabilir,<br/>\n•   tamamen özel robot üretebilir,<br/>\n•   iki yaklaşımı birleştirebilir.<br/>\nRobot yapımında ileri üretim araçları kullanılabilir<br/>\nancak bunlar zorunlu değildir.",
+    "generalRulesBioTitle4": "1.3 FIRST Ethos and Core Values (Page 6)",
+    "generalRulesBioText15": "We Don’t Cheat.<br/>\nTakım:<br/>\n•   kuralların ruhunu bilerek ihlal etmemeli,<br/>\n•   FIRST sistemlerini dolanmamalı,<br/>\n•   hile ile kazanmayı kabul etmemeli,<br/>\n•   fair play ve integrity’yi korumalıdır.",
+    "generalRulesBioText16": "Kuralların kontrol edilmediği durumlarda bile takım<br/>\nkurallara uymalıdır.<br/>\nAmaç:<br/>\n“Ne yapabiliriz?” değil, “Doğru olan nedir?”<br/>\nolmalıdır.",
+    "generalRulesBioText45": "değildir. INSPECTOR her parçayı kontrol etmese<br/>\nbile takım Section 12’deki kuralların ruhuna<br/>\nuymak zorundadır.<br/>\nKuralları STRATEGICALLY circumvent etmek<br/>\nCompetition Integrity Contract’a aykırı olabilir ve<br/>\nmitigation uygulanabilir.<br/>\nTakımlar her etkinlikten önce ROBOT’larını<br/>\nkendileri kontrol etmeye teşvik edilir.<br/>\nI301 — Bring the complete ROBOT and<br/>\nsupporting equipment to inspection.<br/>\nInspection’a MATCH’lerde kullanılacak:<br/>\n•   ROBOT,<br/>\n•   OPERATOR CONSOLE,<br/>\n•   bütün COMPONENTS,<br/>\n•   decorative parts<br/>\ngetirilmelidir.<br/>\nInspection’dan geçmemiş yeni COMPONENTS<br/>\nsonradan ROBOT’a eklenemez; eklenirse yeniden<br/>\ninspection gerekir.<br/>\nI302 — Certain limits apply to all<br/>\nconfigurations.<br/>\nROBOT’un farklı MECHANISM’lerinde kullanılan<br/>\ntoplam elektronik miktarı, ROBOT’un aynı anda<br/>\nkullanmasa bile Section 12’de belirtilen sınırları<br/>\naşamaz.",
+    "generalRulesBioTitle57": "5.4 Load-In (Page 38)",
+    "generalRulesBioText32": "Manualdaki turuncu kutular:<br/>\n• kuralların mantığını açıklayabilir,<br/>\n• bir kuralın nasıl yorumlanacağını anlatabilir,<br/>\n• best practice önerebilir.<br/>\nAncak turuncu kutu ile gerçek rule language<br/>\narasında çelişki varsa rule language geçerlidir.",
+    "generalRulesBioTitle55": "E113 — Limit flag and flagpole size if (Page 36)",
+    "generalRulesBioTitle9": "1.4 The Spirit of the Competition (Page 10)",
+    "generalRulesBioText33": "Manualda imperial ölçüler esas alınır.<br/>\nMetric karşılıklar yalnızca yaklaşık referans olarak<br/>\nverilir. Imperial ölçüler ile metric dönüşüm<br/>\narasında fark varsa imperial measurement ve<br/>\nresmi çizimler esas alınır.",
+    "generalRulesBioText6": "Bilgi<br/>\nCoopertition®, yoğun rekabet sırasında bile<br/>\nrakiplere yardım edebilme ve saygılı<br/>\ndavranabilme anlayışıdır.<br/>\nFTC alliance sistemi nedeniyle bugün rakip olan<br/>\nbir takım, başka bir MATCH’te alliance partneri<br/>\nolabilir.",
+    "generalRulesBioTitle60": "5.7 Ceremonies (Page 41)",
+    "generalRulesBioTitle18": "We Know Our Team Doesn’t Enforce the (Page 14)",
+    "generalRulesBioText43": "Inspection (I)<br/>\n3.1 Team Eligibility Rules<br/>\nI101 — Teams must be registered with<br/>\nFIRST.<br/>\nBir takım resmi FIRST Tech Challenge<br/>\netkinliklerinde yarışabilmek ve MATCH puanı/<br/>\njudged award kazanabilmek için “competition<br/>\nready” olmalıdır.<br/>\nKuzey Amerika için temel şartlar:<br/>\n• Yıllık kayıt tamamlanmalı.<br/>\n• Yıllık kayıt ücreti ödenmeli.<br/>\n• Lead Coach 1 ve Lead Coach 2 olarak iki<br/>\nyetişkin atanmalı ve YPP taramasından<br/>\ngeçmeli.<br/>\n• Gerekli diğer Youth Protection kontrolleri<br/>\ntamamlanmalı.<br/>\n• Tüm öğrenciler FIRST dashboard’a<br/>\nkaydedilmeli.<br/>\nKuzey Amerika dışındaki bölgelerde yerel<br/>\nProgram Delivery Partner’ın ek şartları olabilir.<br/>\nÖnemli: Yıllık kayıt ücretini ödememiş takımlar<br/>\nresmi sezon kaydı elde edemez ve<br/>\nadvancement’a ilerleyemez.<br/>\nI102 — Check-in at the event on time.<br/>\nTakım yetişkini, Qualification MATCH’leri<br/>\nbaşlamadan en geç 45 dakika önce check-in<br/>\nyapmalıdır; aksi belirtilmedikçe veya Event<br/>\nDirector izin vermedikçe.<br/>\nCheck-in sırasında:<br/>\n• Takım yetişkini bulunmalı.<br/>\n• En az bir STUDENT mekânda bulunmalı.<br/>\n• Bölgeye göre roster, kayıt belgeleri, ROBOT<br/>\nve PORTFOLIO istenebilir.<br/>\nTakımların inspection/judging gibi check-in’den<br/>\nönce gerçekleşebilecek etkinlikleri de dikkate<br/>\nalması gerekir.",
+    "generalRulesBioTitle26": "We’re All on the Same Team. (Page 16)",
+    "generalRulesBioTitle53": "E102 — Be Respectful. (Page 34)",
+    "generalRulesBioText29": "Competition Manual<br/>\n1.7.1 This Document & Its Conventions<br/>\nCompetition Manual şu bilgileri içerir:<br/>\n• BIOBUZZ game overview,<br/>\n• BIOBUZZ FIELD bilgileri,<br/>\n• oyunun nasıl oynandığı,<br/>\n• safety, conduct, gameplay, inspection ve<br/>\nevent kuralları,<br/>\n• ROBOT construction rules,<br/>\n• season advancement sistemi.",
+    "generalRulesBioTitle10": "Changes for 2026-2027 (and beyond) (Page 11)",
+    "generalRulesBioTitle41": "Q&A — Good Question Example (Page 20)",
+    "generalRulesBioTitle44": "I103 — A responsible adult must be (Page 23)",
+    "generalRulesBioText26": "FIELD üzerinde takımlar birbirlerine karşı yarışır.<br/>\nFIELD dışında ise tüm öğrenciler, mentorlar,<br/>\ngönüllüler ve organizatörler aynı FIRST<br/>\ntopluluğunun parçasıdır.<br/>\nAmaç birlikte:<br/>\n•   robot yapmak,<br/>\n•   öğrenmek,<br/>\n•   deneyimleri paylaşmak,<br/>\n•   eğlenmek,<br/>\n•   birbirimizi geliştirmek<br/>\nve birbirimize iyi davranmaktır.",
+    "generalRulesBioText18": "Rules.<br/>\nTakımlar kural ihlali gördüklerinde bunu yarışma<br/>\ngörevlilerine bildirebilir.<br/>\nAncak:<br/>\n•   başka takımı suçlamak,<br/>\n•   soruşturma yapmak,<br/>\n•   kamuya açık şekilde hedef göstermek,<br/>\n•   kendi başına ceza vermeye çalışmak<br/>\ntakımın görevi değildir.",
+    "generalRulesBioTitle49": "Table 4-2 Advancement Sorting Criteria (Page 29)",
+    "generalRulesBioTitle2": "1.2 FIRST® Tech Challenge (Page 5)",
+    "generalRulesBioText13": "Bilgi<br/>\nFIRST gönüllülerinin amacı takımların başarılı<br/>\nolmasına yardımcı olmaktır.<br/>\nGönüllüler ve takımlar birbirine karşı değil,<br/>\nyarışmanın iyi işlemesi için birlikte çalışmalıdır.<br/>\nGönüllüler kuralları uygularken saygılı,<br/>\ndestekleyici, adil ve takım odaklı davranmalıdır.",
+    "generalRulesBioText56": "Spaces<br/>\nBazı etkinliklerde ROBOT tamiri/üretimi için<br/>\nmachine shop veya host team’s build space<br/>\nbulunabilir.<br/>\nTüm yarışan takımların mümkün olduğunca aynı<br/>\nkaynaklara erişebilmesi gerekir.<br/>\n5.3 Wireless Rules<br/>\nE301 — No wireless communication.<br/>\nVenue içinde takım kendi:<br/>\n•   Wi-Fi,<br/>\n•   access point,<br/>\n•   ad-hoc network,<br/>\n•   Bluetooth,<br/>\n•   2.4 GHz / 5 GHz communication<br/>\nsistemlerini kuramaz.<br/>\nCellular cihazların oluşturduğu hotspot’lar da<br/>\naccess point sayılır.<br/>\nBazı smart TV’lerde access point fabrika çıkışında<br/>\naçık olabilir; kapatılmalıdır.<br/>\nE302 — Don’t interfere with wireless<br/>\nnetworks.<br/>\nBaşka takımın veya FIRST wireless network’ünün<br/>\nçalışmasına müdahale etmek, bağlanmaya<br/>\nçalışmak veya interferans yaratmak yasaktır.<br/>\nŞüpheli wireless security sorunları FTA/Event<br/>\nDirector’a bildirilmelidir.",
+    "generalRulesBioText17": "Takımlar kurallardaki boşlukları kullanarak avantaj<br/>\nsağlamaya çalışmamalıdır.<br/>\nBir kuralın ifadesi ile amacı arasında belirsizlik<br/>\nvarsa intent ve spirit of the competition dikkate<br/>\nalınmalıdır.",
+    "generalRulesBioText48": "Advancing event’lerde takımlar, o etkinlikte<br/>\ntopladıkları Advancement Points üzerinden<br/>\nsıralanır.<br/>\nQualification Phase Performance<br/>\n• En yüksek: 16<br/>\n• En düşük: 2<br/>\nALLIANCE lead<br/>\n21 − ALLIANCE lead number<br/>\nÖrneğin ALLIANCE #3 lead → 18 puan.<br/>\nDraft Order Acceptance<br/>\n21 − draft position<br/>\nÖrneğin üçüncü draft pozisyonunu kabul eden<br/>\ntakım → 18 puan.<br/>\nPlayoff Advancement<br/>\n• 1st Place → 40<br/>\n• 2nd Place → 20<br/>\n• 3rd Place → 10<br/>\n• 4th Place → 5<br/>\nTeam Judged Awards<br/>\n• Inspire Award 1st → 60<br/>\n• Inspire Award 2nd → 30<br/>\n• Inspire Award 3rd → 15<br/>\n• Diğer 1st Place → 12<br/>\n• Diğer 2nd Place → 6<br/>\n• Diğer 3rd Place → 3<br/>\nBu puanlar advancement sıralamasında kullanılır.",
+    "generalRulesBioText5": "Bilgi<br/>\nGracious Professionalism bir “kazanılması<br/>\ngereken unvan” değildir. Takımlar ve kişiler bu<br/>\nyaklaşımın farklı özelliklerini davranışlarıyla<br/>\ngöstermeye çalışmalıdır.<br/>\nFTC bağlamında:<br/>\n•   güçlü bir rakip ol,<br/>\n•   diğer insanlara saygı göster,<br/>\n•   takım arkadaşlarını destekle,<br/>\n•   kimsenin dışlanmış veya değersiz<br/>\nhissetmesine neden olma.",
+    "generalRulesBioTitle19": "1.5.2 Behavior Guidelines (Page 15)",
+    "generalRulesBioText11": "FTC davranış çerçevesi dört ana parçadan oluşur:<br/>\nGracious Professionalism & FIRST Core<br/>\nValues<br/>\nTakımların temel davranış anlayışını oluşturur.<br/>\nFIRST Code of Conduct<br/>\nÖzellikle yetişkinler ve öğrencilerin güvenliği ile<br/>\ndavranış standartlarını kapsar.<br/>\nCompetition Integrity Contract<br/>\nHer FTC takımının uyması gereken Competition<br/>\nIntegrity Contract’tır.<br/>\nCompetition Rules<br/>\nSezonun kuralları:<br/>\n• Competition Manual<br/>\n• Team Updates<br/>\n• Q&A<br/>\nüzerinden belirlenir.",
+    "generalRulesBioText47": "Takımlar yalnızca HOME REGION içindeki<br/>\netkinliklerden advancement için uygundur.<br/>\nHOME REGION dışındaki etkinliklere davet<br/>\nedilebilirsiniz ancak bu etkinliklerden<br/>\nadvancement kazanamazsınız.<br/>\nTakımlar FTC-Events üzerinden hangi HOME<br/>\nREGION’a ait olduklarını kontrol edebilir.<br/>\nİlk üç entry-level event:<br/>\n• Qualifying Tournament (QT)<br/>\n• League Tournament (LT)<br/>\nüzerinden advancement mümkündür.<br/>\nTakım sezon boyunca 3’ten fazla entry-level<br/>\nevent’e katılabilir; ancak advancement açısından<br/>\nyalnızca kronolojik ilk üç event dikkate alınır.<br/>\nBir takım sezon başına yalnızca bir League’e<br/>\nkatılabilir.<br/>\nAdvancement yapısında:<br/>\n•   QT<br/>\n•   LT<br/>\n•   SQT<br/>\n•   Regional Championship (RCMP)<br/>\n•   FIRST Championship (FCMP)<br/>\n•   FIRST Premier Event (FPE)<br/>\n•   bazı bölgelerde Pilot<br/>\ngibi seviyeler bulunur.",
+    "generalRulesBioText59": "fair manner.<br/>\nBattery charging sırasında:<br/>\n• Üreticinin önerilerine uygun güvenli rate<br/>\nkullanılmalı.<br/>\n• Charger, 3-amp average channel current<br/>\ndeğerini aşmamalı.<br/>\n• Güvenli connector kullanılmalı.<br/>\n• Battery, alligator clip veya benzeri<br/>\nyöntemlerle şarj edilmemeli.<br/>\n5.6 ROBOT Carts<br/>\nE601 — Carts must not be a nuisance.<br/>\nROBOT cart:<br/>\n• kolay kontrol edilmeli,<br/>\n• çevredeki insanlar için risk oluşturmamalı,<br/>\n• 30-inch (762 mm) standart kapıdan<br/>\ngeçebilmeli,<br/>\n• kullanılmadığında pit’te kalmalı,<br/>\n• müzik/ses üreten cihaz taşımamalı,<br/>\n• powered propulsion kullanmamalıdır.",
+    "generalRulesBioText38": "September 28, 2026 — 12:00 p.m. ET<br/>\nQ&A erişimi Lead Coach 1 veya Lead Coach 2<br/>\nhesabı üzerinden yapılır.",
+    "generalRulesBioText9": "1.4.1 A Note from the FIRST Staff<br/>\nBIOBUZZ sezonunun amacı<br/>\nFIRST, BIOBUZZ ile hem deneyimli<br/>\nChampionship seviyesindeki takımlara hem de<br/>\nFTC’ye yeni başlayan takımlara anlamlı bir<br/>\nyarışma deneyimi sunmayı amaçlıyor.<br/>\nTakımların robotlarını sürekli geliştirerek<br/>\nalliance’larına anlamlı katkı sağlamaları<br/>\nhedefleniyor.",
+    "generalRulesBioTitle37": "1.7.4 Question & Answer System (Page 19)",
+    "generalRulesBioText25": "Yoğun yarışma dönemlerinde bile takım üyeleri:<br/>\n•   yeterince su içmeli,<br/>\n•   iyi beslenmeli,<br/>\n•   aktif kalmalı,<br/>\n•   yeterince uyumalı,<br/>\n•   düzenli mola vermelidir.",
+    "generalRulesBioText12": "Bilgi<br/>\nMentorların robot yapımına katılım miktarı takımın<br/>\nihtiyaçlarına göre değişebilir.<br/>\nFIRST, mentorlar için tek bir zorunlu çalışma<br/>\nmodeli belirlemez. Mentorun temel görevi<br/>\nöğrencilerin öğrenmesini ve gelişmesini<br/>\ndesteklemektir.",
+    "generalRulesBioTitle51": "4.2 Advancement Distribution by Region (Page 31)",
+    "generalRulesBioTitle30": "Competition Manual = “Source of Truth” (Page 17)",
+    "generalRulesBioText30": "Manual, destekleyici belgelerle çelişirse<br/>\nönceliklidir.<br/>\nTakımların resmi kuralları değerlendirirken<br/>\nCompetition Manual’ı temel alması gerekir.",
+    "generalRulesBioTitle58": "E505 — Only small benchtop machinery (Page 39)",
+    "generalRulesBioTitle8": "1.3.4 Why Embrace the FIRST Ethos and (Page 9)",
+    "generalRulesBioTitle29": "1.7 Understanding & Using the (Page 17)",
+    "generalRulesBioTitle52": "5 Event Rules (E) (Page 33)",
+    "generalRulesBioTitle38": "Q&A Opening (Page 19)",
+    "generalRulesBioText36": "Bir etkinlikte driver’s meeting sonrasında<br/>\nyayınlanan Team Update, o etkinlik için geçerli<br/>\ndeğildir.",
+    "generalRulesBioTitle54": "E107 — Work in designated areas only. (Page 35)",
+    "generalRulesBioText21": "Takımlar birbirlerinin başarılı olmasına yardımcı<br/>\nolmalıdır.<br/>\nAmaç, başkasının başarısızlığından yararlanarak<br/>\nkazanmak değil; herkesin mümkün olan en iyi<br/>\nperformansı göstermesini sağlamaktır.",
+    "generalRulesBioTitle46": "3.3.2 Re-Inspection (Page 25)",
+    "generalRulesBioText7": "FIRST Core Values:<br/>\n• Discovery — Yeni beceri ve fikirler<br/>\nkeşfetmek.<br/>\n• Innovation — Yaratıcılık ve azimle problem<br/>\nçözmek.<br/>\n• Impact — Öğrendiklerini dünyayı geliştirmek<br/>\niçin kullanmak.<br/>\n• Inclusion — Farklılıklara saygı göstermek.<br/>\n• Teamwork — Birlikte daha güçlü olmak.<br/>\n• Fun — Yapılan işi ve başarıları kutlamak.",
+    "generalRulesBioText1": "1.1 About FIRST®<br/>\nBilgi<br/>\nFIRST, gençlerin bilim ve teknolojiye olan ilgisini<br/>\nartırmak amacıyla kurulmuş bir organizasyondur.<br/>\nFIRST’in amacı öğrencilerin inovasyon<br/>\nyapmasını, özgüven kazanmasını ve geleceğe<br/>\nhazırlanmasını sağlamaktır.<br/>\nFIRST programları; öğrenciler, mentorlar,<br/>\nöğretmenler, gönüllüler ve sponsorların desteğiyle<br/>\nyürütülür.",
+    "generalRulesBioText41": "İyi bir Q&A sorusu genellikle:<br/>\n• belirli bir ROBOT özelliğini,<br/>\n• belirli bir gameplay senaryosunu,<br/>\n• belirli bir rule’u<br/>\nele alır ve mümkünse ilgili rule ID’lerini belirtir.<br/>\nManual örneğinde robotta kullanılan belirli bir<br/>\nwire’ın ilgili robot kurallarına uyup uymadığı veya<br/>\nbelirli bir gameplay davranışının bir tanıma girip<br/>\ngirmediği gibi sorular örnek gösteriliyor.",
+    "generalRulesBioTitle16": "We Always Behave with Integrity. (Page 14)",
+    "generalRulesBioTitle3": "1.2 FIRST® Tech Challenge (Page 6)",
+    "generalRulesBioText52": "Bu bölüm, takımlar etkinliğe geldiği andan<br/>\nayrılana kadar geçerli genel event kurallarını<br/>\niçerir.<br/>\nUniversal Violation Note: Event Rule ihlali<br/>\nnormalde VERBAL WARNING ile sonuçlanır. Ağır<br/>\nveya tekrarlanan ihlaller:<br/>\n• FIRST Headquarters’a escalation,<br/>\n• MATCH ve award’lardan disqualification<br/>\nile sonuçlanabilir.<br/>\n5.1 General Rules<br/>\nE101 — Personal safety comes first.<br/>\nEtkinlik boyunca:<br/>\n• Belirlenen alanlarda uygun safety glasses<br/>\nkullanılmalı.<br/>\n• Kapalı burun ve topuklu ayakkabı giyilmeli.<br/>\n• Uzun saç ve takılma riski oluşturan nesneler<br/>\nkontrol edilmeli.<br/>\n• Uygun kıyafet kullanılmalı.<br/>\n• Venue içinde yürünmeli.<br/>\n• Yerel sağlık/güvenlik kurallarına uyulmalı.<br/>\nSafety glasses için mekân açıldığında 10<br/>\ndakikalık grace period bulunur.<br/>\nTakımlar kendi kişisel koruyucu ekipmanlarını<br/>\ngetirmekten sorumludur.",
+    "generalRulesBioTitle28": "1.6 Accessibility and Inclusion (Page 16)",
+    "generalRulesBioTitle21": "We Help Each Other. (Page 15)",
+    "generalRulesBioText20": "Sportsmanship.<br/>\nSonuç ne olursa olsun takım üyeleri saygılı ve<br/>\nprofesyonel davranmalıdır.<br/>\nTakım arkadaşlarını destekle.<br/>\nPartnerlerini takdir et.<br/>\nRakiplerini kutla.",
+    "generalRulesBioTitle25": "We Make Healthy Choices. (Page 15)",
+    "generalRulesBioTitle15": "1.5.1 Sporting Ethics Code (Page 14)",
+    "generalRulesBioTitle39": "Q&A Authority (Page 19)",
+    "generalRulesBioTitle35": "1.7.3 Team Updates (Page 19)",
+    "generalRulesBioText23": "Takım:<br/>\n•   etkinlik alanına zarar vermemeli,<br/>\n•   kullandığı alanı temiz bırakmalı,<br/>\n•   yaptığı kazaları bildirmeli,<br/>\n•   ekipman ve tesislere saygılı davranmalıdır.",
+    "generalRulesBioText24": "Güvenlik yalnızca kurallara uymak değil, güvenli<br/>\nkarar verme kültürü oluşturmaktır.<br/>\nTakım kendi güvenliğini veya çevresindeki kişilerin<br/>\ngüvenliğini bilerek tehlikeye atmamalıdır.",
+    "generalRulesBioText54": "FABRICATED ITEMS yalnızca izin verilen<br/>\nalanlarda üretilebilir:<br/>\n•   kendi pit’i,<br/>\n•   izin alınmış başka takımın pit’i,<br/>\n•   MATCH/practice FIELD kuyruğu,<br/>\n•   event staff tarafından belirlenmiş alan,<br/>\n•   herkese açık uygun machine shop.<br/>\nE108 — Some things do not belong at<br/>\nevents.<br/>\nGetirilmesi/kullanılması yasak örnekler:<br/>\n•   Skateboards<br/>\n•   Hoverboards<br/>\n•   Drones<br/>\n•   Bottled gas tanks<br/>\n•   Loud noisemakers<br/>\n•   Scooter’lar (accommodation harici)<br/>\n•   Yaklaşık saniyede 5’ten hızlı yanıp sönen<br/>\nparlak ışıklar<br/>\nE109 — Do not arrange for additional<br/>\nservices or utilities.<br/>\nVenue’dan ayrıca power, internet veya phone<br/>\nservice ayarlanamaz.<br/>\nE110 — Do not sell stuff.<br/>\nEvent’te satış yapılamaz; Event Director özel izin<br/>\nvermedikçe raffle ticket, yiyecek, kıyafet, candy,<br/>\niçecek vb. satılamaz.<br/>\nE111 — No Loud Music.<br/>\nYüksek sesli müzik veya seyircide canlı müzik<br/>\ngrubu yok.<br/>\nE112 — Hang banners with care.<br/>\nBanner:<br/>\n• başka takımın/sponsorun işaretini<br/>\nkapatmamalı,<br/>\n• alan adil paylaşılmalı,<br/>\n• seyirci görüşünü kapatmamalı,<br/>\n• pit dışındaysa Event Director izni olmalı,<br/>\n• güvenli şekilde asılmalı.<br/>\nPit dışındaki banner’lar 25 ft² (~2.3 m²) sınırını<br/>\naşmamalıdır.",
+    "generalRulesBioTitle47": "4 Advancement (Page 27)",
+    "generalRulesBioText22": "Bir başkasının davranışı kötü olsa bile takım kendi<br/>\ndavranış standartlarını korumalıdır.<br/>\nSaygılı, anlayışlı ve empatik davranmak gerekir.",
+    "generalRulesBioTitle34": "Rule Headlines (Page 18)",
+    "generalRulesBioText57": "Bazı büyük etkinliklerde ROBOT ve ekipmanların<br/>\npitlere önceden taşınması için özel load-in saatleri<br/>\nolabilir.<br/>\nTakımların özellikle güvenli, hazırlıklı, gracious ve<br/>\nprofessional olması beklenir.<br/>\n5.5 Pits<br/>\nTakım pit’i genellikle yaklaşık:<br/>\n10 ft × 10 ft × 10 ft (~3 m × 3 m × 3 m)<br/>\nalanındadır.<br/>\nPit area; pitler arasındaki koridorları, Pit Admin,<br/>\ninspection, practice FIELD ve ROBOT’ların<br/>\nçalıştığı diğer alanları da kapsar.<br/>\nE501 — Pits are unavailable if closed.<br/>\nPit alanına yalnızca izin verilen saatlerde girilebilir.<br/>\nE502 — Pit set ups should be self-<br/>\ncontained within the space assigned by<br/>\nthe Event Organizers.<br/>\nTakım ekipmanı kendi pit alanında tutulmalıdır.<br/>\nPit’ten başka alana:<br/>\n• power/internet kablosu çekilemez,<br/>\n• numaralı pitler değiştirilemez,<br/>\n• boş bir pit’e Event Director izni olmadan<br/>\ntaşınılamaz.<br/>\nE503 — Keep aisles and exit pathways<br/>\nclear.<br/>\nKoridor ve çıkışlar kapatılamaz.<br/>\nE504 — Open flames and spark emitting<br/>\ndevices must be limited and carefully<br/>\ncontrolled.<br/>\nAçık alev ve kıvılcım çıkaran araçlar genel olarak<br/>\nyasaktır; sınırlı ve güvenli kullanım ancak belirli<br/>\ndurumlarda kabul edilir.",
+    "generalRulesBioTitle11": "1.4.2 Framework of Behaviors (Page 12)",
+    "generalRulesBioText51": "Bir bölgeden kaç takımın advancement edeceğini<br/>\nProgram Delivery Partner belirler.<br/>\nMinimum advancement sayıları mümkün<br/>\nolduğunca erken açıklanmalı ve en geç<br/>\nALLIANCE selection başladığında takımlar<br/>\ntarafından bilinmelidir.<br/>\nFIRST Championship / FIRST Premier Event<br/>\nadvancement’ı FIRST Headquarters tarafından şu<br/>\nfaktörler dikkate alınarak belirlenir:<br/>\n• Global ve regional representation<br/>\n• Yeni gelişen bölgeler<br/>\n• Bölgedeki kayıtlı takım sayısı<br/>\n• Minimum registration şartlarını karşılayan<br/>\nbölgeler<br/>\n• Bölgedeki toplam takım sayısı<br/>\nBIOBUZZ için kayıt cutoff tarihi: 17 Kasım<br/>\n2026.<br/>\nRegional advancement slot bilgileri Aralık<br/>\nbaşından itibaren FTC-Events sayfasında<br/>\nyayınlanacaktır. Kullanılmayan slotlar FIRST HQ<br/>\nveya Premier Event Host’a geri dönebilir ve<br/>\nyeniden dağıtılabilir.",
+    "generalRulesBioTitle59": "E511 — Charge batteries in a safe and (Page 40)",
+    "generalRulesBioText34": "Kuralların yanında kısa headlines bulunabilir.<br/>\n• Evergreen rules → yeşil ve * ile gösterilir.<br/>\n• Diğer rule headlines → turuncu gösterilir.<br/>\nHeadline ile gerçek rule language arasında<br/>\nanlaşmazlık varsa spesifik rule language<br/>\nüstündür.",
+    "generalRulesBioText55": "used in the ARENA.<br/>\nGuideline olarak:<br/>\n•   Flag < 3 ft × 5 ft<br/>\n•   Flag weight < 2 lb<br/>\n•   Flagpole ≤ 8 ft<br/>\n•   Flagpole weight < 3 lb<br/>\nE114 — No firearms or other weapons.<br/>\nFIRST etkinliklerinde silahlar yasaktır. Gerçek gibi<br/>\ngörünen prop/simulated weapons da bu<br/>\nkapsamdadır.<br/>\nE115 — Inspection required for practice<br/>\nFIELD access.<br/>\nScheduled inspection kullanılmayan event’lerde<br/>\nPractice FIELD’e girebilmek için ROBOT initial<br/>\ncomplete inspection’dan geçmiş olmalıdır.<br/>\nE116 — Do not record anyone at the<br/>\nevent without their consent.<br/>\nBir kişinin konuşmasını veya etkileşimini izinsiz<br/>\nkaydetmek yasaktır.<br/>\nEvent’in livestream edilmesi, bireysel konuşmaları<br/>\nayrıca kaydetme izni anlamına gelmez.<br/>\nE117 — Enter only 1 ROBOT in the<br/>\ntournament.<br/>\nBir takım aynı event’te yalnızca 1 ROBOT ile<br/>\ninspection ve MATCH oynayabilir.<br/>\nTakım aynı anda yalnızca 1 concurrent event’e<br/>\nkatılabilir.<br/>\nBaşka ROBOT’lar venue’ya display/award gibi<br/>\namaçlarla getirilebilir; ancak MATCH için<br/>\nkullanılmaz.<br/>\nE118 — No saving seats.<br/>\nTakımlar aktif olarak kullanılmayan koltukları takım<br/>\nüyeleri için ayıramaz.",
+    "generalRulesBioTitle14": "1.5 Competition Integrity Contract (Page 14)",
+    "generalRulesBioText40": "sorular<br/>\nÖrneğin:<br/>\n• tamamen belirsiz durumlar,<br/>\n• geçmiş maç kararlarına itirazlar,<br/>\n• bir robot tasarımının tamamen legality<br/>\nreview’ı,<br/>\n• aşırı geniş veya kural referansı içermeyen<br/>\nsorular,<br/>\n• geçmiş bir maçta referee’nin nasıl karar<br/>\nvermesi gerektiği,<br/>\n• manualda zaten açıkça cevaplanmış sorular.",
+    "generalRulesBioText44": "present for the whole event.<br/>\nEtkinliğin tamamı boyunca öğrencilerden sorumlu<br/>\nen az 1, tercihen 2 yetişkin bulunmalıdır.<br/>\n3.2 Awards Eligibility Rules<br/>\nJudged Award’lara uygun olmak için takımın<br/>\nInitial Interview (A203) sürecine katılması<br/>\ngerekir.<br/>\nBazı ödüller için PORTFOLIO (A201) da<br/>\ngereklidir.<br/>\nBirden fazla qualifying/league etkinliğine veya<br/>\nHOME REGION dışındaki etkinliklere katılan<br/>\ntakımlar için A213 ve A214 kuralları uygulanabilir.<br/>\n3.3 MATCH Eligibility Rules<br/>\nQualification veya Playoff MATCH’lerine girmeden<br/>\nönce ROBOT inspection’dan geçmelidir.<br/>\nBazı etkinliklerde scheduled Practice MATCH<br/>\nyapılabilir. Inspection geçmeden:<br/>\n• scheduled Practice MATCH’e katılmak<br/>\nmümkün olabilir,<br/>\n• ancak unscheduled / “filler line” Practice<br/>\nMATCH’e katılamazsınız.<br/>\nROBOT’un güvenliğinden takım sorumludur.<br/>\n3.3.1 Inspection<br/>\nInspection sırasında:<br/>\n• ROBOT,<br/>\n• ROBOT ile kullanılacak COMPONENTS,<br/>\n• OPERATOR CONSOLE<br/>\nINSPECTOR’lara gösterilir.<br/>\nROBOT construction konusunda Lead ROBOT<br/>\nINSPECTOR (LRI) son yetkiye sahiptir. Inspection<br/>\nsırasında ROBOT’un açılması gerekiyorsa takım<br/>\nbunu INSPECTOR’a bildirmelidir. Stored energy<br/>\nbulunan sistemler de bildirilmelidir.",
+    "generalRulesBioTitle7": "1.3.3 Core Values (Page 8)",
+    "generalRulesBioText19": "We Focus on Journey, Before<br/>\nDestination.<br/>\nTakım kazanmak için mücadele etmeli ve<br/>\nexcellence peşinde koşmalıdır.<br/>\nAncak takımın başarısı yalnızca competition result<br/>\nile ölçülmez. Öğrenilenler ve kurulan arkadaşlıklar<br/>\nda başarının parçasıdır.",
+    "generalRulesBioText3": "Student Ownership<br/>\nFTC’de öğrencilerin kendi öğrenme süreçlerinin<br/>\nsorumluluğunu alması önemlidir.<br/>\nTakımlar sezon boyunca robotlarını geliştirir, test<br/>\neder ve değiştirir. Robotun gelişimi öğrencilerin<br/>\nkendi deneyimlerini ve öğrendiklerini<br/>\nyansıtmalıdır.",
+    "generalRulesBioText60": "Opening/closing/award ceremonies; ülkeleri,<br/>\nsponsorları, takımları, mentorları, gönüllüleri ve<br/>\naward winners’ı onurlandırmak için yapılır.<br/>\nE701 — Quiet in the pits during<br/>\nceremonies.<br/>\nCeremony sırasında pitlerde:<br/>\n• power tools,<br/>\n• loud hand tools,<br/>\n• disruptive şekilde bağırma/yüksek ses<br/>\nkullanılamaz.<br/>\nE702 — Pit person limit during<br/>\nceremonies is 5.<br/>\nPlayoff MATCH dışındaki ceremony sırasında<br/>\npit’te en fazla 5 takım üyesi bulunabilir.<br/>\nHer takımın en az 1 temsilcisi ceremony’yi takip<br/>\netmelidir.<br/>\nE703 — Be respectful during anthems.<br/>\nNational anthem sırasında peaceful ve non-<br/>\ndisruptive davranılmalıdır. Geleneksel anthem<br/>\ndavranışlarına katılmak istemeyenler bunu<br/>\nyapabilir; ancak sessiz ve rahatsız etmeyecek<br/>\nşekilde kalmalıdır.",
+    "generalRulesBioTitle33": "Imperial vs Metric Dimensions (Page 18)",
+    "generalRulesBioTitle17": "We Play the Game as Intended. (Page 14)",
+    "generalRulesBioText10": "BIOBUZZ’ta önemli değişiklik<br/>\nBIOBUZZ Competition Manual, önceki sezonlara<br/>\ngöre “spirit of the rule” anlayışına daha fazla<br/>\nönem veriyor.<br/>\nKurallar her olası durumu tek tek tanımlamak<br/>\nyerine:<br/>\n• intended gameplay,<br/>\n• kuralların amacı,<br/>\n• yarışmanın ruhu<br/>\nüzerinden değerlendirme yapılmasını hedefliyor.<br/>\nGönüllülerden her küçük hareketi kaydetmek<br/>\nyerine yarışmanın ruhuna aykırı büyük<br/>\ndavranışlara ve stratejilere odaklanmaları<br/>\nbekleniyor.",
+    "generalRulesBioTitle24": "We Build a Positive Culture of Safety. (Page 15)",
+    "generalRulesBioTitle23": "We Respect Property and Facilities. (Page 15)",
+    "generalRulesBioTitle5": "1.3.1 Gracious Professionalism® (Page 7)",
+    "generalRulesBioText8": "Gracious Professionalism?<br/>\nBilgi<br/>\nFIRST, Gracious Professionalism ve Core<br/>\nValues’ın yalnızca yarışma sırasında değil, günlük<br/>\nyaşamda da uygulanmasını teşvik eder.<br/>\nTakımların kutlaması gereken değerler:<br/>\n•   hard work,<br/>\n•   integrity,<br/>\n•   fair play,<br/>\n•   sportsmanship,<br/>\n•   empathy.",
+    "generalRulesBioText42": "2026–2027 FIRST sezonunun teması FIRST<br/>\nCANOPY™. Sezon doğadan ve biyolojik<br/>\nçeşitlilikten ilham alıyor. Ana fikir; STEM, problem<br/>\nçözme ve takım çalışmasıyla dünyamızın<br/>\nsürdürülebilirliğine katkı sağlayan çözümler<br/>\ngeliştirmek.<br/>\nKart özeti:<br/>\n2026–2027 sezonu FIRST CANOPY teması<br/>\naltında yürütülüyor ve BIOBUZZ oyunu bu<br/>\nsezonun FTC oyunudur.",
+    "generalRulesBioText39": "Q&A cevapları Competition Manual’ın yerine<br/>\ngeçmez.<br/>\nManualdaki kurallar temel kaynaktır; event<br/>\nsırasında REFEREES ve INSPECTORS kendi<br/>\ngörev alanlarında nihai otoritedir.",
+    "generalRulesBioTitle1": "1 Introduction (Page 5)",
+    "generalRulesBioTitle42": "2 FIRST Season Overview (Page 21)",
+    "generalRulesBioText27": "Escalation<br/>\nBilgi<br/>\nCIC ihlalleri durumun ciddiyetine göre mitigation<br/>\nveya escalation gerektirebilir.<br/>\nDaha ciddi ihlaller:<br/>\n• Event Director’a,<br/>\n• FIRST Headquarters’a<br/>\naktarılabilir.<br/>\nCiddi durumlarda takım veya kişiler mevcut ya da<br/>\ngelecekteki etkinliklerden men edilebilir veya<br/>\nFIRST Tech Challenge programından<br/>\nuzaklaştırılabilir.",
+    "generalRulesBioTitle22": "We ‘Take the High Road.’ (Page 15)",
+    "generalRulesBioTitle36": "Önemli (Page 19)",
+    "generalRulesBioTitle43": "3 Competition Eligibility and (Page 22)",
+    "generalRulesBioText4": "1.3.1 Gracious Professionalism®<br/>\nBilgi<br/>\nGracious Professionalism®, yüksek kaliteli iş<br/>\nyaparken diğer insanlara değer vermeyi ve<br/>\ntopluluğa saygı göstermeyi ifade eder.<br/>\nFTC’de güçlü rekabet ile saygı ve empati aynı<br/>\nanda bulunmalıdır.",
+    "generalRulesBioTitle27": "1.5.3 Infractions, Mitigations, & (Page 16)",
+    "generalRulesBioText58": "is permitted in team pits.<br/>\nYalnızca küçük, bir kişinin kolayca kaldırabileceği<br/>\nbenchtop machinery kullanılabilir.<br/>\nÖrnek:<br/>\n•   3D printer<br/>\n•   Small band saw<br/>\n•   Small drill press<br/>\n•   Desktop CNC mill<br/>\n•   Sander<br/>\nFloor-standing büyük makineler yasaktır.<br/>\nE506 — No brazing or welding.<br/>\nBrazing/welding yasaktır.<br/>\nE507 — Solder with specific tools only.<br/>\nSoldering yalnızca electric iron/gun ile yapılabilir.<br/>\nE508 — Pit structures must be safe.<br/>\nİnsan ağırlığı taşıyan veya üstte eşya depolayan<br/>\nyapılar yapılamaz. Sprinkler sistemleri<br/>\nengellenemez.<br/>\nE509 — Only use aerosol or other<br/>\nchemicals with noxious fumes in<br/>\napproved areas.<br/>\nNoxious fumes veya partikül üreten aerosol/<br/>\nchemical ürünler yalnızca izin verilen alanlarda<br/>\nkullanılabilir.<br/>\nE510 — Don’t heat or cool ROBOT<br/>\ncomponents to gain an advantage.<br/>\nROBOT parçalarını venue’nun ambient<br/>\ntemperature’ından yapay şekilde daha sıcak/<br/>\nsoğuk hale getirerek competitive advantage elde<br/>\netmek yasaktır.<br/>\nÖrnek ihlaller:<br/>\n• Fuse’ları soğutup daha geç atmalarını<br/>\nsağlamak<br/>\n• Battery’leri performans için ısıtmak<br/>\n• Heatsink’leri dondurmak<br/>\nNormal kullanım sonucu sıcak olan battery/<br/>\ncomponent’ler ise bu kapsamda değildir.",
+    "generalRulesBioTitle13": "1.4.4 The Sprit of FIRST Volunteers (Page 13)",
+    "generalRulesBioText14": "(CIC)<br/>\nBilgi<br/>\nCompetition Integrity Contract iki ana bölümden<br/>\noluşur:<br/>\n1. Sporting Ethics Code<br/>\n2. Behavior Guidelines<br/>\nAmaç yarışmanın bütünlüğünü korumak ve<br/>\ntakımların Gracious Professionalism anlayışına<br/>\nuygun davranmasını sağlamaktır.",
+    "generalRulesBioText31": "Manualdaki rule ID’lerinin harfleri ilgili bölümü<br/>\ngösterir:<br/>\n• I → Competition Eligibility and Inspection<br/>\n• E → Event Rules<br/>\n• A → Awards<br/>\n• G → Game Rules<br/>\n• R → ROBOT Construction Rules<br/>\n• T → Tournament<br/>\n• L → League Play Tournaments<br/>\n• C → FIRST Championship<br/>\nRule ID’nin sonraki rakamları subsection ve rule<br/>\nsırasını gösterir.",
+    "generalRulesBioTitle31": "Rule Numbering Method (Page 17)",
+    "generalRulesBioTitle48": "4.1 Advancement Points Calculation (Page 28)",
+    "generalRulesBioText53": "Section 1.4’teki davranış çerçevesine uyulmalı.<br/>\nÖrnek uygunsuz davranışlar:<br/>\n• Offensive language<br/>\n• Başka birine “not GP” diyerek Gracious<br/>\nProfessionalism’ı silah olarak kullanmak<br/>\n• Başkalarının görüşünü uzun süre kasıtlı olarak<br/>\nengellemek<br/>\n• ROBOT veya ARENA operasyonlarını<br/>\nengellemek<br/>\nÖzellikle ağır davranışlar arasında:<br/>\n•   Assault<br/>\n•   Threat<br/>\n•   Harassment<br/>\n•   Bullying<br/>\n•   Insulting<br/>\n•   Başkasına küfür etmek<br/>\n•   Öfkeyle bağırmak<br/>\nbulunur.<br/>\nE103 — Children with adults, please.<br/>\n12 yaşından küçük çocuklar pitlerde her zaman<br/>\nyetişkin eşliğinde olmalıdır.<br/>\nE104 — Respect the venue.<br/>\nTribün, zemin, duvar, korkuluk vb. venue<br/>\nbölümlerine zarar verilemez. Takım<br/>\ngiveaways’lerinin ortalığa atılması da yasaktır.<br/>\nE105 — Event resources are for<br/>\ncompeting teams only.<br/>\nCompetition FIELD, practice FIELD ve inspection<br/>\nkaynakları yalnızca kayıtlı takımlar içindir;<br/>\nistisnalar Event Director/Program Delivery Partner<br/>\nonayına bağlıdır.<br/>\nE106 — Practice only when/where<br/>\npermitted.<br/>\nROBOT ile yalnızca:<br/>\n• kendi pit alanında,<br/>\n• belirlenmiş practice alanlarında,<br/>\n• Practice MATCH sırasında<br/>\npractice yapılabilir.",
+    "generalRulesBioTitle50": "Table 4-3 Sample Qualification Round (Page 30)",
+    "generalRulesBioTitle56": "5.2 Machine Shops and Host Team Build (Page 37)",
+    "generalRulesBioTitle6": "1.3.2 Coopertition® (Page 8)",
+    "generalRulesBioText37": "Q&A sistemi takımların şu konularda soru sorması<br/>\niçin kullanılır:<br/>\n•   gameplay,<br/>\n•   competition rules,<br/>\n•   judging,<br/>\n•   advancement,<br/>\n•   ROBOT build rules,<br/>\n•   FIELD setup.<br/>\nTakımlar daha önce sorulmuş soruları da<br/>\narayabilir.",
+    "generalRulesBioText49": "Including Tiebreakers<br/>\nAdvancement puanları eşitse sırasıyla:<br/>\n1. Total Advancement Points<br/>\n2. Judged Team Award Points<br/>\n3. Playoff Advancement Points<br/>\n4. ALLIANCE Selection Results Points<br/>\n5. Qualification Phase Performance Points<br/>\n6. Average Qualification MATCH Points<br/>\n(excluding FOULS)<br/>\n7. Average Qualification AUTO Points<br/>\n8. Highest individual Qualification MATCH<br/>\nPoints (excluding FOULS)<br/>\n9. Second Highest individual Qualification<br/>\nMATCH Points (excluding FOULS)<br/>\n10.Random Selection by Event Management<br/>\nSystem<br/>\n4.1.1 Qualification Phase Performance<br/>\nQualification Phase Performance; takımın:<br/>\n• qualification rank’ı (R),<br/>\n• etkinlikteki takım sayısı (N),<br/>\n• sabit α değeri (1.07)<br/>\nkullanılarak hesaplanır.<br/>\nAmaç, sıralamaya göre yaklaşık normal dağılımlı<br/>\nbir Advancement Point sistemi oluşturmaktır.",
+    "generalRulesBioTitle20": "We Behave with Respect and Good (Page 15)"
+  },
+  "en": {
+    "navGameRules": "Match Rules",
+    "navFieldInfo": "Field Element Information",
+    "navMatchProcedures": "Match Procedures",
+    "navScoringSystem": "How to Score",
+    "navHome": "Awards & Definitions",
+    "navTeam": "General Rules",
+    "navRobots": "Robot Construction",
+    "navDecode": "Go back",
+    "asterisk": "* QuickManual is not the official Game Manual and should never be treated as a complete or final source of rules. It does not replace the official document published by FIRST. For any official decision, inspection, or dispute, teams must always refer to the latest version of the official Game Manual.",
+    "dateUpdate": "** Last updated: August 5, 2026, Game Manual V0",
+    "pageSearch": "Search this page... (Example: rules, rewards, bots)",
+    "clear": "Clear",
+    "generalRulesTitle": "General Rules",
+    "footerTitle": "QuickManual",
+    "footerDescription": "A community resource by Asteria Robotics\nThis is not an official FIRST document.",
+    "contactTitle": "Contact Us",
+    "addressText": "Our address",
+    "instagramText": "Instagram",
+    "copyrightText": "© 2026 Asteria Robotics FTC Team 32334. All Rights Reserved.",
+    "navPanel": "Categories",
+    "generalRulesBioText1": "FIRST was founded to increase young people's interest in science and technology. Its goal is to help students innovate, build confidence, and prepare for the future. FIRST programs are supported by students, mentors, teachers, volunteers, and sponsors.",
+    "generalRulesBioText2": "FIRST Tech Challenge lets students compete with classroom-sized FIELDS and ROBOTS. Teams may work in small groups, specialize in different roles, use a Starter Kit, build a fully custom ROBOT, or combine both approaches. Advanced manufacturing tools may be used but are not required.",
+    "generalRulesBioText3": "Student Ownership: Students are expected to take responsibility for their own learning. Teams develop, test, and modify their ROBOT throughout the season, and the ROBOT's development should reflect what the students themselves learned and experienced.",
+    "generalRulesBioText4": "Gracious Professionalism means producing high-quality work while valuing other people and respecting the community. In FTC, strong competition, respect, and empathy should exist at the same time.",
+    "generalRulesBioText5": "Gracious Professionalism is not a title to be won. Teams and individuals should demonstrate its qualities through their behavior: be a strong competitor, respect others, support teammates, and do not make anyone feel excluded or devalued.",
+    "generalRulesBioText6": "Coopertition means helping and respecting competitors even during intense competition. Because of FTC's ALLIANCE system, a team that is your opponent today may be your ALLIANCE partner in another MATCH.",
+    "generalRulesBioText7": "FIRST Core Values: Discovery — explore new skills and ideas. Innovation — solve problems with creativity and persistence. Impact — use what you learn to improve the world. Inclusion — respect differences. Teamwork — be stronger together. Fun — celebrate the work and achievements.",
+    "generalRulesBioText8": "FIRST encourages Gracious Professionalism and the Core Values not only during competition but also in everyday life. Teams should celebrate hard work, integrity, fair play, sportsmanship, and empathy.",
+    "generalRulesBioText9": "FIRST intends BIOBUZZ to provide a meaningful competition experience for both experienced Championship-level teams and teams that are new to FTC. Teams are expected to keep improving their ROBOTS so they can make meaningful contributions to their ALLIANCES.",
+    "generalRulesBioText10": "BIOBUZZ places greater emphasis on the 'spirit of the rule' than previous seasons. Instead of defining every possible situation, decisions should consider intended gameplay, the purpose of the rule, and the spirit of the competition. Volunteers are expected to focus on significant behaviors and strategies that conflict with that spirit rather than recording every small action.",
+    "generalRulesBioText11": "The FTC behavior framework has four parts: Gracious Professionalism & FIRST Core Values; the FIRST Code of Conduct, which covers safety and behavior standards; the Competition Integrity Contract that every FTC team must follow; and Competition Rules established through the Competition Manual, Team Updates, and Q&A.",
+    "generalRulesBioText12": "The amount of mentor involvement in ROBOT building may vary according to a team's needs. FIRST does not require one single mentoring model; the mentor's primary role is to support student learning and growth.",
+    "generalRulesBioText13": "FIRST volunteers are there to help teams succeed. Volunteers and teams are not opponents; they work together so the competition runs well. Volunteers should apply rules in a respectful, supportive, fair, and team-focused way.",
+    "generalRulesBioText14": "The Competition Integrity Contract has two main parts: the Sporting Ethics Code and the Behavior Guidelines. Its purpose is to protect competition integrity and encourage behavior consistent with Gracious Professionalism.",
+    "generalRulesBioText15": "We Don't Cheat: Teams must not knowingly violate the spirit of the rules, bypass FIRST systems, accept winning through cheating, or compromise fair play and integrity.",
+    "generalRulesBioText16": "Teams must follow the rules even when compliance is not actively checked. The question should not be 'What can we get away with?' but 'What is the right thing to do?'",
+    "generalRulesBioText17": "Teams must not exploit loopholes to gain an advantage. If the wording and purpose of a rule seem unclear, the intent of the rule and the spirit of the competition should guide the interpretation.",
+    "generalRulesBioText18": "Teams may report possible violations to event officials, but it is not the team's job to accuse another team, conduct investigations, publicly target others, or attempt to impose penalties themselves.",
+    "generalRulesBioText19": "We Focus on Journey, Before Destination: Teams should compete to win and pursue excellence, but success is not measured only by competition results. Learning and friendships are also part of success.",
+    "generalRulesBioText20": "We Behave with Respect and Good Sportsmanship: Regardless of the result, team members should act respectfully and professionally. Support teammates, appreciate partners, and congratulate opponents.",
+    "generalRulesBioText21": "We Help Each Other: Teams should help others succeed. The goal is not to win because someone else fails, but to help everyone perform as well as possible.",
+    "generalRulesBioText22": "We Take the High Road: Even when someone else behaves poorly, teams should maintain their own standards and respond with respect, understanding, and empathy.",
+    "generalRulesBioText23": "We Respect Property and Facilities: Do not damage the venue, leave used areas clean, report accidents, and treat equipment and facilities with respect.",
+    "generalRulesBioText24": "We Build a Positive Culture of Safety: Safety is not only about following rules; it is about creating a culture of safe decision-making. Teams must not knowingly endanger themselves or others.",
+    "generalRulesBioText25": "We Make Healthy Choices: Even during intense competition periods, team members should drink enough water, eat well, stay active, get enough sleep, and take regular breaks.",
+    "generalRulesBioText26": "We're All on the Same Team: Teams compete against each other on the FIELD, but off the FIELD students, mentors, volunteers, and organizers are part of the same FIRST community. The goal is to build ROBOTS, learn, share experiences, have fun, improve together, and treat one another well.",
+    "generalRulesBioText27": "CIC violations may require mitigation or escalation depending on severity. Serious matters may be referred to the Event Director or FIRST Headquarters. In severe cases, teams or individuals may be barred from current or future events or removed from the FIRST Tech Challenge program.",
+    "generalRulesBioText28": "FIRST aims to provide reasonable accommodations for participants with disabilities. Contact local FIRST leadership before the event when needed. Reasonable accommodations may be made when they do not create a safety issue or undue hardship.",
+    "generalRulesBioText29": "The Competition Manual includes the BIOBUZZ game overview, FIELD information, gameplay, safety/conduct/gameplay/inspection/event rules, ROBOT construction rules, and the season advancement system.",
+    "generalRulesBioText30": "The Competition Manual is the source of truth. If it conflicts with supporting documents, the Manual takes priority and should be the basis for official rule interpretation.",
+    "generalRulesBioText31": "Rule ID letters identify the section: I = Competition Eligibility and Inspection, E = Event Rules, A = Awards, G = Game Rules, R = ROBOT Construction Rules, T = Tournament, L = League Play Tournaments, C = FIRST Championship. The following digits identify the subsection and rule order.",
+    "generalRulesBioText32": "Orange warning, caution, and note boxes may explain rule logic, interpretation, or best practices. If an orange box conflicts with the actual rule language, the rule language controls.",
+    "generalRulesBioText33": "Imperial dimensions are authoritative. Metric values are approximate references. If the imperial value and metric conversion differ, use the imperial measurement and official drawings.",
+    "generalRulesBioText34": "Rules may have short headlines. Evergreen rules are shown in green with an asterisk; other rule headlines are orange. If a headline conflicts with the detailed rule language, the detailed rule language controls.",
+    "generalRulesBioText35": "Team Updates announce changes to official documents and important season information. During BIOBUZZ they are published every Thursday from Kickoff until two weeks before FIRST Championship. New additions are highlighted yellow and deleted text is struck through.",
+    "generalRulesBioText36": "Important: A Team Update published after the driver's meeting at an event does not apply to that event.",
+    "generalRulesBioText37": "The Q&A system is used for questions about gameplay, competition rules, judging, advancement, ROBOT build rules, and FIELD setup. Teams can also search previously answered questions.",
+    "generalRulesBioText38": "Q&A opens September 28, 2026 at 12:00 p.m. ET. Access is through the Lead Coach 1 or Lead Coach 2 account.",
+    "generalRulesBioText39": "Q&A answers do not replace the Competition Manual. The Manual remains the primary source, and at events REFEREES and INSPECTORS have final authority within their respective responsibilities.",
+    "generalRulesBioText40": "Q&A generally will not answer vague hypotheticals, appeals of past MATCH decisions, complete legality reviews of a ROBOT design, overly broad questions without rule references, questions asking how a REFEREE should have ruled in a past MATCH, or questions already clearly answered by the Manual.",
+    "generalRulesBioText41": "A good Q&A question is specific: identify a particular ROBOT feature, gameplay scenario, or rule and include relevant rule IDs when possible. Examples include whether a specific wire is legal or whether a specific gameplay action fits a defined term.",
+    "generalRulesBioText42": "The 2026–2027 FIRST season theme is FIRST CANOPY™, inspired by nature and biodiversity. BIOBUZZ is the FTC game for this season, emphasizing STEM, problem-solving, teamwork, and solutions that support a thriving planet.",
+    "generalRulesBioText43": "Competition Eligibility and Inspection: Teams must be registered and competition ready. Check-in is normally required at least 45 minutes before Qualification MATCHES. ROBOTS must pass inspection before official MATCH participation, and teams must present the complete ROBOT, OPERATOR CONSOLE, and all configurations/components that may be used.",
+    "generalRulesBioText44": "I103 — A responsible adult must be present for the whole event. At least one, preferably two, adults responsible for the student team members must be present throughout the event.",
+    "generalRulesBioText45": "Inspection is not a comprehensive guarantee that every rule was checked. Teams remain responsible for complying with the spirit and requirements of Section 12. I301 requires the complete ROBOT and supporting equipment; I302 applies electronic limits across all ROBOT configurations.",
+    "generalRulesBioText46": "Re-Inspection: Most changes that could affect safety or legality require re-inspection. Minor fastener/label/code changes, like-for-like replacements, or previously inspected configurations may not. Do not exploit re-inspection to bypass other rules or gain an advantage.",
+    "generalRulesBioText47": "Advancement: Teams are normally eligible to advance only from events in their HOME REGION. Advancement can occur through Qualifying or League Tournaments and higher-level events. Only the first three chronological entry-level events count for advancement eligibility, and a team may belong to only one League per season.",
+    "generalRulesBioText48": "Advancement Points include Qualification performance (2–16 points), ALLIANCE lead position, draft acceptance, Playoff placement (40/20/10/5 for 1st–4th), and judged awards (Inspire 1st = 60, 2nd = 30, 3rd = 15; other 1st/2nd/3rd = 12/6/3).",
+    "generalRulesBioText49": "Advancement tiebreakers are applied in order: Total Advancement Points, Judged Team Award Points, Playoff Advancement Points, ALLIANCE Selection Results Points, Qualification Phase Performance Points, average Qualification MATCH points excluding FOULS, average AUTO points, highest MATCH points, second-highest MATCH points, then random selection.",
+    "generalRulesBioText50": "Sample Qualification points show how ranking position converts to Advancement Points. ALLIANCE selection rewards both ranking and being selected by other teams; all members of an ALLIANCE receive the applicable Playoff performance points. Judged Awards also contribute to Advancement Points.",
+    "generalRulesBioText51": "The Program Delivery Partner determines how many teams advance from a region. Minimum slots should be announced as early as possible and no later than ALLIANCE selection. FIRST Championship/Premier Event allocations consider global/regional representation, developing regions, registration numbers, and other factors. BIOBUZZ registration cutoff: November 17, 2026.",
+    "generalRulesBioText52": "Event Rules apply from arrival until departure. Violations normally receive a VERBAL WARNING; serious or repeated violations may escalate or lead to disqualification. E101 requires safety glasses in designated areas, closed-toe/heel shoes, controlled hair/accessories, appropriate clothing, walking in the venue, and compliance with health/safety requirements. Teams supply their own PPE.",
+    "generalRulesBioText53": "E102 requires respectful behavior and prohibits offensive language, harassment, bullying, obstruction, and misuse of Gracious Professionalism. E103 requires children under 12 in pits to be accompanied by an adult. E104 protects the venue. E105 reserves event resources for registered teams. E106 allows ROBOT practice only in approved areas or Practice MATCHES.",
+    "generalRulesBioText54": "E107 limits fabrication to approved work areas. E108 prohibits items such as skateboards, hoverboards, drones, gas cylinders, loud noisemakers, non-accommodation scooters, and very fast flashing lights. E109 forbids arranging extra venue utilities. E110 forbids sales without approval. E111 forbids loud/live music. E112 requires banners to be safe, fair, non-obstructive, and generally no larger than 25 ft² outside the pits without approval.",
+    "generalRulesBioText55": "E113 gives recommended flag/flagpole limits. E114 prohibits firearms and other weapons, including realistic props. E115 may require completed inspection before Practice FIELD access. E116 prohibits recording people without consent. E117 limits each team to one competition ROBOT and one concurrent event. E118 prohibits saving unused seats.",
+    "generalRulesBioText56": "Machine shops/build spaces, when provided, should be equally accessible. E301 prohibits teams from creating Wi-Fi, hotspot, ad-hoc, Bluetooth, or 2.4/5 GHz wireless systems at the venue. E302 prohibits interfering with or attempting to access other teams' or FIRST wireless networks; suspected issues should be reported to the FTA or Event Director.",
+    "generalRulesBioText57": "Load-in may be offered at larger events. Pits are typically about 10 × 10 × 10 ft and include surrounding pit operations. E501 restricts access when pits are closed. E502 keeps team setups within assigned space. E503 keeps aisles/exits clear. E504 tightly limits open flames and spark-producing tools.",
+    "generalRulesBioText58": "E505 permits only small benchtop machinery in team pits. E506 prohibits brazing/welding. E507 allows soldering only with electric irons/guns. E508 requires safe pit structures. E509 limits noxious aerosols/chemicals to approved areas. E510 prohibits artificially heating or cooling ROBOT components to gain a competitive advantage.",
+    "generalRulesBioText59": "E511 requires safe battery charging: follow manufacturer guidance, keep average channel current at or below 3 A, use safe polarized connectors, and do not use alligator clips. E601 requires ROBOT carts to be controllable, safe, able to pass through a 30-inch door, stored in the pit when unused, silent, and not self-propelled.",
+    "generalRulesBioText60": "Ceremonies honor teams, sponsors, mentors, volunteers, and award winners. E701 requires quiet pits during ceremonies and restricts power/loud tools. E702 limits pit occupancy to 5 team members during non-Playoff ceremonies and requires at least one representative to follow announcements. E703 requires respectful, non-disruptive behavior during national anthems."
+  },
+  "es": {
+    "navGameRules": "Reglas del partido",
+    "navFieldInfo": "Elementos del campo",
+    "navMatchProcedures": "Procedimientos del partido",
+    "navScoringSystem": "Cómo puntuar",
+    "navHome": "Premios y definiciones",
+    "navTeam": "Reglas generales",
+    "navRobots": "Construcción del robot",
+    "navDecode": "Volver",
+    "asterisk": "* QuickManual no es el Manual de Juego oficial y nunca debe considerarse una fuente completa o definitiva de reglas. No reemplaza el documento oficial publicado por FIRST. Para cualquier decisión oficial, inspección o disputa, los equipos deben consultar siempre la versión más reciente del Manual de Juego oficial.",
+    "dateUpdate": "** Fecha de la última actualización: 5 de agosto de 2026, Manual del juego V0",
+    "pageSearch": "Buscar en la página... (Ejemplo: normas, premios, bots)",
+    "clear": "limpiar",
+    "generalRulesTitle": "Normas generales",
+    "footerTitle": "QuickManual",
+    "footerDescription": "A community resource by Asteria Robotics\nThis is not an official FIRST document.",
+    "contactTitle": "Contacto",
+    "addressText": "Dirección de nuestro taller",
+    "instagramText": "Instagram",
+    "copyrightText": "© 2026 Asteria Robotics FTC Team 32334. Todos los derechos reservados.",
+    "navPanel": "Categorías",
+    "generalRulesBioText1": "FIRST fue fundada para aumentar el interés de los jóvenes por la ciencia y la tecnología. Su objetivo es ayudar a los estudiantes a innovar, ganar confianza y prepararse para el futuro. Los programas de FIRST cuentan con el apoyo de estudiantes, mentores, docentes, voluntarios y patrocinadores.",
+    "generalRulesBioText2": "FIRST Tech Challenge permite a los estudiantes competir con FIELDS y ROBOTS de tamaño adecuado para un aula. Los equipos pueden trabajar en grupos pequeños, especializarse en distintas tareas, usar un Starter Kit, construir un ROBOT totalmente personalizado o combinar ambos enfoques. Se pueden usar herramientas avanzadas de fabricación, pero no son obligatorias.",
+    "generalRulesBioText3": "Student Ownership: es importante que los estudiantes asuman la responsabilidad de su propio aprendizaje. Durante la temporada, los equipos desarrollan, prueban y modifican su ROBOT; su evolución debe reflejar la experiencia y lo aprendido por los propios estudiantes.",
+    "generalRulesBioText4": "Gracious Professionalism significa realizar un trabajo de alta calidad mientras se valora a las demás personas y se respeta a la comunidad. En FTC, la competencia intensa debe coexistir con el respeto y la empatía.",
+    "generalRulesBioText5": "Gracious Professionalism no es un título que se gana. Los equipos y las personas deben demostrar sus cualidades mediante su conducta: competir con fuerza, respetar a los demás, apoyar a los compañeros y no hacer que nadie se sienta excluido o menospreciado.",
+    "generalRulesBioText6": "Coopertition significa ayudar y respetar a los rivales incluso durante una competencia intensa. Debido al sistema de ALLIANCE de FTC, un equipo que hoy es rival puede ser tu compañero de ALLIANCE en otro MATCH.",
+    "generalRulesBioText7": "FIRST Core Values: Discovery — descubrir nuevas habilidades e ideas. Innovation — resolver problemas con creatividad y perseverancia. Impact — usar lo aprendido para mejorar el mundo. Inclusion — respetar las diferencias. Teamwork — ser más fuertes juntos. Fun — celebrar el trabajo y los logros.",
+    "generalRulesBioText8": "FIRST anima a aplicar Gracious Professionalism y los Core Values no solo durante la competencia, sino también en la vida diaria. Los equipos deben valorar el trabajo duro, la integridad, el juego limpio, la deportividad y la empatía.",
+    "generalRulesBioText9": "FIRST busca que BIOBUZZ ofrezca una experiencia competitiva significativa tanto a equipos experimentados de nivel Championship como a equipos nuevos en FTC. Se espera que los equipos mejoren continuamente sus ROBOTS para aportar de forma útil a sus ALLIANCES.",
+    "generalRulesBioText10": "BIOBUZZ da más importancia al 'spirit of the rule' que temporadas anteriores. En vez de definir cada situación posible, las decisiones deben considerar el juego previsto, el propósito de la regla y el espíritu de la competencia. Se espera que los voluntarios se centren en conductas y estrategias importantes que contradigan ese espíritu, no en registrar cada pequeña acción.",
+    "generalRulesBioText11": "El marco de conducta de FTC tiene cuatro partes: Gracious Professionalism & FIRST Core Values; el FIRST Code of Conduct, que cubre seguridad y conducta; el Competition Integrity Contract que todos los equipos deben seguir; y las Competition Rules definidas por el Competition Manual, Team Updates y Q&A.",
+    "generalRulesBioText12": "El grado de participación de los mentores en la construcción del ROBOT puede variar según las necesidades del equipo. FIRST no exige un único modelo de mentoría; la función principal del mentor es apoyar el aprendizaje y el desarrollo de los estudiantes.",
+    "generalRulesBioText13": "Los voluntarios de FIRST están para ayudar a los equipos a tener éxito. Voluntarios y equipos no son adversarios; trabajan juntos para que la competencia funcione bien. Los voluntarios deben aplicar las reglas con respeto, apoyo, justicia y enfoque en los equipos.",
+    "generalRulesBioText14": "El Competition Integrity Contract tiene dos partes principales: Sporting Ethics Code y Behavior Guidelines. Su objetivo es proteger la integridad de la competencia y fomentar una conducta coherente con Gracious Professionalism.",
+    "generalRulesBioText15": "We Don't Cheat: los equipos no deben violar deliberadamente el espíritu de las reglas, eludir los sistemas de FIRST, aceptar ganar mediante trampas ni comprometer el juego limpio y la integridad.",
+    "generalRulesBioText16": "Los equipos deben cumplir las reglas incluso cuando no se controle activamente su cumplimiento. La pregunta no debe ser '¿Qué podemos hacer sin que nos descubran?', sino '¿Qué es lo correcto?'.",
+    "generalRulesBioText17": "Los equipos no deben aprovechar vacíos de las reglas para obtener ventaja. Si el texto y el propósito de una regla parecen ambiguos, deben prevalecer la intención de la regla y el espíritu de la competencia.",
+    "generalRulesBioText18": "Los equipos pueden informar posibles infracciones a los oficiales del evento, pero no les corresponde acusar a otro equipo, investigar, señalar públicamente a otros ni intentar imponer sanciones por su cuenta.",
+    "generalRulesBioText19": "We Focus on Journey, Before Destination: los equipos deben intentar ganar y buscar la excelencia, pero el éxito no se mide solo por los resultados. Lo aprendido y las amistades también forman parte del éxito.",
+    "generalRulesBioText20": "We Behave with Respect and Good Sportsmanship: sea cual sea el resultado, los miembros deben actuar con respeto y profesionalidad. Apoya a tus compañeros, reconoce a tus partners y felicita a tus rivales.",
+    "generalRulesBioText21": "We Help Each Other: los equipos deben ayudarse a tener éxito. El objetivo no es ganar gracias al fracaso de otro, sino ayudar a que todos rindan lo mejor posible.",
+    "generalRulesBioText22": "We Take the High Road: aunque otra persona se comporte mal, el equipo debe mantener sus propios estándares y responder con respeto, comprensión y empatía.",
+    "generalRulesBioText23": "We Respect Property and Facilities: no dañes el recinto, deja limpias las zonas utilizadas, informa de los accidentes y trata con respeto el equipo y las instalaciones.",
+    "generalRulesBioText24": "We Build a Positive Culture of Safety: la seguridad no consiste solo en obedecer reglas, sino en crear una cultura de decisiones seguras. Los equipos no deben poner deliberadamente en peligro a sí mismos ni a otras personas.",
+    "generalRulesBioText25": "We Make Healthy Choices: incluso en periodos intensos de competencia, los miembros deben beber suficiente agua, alimentarse bien, mantenerse activos, dormir lo suficiente y hacer descansos regulares.",
+    "generalRulesBioText26": "We're All on the Same Team: en el FIELD los equipos compiten, pero fuera del FIELD estudiantes, mentores, voluntarios y organizadores forman parte de la misma comunidad FIRST. El objetivo es construir ROBOTS, aprender, compartir experiencias, divertirse, mejorar juntos y tratarse bien.",
+    "generalRulesBioText27": "Las infracciones del CIC pueden requerir mitigation o escalation según su gravedad. Los casos graves pueden remitirse al Event Director o a FIRST Headquarters. En situaciones severas, equipos o personas pueden ser excluidos de eventos actuales/futuros o retirados del programa FIRST Tech Challenge.",
+    "generalRulesBioText28": "FIRST intenta ofrecer accommodations razonables a participantes con discapacidad. Si es necesario, contacta con el liderazgo local de FIRST antes del evento. Pueden realizarse ajustes razonables siempre que no creen un riesgo de seguridad ni una carga indebida.",
+    "generalRulesBioText29": "El Competition Manual incluye el resumen del juego BIOBUZZ, información del FIELD, cómo se juega, reglas de seguridad/conducta/gameplay/inspection/evento, reglas de construcción del ROBOT y el sistema de advancement de la temporada.",
+    "generalRulesBioText30": "El Competition Manual es la fuente de referencia. Si entra en conflicto con documentos de apoyo, prevalece el Manual y debe usarse como base para interpretar oficialmente las reglas.",
+    "generalRulesBioText31": "Las letras de los Rule ID identifican la sección: I = Competition Eligibility and Inspection, E = Event Rules, A = Awards, G = Game Rules, R = ROBOT Construction Rules, T = Tournament, L = League Play Tournaments, C = FIRST Championship. Los números siguientes indican la subsección y el orden de la regla.",
+    "generalRulesBioText32": "Los cuadros naranjas de warning/caution/note pueden explicar la lógica de una regla, cómo interpretarla o recomendar buenas prácticas. Si un cuadro naranja contradice el texto de la regla, prevalece el texto de la regla.",
+    "generalRulesBioText33": "Las medidas imperiales son las oficiales. Los valores métricos son referencias aproximadas. Si existe una diferencia entre la medida imperial y su conversión métrica, prevalecen la medida imperial y los dibujos oficiales.",
+    "generalRulesBioText34": "Las reglas pueden incluir titulares breves. Las evergreen rules aparecen en verde con un asterisco y otros titulares en naranja. Si un titular contradice el texto específico de la regla, prevalece el texto detallado.",
+    "generalRulesBioText35": "Team Updates comunica cambios en documentos oficiales e información importante de la temporada. En BIOBUZZ se publican cada jueves desde Kickoff hasta dos semanas antes de FIRST Championship. Las adiciones nuevas se resaltan en amarillo y el texto eliminado aparece tachado.",
+    "generalRulesBioText36": "Importante: un Team Update publicado después del driver's meeting de un evento no se aplica a ese evento.",
+    "generalRulesBioText37": "El sistema Q&A se usa para preguntas sobre gameplay, reglas de competencia, judging, advancement, reglas de construcción del ROBOT y configuración del FIELD. Los equipos también pueden buscar preguntas ya respondidas.",
+    "generalRulesBioText38": "Q&A abre el 28 de septiembre de 2026 a las 12:00 p. m. ET. El acceso se realiza mediante la cuenta de Lead Coach 1 o Lead Coach 2.",
+    "generalRulesBioText39": "Las respuestas de Q&A no sustituyen al Competition Manual. El Manual sigue siendo la fuente principal y, durante los eventos, REFEREES e INSPECTORS tienen autoridad final en sus respectivas áreas.",
+    "generalRulesBioText40": "Q&A normalmente no responde hipótesis vagas, apelaciones de decisiones de MATCH anteriores, revisiones completas de legalidad de un diseño de ROBOT, preguntas demasiado amplias sin referencias a reglas, preguntas sobre cómo debió decidir un REFEREE en un MATCH pasado ni cuestiones ya respondidas claramente en el Manual.",
+    "generalRulesBioText41": "Una buena pregunta de Q&A es específica: identifica una característica concreta del ROBOT, un escenario de gameplay o una regla, e incluye los Rule ID relevantes cuando sea posible. Ejemplos: si un cable específico es legal o si una acción de juego encaja en una definición.",
+    "generalRulesBioText42": "El tema de la temporada FIRST 2026–2027 es FIRST CANOPY™, inspirado en la naturaleza y la biodiversidad. BIOBUZZ es el juego FTC de la temporada y destaca STEM, resolución de problemas, trabajo en equipo y soluciones para un planeta próspero.",
+    "generalRulesBioText43": "Competition Eligibility and Inspection: los equipos deben estar registrados y competition ready. Normalmente el check-in debe completarse al menos 45 minutos antes de los Qualification MATCHES. Los ROBOTS deben aprobar inspection antes de participar en MATCHES oficiales, y el equipo debe presentar el ROBOT completo, OPERATOR CONSOLE y todas las configuraciones/componentes que pueda usar.",
+    "generalRulesBioText44": "I103 — Debe haber un adulto responsable durante todo el evento. Al menos uno, preferiblemente dos, adultos responsables de los estudiantes deben permanecer presentes durante todo el evento.",
+    "generalRulesBioText45": "Inspection no garantiza que se haya comprobado cada regla. El equipo sigue siendo responsable de cumplir el espíritu y los requisitos de la Section 12. I301 exige el ROBOT completo y equipo de apoyo; I302 aplica los límites electrónicos a todas las configuraciones del ROBOT.",
+    "generalRulesBioText46": "Re-Inspection: la mayoría de cambios que puedan afectar seguridad o legalidad requieren nueva inspection. Cambios menores de fijaciones/etiquetas/código, reemplazos idénticos o configuraciones ya inspeccionadas pueden no requerirla. No se puede explotar re-inspection para evitar otras reglas o ganar ventaja.",
+    "generalRulesBioText47": "Advancement: normalmente los equipos solo pueden avanzar desde eventos de su HOME REGION. El advancement puede producirse mediante Qualifying/League Tournaments y eventos superiores. Solo cuentan los primeros tres eventos de nivel inicial en orden cronológico, y un equipo solo puede pertenecer a una League por temporada.",
+    "generalRulesBioText48": "Advancement Points incluyen rendimiento en Qualification (2–16), posición como ALLIANCE lead, aceptación en draft, puesto en Playoffs (40/20/10/5 para 1.º–4.º) y judged awards (Inspire 1.º = 60, 2.º = 30, 3.º = 15; otros 1.º/2.º/3.º = 12/6/3).",
+    "generalRulesBioText49": "Los desempates de advancement se aplican en este orden: Total Advancement Points, Judged Team Award Points, Playoff Advancement Points, ALLIANCE Selection Results Points, Qualification Phase Performance Points, promedio de puntos de Qualification sin FOULS, promedio de AUTO, mayor puntuación de MATCH, segunda mayor puntuación y finalmente selección aleatoria.",
+    "generalRulesBioText50": "La tabla de ejemplo muestra cómo el puesto de Qualification se convierte en Advancement Points. ALLIANCE selection recompensa tanto el ranking como ser elegido por otros equipos; todos los miembros de una ALLIANCE reciben los puntos de rendimiento de Playoff correspondientes. Los Judged Awards también aportan Advancement Points.",
+    "generalRulesBioText51": "El Program Delivery Partner determina cuántos equipos avanzan desde una región. Los cupos mínimos deben anunciarse lo antes posible y como máximo antes de ALLIANCE selection. Las plazas para FIRST Championship/Premier Events consideran representación global/regional, regiones en desarrollo, número de equipos registrados y otros factores. Fecha límite BIOBUZZ: 17 de noviembre de 2026.",
+    "generalRulesBioText52": "Event Rules se aplican desde la llegada hasta la salida. Las infracciones normalmente reciben VERBAL WARNING; las graves o repetidas pueden escalar o causar disqualification. E101 exige gafas de seguridad en zonas designadas, calzado cerrado, controlar cabello/accesorios, ropa apropiada, caminar dentro del recinto y cumplir requisitos de salud/seguridad. Cada equipo lleva su propio PPE.",
+    "generalRulesBioText53": "E102 exige conducta respetuosa y prohíbe lenguaje ofensivo, acoso, bullying, obstrucción y uso de Gracious Professionalism como arma. E103 exige que menores de 12 años estén acompañados en pits. E104 protege el recinto. E105 reserva recursos para equipos registrados. E106 permite practicar con el ROBOT solo en áreas autorizadas o Practice MATCHES.",
+    "generalRulesBioText54": "E107 limita la fabricación a zonas de trabajo autorizadas. E108 prohíbe objetos como skateboards, hoverboards, drones, cilindros de gas, dispositivos ruidosos, scooters no usados como accommodation y luces de parpadeo muy rápido. E109 prohíbe contratar servicios adicionales del recinto. E110 prohíbe ventas sin autorización. E111 prohíbe música fuerte/en vivo. E112 exige banners seguros, justos y sin bloquear la vista; fuera de pits normalmente no deben superar 25 ft² sin permiso.",
+    "generalRulesBioText55": "E113 establece límites recomendados para banderas y mástiles. E114 prohíbe armas, incluidos props realistas. E115 puede exigir inspection completa antes de acceder al Practice FIELD. E116 prohíbe grabar a personas sin consentimiento. E117 limita a un solo ROBOT de competición y un solo evento simultáneo por equipo. E118 prohíbe reservar asientos sin uso.",
+    "generalRulesBioText56": "Cuando existen machine shops/build spaces, deben estar disponibles de forma equitativa. E301 prohíbe crear Wi-Fi, hotspot, redes ad-hoc, Bluetooth o comunicaciones de 2.4/5 GHz en el recinto. E302 prohíbe interferir o intentar acceder a las redes de otros equipos o FIRST; los problemas sospechosos deben comunicarse al FTA o Event Director.",
+    "generalRulesBioText57": "Los eventos grandes pueden ofrecer load-in. Los pits suelen ser de unos 10 × 10 × 10 ft e incluyen operaciones alrededor del área. E501 restringe el acceso cuando están cerrados. E502 mantiene todo dentro del espacio asignado. E503 mantiene pasillos/salidas libres. E504 limita estrictamente llamas abiertas y herramientas que produzcan chispas.",
+    "generalRulesBioText58": "E505 permite solo maquinaria pequeña de sobremesa en pits. E506 prohíbe brazing/welding. E507 permite soldering solo con soldador eléctrico. E508 exige estructuras seguras. E509 limita aerosoles/químicos nocivos a zonas aprobadas. E510 prohíbe calentar o enfriar artificialmente componentes del ROBOT para obtener ventaja competitiva.",
+    "generalRulesBioText59": "E511 exige carga segura de baterías: seguir al fabricante, mantener la corriente media por canal en 3 A o menos, usar conectores seguros/polarizados y no usar pinzas cocodrilo. E601 exige carts controlables, seguros, capaces de pasar por una puerta de 30 in, guardados en el pit cuando no se usen, sin música y sin propulsión propia.",
+    "generalRulesBioText60": "Las ceremonias honran a equipos, patrocinadores, mentores, voluntarios y ganadores. E701 exige silencio en pits durante ceremonias y restringe herramientas eléctricas/ruidosas. E702 limita a 5 miembros en el pit durante ceremonias fuera de Playoffs y exige al menos un representante atento a anuncios. E703 exige conducta respetuosa y no disruptiva durante los himnos nacionales."
+  },
+  "pt": {
+    "navGameRules": "Regras da partida",
+    "navFieldInfo": "Elementos do campo",
+    "navMatchProcedures": "Procedimentos da partida",
+    "navScoringSystem": "Como pontuar",
+    "navHome": "Prêmios e definições",
+    "navTeam": "Regras gerais",
+    "navRobots": "Construção do robô",
+    "navDecode": "Voltar",
+    "asterisk": "* QuickManual não é o Manual de Jogo oficial e nunca deve ser tratado como uma fonte completa ou definitiva de regras. Ele não substitui o documento oficial publicado pela FIRST. Para qualquer decisão oficial, inspeção ou contestação, as equipes devem sempre consultar a versão mais recente do Manual de Jogo oficial.",
+    "dateUpdate": "** Data da última atualização: 5 de agosto de 2026, Manual do Jogo V0",
+    "pageSearch": "Pesquisar nesta página... (Exemplo: regras, prémios, bots)",
+    "clear": "limpar",
+    "generalRulesTitle": "Regras gerais",
+    "footerTitle": "QuickManual",
+    "footerDescription": "A community resource by Asteria Robotics\nThis is not an official FIRST document.",
+    "contactTitle": "Contato",
+    "addressText": "Endereço da nossa oficina",
+    "instagramText": "Instagram",
+    "copyrightText": "© 2026 Asteria Robotics FTC Team 32334. Todos os direitos reservados.",
+    "navPanel": "Categorias",
+    "generalRulesBioText1": "A FIRST foi fundada para aumentar o interesse dos jovens por ciência e tecnologia. Seu objetivo é ajudar estudantes a inovar, ganhar confiança e se preparar para o futuro. Os programas FIRST contam com o apoio de estudantes, mentores, professores, voluntários e patrocinadores.",
+    "generalRulesBioText2": "O FIRST Tech Challenge permite que estudantes compitam com FIELDS e ROBOTS em escala adequada para sala de aula. As equipes podem trabalhar em pequenos grupos, se especializar em funções diferentes, usar um Starter Kit, construir um ROBOT totalmente personalizado ou combinar abordagens. Ferramentas avançadas de fabricação podem ser usadas, mas não são obrigatórias.",
+    "generalRulesBioText3": "Student Ownership: é importante que os estudantes assumam responsabilidade pelo próprio aprendizado. Ao longo da temporada, as equipes desenvolvem, testam e modificam o ROBOT; sua evolução deve refletir a experiência e o aprendizado dos próprios estudantes.",
+    "generalRulesBioText4": "Gracious Professionalism significa realizar trabalho de alta qualidade enquanto se valoriza outras pessoas e se respeita a comunidade. No FTC, competição forte deve coexistir com respeito e empatia.",
+    "generalRulesBioText5": "Gracious Professionalism não é um título a ser conquistado. Equipes e pessoas devem demonstrar seus princípios por meio do comportamento: competir com força, respeitar os outros, apoiar os colegas e não fazer ninguém se sentir excluído ou desvalorizado.",
+    "generalRulesBioText6": "Coopertition significa ajudar e respeitar os adversários mesmo durante competição intensa. Por causa do sistema de ALLIANCE do FTC, uma equipe que hoje é adversária pode ser parceira de ALLIANCE em outro MATCH.",
+    "generalRulesBioText7": "FIRST Core Values: Discovery — descobrir novas habilidades e ideias. Innovation — resolver problemas com criatividade e persistência. Impact — usar o aprendizado para melhorar o mundo. Inclusion — respeitar diferenças. Teamwork — ser mais forte junto. Fun — celebrar o trabalho e as conquistas.",
+    "generalRulesBioText8": "A FIRST incentiva Gracious Professionalism e Core Values não apenas durante competições, mas também na vida cotidiana. As equipes devem valorizar trabalho duro, integridade, fair play, sportsmanship e empatia.",
+    "generalRulesBioText9": "A FIRST pretende que BIOBUZZ ofereça uma experiência competitiva significativa tanto para equipes experientes de nível Championship quanto para equipes novas no FTC. Espera-se que as equipes melhorem continuamente seus ROBOTS para contribuir de forma relevante com suas ALLIANCES.",
+    "generalRulesBioText10": "BIOBUZZ dá mais importância ao 'spirit of the rule' do que temporadas anteriores. Em vez de definir toda situação possível, as decisões devem considerar o gameplay pretendido, o objetivo da regra e o espírito da competição. Espera-se que voluntários se concentrem em comportamentos e estratégias relevantes que contrariem esse espírito, e não em registrar cada pequena ação.",
+    "generalRulesBioText11": "A estrutura de comportamento do FTC tem quatro partes: Gracious Professionalism & FIRST Core Values; FIRST Code of Conduct, cobrindo segurança e padrões de comportamento; Competition Integrity Contract, obrigatório para todas as equipes; e Competition Rules definidas pelo Competition Manual, Team Updates e Q&A.",
+    "generalRulesBioText12": "O nível de participação dos mentores na construção do ROBOT pode variar conforme as necessidades da equipe. A FIRST não exige um único modelo de mentoria; o papel principal do mentor é apoiar o aprendizado e o desenvolvimento dos estudantes.",
+    "generalRulesBioText13": "Voluntários da FIRST existem para ajudar as equipes a ter sucesso. Voluntários e equipes não são adversários; trabalham juntos para que a competição funcione bem. As regras devem ser aplicadas com respeito, apoio, justiça e foco nas equipes.",
+    "generalRulesBioText14": "O Competition Integrity Contract tem duas partes principais: Sporting Ethics Code e Behavior Guidelines. Seu objetivo é proteger a integridade da competição e incentivar comportamento coerente com Gracious Professionalism.",
+    "generalRulesBioText15": "We Don't Cheat: as equipes não devem violar conscientemente o espírito das regras, contornar sistemas FIRST, aceitar vencer por trapaça nem comprometer fair play e integridade.",
+    "generalRulesBioText16": "As equipes devem seguir as regras mesmo quando o cumprimento não é fiscalizado ativamente. A pergunta não deve ser 'O que podemos fazer sem sermos pegos?', mas 'Qual é a coisa certa a fazer?'.",
+    "generalRulesBioText17": "As equipes não devem explorar brechas para obter vantagem. Se o texto e o objetivo de uma regra parecerem ambíguos, a intenção da regra e o espírito da competição devem orientar a interpretação.",
+    "generalRulesBioText18": "As equipes podem informar possíveis violações aos oficiais do evento, mas não cabe a elas acusar outra equipe, conduzir investigações, expor publicamente pessoas ou tentar aplicar penalidades por conta própria.",
+    "generalRulesBioText19": "We Focus on Journey, Before Destination: as equipes devem buscar vencer e perseguir excelência, mas sucesso não é medido apenas por resultados. Aprendizado e amizades também fazem parte da jornada.",
+    "generalRulesBioText20": "We Behave with Respect and Good Sportsmanship: independentemente do resultado, membros da equipe devem agir com respeito e profissionalismo. Apoie colegas, reconheça parceiros e parabenize adversários.",
+    "generalRulesBioText21": "We Help Each Other: as equipes devem ajudar umas às outras a ter sucesso. O objetivo não é vencer porque alguém falhou, mas ajudar todos a alcançar o melhor desempenho possível.",
+    "generalRulesBioText22": "We Take the High Road: mesmo quando outra pessoa se comporta mal, a equipe deve manter seus próprios padrões e responder com respeito, compreensão e empatia.",
+    "generalRulesBioText23": "We Respect Property and Facilities: não danifique o local, deixe as áreas utilizadas limpas, informe acidentes e trate equipamentos e instalações com respeito.",
+    "generalRulesBioText24": "We Build a Positive Culture of Safety: segurança não é apenas cumprir regras, mas criar uma cultura de decisões seguras. Equipes não devem colocar conscientemente a si mesmas ou outras pessoas em risco.",
+    "generalRulesBioText25": "We Make Healthy Choices: mesmo em períodos intensos de competição, membros devem beber água suficiente, se alimentar bem, permanecer ativos, dormir o necessário e fazer pausas regulares.",
+    "generalRulesBioText26": "We're All on the Same Team: no FIELD as equipes competem entre si, mas fora dele estudantes, mentores, voluntários e organizadores fazem parte da mesma comunidade FIRST. O objetivo é construir ROBOTS, aprender, compartilhar experiências, se divertir, melhorar juntos e tratar todos bem.",
+    "generalRulesBioText27": "Violações do CIC podem exigir mitigation ou escalation conforme a gravidade. Casos sérios podem ser encaminhados ao Event Director ou FIRST Headquarters. Em situações graves, equipes ou indivíduos podem ser impedidos de participar de eventos atuais/futuros ou removidos do programa FIRST Tech Challenge.",
+    "generalRulesBioText28": "A FIRST busca fornecer accommodations razoáveis para participantes com deficiência. Quando necessário, contate a liderança local da FIRST antes do evento. Ajustes razoáveis podem ser feitos desde que não criem risco de segurança ou undue hardship.",
+    "generalRulesBioText29": "O Competition Manual inclui visão geral do BIOBUZZ, informações do FIELD, como jogar, regras de safety/conduct/gameplay/inspection/event, ROBOT construction rules e o sistema de advancement da temporada.",
+    "generalRulesBioText30": "O Competition Manual é a fonte oficial. Se houver conflito com documentos de apoio, o Manual tem prioridade e deve ser a base da interpretação das regras.",
+    "generalRulesBioText31": "As letras dos Rule IDs identificam a seção: I = Competition Eligibility and Inspection, E = Event Rules, A = Awards, G = Game Rules, R = ROBOT Construction Rules, T = Tournament, L = League Play Tournaments, C = FIRST Championship. Os números seguintes indicam subseção e ordem da regra.",
+    "generalRulesBioText32": "Caixas laranja de warning/caution/note podem explicar a lógica de uma regra, sua interpretação ou boas práticas. Se uma caixa laranja entrar em conflito com o texto da regra, o texto da regra prevalece.",
+    "generalRulesBioText33": "Medidas imperiais são oficiais. Valores métricos são referências aproximadas. Se houver diferença entre medida imperial e conversão métrica, prevalecem a medida imperial e os desenhos oficiais.",
+    "generalRulesBioText34": "Regras podem ter headlines curtos. Evergreen rules aparecem em verde com asterisco; outros headlines em laranja. Se o headline conflitar com o texto específico da regra, prevalece o texto detalhado.",
+    "generalRulesBioText35": "Team Updates anunciam mudanças em documentos oficiais e informações importantes da temporada. No BIOBUZZ são publicados toda quinta-feira desde Kickoff até duas semanas antes do FIRST Championship. Novas adições aparecem em amarelo e trechos removidos aparecem riscados.",
+    "generalRulesBioText36": "Importante: um Team Update publicado depois do driver's meeting de um evento não vale para aquele evento.",
+    "generalRulesBioText37": "O sistema Q&A é usado para perguntas sobre gameplay, regras da competição, judging, advancement, ROBOT build rules e FIELD setup. As equipes também podem pesquisar perguntas já respondidas.",
+    "generalRulesBioText38": "O Q&A abre em 28 de setembro de 2026 às 12:00 p.m. ET. O acesso é feito pela conta Lead Coach 1 ou Lead Coach 2.",
+    "generalRulesBioText39": "Respostas do Q&A não substituem o Competition Manual. O Manual continua sendo a fonte principal e, nos eventos, REFEREES e INSPECTORS têm autoridade final em suas áreas de responsabilidade.",
+    "generalRulesBioText40": "O Q&A normalmente não responde hipóteses vagas, recursos de decisões passadas de MATCH, revisões completas de legalidade de um ROBOT, perguntas muito amplas sem referência a regras, perguntas sobre como um REFEREE deveria ter decidido em um MATCH passado ou questões já claramente respondidas pelo Manual.",
+    "generalRulesBioText41": "Uma boa pergunta de Q&A é específica: identifica uma característica do ROBOT, cenário de gameplay ou regra e inclui Rule IDs relevantes quando possível. Exemplos: se um fio específico é legal ou se uma ação de gameplay se enquadra em uma definição.",
+    "generalRulesBioText42": "O tema da temporada FIRST 2026–2027 é FIRST CANOPY™, inspirado na natureza e biodiversidade. BIOBUZZ é o jogo FTC da temporada, destacando STEM, resolução de problemas, trabalho em equipe e soluções para um planeta saudável.",
+    "generalRulesBioText43": "Competition Eligibility and Inspection: equipes devem estar registradas e competition ready. O check-in normalmente deve ser concluído ao menos 45 minutos antes dos Qualification MATCHES. ROBOTS precisam passar por inspection antes de MATCHES oficiais e a equipe deve apresentar ROBOT completo, OPERATOR CONSOLE e todas as configurações/componentes possíveis.",
+    "generalRulesBioText44": "I103 — Um adulto responsável deve estar presente durante todo o evento. Pelo menos um, preferencialmente dois, adultos responsáveis pelos estudantes devem permanecer no local durante todo o evento.",
+    "generalRulesBioText45": "Inspection não garante que todas as regras foram verificadas. A equipe continua responsável por cumprir o espírito e os requisitos da Section 12. I301 exige ROBOT completo e equipamento de apoio; I302 aplica limites eletrônicos a todas as configurações do ROBOT.",
+    "generalRulesBioText46": "Re-Inspection: a maioria das mudanças que possa afetar segurança ou legalidade exige nova inspection. Pequenas mudanças de fixadores/etiquetas/código, substituições idênticas ou configurações previamente inspecionadas podem não exigir. Não explore re-inspection para contornar regras ou ganhar vantagem.",
+    "generalRulesBioText47": "Advancement: normalmente equipes só podem avançar a partir de eventos em sua HOME REGION. Advancement pode ocorrer por Qualifying/League Tournaments e níveis superiores. Apenas os três primeiros eventos de entrada em ordem cronológica contam, e a equipe pode participar de apenas uma League por temporada.",
+    "generalRulesBioText48": "Advancement Points incluem desempenho de Qualification (2–16), posição como ALLIANCE lead, aceitação no draft, colocação em Playoffs (40/20/10/5 para 1º–4º) e judged awards (Inspire 1º = 60, 2º = 30, 3º = 15; outros 1º/2º/3º = 12/6/3).",
+    "generalRulesBioText49": "Desempates de advancement seguem: Total Advancement Points, Judged Team Award Points, Playoff Advancement Points, ALLIANCE Selection Results Points, Qualification Phase Performance Points, média de Qualification MATCH points sem FOULS, média de AUTO, maior pontuação de MATCH, segunda maior e seleção aleatória.",
+    "generalRulesBioText50": "A tabela de exemplo mostra como ranking de Qualification vira Advancement Points. ALLIANCE selection recompensa ranking e ser escolhido por outras equipes; todos os membros da ALLIANCE recebem os pontos aplicáveis de Playoff. Judged Awards também contribuem para Advancement Points.",
+    "generalRulesBioText51": "O Program Delivery Partner define quantas equipes avançam de uma região. O mínimo deve ser anunciado o mais cedo possível e até o início da ALLIANCE selection. Vagas para FIRST Championship/Premier Events consideram representação global/regional, regiões emergentes, número de equipes registradas e outros fatores. Cutoff BIOBUZZ: 17 de novembro de 2026.",
+    "generalRulesBioText52": "Event Rules valem da chegada até a saída. Violações normalmente recebem VERBAL WARNING; violações graves ou repetidas podem escalar ou causar disqualification. E101 exige safety glasses em áreas designadas, calçado fechado, cabelo/acessórios controlados, roupa adequada, caminhar no local e seguir requisitos de saúde/segurança. A equipe leva seu próprio PPE.",
+    "generalRulesBioText53": "E102 exige comportamento respeitoso e proíbe linguagem ofensiva, assédio, bullying, obstrução e uso de Gracious Professionalism como arma. E103 exige adulto acompanhando menores de 12 anos nos pits. E104 protege o local. E105 reserva recursos do evento para equipes registradas. E106 permite prática de ROBOT apenas em áreas autorizadas ou Practice MATCHES.",
+    "generalRulesBioText54": "E107 limita fabricação a áreas autorizadas. E108 proíbe skateboards, hoverboards, drones, cilindros de gás, dispositivos ruidosos, scooters não usados como accommodation e luzes de piscar muito rápido. E109 proíbe contratar serviços extras do local. E110 proíbe vendas sem autorização. E111 proíbe música alta/ao vivo. E112 exige banners seguros, justos e sem bloquear visão; fora dos pits normalmente não podem superar 25 ft² sem autorização.",
+    "generalRulesBioText55": "E113 recomenda limites de bandeira/mastro. E114 proíbe armas, inclusive props realistas. E115 pode exigir inspection completa antes de usar Practice FIELD. E116 proíbe gravar pessoas sem consentimento. E117 limita cada equipe a um ROBOT de competição e um evento simultâneo. E118 proíbe reservar assentos não utilizados.",
+    "generalRulesBioText56": "Quando disponíveis, machine shops/build spaces devem ser acessíveis de forma igual. E301 proíbe criar Wi-Fi, hotspot, rede ad-hoc, Bluetooth ou comunicação 2.4/5 GHz no local. E302 proíbe interferir ou tentar acessar redes de outras equipes/FIRST; problemas suspeitos devem ser comunicados ao FTA ou Event Director.",
+    "generalRulesBioText57": "Eventos grandes podem oferecer load-in. Pits têm tipicamente cerca de 10 × 10 × 10 ft e incluem operações ao redor da área. E501 restringe acesso quando fechados. E502 mantém equipamentos no espaço designado. E503 mantém corredores/saídas livres. E504 limita fortemente chamas abertas e ferramentas que geram faíscas.",
+    "generalRulesBioText58": "E505 permite apenas máquinas pequenas de bancada nos pits. E506 proíbe brazing/welding. E507 permite soldering apenas com ferro/pistola elétrica. E508 exige estruturas seguras. E509 limita aerosóis/químicos nocivos a áreas aprovadas. E510 proíbe aquecer ou resfriar artificialmente componentes do ROBOT para obter vantagem competitiva.",
+    "generalRulesBioText59": "E511 exige carregamento seguro de baterias: seguir o fabricante, manter corrente média por canal em no máximo 3 A, usar conectores seguros/polarizados e não usar garras jacaré. E601 exige ROBOT carts controláveis, seguros, capazes de passar por porta de 30 in, guardados no pit quando não usados, sem música e sem propulsão própria.",
+    "generalRulesBioText60": "Cerimônias homenageiam equipes, patrocinadores, mentores, voluntários e vencedores. E701 exige silêncio nos pits e restringe ferramentas elétricas/ruidosas durante cerimônias. E702 limita a 5 membros no pit em cerimônias fora dos Playoffs e exige ao menos um representante acompanhando anúncios. E703 exige comportamento respeitoso e não disruptivo durante hinos nacionais."
+  },
+  "zh": {
+    "navGameRules": "比赛规则",
+    "navFieldInfo": "场地元素信息",
+    "navMatchProcedures": "比赛流程",
+    "navScoringSystem": "如何得分",
+    "navHome": "奖项与定义",
+    "navTeam": "通用规则",
+    "navRobots": "机器人构建",
+    "navDecode": "返回",
+    "asterisk": "* QuickManual 不是官方比赛手册，绝不能被视为完整或最终的规则来源。它不能替代 FIRST 发布的官方文件。对于任何正式决定、检查或争议，队伍必须始终参考最新版本的官方比赛手册。",
+    "dateUpdate": "** 最后更新日期：2026年8月5日，游戏手册 V0",
+    "pageSearch": "在页面中搜索...（示例：规则、奖励、机器人）",
+    "clear": "清洁",
+    "generalRulesTitle": "一般规则",
+    "footerTitle": "QuickManual",
+    "footerDescription": "A community resource by Asteria Robotics\nThis is not an official FIRST document.",
+    "contactTitle": "联系我们",
+    "addressText": "我们的工作室地址",
+    "instagramText": "Instagram",
+    "copyrightText": "© 2026 Asteria Robotics FTC Team 32334. 版权所有。",
+    "navPanel": "分类",
+    "generalRulesBioText1": "FIRST 的成立旨在提升青少年对科学与技术的兴趣。其目标是帮助学生创新、建立自信并为未来做好准备。FIRST 项目由学生、导师、教师、志愿者和赞助商共同支持。",
+    "generalRulesBioText2": "FIRST Tech Challenge 让学生使用适合课堂规模的 FIELD 和 ROBOT 参加机器人竞赛。队伍可以以小组协作、分工专长、使用 Starter Kit、制作完全自定义 ROBOT，或组合这些方式。可以使用先进制造工具，但并非必须。",
+    "generalRulesBioText3": "Student Ownership：FTC 强调学生对自己的学习负责。整个赛季中，队伍会持续开发、测试和修改 ROBOT；ROBOT 的成长应体现学生自己的经验与学习成果。",
+    "generalRulesBioText4": "Gracious Professionalism 指在完成高质量工作的同时重视他人并尊重社区。在 FTC 中，激烈竞争应与尊重和同理心并存。",
+    "generalRulesBioText5": "Gracious Professionalism 不是一个需要“赢得”的头衔。队伍和个人应通过行为体现它：成为强有力的对手、尊重他人、支持队友，并避免让任何人感到被排斥或被轻视。",
+    "generalRulesBioText6": "Coopertition 指即使在激烈竞争中也愿意帮助并尊重对手。由于 FTC 的 ALLIANCE 机制，今天的对手可能在另一个 MATCH 中成为你的 ALLIANCE partner。",
+    "generalRulesBioText7": "FIRST Core Values：Discovery—学习新技能与新想法；Innovation—用创造力和坚持解决问题；Impact—用所学改善世界；Inclusion—尊重差异；Teamwork—共同合作更强大；Fun—庆祝工作与成果。",
+    "generalRulesBioText8": "FIRST 鼓励不仅在比赛中，也在日常生活中践行 Gracious Professionalism 和 Core Values。队伍应重视努力、诚信、公平竞赛、体育精神和同理心。",
+    "generalRulesBioText9": "FIRST 希望 BIOBUZZ 能同时为经验丰富的 Championship 级队伍和刚加入 FTC 的队伍提供有意义的竞赛体验。队伍应持续改进 ROBOT，从而为 ALLIANCE 做出有价值的贡献。",
+    "generalRulesBioText10": "BIOBUZZ 比以往赛季更强调“spirit of the rule”。规则不会逐一列出所有可能情形，而会结合预期 gameplay、规则目的与竞赛精神进行判断。志愿者应关注明显违背竞赛精神的重要行为或策略，而不是记录每一个小动作。",
+    "generalRulesBioText11": "FTC 行为框架包括四部分：Gracious Professionalism & FIRST Core Values；FIRST Code of Conduct（安全与行为标准）；所有 FTC 队伍必须遵守的 Competition Integrity Contract；以及由 Competition Manual、Team Updates 和 Q&A 构成的 Competition Rules。",
+    "generalRulesBioText12": "导师参与 ROBOT 制作的程度可根据队伍需求而变化。FIRST 不规定唯一的导师模式；导师最重要的职责是支持学生学习与成长。",
+    "generalRulesBioText13": "FIRST 志愿者的目标是帮助队伍成功。志愿者和队伍不是对立关系，而是共同让赛事顺利运行。志愿者执行规则时应保持尊重、支持、公平并以队伍为中心。",
+    "generalRulesBioText14": "Competition Integrity Contract 由两部分组成：Sporting Ethics Code 和 Behavior Guidelines。其目的是保护竞赛完整性，并鼓励符合 Gracious Professionalism 的行为。",
+    "generalRulesBioText15": "We Don't Cheat：队伍不得故意违反规则精神、绕过 FIRST 系统、接受以作弊方式获胜，也不得破坏 fair play 与诚信。",
+    "generalRulesBioText16": "即使某项规则没有被主动检查，队伍也必须遵守。重点不应是“我们能钻什么空子？”，而应是“什么才是正确的做法？”。",
+    "generalRulesBioText17": "队伍不得利用规则漏洞获取优势。如果规则文字与目的之间存在不明确之处，应以规则意图和竞赛精神作为解释依据。",
+    "generalRulesBioText18": "队伍可以向赛事官员报告可能的违规，但不应自行指责其他队伍、展开调查、公开点名攻击或试图自行处罚他人。",
+    "generalRulesBioText19": "We Focus on Journey, Before Destination：队伍应努力取胜并追求卓越，但成功不仅由比赛结果衡量。学习到的经验和建立的友谊同样是成功的一部分。",
+    "generalRulesBioText20": "We Behave with Respect and Good Sportsmanship：无论结果如何，都应保持尊重与专业。支持队友、认可伙伴，并向对手表示祝贺。",
+    "generalRulesBioText21": "We Help Each Other：队伍应帮助他人取得成功。目标不是依靠别人失败来获胜，而是帮助所有人发挥出最佳水平。",
+    "generalRulesBioText22": "We Take the High Road：即使他人行为不佳，也应保持自己的行为标准，以尊重、理解和同理心回应。",
+    "generalRulesBioText23": "We Respect Property and Facilities：不要损坏场地；使用过的区域应保持整洁；发生事故应报告；尊重设备与设施。",
+    "generalRulesBioText24": "We Build a Positive Culture of Safety：安全不仅是遵守规则，更是建立安全决策文化。队伍不得故意让自己或他人处于危险之中。",
+    "generalRulesBioText25": "We Make Healthy Choices：即使在紧张的赛季中，也应确保成员充分饮水、合理饮食、保持活动、获得足够睡眠并定期休息。",
+    "generalRulesBioText26": "We're All on the Same Team：在 FIELD 上队伍彼此竞争，但在 FIELD 外，学生、导师、志愿者和组织者都属于同一个 FIRST 社区。大家共同制作 ROBOT、学习、分享经验、享受过程、共同进步并友善相处。",
+    "generalRulesBioText27": "CIC 违规会根据严重程度采取 mitigation 或 escalation。严重情况可上报 Event Director 或 FIRST Headquarters。极严重时，队伍或个人可能被禁止参加当前或未来赛事，甚至被移出 FIRST Tech Challenge 项目。",
+    "generalRulesBioText28": "FIRST 会尽力为残障参与者提供合理 accommodations。如有需要，应在赛事前联系当地 FIRST 负责人。只要不会造成安全问题或 undue hardship，就可能对部分规则提供合理调整。",
+    "generalRulesBioText29": "Competition Manual 包含 BIOBUZZ 游戏概览、FIELD 信息、玩法、安全/行为/gameplay/inspection/event 规则、ROBOT construction rules 以及赛季 advancement 系统。",
+    "generalRulesBioText30": "Competition Manual 是“Source of Truth”。若与辅助文件冲突，应以 Manual 为准，官方规则解释也应以其为基础。",
+    "generalRulesBioText31": "Rule ID 的字母代表章节：I = Competition Eligibility and Inspection，E = Event Rules，A = Awards，G = Game Rules，R = ROBOT Construction Rules，T = Tournament，L = League Play Tournaments，C = FIRST Championship。后续数字表示子章节和规则顺序。",
+    "generalRulesBioText32": "橙色 warning/caution/note 框可能解释规则逻辑、说明解释方法或提供 best practice。若橙色说明与正式 rule language 冲突，应以正式规则文字为准。",
+    "generalRulesBioText33": "Manual 以英制尺寸为准，公制数值仅作近似参考。若英制尺寸与公制换算不一致，应以英制尺寸和官方图纸为准。",
+    "generalRulesBioText34": "规则旁可能有简短 headline。Evergreen rules 用绿色并带 *，其他 rule headlines 为橙色。若 headline 与具体 rule language 冲突，应以具体规则文字为准。",
+    "generalRulesBioText35": "Team Updates 用于公布官方文件变更和重要赛季信息。BIOBUZZ 赛季从 Kickoff 起至 FIRST Championship 前两周，每周四发布。新增内容以黄色标示，删除内容以删除线表示。",
+    "generalRulesBioText36": "重要：若 Team Update 在某赛事的 driver's meeting 之后发布，则该更新不适用于该赛事。",
+    "generalRulesBioText37": "Q&A 系统用于提问 gameplay、competition rules、judging、advancement、ROBOT build rules 和 FIELD setup。队伍也可以搜索已回答的问题。",
+    "generalRulesBioText38": "Q&A 于 2026 年 9 月 28 日美国东部时间中午 12:00 开放，通过 Lead Coach 1 或 Lead Coach 2 账号访问。",
+    "generalRulesBioText39": "Q&A 回答不能取代 Competition Manual。Manual 仍是主要依据；在赛事现场，REFEREES 和 INSPECTORS 在各自职责范围内拥有最终权威。",
+    "generalRulesBioText40": "Q&A 通常不会回答：过于模糊的假设情形、对过去 MATCH 判罚的申诉、对整个 ROBOT 设计的全面合法性审核、没有规则引用且过于宽泛的问题、询问过去 MATCH 中 REFEREE 应如何判罚的问题，以及 Manual 已明确回答的问题。",
+    "generalRulesBioText41": "好的 Q&A 问题应具体：指出某个 ROBOT 特征、gameplay 情形或具体规则，并尽可能附上相关 Rule ID。例如询问某种导线是否合法，或某项 gameplay 行为是否符合某个定义。",
+    "generalRulesBioText42": "2026–2027 FIRST 赛季主题是 FIRST CANOPY™，灵感来自自然和生物多样性。BIOBUZZ 是本赛季 FTC 游戏，强调 STEM、问题解决、团队合作以及帮助地球繁荣的解决方案。",
+    "generalRulesBioText43": "Competition Eligibility and Inspection：队伍必须完成注册并处于 competition ready 状态。通常应在 Qualification MATCHES 开始前至少 45 分钟完成 check-in。ROBOT 参加正式 MATCH 前必须通过 inspection，并应提交完整 ROBOT、OPERATOR CONSOLE 以及可能使用的全部配置/组件。",
+    "generalRulesBioText44": "I103 — 整个赛事期间必须有负责的成年人在场。至少 1 名、最好 2 名负责学生成员的成年人应全程在场。",
+    "generalRulesBioText45": "Inspection 并不意味着每条规则都被检查。队伍仍需自行确保符合 Section 12 的精神与要求。I301 要求提供完整 ROBOT 和配套设备；I302 的电子设备限制适用于所有 ROBOT 配置。",
+    "generalRulesBioText46": "Re-Inspection：多数可能影响安全或合法性的改动都需要重新 inspection。轻微的紧固件/标签/代码变化、完全相同的替换件或已检查过的配置可能不需要。不得利用 re-inspection 绕过其他规则或获取优势。",
+    "generalRulesBioText47": "Advancement：队伍通常只能从 HOME REGION 内的赛事晋级。晋级路径可包括 Qualifying/League Tournaments 及更高级赛事。只有按时间顺序最早的三个 entry-level event 计入晋级资格，一个赛季只能加入一个 League。",
+    "generalRulesBioText48": "Advancement Points 包括：Qualification 表现（2–16 分）、ALLIANCE lead 排位、draft 接受顺序、Playoff 名次（第 1–4 名分别 40/20/10/5 分）以及 judged awards（Inspire 第 1/2/3 名为 60/30/15，其他第 1/2/3 名为 12/6/3）。",
+    "generalRulesBioText49": "Advancement 平分时依次比较：Total Advancement Points、Judged Team Award Points、Playoff Advancement Points、ALLIANCE Selection Results Points、Qualification Phase Performance Points、扣除 FOULS 后的 Qualification MATCH 平均分、AUTO 平均分、最高单场分、第二高单场分，最后随机决定。",
+    "generalRulesBioText50": "示例表展示 Qualification 排名如何换算 Advancement Points。ALLIANCE selection 同时奖励排名和被其他队伍选择；ALLIANCE 所有成员获得相应 Playoff 表现分。Judged Awards 也计入 Advancement Points。",
+    "generalRulesBioText51": "每个地区的晋级名额由 Program Delivery Partner 决定。最低名额应尽早公布，最晚在 ALLIANCE selection 开始前公布。FIRST Championship/Premier Event 名额会考虑全球/地区代表性、新兴地区、注册队伍数等因素。BIOBUZZ 注册截止日：2026 年 11 月 17 日。",
+    "generalRulesBioText52": "Event Rules 从抵达赛事到离场期间适用。一般违规会收到 VERBAL WARNING；严重或重复违规可能升级或导致 disqualification。E101 要求在指定区域佩戴 safety glasses、穿封闭鞋、整理长发/饰品、穿合适衣物、在场馆内步行并遵守健康/安全要求。PPE 由队伍自行准备。",
+    "generalRulesBioText53": "E102 要求尊重他人，禁止侮辱性语言、骚扰、欺凌、阻挡以及把 Gracious Professionalism 当作攻击工具。E103 要求 12 岁以下儿童在 pit 内由成年人陪同。E104 保护场馆设施。E105 将赛事资源保留给注册队伍。E106 只允许在批准区域或 Practice MATCH 中练习 ROBOT。",
+    "generalRulesBioText54": "E107 将制造工作限制在批准区域。E108 禁止滑板、hoverboard、无人机、气瓶、噪音设备、非 accommodation 用 scooter 和高速闪烁灯等。E109 禁止私自安排额外场馆服务。E110 未经批准不得销售。E111 禁止高音量/现场音乐。E112 要求 banner 安全、公平且不遮挡视线；pit 外一般未经批准不得超过 25 ft²。",
+    "generalRulesBioText55": "E113 给出 flag/flagpole 建议尺寸。E114 禁止枪械和其他武器，包括逼真的道具。E115 可能要求通过完整 inspection 后才能进入 Practice FIELD。E116 禁止未经同意录制他人。E117 每队赛事中只能使用 1 台竞赛 ROBOT，且不能同时参加多个赛事。E118 禁止占用无人使用的座位。",
+    "generalRulesBioText56": "若赛事提供 machine shop/build space，应尽量公平开放。E301 禁止队伍在场馆建立 Wi-Fi、hotspot、ad-hoc、Bluetooth 或 2.4/5 GHz 通信系统。E302 禁止干扰或尝试访问其他队伍或 FIRST 的无线网络；发现可疑情况应报告 FTA 或 Event Director。",
+    "generalRulesBioText57": "大型赛事可能安排 load-in。Pit 通常约为 10 × 10 × 10 ft，并包含周边 pit 运营区域。E501 规定 pit 关闭时不得进入。E502 要求设备留在分配空间内。E503 要保持走道和出口畅通。E504 严格限制明火和产生火花的工具。",
+    "generalRulesBioText58": "E505 仅允许小型台式设备。E506 禁止 brazing/welding。E507 只允许电烙铁/焊枪进行 soldering。E508 要求 pit 结构安全。E509 规定有害 aerosol/chemical 只能在批准区域使用。E510 禁止人为加热或冷却 ROBOT 部件以获得竞争优势。",
+    "generalRulesBioText59": "E511 要求安全充电：遵循制造商建议、单通道平均电流不超过 3 A、使用安全极性连接器，不得使用鳄鱼夹。E601 要求 ROBOT cart 易于控制、安全、可通过 30 in 门、闲置时存放在 pit、不得播放音乐/发声，也不得自行驱动。",
+    "generalRulesBioText60": "Ceremonies 用于表彰队伍、赞助商、导师、志愿者和获奖者。E701 要求仪式期间 pit 保持安静，并限制电动/高噪声工具。E702 在非 Playoff 仪式期间每队 pit 最多 5 人，且至少 1 名代表应关注公告。E703 要求在国歌期间保持尊重且不干扰他人。"
+  }
+};
+
+function setLanguage(lang) {
+    if (!translations[lang]) return;
+    document.documentElement.lang = lang;
+
+    for (const id in translations[lang]) {
+        const element = document.getElementById(id);
+        if (!element) continue;
+        if (id === "pageSearch") {
+            element.placeholder = translations[lang][id];
+        } else {
+            element.innerHTML = translations[lang][id];
+        }
+    }
+
+    const langBtn = document.getElementById("langBtn");
+    if (langBtn) langBtn.textContent = lang.toUpperCase();
+
+    document.querySelectorAll(".lang-dropdown button").forEach(btn => {
+        btn.classList.toggle("active", btn.dataset.lang === lang);
+    });
+
+    localStorage.setItem("language", lang);
+
+    const quickManualIframe = document.getElementById("quickmanual-iframe");
+    if (quickManualIframe && quickManualIframe.contentWindow) {
+        quickManualIframe.contentWindow.postMessage({
+            type: "languageChange",
+            language: lang
+        }, "*");
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    setLanguage(localStorage.getItem("language") || "tr");
+
+    const langSwitch = document.getElementById("langSwitch");
+    const langBtn = document.getElementById("langBtn");
+
+    if (langBtn && langSwitch) {
+        langBtn.addEventListener("click", function (e) {
+            e.stopPropagation();
+            langSwitch.classList.toggle("open");
+        });
+
+        document.querySelectorAll(".lang-dropdown button").forEach(btn => {
+            btn.addEventListener("click", function () {
+                setLanguage(btn.dataset.lang);
+                langSwitch.classList.remove("open");
+            });
+        });
+
+        document.addEventListener("click", function (e) {
+            if (!langSwitch.contains(e.target)) langSwitch.classList.remove("open");
+        });
+    }
+
+    const searchInput = document.getElementById("pageSearch");
+    if (searchInput) searchInput.addEventListener("input", liveSearch);
+
+    // QuickManual AI widget - same behavior as the original page.
+    const widget = document.createElement("div");
+    widget.id = "quickmanual-widget";
+    widget.innerHTML = `
+        <div id="quickmanual-window">
+            <button id="quickmanual-close" aria-label="QuickManual AI'yi kapat" title="Kapat">×</button>
+            <iframe id="quickmanual-iframe" src="quickmanual/quickmanual-ai.html"
+                    title="QuickManual AI" loading="lazy"></iframe>
+        </div>
+        <button id="quickmanual-button" aria-label="QuickManual AI'yi aç" title="QuickManual AI">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 11.5C20 15.6421 16.1944 19 11.5 19C10.3065 19 9.17663 18.7881 8.16571 18.4049L4 20L5.20564 16.3878C4.44183 15.1111 4 13.6179 4 12C4 7.85786 7.80558 4.5 12.5 4.5C17.1944 4.5 20 7.35786 20 11.5Z"
+                      stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                <circle cx="9" cy="12" r="0.8" fill="currentColor"/>
+                <circle cx="12" cy="12" r="0.8" fill="currentColor"/>
+                <circle cx="15" cy="12" r="0.8" fill="currentColor"/>
+            </svg>
+        </button>`;
+    document.body.appendChild(widget);
+
+    const button = document.getElementById("quickmanual-button");
+    const windowBox = document.getElementById("quickmanual-window");
+    const closeButton = document.getElementById("quickmanual-close");
+
+    if (button && windowBox) button.addEventListener("click", () => windowBox.classList.toggle("open"));
+    if (closeButton && windowBox) closeButton.addEventListener("click", () => windowBox.classList.remove("open"));
+});
+
+function clearHighlights() {
+    document.querySelectorAll("mark.search-highlight").forEach(mark => {
+        const parent = mark.parentNode;
+        parent.replaceChild(document.createTextNode(mark.textContent), mark);
+        parent.normalize();
+    });
+}
+
+function liveSearch() {
+    clearHighlights();
+    const input = document.getElementById("pageSearch");
+    if (!input) return;
+    const query = input.value.trim();
+    if (!query) return;
+
+    const lowerQuery = query.toLocaleLowerCase();
+    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+        acceptNode(node) {
+            const parent = node.parentElement;
+            if (!parent) return NodeFilter.FILTER_REJECT;
+            if (
+                parent.closest("nav") ||
+                parent.closest("footer") ||
+                parent.closest(".search-section") ||
+                parent.closest(".language-switch") ||
+                parent.closest("#quickmanual-widget") ||
+                parent.tagName === "SCRIPT" ||
+                parent.tagName === "STYLE"
+            ) return NodeFilter.FILTER_REJECT;
+            return NodeFilter.FILTER_ACCEPT;
+        }
+    });
+
+    let firstMatch = null;
+    const nodes = [];
+    let n;
+    while ((n = walker.nextNode())) nodes.push(n);
+
+    for (const node of nodes) {
+        const text = node.nodeValue;
+        if (!text || !text.trim()) continue;
+        const index = text.toLocaleLowerCase().indexOf(lowerQuery);
+        if (index === -1) continue;
+
+        const before = text.slice(0, index);
+        const matchText = text.slice(index, index + query.length);
+        const after = text.slice(index + query.length);
+        const mark = document.createElement("mark");
+        mark.className = "search-highlight";
+        mark.textContent = matchText;
+
+        const parent = node.parentNode;
+        parent.insertBefore(document.createTextNode(before), node);
+        parent.insertBefore(mark, node);
+        node.nodeValue = after;
+        if (!firstMatch) firstMatch = mark;
+    }
+
+    if (firstMatch) firstMatch.scrollIntoView({ behavior: "smooth", block: "center" });
+}
+
+function clearSearch() {
+    const input = document.getElementById("pageSearch");
+    if (input) input.value = "";
+    clearHighlights();
+}
+
+</script>
+</body>
+</html>
