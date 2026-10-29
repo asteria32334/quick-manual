@@ -1,701 +1,689 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8TVBNWLCJG"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-8TVBNWLCJG');
-</script>
-
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QuickManual</title>
+    <title>QuickManual AI</title>
 
-    <link rel="icon" href="images/logo (2).png" >
-
-    <link rel="manifest" href="manifest.json">
-
+    <link rel="icon" type="image/png" href="images/logo.png" >
     <link rel="apple-touch-icon" href="images/logo.png">
+    
+    <!-- Supabase JS Kütüphanesi -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
-    <link rel="stylesheet" href="style.css">
+    <style>
+        * { box-sizing: border-box; }
+        
+        /* Sayfa yapısının düzgün akması için body güncellendi */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            color: #222;
+            display: block; /* Flex kaldırıldı, genel akış sağlandı */
+            min-height: 100vh;
+        }
+
+        /* İçerikleri yan yana tutan ana sarmalayıcı */
+        .page-wrapper {
+            display: flex;
+            min-height: calc(100vh - 300px);
+        }
+
+        /* Sol Kenar Çubuğu (Team Updates) */
+        .sidebar-left {
+            width: 260px;
+            background: #ffffff;
+            border-right: 1px solid #e0e0e0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            max-height: 100vh;
+            overflow-y: auto;
+        }
+        .sidebar-left h3 { font-size: 15px; margin-top: 0; margin-bottom: 5px; color: #333; border-bottom: 2px solid #f0f0f0; padding-bottom: 8px; }
+        .manual-link {
+            padding: 9px 12px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #333;
+            font-size: 13px;
+            transition: 0.2s;
+            border: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .manual-link:hover { background: #e3f2fd; color: #0d47a1; }
+        .manual-link.active { background: #e8f5e9; border-color: #c8e6c9; color: #1b5e20; font-weight: bold; }
+
+        /* Ana İçerik Alanı */
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Üst Bilgi Barı */
+        .top-bar {
+            background: white;
+            padding: 15px 20px;
+            border-radius: 14px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 15px;
+        }
+        .brand-area { display: flex; align-items: center; gap: 12px; }
+        .team-logo { width: 40px; height: 40px; border-radius: 50%; background: #111; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; }
+        .brand-info h1 { font-size: 18px; margin: 0; }
+        .brand-info .subtitle { font-size: 12px; color: #777; margin: 2px 0 0 0; }
+
+        /* Dil Seçici */
+        .lang-select {
+            padding: 8px 12px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            background: #fff;
+            font-size: 14px;
+            cursor: pointer;
+            outline: none;
+        }
+
+        /* Sohbet Kutusu ve Arka Plan Logosu */
+        .chat-box {
+            background: rgba(255, 255, 255, 0.92);
+            border-radius: 18px;
+            padding: 20px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Arka Planda Saydam Logo ve Takım Numarası */
+        .chat-box::before {
+            content: "ASTERIA 32334";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-25deg);
+            font-size: 80px;
+            font-weight: bold;
+            color: rgba(0, 0, 0, 0.03);
+            pointer-events: none;
+            white-space: nowrap;
+            z-index: 0;
+        }
+
+        .manual-status {
+            text-align: center;
+            font-size: 13px;
+            margin-bottom: 15px;
+            padding: 8px;
+            border-radius: 8px;
+            background: #f5f5f5;
+            position: relative;
+            z-index: 1;
+        }
+        .manual-ok { color: #16803c; }
+        .manual-error { color: #c62828; }
+
+        #messages {
+            min-height: 250px;
+            max-height: 400px;
+            overflow-y: auto;
+            margin-bottom: 20px;
+            padding: 5px;
+            position: relative;
+            z-index: 1;
+            flex: 1;
+        }
+
+        .message {
+            padding: 12px 15px;
+            margin: 10px 0;
+            border-radius: 14px;
+            line-height: 1.5;
+            word-wrap: break-word;
+        }
+        .user { background: #e3f2fd; margin-left: 50px; text-align: right; }
+        .ai { background: #f1f1f1; margin-right: 50px; width: fit-content; max-width: 85%; }
+
+        /* Yükleniyor Animasyonu */
+        .thinking-message { display: flex; align-items: center; gap: 10px; min-height: 45px; }
+        .thinking-text { color: #666; font-size: 14px; }
+        .dots { display: flex; align-items: center; gap: 4px; }
+        .dots span {
+            width: 7px; height: 7px; background: #555; border-radius: 50%; display: inline-block;
+            animation: thinking 1.4s infinite ease-in-out;
+        }
+        .dots span:nth-child(1) { animation-delay: 0s; }
+        .dots span:nth-child(2) { animation-delay: 0.2s; }
+        .dots span:nth-child(3) { animation-delay: 0.4s; }
+        @keyframes thinking {
+            0%, 60%, 100% { transform: translateY(0); opacity: 0.35; }
+            30% { transform: translateY(-5px); opacity: 1; }
+        }
+
+        .input-area { display: flex; gap: 10px; position: relative; z-index: 1; }
+        #userInput { flex: 1; padding: 13px; border: 1px solid #ccc; border-radius: 10px; font-size: 16px; outline: none; }
+        #userInput:focus { border-color: #555; }
+        
+        button {
+            border: none; padding: 13px 20px; border-radius: 10px; background: #111; color: white;
+            cursor: pointer; font-size: 16px; transition: 0.2s;
+        }
+        button:hover { opacity: 0.85; }
+        button:disabled { opacity: 0.5; cursor: not-allowed; }
+
+        .status { text-align: center; color: #777; font-size: 12px; margin-top: 10px; position: relative; z-index: 1; }
+
+        /* Sağ Kenar Çubuğu (İstatistikler) */
+        .sidebar-right {
+            width: 250px;
+            background: #ffffff;
+            border-left: 1px solid #e0e0e0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .sidebar-right h3 { font-size: 15px; margin-top: 0; color: #333; border-bottom: 2px solid #f0f0f0; padding-bottom: 8px; }
+        .stat-card { background: #f8f9fa; padding: 12px; border-radius: 10px; border: 1px solid #eee; }
+        .stat-title { font-size: 12px; color: #666; margin-bottom: 4px; }
+        .stat-value { font-size: 18px; font-weight: bold; color: #111; }
+
+        /* Mobil Uyum */
+        @media (max-width: 900px) {
+            .page-wrapper { flex-direction: column; }
+            .sidebar-left, .sidebar-right { width: 100%; border: none; max-height: none; }
+        }
+
+        .footer {
+            background: #263970;
+            width: 100%;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 50px;
+            flex-wrap: wrap;
+            padding: 60px 30px;
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .footer-column h3 {
+            color: #00d4ff;
+            margin-bottom: 20px;
+        }
+
+        .footer-column p,
+        .footer-column a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 12px;
+        }
+
+        .footer-column a:hover {
+            color: #00d4ff;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding: 20px;
+            border-top: 1px solid rgba(255,255,255,0.15);
+            font-size: 0.9rem;
+            color: white;
+        }
+
+        .footer-bottom-asterisk {
+            text-align: center;
+            padding: 20px;
+            border-top: 1px solid rgba(255,255,255,0.15);
+            font-size: 0.9rem;
+            color: white;
+        }
+    </style>
 </head>
-
 <body>
 
-<nav class="navbar">
-
-    <div class="logo">QuickManual</div>
-
-    <ul class="nav-links">
-
-        <li><a href="#whatItIs" id="navHome">Nedir?</a></li>
-        <li><a href="#whatItIsNot" id="navTeam">Ne değildir?</a></li>
-        <li><a href="#whoIsItFor" id="navRobots">Kimler için?</a></li>
-        <li><a href="#howToUseIt" id="navProjects">Nasıl kullanılır?</a></li>
-      <!--  <li><a href="#sponsors" id="navSponsors">Sponsorlarımız</a></li>
-        <li><a href="#gallery" id="navGallery">Galeri</a></li>
-        <li><a href="#contact" id="navContact">İletişim</a></li>
--->
-        <li><a href="quickmanual/quickmanual-ai.html" id="navDecode">Kurallar</a></li>
-     <!--   <li><a href="giris.html" id="navLogin">Login</a></li>   -->
-
-    </ul>
-
-</nav>
-
-<div class="language-switch" id="langSwitch">
-    <button class="lang-btn" id="langBtn">TR</button>
-
-    <div class="lang-dropdown">
-        <button data-lang="tr">Türkçe</button>
-        <button data-lang="en">English</button>
-        <button data-lang="es">Español</button>
-        <button data-lang="pt">Português</button>
-        <button data-lang="zh">中文</button>
-    </div>
-</div>
-
-<!-- HERO -->
-<section id="home" class="hero">
-
-    <div class="hero-content">
-
-        <h1>QuickManual</h1>
-
-         <div class="logo-wrapper">
-            <img src="images/logo.png" alt="Team Logo">
-        </div>
-
-        <h2>QuickManual</h2>
-
-        <p>A Clear and Practical Summary of the FTC Game Manual</p>
-
-        <a href="#whatItIs" class="btn" id="discoverBtn">Keşfet</a>
-
-    </div>
- 
-</section>
-
-<!-- what it is -->
-<section id="whatItIs" class="section">
-    <h2 id="whatItIsTitle">Nedir?</h2>
-    <p id="whatItIsText">QuickManual, FIRST Tech Challenge resmi 
-    Oyun Kılavuzu’nun dikkatle hazırlanmış, sadeleştirilmiş bir 
-    özetidir. Maçlar sırasında takımların en sık karşılaştığı 
-    kurallara, puanlama yöntemlerine ve önemli durumlara odaklanır. 
-    Amacı, öğrencilerin ve mentörlerin oyunun temelini daha hızlı 
-    ve net bir şekilde anlamasına yardımcı olmaktır.</p>
-</section>
-
-<!-- what it is not -->
-<section id="whatItIsNot" class="section">
-    <h2 id="whatItIsNotTitle">Ne değildir?</h2>
-    <p id="whatItIsNotText">QuickManual resmi Oyun Kılavuzu 
-    değildir ve hiçbir zaman eksiksiz ya da kesin kural kaynağı 
-    olarak kabul edilmemelidir. FIRST tarafından yayınlanan resmi 
-    belgenin yerini tutmaz. Resmi kararlar, muayene süreçleri veya 
-    itirazlar için takımlar her zaman en güncel resmi Game Manual’a 
-    başvurmalıdır.</p>
-</section>
-
-<!-- who is it for  -->
-<section id="whoIsItFor" class="section">
-    <h2 id="whoIsItForTitle">Kimler için?</h2>
-    <p id="whoIsItForText">Bu kaynak özellikle yeni kurulan 
-    takımlar, rookie öğrenciler ve uzun teknik metinleri İngilizce 
-    okumakta zorlanan takımlar için tasarlanmıştır. Aynı zamanda 
-    maç öncesi veya antrenmanlarda hızlı referans arayan deneyimli 
-    takımlar için de faydalıdır.</p>
-</section>
-
-<!-- How to use it -->
-<section id="howToUseIt" class="section">
-    <h2 id="howToUseItTitle">Nasıl kullanılır?</h2>
-    <p id="howToUseItText">Önce kısa özetleri okuyarak ana 
-        fikirleri anlayın. Daha sonra kendi dilinizdeki PDF 
-        sürümünü indirin. QuickManual’ı bir öğrenme ve tekrar 
-        aracı olarak kullanın, ancak yarışmalar öncesinde kritik 
-        kuralları mutlaka resmi Game Manual’dan kontrol edin.</p>
-</section>
-
-
-<!-- 
-<section id="robots" class="section">
-   <h2 id="robotsTitle">Robotlarımız</h2>
-    <p id="robotSeason">2025-2026 DECODE</p>
-    <div class="card-container">
-
-    <div class="card">
-        <img src="images/robotv1.jpeg" alt="Robot 1" width="250">
-        <h3 id="robot1Title">AsterBot V1.5</h3>
-        <p></p>
-    </div>
-
-    <div class="card">
-        <img src="images/robotv2.jpeg" alt="Robot 2">
-        <h3 id="robot2Title">AsterBot V3</h3>
-        <p></p>
-    </div>
-
-</div>
-</section>
-
-<section id="projects" class="section">
-    <h2 id="projectsTitle">Projelerimiz</h2>
-
-    <div class="card-container">
-
-    <div class="card">
-        <img src="images/AgeGuard.jpeg" alt="AgeGuard">
-        <h3 id="project1Title">AgeGuard</h3>
-        <p id="project1Text">Arkeolojik eserlerin doğru bir şekilde çıkarılmasını sağlar</p>
-    </div>
-
-    <div class="card">
-
-        <img src="images/2025senlik.jpeg" alt="2025 senlik">
-
-        <h3 id="project2Title">2025 Bilim Şenliği</h3>
-
-<p id="project2Text">
-Okulumuz bünyesinde düzenlenen bilim şenliğinde 850+ kişi katıldı, %97,9 STEM ilgi artışı gözlemlendi.
-</p>    </div>
-
-    <div class="card">
-        <img src="images/HistoryGame.jpeg" alt="HistoryGame">
-       <h3 id="project3Title">HistoryGame</h3>
-
-<p id="project3Text">
-Gençlerde arkeoloji, tarih ve STEM alanına olan ilgiyi artırmayı amaçlayan eğitim projesi.
-</p>
-    </div>
-
-    <div class="card">
-        <img src="images/mia.jpeg" alt="mia">
-       <h3 id="project4Title">Mia Yaşam Merkezi Ortak Etkinliği</h3>
-
-<p id="project4Text">
-Mia Yaşam Merkezi'ndeki büyüklerimizle gerçekleştirilen kil ve STEM etkinliği.
-</p>
-    </div>
-
-    <div class="card">
-        <img src="images/şase.jpeg" alt="şase">
-       <h3 id="project5Title">Düşük Maliyetli Mecanum Şase Hibesi</h3>
-
-<p id="project5Text">
-Ülkemizin birçok bölgesindeki yeni FTC takımlarına 3 set mecanum şase desteği sağlandı.
-</p>
-    </div>
-
-    <div class="card">
-        <img src="images/tarihiEserKoruma.jpeg" alt="tarihiEserKoruma">
-       <h3 id="project6Title">Tarihi Eser Koruma Kutusu</h3>
-
-<p id="project6Text">
-Tarihi eserlerin en çok hasar gördüğü aşama olan taşıma sürecinde güvenliği sağlamak amacıyla tasarlanmıştır.
-</p>    </div>
-
-    <div class="card">
-        <img src="images/ASTERIA SCOUTING.png" alt="AsteriaScouting">
-       <h3 id="project7Title">Open-Source Asteria Scouting App</h3>
-
-<p id="project7Text">
-FTC ve FRC topluluğu için geliştirilen açık kaynaklı scouting uygulaması.
-</p>
-        <a href="https://github.com/asteria32334/scouting.app.public.git"
-target="_blank"
-class="btn"
-id="viewBtn2">
-Görüntüle
-</a>
-
+<div class="page-wrapper">
+    <!-- SOL PANEL: 2026-2027 Canopy Team Updates -->
+    <div class="sidebar-left">
+        <h3 id="sidebarLeftTitle">📢 Team Updates (2026-2027)</h3>
         
+        <a href="#" class="manual-link" id="update6">📜 Team Update 06</a>
+        <a href="#" class="manual-link" id="update5">📜 Team Update 05</a>
+        <a href="#" class="manual-link" id="update4">📜 Team Update 04</a>
+        <a href="#" class="manual-link" id="update3">📜 Team Update 03</a>
+        <a href="#" class="manual-link" id="update2">📜 Team Update 02</a>
+        <a href="#" class="manual-link" id="update1">📜 Team Update 01</a>
     </div>
 
-    <div class="card">
-        <img src="images/biyosfer.png" alt="biyosfer">
-<h3 id="project8Title">Ankara Hacettepe Biyosfer Müzesi Gezisi</h3>
-
-<p id="project8Text">
-7. sınıf öğrencilerinin doğa ve biyolojik çeşitlilik hakkında bilgi edinmelerini sağlayan STEM gezisi.
-</p>    </div>
-
-    <div class="card">
-        <img src="images/FTC 101.jpg" alt="ftc101">
-                <h3 id="project9Title">FTC 101</h3>
-
-<p id="project9Text">
-Tüm sezonlar için hazırlanmış kapsamlı FTC başlangıç rehberi.
-</p>
-
-<a href="files/FTC 101 EN.pdf" download class="btn" id="downloadBtn">
-İndir
-</a>
+    <!-- ORTA ANA İÇERİK -->
+    <div class="main-content">
+        
+        <!-- Üst Bilgi Barı -->
+        <div class="top-bar">
+            <div class="brand-area">
+                <div class="team-logo">#32334</div>
+                <div class="brand-info">
+                    <h1>QuickManual AI</h1>
+                    <p class="subtitle" id="subtitle">Game Manual destekli yapay zekâ asistanı</p>
+                </div>
             </div>
-    <div class="card">
-        <img src="images/kitap1.jpeg" alt="kitap">
-        <h3 id="project10Title">İhsan Köksal Okulu Kitap Bağışı</h3>
-
-<p id="project10Text">
-İhsan Köksal İlkokulu ve Ortaokulu'na üçüncü yılına giren yıllık kitap bağışı projemiz.
-</p>    </div>
-
-
-    <div class="card">
-        <img src="images/Icon-512.png" alt="ftc-turkiye-alliance">
-                <h3 id="project11Title">FTC TÜRKİYE ALLIANCE</h3>
-
-<p id="project11Text">
-Türk FTC takımları için oluşturulmuş forum ve topluluk platformu.
-</p>
-
-<p>
-
-<a href="https://asteria32334.github.io/ftc-turkiye-alliance/" target="_blank" class="btn" id="viewBtn">
-
-Görüntüle
-
-</a>
-
-</p>
-            </div>
-
-    
-    <div class="card">
-    <h3>Engineering Portfolio</h3>
-
-    <p>
-        FTC sezon portföyümüzü inceleyebilirsiniz.
-    </p>
-
-    <a href="images/biyosfer.png"
-       download
-       class="btn">
-       İndir
-    </a> 
-</div>
-
-</div>
-</section>
-
-<section id="sponsors" class="section">
-<h2 id="sponsorsTitle">Sponsorlarımız</h2>
-
-    <div class="sponsor-slider">
-        <div class="sponsor-track" data-clone="true">
-            <img src="images/berker.jpeg" alt="Berker">
-            <img src="images/koçak.jpeg" alt="Koçak">
-            <img src="images/natura.jpeg" alt="Natura">
-            <img src="images/dener.png" alt="Dener">
-            <img src="images/taleworlds.jpg" alt="TaleWorlds">
-            <img src="images/nativex.jpeg" alt="NativeX">
             
-            <img src="images/berker.jpeg" alt="Berker">
-            <img src="images/koçak.jpeg" alt="Koçak">
-            <img src="images/natura.jpeg" alt="Natura">
-            <img src="images/dener.png" alt="Dener">
-            <img src="images/taleworlds.jpg" alt="TaleWorlds">
-            <img src="images/nativex.jpeg" alt="NativeX">
+            <!-- Dil Seçici Dropdown -->
+            <select id="languageSelect" class="lang-select" onchange="changeLanguage(this.value)">
+                <option value="tr">🇹🇷 Türkçe</option>
+                <option value="en">🇬🇧 English</option>
+                <option value="es">🇪🇸 Español</option>
+                <option value="pt">🇵🇹 Português</option>
+                <option value="zh">🇨🇳 中文</option>
+            </select>
+        </div>
+
+        <!-- Sohbet Alanı -->
+        <div class="chat-box">
+            <div id="manualStatus" class="manual-status">📖 Game Manual yükleniyor...</div>
+
+            <div id="messages">
+                <div class="message ai" id="welcomeMessage">
+                    Merhaba! Ben QuickManual AI. Game Manual'ı temel alarak sorularını cevaplayabilirim.
+                </div>
+            </div>
+
+            <div class="input-area">
+                <input type="text" id="userInput" placeholder="Manual hakkında bir soru sor..." autocomplete="off">
+                <button id="sendButton">Gönder</button>
+            </div>
+
+            <div class="status">Gemini 3.5 Flash-Lite | Asteria #32334</div>
         </div>
     </div>
-</section>
 
-<section id="gallery" class="section">
-<h2 id="galleryTitle">Galeri</h2>
+    <!-- SAĞ PANEL: Canlı Sayaçlar (Supabase Bağlantılı) -->
+    <div class="sidebar-right">
+        <h3 id="sidebarRightTitle">Canlı İstatistikler</h3>
+        
+        <div class="stat-card">
+            <div class="stat-title" id="statTitleTotalViews">Toplam Ziyaretçi</div>
+            <div class="stat-value" id="totalViews">Yükleniyor...</div>
+        </div>
 
-    <div class="gallery">
-    <img src="images/galeri/1.jpeg">
-    <img src="images/galeri/2.jpeg">
-    <img src="images/galeri/3.jpeg">
-    <img src="images/galeri/4.jpeg">
-    <img src="images/galeri/5.jpeg">
-    <img src="images/galeri/6.jpeg">
-    <img src="images/galeri/7.jpeg">
-    <img src="images/galeri/8.jpeg">
-    <img src="images/galeri/9.jpeg">
-    <img src="images/galeri/10.jpeg">
-    <img src="images/galeri/11.jpeg">
-    <img src="images/galeri/12.jpeg">
-    <img src="images/galeri/13.jpeg">
-    <img src="images/galeri/14.jpeg">    
+        <div class="stat-card">
+            <div class="stat-title" id="statTitleTopCountry">En Çok Ziyaret Eden Ülke</div>
+            <div class="stat-value" id="statValueTopCountry" style="font-size: 14px; margin-top: 4px;">🇹🇷 Türkiye (%65)</div>
+        </div>
+    </div>
 </div>
-
-
-</section>
-
-<section id="contact" class="section">
-    <h2>İletişim</h2>
-
-    <div class="card-container contact-grid">
-
-        <div class="card">
-            <h3>E-Mail</h3>
-            <p>
-                <a href="mailto:asteria.32334@gmail.com">asteria.32334@gmail.com</a>
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>Telefon</h3>
-            <p>
-                <a href="tel:+905057770038">+90 505 777 00 38</a>
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>Adres</h3>
-            <p>
-                <a href="https://maps.app.goo.gl/HN1VrrvqUwMMbExA6" target="_blank">
-                    Atölye Adresi
-                </a>
-            </p>
-        </div>
-
-    </div>
-
-    <div class="card">
-            <h3>Instagram</h3>
-            <p>
-                <a href="https://instagram.com/asteria32334" target="_blank">
-                    @asteria32334
-                </a>
-            </p>
-        </div>
-</section>
-
-    
-    <p>e-mail: <a href="mailto:asteria.32334@gmail.com">
-    asteria.32334@gmail.com
-</a></p>
-    <p> </p>
-
-    <p>telefon numarası: <a href="tel:+905057770038">
-    +90 505 777 00 38
-</a></p>
-    <p> </p>
-    <div class="address">
-
-    <a href="https://maps.app.goo.gl/HN1VrrvqUwMMbExA6?g_st=ic" target="_blank">
-        Atölyemizin Adresi
-    </a>
-</div>  -->
 
 <section id="contact" class="section">
 <footer class="footer">
 
     <div class="footer-container">
-
-        <div class="footer-column">
-<h3 id="footerTitle">QuickManual</h3>
-           <p id="footerDescription">
-            A community resource by Asteria Robotics
-            This is not an official FIRST document.
-        </p>
-        </div>
-
-        <div class="footer-column">
-<h3 id="contactTitle">İletişim</h3>
-
-            <p><a href="mailto:asteria.32334@gmail.com">
-    asteria.32334@gmail.com
-</a></p>
-            <p><a href="tel:+905057770038">
-    +90 (505) 777 00 38
-</a></p>
-            <a href="https://maps.app.goo.gl/HN1VrrvqUwMMbExA6?g_st=ic"
-target="_blank"
-id="addressText">
-
-Atölyemizin Adresi
-
-</a>
-        </div>
+        <!-- İletişim sütunu tamamen kaldırıldı -->
 
         <div class="footer-column">
             <h3> </h3>
-
-            <a href="https://www.instagram.com/asteria_32334/"
-target="_blank"
-id="instagramText">
-
-Instagram
-
-</a>
-            <p><a href="https://theorangealliance.org/teams/32334" target="_blank">
-        The Orange Alliance
-    </a></p>
-            <p><a href="https://ftcscout.org/teams/32334" target="_blank">
-        FTCScout
-    </a></p>
-    </p>
-            <p><a href="https://www.youtube.com/@asteria32334" target="_blank">
-        YouTube
-    </a></p>
+            <p><a href="https://asteria32334.github.io/asteria.web.general/" target="_blank">
+                Main Asteria 32334 Website
+            </a></p>
         </div>
 
     </div>
 
     <div class="footer-bottom" id="copyrightText">
-© 2026 Asteria Robotics FTC Team 32334. All Rights Reserved.
-</div>
-    <div class="footer-bottom-asterisk" id="copyrightText">
+        © 2026 Asteria Robotics FTC Team 32334. All Rights Reserved.
+    </div>
+    <div class="footer-bottom-asterisk">
         * QuickManual is not the official Game Manual and should never be treated as a complete or final source of rules. It does not replace the official document published by FIRST. For any official decision, inspection, or dispute, teams must always refer to the latest version of the official Game Manual.
     </div>
-    <img class="center-image" src="images/biobuzz.png" alt="biobuzz" style="max-width: 50%; height: auto; display: block;">
-
 </footer>
- 
 </section>
 
 <script>
-const translations = {
+/* =====================================================
+   SUPABASE AYARLARI (Kendi bilgilerini buraya yazacaksın)
+   ===================================================== */
+const SUPABASE_URL = "https://plsfmbknqsjgvpjoubht.supabase.co";
+const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBsc2ZtYmtucXNqZ3Zwam91Ymh0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1ODc3NzcsImV4cCI6MjA5NjE2Mzc3N30.TLee9QqcSjvT00ouwF53ntu-K7kcY9R_BDK9Tv82aF4";
+const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
-tr:{
-navHome:"Nedir?",
-navTeam:"Ne değildir?",
-navRobots:"Kimler için?",
-navProjects:"Nasıl kullanılır?",
-navSponsors:"Sponsorlarımız",
-navGallery:"Galeri",
-navContact:"İletişim",
-navDecode:"Kurallar",
-navLogin:"Login",
+const WORKER_URL = "https://quickmanual-api.asteria-32334.workers.dev/";
+const MANUAL_URL = "./game-manual.pdf";
 
-discoverBtn:"Keşfet",
+const input = document.getElementById("userInput");
+const sendButton = document.getElementById("sendButton");
+const messages = document.getElementById("messages");
+const manualStatus = document.getElementById("manualStatus");
 
-whatItIsTitle:"Nedir?",
-whatItIsText:"QuickManual, FIRST Tech Challenge resmi Oyun Kılavuzu’nun dikkatle hazırlanmış, sadeleştirilmiş bir özetidir. Maçlar sırasında takımların en sık karşılaştığı kurallara, puanlama yöntemlerine ve önemli durumlara odaklanır. Amacı, öğrencilerin ve mentörlerin oyunun temelini daha hızlı ve net bir şekilde anlamasına yardımcı olmaktır.",
+let manualBase64 = null;
+const manualMimeType = "application/pdf";
+let currentLanguage = "tr";
 
-whatItIsNotTitle:"Ne değildir?",
-whatItIsNotText:"QuickManual resmi Oyun Kılavuzu değildir ve hiçbir zaman eksiksiz ya da kesin kural kaynağı olarak kabul edilmemelidir. FIRST tarafından yayınlanan resmi belgenin yerini tutmaz. Resmi kararlar, muayene süreçleri veya itirazlar için takımlar her zaman en güncel resmi Game Manual’a başvurmalıdır.",
+// Sayfa açıldığında çalışacak fonksiyonlar
+loadManual();
+incrementAndFetchViews();
 
-whoIsItForTitle:"Kimler için?",
-whoIsItForText:"Bu kaynak özellikle yeni kurulan takımlar, rookie öğrenciler ve uzun teknik metinleri İngilizce okumakta zorlanan takımlar için tasarlanmıştır. Aynı zamanda maç öncesi veya antrenmanlarda hızlı referans arayan deneyimli takımlar için de faydalıdır.",
+// Supabase Canlı Sayaç Fonksiyonu
+async function incrementAndFetchViews() {
+    try {
+        let { data, error } = await supabaseClient
+            .from('site_stats')
+            .select('views')
+            .eq('id', 1)
+            .single();
 
-howToUseItTitle:"Nasıl kullanılır?",
-howToUseItText:"Önce kısa özetleri okuyarak ana fikirleri anlayın. Daha sonra kendi dilinizdeki PDF sürümünü indirin. QuickManual’ı bir öğrenme ve tekrar aracı olarak kullanın, ancak yarışmalar öncesinde kritik kuralları mutlaka resmi Game Manual’dan kontrol edin.",
+        if (error) throw error;
 
-footerTitle:"QuickManual",
-footerDescription:`A community resource by Asteria Robotics
-This is not an official FIRST document.`,
+        let newViews = (data.views || 341) + 1;
 
-contactTitle:"İletişim",
-addressText:"Atölyemizin Adresi",
-instagramText:"Instagram",
-copyrightText:"© 2026 Asteria Robotics FTC Team 32334. Tüm Hakları Saklıdır.",
-viewBtn2:"Görüntüle",
-},
+        await supabaseClient
+            .from('site_stats')
+            .update({ views: newViews })
+            .eq('id', 1);
 
-en:{
-navHome:"What it is",
-navTeam:"What it is not",
-navRobots:"Who is it for",
-navProjects:"How to use it",
-navSponsors:"Sponsors",
-navGallery:"Gallery",
-navContact:"Contact",
-navDecode:"Game Rules",
-navLogin:"Login",
-
-discoverBtn:"Discover",
-
-whatItIsTitle:"What it is",
-whatItIsText:"QuickManual is a carefully prepared, simplified summary of the official FIRST Tech Challenge Game Manual. It focuses on the most important rules, scoring methods, and common situations that teams encounter during matches. The goal is to help students and mentors understand the core of the game faster and more clearly, without having to read the entire official document at once.",
-
-whatItIsNotTitle:"What it is not",
-whatItIsNotText:"QuickManual is not the official Game Manual and should never be treated as a complete or final source of rules. It does not replace the official document published by FIRST. For any official decision, inspection, or dispute, teams must always refer to the latest version of the official Game Manual.",
-
-whoIsItForTitle:"Who is it for",
-whoIsItForText:"This resource is designed especially for new teams, rookie students, and teams whose members are not fully comfortable reading long technical documents in English. It is also useful for experienced teams that want a quick reference before matches or training sessions.",
-
-howToUseItTitle:"How to use it",
-howToUseItText:"Start by reading the short summaries to understand the main ideas. Then download the PDF version in your preferred language. Use QuickManual as a learning and review tool, but always double-check critical rules with the official Game Manual before competitions.",
-
-footerTitle:"QuickManual",
-footerDescription:`A community resource by Asteria Robotics
-This is not an official FIRST document.`,
-
-contactTitle:"Contact Us",
-addressText:"Our address",
-instagramText:"Instagram",
-copyrightText:"© 2026 Asteria Robotics FTC Team 32334. All Rights Reserved.",
-viewBtn2:"View",
-},
-
-es:{
-navHome:"¿Qué es?",
-navTeam:"¿Qué no es?",
-navRobots:"¿Para quién es?",
-navProjects:"Cómo usarlo",
-navSponsors:"Patrocinadores",
-navGallery:"Galería",
-navContact:"Contacto",
-navDecode:"Resumen de Reglas",
-navLogin:"Login",
-
-discoverBtn:"Descubrir",
-
-whatItIsTitle:"¿Qué es?",
-whatItIsText:"QuickManual es un resumen simplificado y cuidadosamente preparado del Manual de Juego oficial de FIRST Tech Challenge. Se centra en las reglas más importantes, los métodos de puntuación y las situaciones comunes que los equipos enfrentan durante los partidos. Su objetivo es ayudar a estudiantes y mentores a comprender más rápido y con mayor claridad los aspectos esenciales del juego.",
-
-whatItIsNotTitle:"¿Qué no es?",
-whatItIsNotText:"QuickManual no es el Manual de Juego oficial y nunca debe considerarse una fuente completa o definitiva de reglas. No reemplaza el documento oficial publicado por FIRST. Para cualquier decisión oficial, inspección o disputa, los equipos deben consultar siempre la versión más reciente del Manual de Juego oficial.",
-
-whoIsItForTitle:"¿Para quién es?",
-whoIsItForText:"Este recurso está diseñado especialmente para equipos nuevos, estudiantes novatos y equipos cuyos miembros no se sienten completamente cómodos leyendo documentos técnicos largos en inglés. También es útil para equipos experimentados que necesitan una referencia rápida antes de los partidos o entrenamientos.",
-
-howToUseItTitle:"Cómo usarlo",
-howToUseItText:"Comienza leyendo los resúmenes cortos para entender las ideas principales. Luego descarga la versión en PDF en tu idioma preferido. Utiliza QuickManual como herramienta de aprendizaje y repaso, pero siempre verifica las reglas importantes con el Manual de Juego oficial antes de las competencias.",
-
-footerTitle:"QuickManual",
-footerDescription:`A community resource by Asteria Robotics
-This is not an official FIRST document.`,
-
-contactTitle:"Contacto",
-addressText:"Dirección de nuestro taller",
-instagramText:"Instagram",
-copyrightText:"© 2026 Asteria Robotics FTC Team 32334. Todos los derechos reservados.",
-viewBtn2:"Ver",
-},
-
-pt:{
-navHome:"O que é?",
-navTeam:"O que não é?",
-navRobots:"Para quem é?",
-navProjects:"Como usar",
-navSponsors:"Patrocinadores",
-navGallery:"Galeria",
-navContact:"Contato",
-navDecode:"Resumo das Regras",
-navLogin:"Login",
-
-discoverBtn:"Descobrir",
-
-whatItIsTitle:"O que é?",
-whatItIsText:"QuickManual é um resumo simplificado e cuidadosamente preparado do Manual de Jogo oficial do FIRST Tech Challenge. Ele se concentra nas regras mais importantes, nos métodos de pontuação e nas situações comuns que as equipes enfrentam durante as partidas. O objetivo é ajudar estudantes e mentores a compreender de forma mais rápida e clara os aspectos essenciais do jogo.",
-
-whatItIsNotTitle:"O que não é?",
-whatItIsNotText:"QuickManual não é o Manual de Jogo oficial e nunca deve ser tratado como uma fonte completa ou definitiva de regras. Ele não substitui o documento oficial publicado pela FIRST. Para qualquer decisão oficial, inspeção ou contestação, as equipes devem sempre consultar a versão mais recente do Manual de Jogo oficial.",
-
-whoIsItForTitle:"Para quem é?",
-whoIsItForText:"Este recurso foi desenvolvido especialmente para equipes novas, estudantes iniciantes e equipes cujos membros não se sentem totalmente confortáveis lendo documentos técnicos longos em inglês. Também é útil para equipes experientes que desejam uma referência rápida antes das partidas ou treinos.",
-
-howToUseItTitle:"Como usar",
-howToUseItText:"Comece lendo os resumos curtos para entender as ideias principais. Em seguida, baixe a versão em PDF no seu idioma de preferência. Use o QuickManual como uma ferramenta de aprendizado e revisão, mas sempre confira as regras importantes no Manual de Jogo oficial antes das competições.",
-
-footerTitle:"QuickManual",
-footerDescription:`A community resource by Asteria Robotics
-This is not an official FIRST document.`,
-
-contactTitle:"Contato",
-addressText:"Endereço da nossa oficina",
-instagramText:"Instagram",
-copyrightText:"© 2026 Asteria Robotics FTC Team 32334. Todos os direitos reservados.",
-viewBtn2:"Ver",
-},
-
-zh:{
-navHome:"这是什么？",
-navTeam:"这不是什么？",
-navRobots:"适合谁？",
-navProjects:"如何使用？",
-navSponsors:"赞助商",
-navGallery:"图库",
-navContact:"联系我们",
-navDecode:"比赛规则",
-navLogin:"登录",
-
-discoverBtn:"探索",
-
-whatItIsTitle:"这是什么？",
-whatItIsText:"QuickManual 是对 FIRST Tech Challenge 官方比赛手册的精心简化摘要。它重点介绍比赛中最重要的规则、得分方式以及队伍经常遇到的情况。目标是帮助学生和导师更快、更清楚地理解比赛的核心内容。",
-
-whatItIsNotTitle:"这不是什么？",
-whatItIsNotText:"QuickManual 不是官方比赛手册，绝不能被视为完整或最终的规则来源。它不能替代 FIRST 发布的官方文件。对于任何正式决定、检查或争议，队伍必须始终参考最新版本的官方比赛手册。",
-
-whoIsItForTitle:"适合谁？",
-whoIsItForText:"本资源特别为新队伍、新手学生，以及阅读长篇英语技术文件有困难的队伍而设计。同时，对于希望在比赛或训练前快速查阅规则的经验队伍也很有帮助。",
-
-howToUseItTitle:"如何使用？",
-howToUseItText:"先阅读简短摘要，了解主要概念。然后下载你所需语言的 PDF 版本。将 QuickManual 作为学习和复习工具使用，但在比赛前务必对照官方比赛手册核实重要规则。",
-
-footerTitle:"QuickManual",
-footerDescription:`A community resource by Asteria Robotics
-This is not an official FIRST document.`,
-
-contactTitle:"联系我们",
-addressText:"我们的工作室地址",
-instagramText:"Instagram",
-copyrightText:"© 2026 Asteria Robotics FTC Team 32334. 版权所有。",
-viewBtn2:"查看",
+        document.getElementById("totalViews").textContent = newViews;
+    } catch (error) {
+        console.error("Sayaç güncellenemedi:", error);
+        document.getElementById("totalViews").textContent = "341";
+    }
 }
 
-};
+async function loadManual() {
+    const t = getLanguageTexts(currentLanguage);
+    try {
+        manualStatus.textContent = t.manualLoading;
+        const response = await fetch(MANUAL_URL);
+        if (!response.ok) throw new Error("game-manual.pdf bulunamadı.");
 
-function setLanguage(lang){
-    if(!translations[lang]) return;
+        const pdfBlob = await response.blob();
+        const arrayBuffer = await pdfBlob.arrayBuffer();
+        manualBase64 = arrayBufferToBase64(arrayBuffer);
 
-    document.documentElement.lang = lang;
+        const sizeMB = arrayBuffer.byteLength / (1024 * 1024);
+        if (sizeMB > 50) throw new Error("Game Manual 50 MB'dan büyük.");
 
-    for(let id in translations[lang]){
-        const element = document.getElementById(id);
-        if(element){
-            element.innerHTML = translations[lang][id];
+        manualStatus.textContent = t.manualReady;
+        manualStatus.className = "manual-status manual-ok";
+    } catch (error) {
+        console.error("Manual yükleme hatası:", error);
+        manualBase64 = null;
+        manualStatus.textContent = t.manualError;
+        manualStatus.className = "manual-status manual-error";
+    }
+}
+
+function arrayBufferToBase64(buffer) {
+    let binary = "";
+    const bytes = new Uint8Array(buffer);
+    const chunkSize = 0x8000;
+    for (let i = 0; i < bytes.length; i += chunkSize) {
+        const chunk = bytes.subarray(i, Math.min(i + chunkSize, bytes.length));
+        binary += String.fromCharCode(...chunk);
+    }
+    return btoa(binary);
+}
+
+input.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") sendMessage();
+});
+
+sendButton.addEventListener("click", sendMessage);
+
+async function sendMessage() {
+    const userMessage = input.value.trim();
+    if (!userMessage) return;
+
+    const t = getLanguageTexts(currentLanguage);
+
+    if (!manualBase64) {
+        addMessage(t.manualNotLoaded, "ai");
+        return;
+    }
+
+    addMessage(userMessage, "user");
+    input.value = "";
+    sendButton.disabled = true;
+    sendButton.textContent = "...";
+
+    const aiMessage = addThinkingMessage();
+
+    try {
+        const response = await fetch(WORKER_URL, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                question: userMessage,
+                manualBase64: manualBase64,
+                manualMimeType: manualMimeType
+            })
+        });
+
+        const data = await response.json();
+        if (!response.ok) throw new Error(data?.error || "Cloudflare Worker hatası.");
+
+        const answer = data?.answer?.trim();
+        if (!answer) throw new Error("Gemini cevap döndürmedi.");
+
+        aiMessage.classList.remove("thinking-message");
+        aiMessage.textContent = answer;
+    } catch (error) {
+        aiMessage.classList.remove("thinking-message");
+        aiMessage.textContent = t.apiError + error.message;
+    }
+
+    sendButton.disabled = false;
+    sendButton.textContent = t.send;
+    messages.scrollTop = messages.scrollHeight;
+}
+
+function addMessage(text, type) {
+    const message = document.createElement("div");
+    message.className = `message ${type}`;
+    message.textContent = text;
+    messages.appendChild(message);
+    messages.scrollTop = messages.scrollHeight;
+    return message;
+}
+
+function addThinkingMessage() {
+    const t = getLanguageTexts(currentLanguage);
+    const message = document.createElement("div");
+    message.className = "message ai thinking-message";
+    message.innerHTML = `
+        <div class="thinking-text" id="thinkingText">${t.thinking}</div>
+        <div class="dots"><span></span><span></span><span></span></div>
+    `;
+    messages.appendChild(message);
+    messages.scrollTop = messages.scrollHeight;
+    return message;
+}
+
+/* =====================================================
+   TÜM DİLLERİN METİN LİSTESİ (ÇEVİRİ DİZİNİ)
+   ===================================================== */
+function getLanguageTexts(lang) {
+    const texts = {
+        tr: {
+            subtitle: "Game Manual destekli yapay zekâ asistanı",
+            welcome: "Merhaba! Ben QuickManual AI. Game Manual'ı temel alarak sorularını cevaplayabilirim.",
+            placeholder: "Manual hakkında bir soru sor...",
+            send: "Gönder",
+            thinking: "Cevap hazırlanıyor...",
+            sidebarLeftTitle: "Team Updates (2026-2027)",
+            update6: "📜 Team Update 06",
+            update5: "📜 Team Update 05",
+            update4: "📜 Team Update 04",
+            update3: "📜 Team Update 03",
+            update2: "📜 Team Update 02",
+            update1: "📜 Team Update 01",
+            sidebarRightTitle: "Canlı İstatistikler",
+            statTotalViews: "Toplam Ziyaretçi",
+            statTopCountry: "En Çok Ziyaret Eden Ülke",
+            topCountryValue: "🇹🇷 Türkiye (%65)",
+            manualLoading: "📖 Game Manual yükleniyor...",
+            manualReady: "✅ Game Manual Hazır",
+            manualError: "❌ Game Manual yüklenemedi",
+            manualNotLoaded: "❌ Game Manual henüz yüklenmedi.",
+            apiError: "❌ Hata oluştu:\n\n"
+        },
+        en: {
+            subtitle: "AI assistant powered by the Game Manual",
+            welcome: "Hello! I'm QuickManual AI. I can answer your questions based on the Game Manual.",
+            placeholder: "Ask a question about the manual...",
+            send: "Send",
+            thinking: "Preparing answer...",
+            sidebarLeftTitle: "Team Updates (2026-2027)",
+            update6: "📜 Team Update 06",
+            update5: "📜 Team Update 05",
+            update4: "📜 Team Update 04",
+            update3: "📜 Team Update 03",
+            update2: "📜 Team Update 02",
+            update1: "📜 Team Update 01",
+            sidebarRightTitle: "Live Analytics",
+            statTotalViews: "Total Visitors",
+            statTopCountry: "Top Visiting Country",
+            topCountryValue: "🇹🇷 Türkiye (%65)",
+            manualLoading: "📖 Loading Game Manual...",
+            manualReady: "✅ Game Manual Ready",
+            manualError: "❌ Failed to load Game Manual",
+            manualNotLoaded: "❌ Game Manual is not loaded yet.",
+            apiError: "❌ Error occurred:\n\n"
+        },
+        es: {
+            subtitle: "Asistente de IA basado en el Game Manual",
+            welcome: "¡Hola! Soy QuickManual AI. Puedo responder tus preguntas sobre el Game Manual.",
+            placeholder: "Haz una pregunta sobre el manual...",
+            send: "Enviar",
+            thinking: "Preparando respuesta...",
+            sidebarLeftTitle: "Updates de Equipo (2026-2027)",
+            update6: "📜 Team Update 06",
+            update5: "📜 Team Update 05",
+            update4: "📜 Team Update 04",
+            update3: "📜 Team Update 03",
+            update2: "📜 Team Update 02",
+            update1: "📜 Team Update 01",
+            sidebarRightTitle: "Estadísticas en Vivo",
+            statTotalViews: "Visitas Totales",
+            statTopCountry: "País Más Visitante",
+            topCountryValue: "🇹🇷 Turquía (%65)",
+            manualLoading: "📖 Cargando Game Manual...",
+            manualReady: "✅ Game Manual Listo",
+            manualError: "❌ Error al cargar Game Manual",
+            manualNotLoaded: "❌ El Game Manual aún no se ha cargado.",
+            apiError: "❌ Ocurrió un error:\n\n"
+        },
+        pt: {
+            subtitle: "Assistente de IA baseado no Game Manual",
+            welcome: "Olá! Eu sou o QuickManual AI. Posso responder às suas perguntas sobre o Game Manual.",
+            placeholder: "Faça uma pergunta sobre o manual...",
+            send: "Enviar",
+            thinking: "Preparando resposta...",
+            sidebarLeftTitle: "Updates da Equipe (2026-2027)",
+            update6: "📜 Team Update 06",
+            update5: "📜 Team Update 05",
+            update4: "📜 Team Update 04",
+            update3: "📜 Team Update 03",
+            update2: "📜 Team Update 02",
+            update1: "📜 Team Update 01",
+            sidebarRightTitle: "Estatísticas ao Vivo",
+            statTotalViews: "Total de Visitantes",
+            statTopCountry: "País com Mais Visitas",
+            topCountryValue: "🇹🇷 Turquia (%65)",
+            manualLoading: "📖 Carregando Game Manual...",
+            manualReady: "✅ Game Manual Pronto",
+            manualError: "❌ Falha ao carregar Game Manual",
+            manualNotLoaded: "❌ O Game Manual ainda não foi carregado.",
+            apiError: "❌ Ocorreu um erro:\n\n"
+        },
+        zh: {
+            subtitle: "基于 Game Manual 的 AI 助手",
+            welcome: "你好！我是 QuickManual AI。我可以回答你关于 Game Manual 的问题。",
+            placeholder: "询问有关手册的问题...",
+            send: "发送",
+            thinking: "正在准备答案...",
+            sidebarLeftTitle: "战队更新 (2026-2027)",
+            update6: "📜 Team Update 06",
+            update5: "📜 Team Update 05",
+            update4: "📜 Team Update 04",
+            update3: "📜 Team Update 03",
+            update2: "📜 Team Update 02",
+            update1: "📜 Team Update 01",
+            sidebarRightTitle: "实时数据统计",
+            statTotalViews: "总访问人数",
+            statTopCountry: "主要访问国家",
+            topCountryValue: "🇹🇷 土耳其 (%65)",
+            manualLoading: "📖 正在加载 Game Manual...",
+            manualReady: "✅ Game Manual 已就绪",
+            manualError: "❌ 加载 Game Manual 失败",
+            manualNotLoaded: "❌ Game Manual 尚未加载。",
+            apiError: "❌ 发生错误:\n\n"
         }
-    }
-
-    // Buton yazısını güncelle
-    const langBtn = document.getElementById('langBtn');
-    if(langBtn){
-        langBtn.textContent = lang.toUpperCase();
-    }
-
-    // Active class
-    document.querySelectorAll('.lang-dropdown button').forEach(btn => {
-        btn.classList.toggle('active', btn.dataset.lang === lang);
-    });
-
-    localStorage.setItem("language", lang);
+    };
+    return texts[lang] || texts.tr;
 }
 
-window.onload = function(){
-    const savedLang = localStorage.getItem("language") || "tr";
-    setLanguage(savedLang);
-}
+/* =====================================================
+   DİL DEĞİŞTİRME FONKSİYONU (HER ŞEYİ ÇEVİRİR)
+   ===================================================== */
+function changeLanguage(lang) {
+    currentLanguage = lang;
+    const t = getLanguageTexts(lang);
 
-const langSwitch = document.getElementById('langSwitch');
-const langBtn = document.getElementById('langBtn');
+    // Üst Bar & Chat Başlıkları
+    document.getElementById("subtitle").textContent = t.subtitle;
+    document.getElementById("welcomeMessage").textContent = t.welcome;
+    document.getElementById("userInput").placeholder = t.placeholder;
+    document.getElementById("sendButton").textContent = t.send;
 
-langBtn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    langSwitch.classList.toggle('open');
-});
+    // Sol Sidebar (Team Updates)
+    document.getElementById("sidebarLeftTitle").textContent = t.sidebarLeftTitle;
+    document.getElementById("update6").textContent = t.update6;
+    document.getElementById("update5").textContent = t.update5;
+    document.getElementById("update4").textContent = t.update4;
+    document.getElementById("update3").textContent = t.update3;
+    document.getElementById("update2").textContent = t.update2;
+    document.getElementById("update1").textContent = t.update1;
 
-// Dil seçince değiştir
-document.querySelectorAll('.lang-dropdown button').forEach(btn => {
-    btn.addEventListener('click', () => {
-        const lang = btn.dataset.lang;
-        setLanguage(lang);
-        langSwitch.classList.remove('open');
-    });
-});
+    // Sağ Sidebar (İstatistik Başlıkları ve Değerleri)
+    document.getElementById("sidebarRightTitle").textContent = t.sidebarRightTitle;
+    document.getElementById("statTitleTotalViews").textContent = t.statTotalViews;
+    document.getElementById("statTitleTopCountry").textContent = t.statTopCountry;
+    document.getElementById("statValueTopCountry").textContent = t.topCountryValue;
 
-// Dışarı tıklayınca kapansın
-document.addEventListener('click', (e) => {
-    if (!langSwitch.contains(e.target)) {
-        langSwitch.classList.remove('open');
+    // Yükleniyor Mesajı
+    const thinkingEl = document.getElementById("thinkingText");
+    if (thinkingEl) thinkingEl.textContent = t.thinking;
+
+    // Manual Durumu Metni
+    if (manualBase64) {
+        manualStatus.textContent = t.manualReady;
+    } else if (manualStatus.classList.contains("manual-error")) {
+        manualStatus.textContent = t.manualError;
+    } else {
+        manualStatus.textContent = t.manualLoading;
     }
-});
-
+}
 </script>
-
 
 </body>
 </html>
