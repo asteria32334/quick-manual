@@ -193,10 +193,13 @@
 <!-- SOL PANEL: Geçmiş Manual Sürümleri -->
 <div class="sidebar-left">
     <h3>📖 Game Manual Sürümleri</h3>
-    <a href="./game-manual.pdf" class="manual-link" target="_blank">🟢 2026-2027 Canopy (Güncel)</a>
-    <a href="#" class="manual-link">📜 2025-2026 Age</a>
-    <a href="#" class="manual-link">📜 2024-2025 Submerged</a>
-    <a href="#" class="manual-link">📜 2023-2024 CenterStage</a>
+    <a href="./game-manual.pdf" class="manual-link" target="_blank">2026-2027 Canopy TU6</a>
+    <a href="#" class="manual-link">2026-2027 Canopy TU5</a>
+    <a href="#" class="manual-link">2026-2027 Canopy TU4</a>
+    <a href="#" class="manual-link">2026-2027 Canopy TU3</a>
+    <a href="#" class="manual-link">2026-2027 Canopy TU2</a>
+    <a href="#" class="manual-link">2026-2027 Canopy TU1</a>
+    <a href="#" class="manual-link">2026-2027 Canopy TU0</a>
 </div>
 
 <!-- ORTA ANA İÇERİK -->
@@ -243,7 +246,7 @@
 
 <!-- SAĞ PANEL: Sayaçlar ve İstatistikler -->
 <div class="sidebar-right">
-    <h3>📊 İstatistikler</h3>
+    <h3>İstatistikler</h3>
     
     <div class="stat-card">
         <div class="stat-title">Toplam Ziyaretçi</div>
@@ -289,7 +292,7 @@ async function loadManual() {
         const sizeMB = arrayBuffer.byteLength / (1024 * 1024);
         if (sizeMB > 50) throw new Error("Game Manual 50 MB'dan büyük.");
 
-        manualStatus.textContent = "✅ Game Manual Hazır";
+        manualStatus.textContent = "✅ Game Manual";
         manualStatus.className = "manual-status manual-ok";
     } catch (error) {
         console.error("Manual yükleme hatası:", error);
