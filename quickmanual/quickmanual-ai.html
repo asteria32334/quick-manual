@@ -194,13 +194,15 @@
 </head>
 <body>
 
-<!-- SOL PANEL: Geçmiş Manual Sürümleri -->
 <div class="sidebar-left">
-    <h3>📖 Game Manual Sürümleri</h3>
-    <a href="./game-manual.pdf" class="manual-link" target="_blank">🟢 2026-2027 Canopy (Güncel)</a>
-    <a href="#" class="manual-link">📜 2025-2026 Age</a>
-    <a href="#" class="manual-link">📜 2024-2025 Submerged</a>
-    <a href="#" class="manual-link">📜 2023-2024 CenterStage</a>
+    <h3 id="sidebarLeftTitle">📢 Team Updates (2026-2027)</h3>
+    <a href="#" class="manual-link" id="update6">📜 Team Update 06</a>
+    <a href="#" class="manual-link" id="update5">📜 Team Update 05</a>
+    <a href="#" class="manual-link" id="update4">📜 Team Update 04</a>
+    <a href="#" class="manual-link" id="update3">📜 Team Update 03</a>
+    <a href="#" class="manual-link" id="update2">📜 Team Update 02</a>
+    <a href="#" class="manual-link" id="update1">📜 Team Update 01</a>
+    <a href="#" class="manual-link" id="update0">📜 Team Update 00</a>
 </div>
 
 <!-- ORTA ANA İÇERİK -->
@@ -431,38 +433,133 @@ function changeLanguage(lang) {
     const texts = {
         tr: {
             subtitle: "Game Manual destekli yapay zekâ asistanı",
-            welcome: "Merhaba! Ben QuickManual AI. Game Manual hakkında sorularını cevaplayabilirim.",
+            welcome: "Merhaba! Ben QuickManual AI. Game Manual'ı temel alarak sorularını cevaplayabilirim.",
             placeholder: "Manual hakkında bir soru sor...",
             send: "Gönder",
-            thinking: "Cevap hazırlanıyor..."
+            thinking: "Cevap hazırlanıyor...",
+            sidebarLeftTitle: "📢 Team Updates (2026-2027)",
+            
+            update6: "📜 Team Update 06",
+            update5: "📜 Team Update 05",
+            update4: "📜 Team Update 04",
+            update3: "📜 Team Update 03",
+            update2: "📜 Team Update 02",
+            update1: "📜 Team Update 01",
+            update0: "📜 Team Update 00",
+            sidebarRightTitle: "📊 Canlı İstatistikler",
+            statTotalViews: "Toplam Ziyaretçi",
+            statActiveUsers: "Anlık Aktif Kullanıcı",
+            statTopCountry: "En Çok Ziyaret Eden Ülke",
+            topCountryValue: "🇹🇷 Türkiye (%65)",
+            manualLoading: "📖 Game Manual yükleniyor...",
+            manualReady: "✅ Game Manual Hazır",
+            manualError: "❌ Game Manual yüklenemedi",
+            manualNotLoaded: "❌ Game Manual henüz yüklenmedi.",
+            apiError: "❌ Hata oluştu:\n\n"
         },
         en: {
             subtitle: "AI assistant powered by the Game Manual",
-            welcome: "Hello! I'm QuickManual AI. I can answer your questions about the Game Manual.",
+            welcome: "Hello! I'm QuickManual AI. I can answer your questions based on the Game Manual.",
             placeholder: "Ask a question about the manual...",
             send: "Send",
-            thinking: "Preparing answer..."
+            thinking: "Preparing answer...",
+            sidebarLeftTitle: "📢 Team Updates (2026-2027)",
+            
+            update6: "📜 Team Update 06",
+            update5: "📜 Team Update 05",
+            update4: "📜 Team Update 04",
+            update3: "📜 Team Update 03",
+            update2: "📜 Team Update 02",
+            update1: "📜 Team Update 01",
+            update0: "📜 Team Update 00",
+            sidebarRightTitle: "📊 Live Analytics",
+            statTotalViews: "Total Visitors",
+            statActiveUsers: "Active Users (Now)",
+            statTopCountry: "Top Visiting Country",
+            topCountryValue: "🇹🇷 Türkiye (%65)",
+            manualLoading: "📖 Loading Game Manual...",
+            manualReady: "✅ Game Manual Ready",
+            manualError: "❌ Failed to load Game Manual",
+            manualNotLoaded: "❌ Game Manual is not loaded yet.",
+            apiError: "❌ Error occurred:\n\n"
         },
         es: {
             subtitle: "Asistente de IA basado en el Game Manual",
             welcome: "¡Hola! Soy QuickManual AI. Puedo responder tus preguntas sobre el Game Manual.",
             placeholder: "Haz una pregunta sobre el manual...",
             send: "Enviar",
-            thinking: "Preparando respuesta..."
+            thinking: "Preparando respuesta...",
+            sidebarLeftTitle: "📢 Updates de Equipo (2026-2027)",
+            
+            update6: "📜 Team Update 06",
+            update5: "📜 Team Update 05",
+            update4: "📜 Team Update 04",
+            update3: "📜 Team Update 03",
+            update2: "📜 Team Update 02",
+            update1: "📜 Team Update 01",
+            update0: "📜 Team Update 00",
+            sidebarRightTitle: "📊 Estadísticas en Vivo",
+            statTotalViews: "Visitas Totales",
+            statActiveUsers: "Usuarios Activos (Ahora)",
+            statTopCountry: "País Más Visitante",
+            topCountryValue: "🇹🇷 Turquía (%65)",
+            manualLoading: "📖 Cargando Game Manual...",
+            manualReady: "✅ Game Manual Listo",
+            manualError: "❌ Error al cargar Game Manual",
+            manualNotLoaded: "❌ El Game Manual aún no se ha cargado.",
+            apiError: "❌ Ocurrió un error:\n\n"
         },
         pt: {
             subtitle: "Assistente de IA baseado no Game Manual",
             welcome: "Olá! Eu sou o QuickManual AI. Posso responder às suas perguntas sobre o Game Manual.",
             placeholder: "Faça uma pergunta sobre o manual...",
             send: "Enviar",
-            thinking: "Preparando resposta..."
+            thinking: "Preparando resposta...",
+            sidebarLeftTitle: "📢 Updates da Equipe (2026-2027)",
+            
+            update6: "📜 Team Update 06",
+            update5: "📜 Team Update 05",
+            update4: "📜 Team Update 04",
+            update3: "📜 Team Update 03",
+            update2: "📜 Team Update 02",
+            update1: "📜 Team Update 01",
+            update0: "📜 Team Update 00",
+            sidebarRightTitle: "📊 Estatísticas ao Vivo",
+            statTotalViews: "Total de Visitantes",
+            statActiveUsers: "Usuários Ativos (Agora)",
+            statTopCountry: "País com Mais Visitas",
+            topCountryValue: "🇹🇷 Turquia (%65)",
+            manualLoading: "📖 Carregando Game Manual...",
+            manualReady: "✅ Game Manual Pronto",
+            manualError: "❌ Falha ao carregar Game Manual",
+            manualNotLoaded: "❌ O Game Manual ainda não foi carregado.",
+            apiError: "❌ Ocorreu um erro:\n\n"
         },
         zh: {
             subtitle: "基于 Game Manual 的 AI 助手",
             welcome: "你好！我是 QuickManual AI。我可以回答你关于 Game Manual 的问题。",
             placeholder: "询问有关手册的问题...",
             send: "发送",
-            thinking: "正在准备答案..."
+            thinking: "正在准备答案...",
+            sidebarLeftTitle: "📢 战队更新 (2026-2027)",
+            
+            update6: "📜 Team Update 06",
+            update5: "📜 Team Update 05",
+            update4: "📜 Team Update 04",
+            update3: "📜 Team Update 03",
+            update2: "📜 Team Update 02",
+            update1: "📜 Team Update 01",
+            update0: "📜 Team Update 00",
+            sidebarRightTitle: "📊 实时数据统计",
+            statTotalViews: "总访问人数",
+            statActiveUsers: "当前在线用户",
+            statTopCountry: "主要访问国家",
+            topCountryValue: "🇹🇷 土耳其 (%65)",
+            manualLoading: "📖 正在加载 Game Manual...",
+            manualReady: "✅ Game Manual 已就绪",
+            manualError: "❌ 加载 Game Manual 失败",
+            manualNotLoaded: "❌ Game Manual 尚未加载。",
+            apiError: "❌ 发生错误:\n\n"
         }
     };
 
