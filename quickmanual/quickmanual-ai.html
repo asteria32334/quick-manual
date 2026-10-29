@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QuickManual AI - Asteria #32334</title>
+    <title>QuickManual AI</title>
     
     <!-- Supabase JS Kütüphanesi -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
@@ -230,7 +230,7 @@
 
     <!-- Sohbet Alanı -->
     <div class="chat-box">
-        <div id="manualStatus" class="manual-status">📖 Game Manual yükleniyor...</div>
+        <div id="manualStatus" class="manual-status">Game Manual yükleniyor...</div>
 
         <div id="messages">
             <div class="message ai" id="welcomeMessage">
@@ -249,21 +249,16 @@
 
 <!-- SAĞ PANEL: Canlı Sayaçlar (Supabase Bağlantılı) -->
 <div class="sidebar-right">
-    <h3>📊 Canlı İstatistikler</h3>
+    <h3 id="istatistik" >Canlı İstatistikler</h3>
     
     <div class="stat-card">
-        <div class="stat-title">Toplam Ziyaretçi</div>
+        <div class="stat-title" id="ziyaretci">Toplam Ziyaretçi</div>
         <div class="stat-value" id="totalViews">Yükleniyor...</div>
     </div>
-
+    
     <div class="stat-card">
-        <div class="stat-title">Anlık Aktif Kullanıcı</div>
-        <div class="stat-value" id="activeUsers">1</div>
-    </div>
-
-    <div class="stat-card">
-        <div class="stat-title">En Çok Ziyaret Eden Ülke</div>
-        <div class="stat-value" style="font-size: 14px; margin-top: 4px;">🇹🇷 Türkiye (%65)</div>
+        <div class="stat-title" id="ulke">En Çok Ziyaret Eden Ülke</div>
+        <div class="stat-value" style="font-size: 14px; margin-top: 4px;">🇹🇷 Türkiye (%65.3)</div>
     </div>
 </div>
 
@@ -321,7 +316,7 @@ async function incrementAndFetchViews() {
 
 async function loadManual() {
     try {
-        manualStatus.textContent = "📖 Game Manual yükleniyor...";
+        manualStatus.textContent = "📖 Game Manual...";
         const response = await fetch(MANUAL_URL);
         if (!response.ok) throw new Error("game-manual.pdf bulunamadı.");
 
@@ -332,12 +327,12 @@ async function loadManual() {
         const sizeMB = arrayBuffer.byteLength / (1024 * 1024);
         if (sizeMB > 50) throw new Error("Game Manual 50 MB'dan büyük.");
 
-        manualStatus.textContent = "✅ Game Manual Hazır";
+        manualStatus.textContent = "✅ Game Manual";
         manualStatus.className = "manual-status manual-ok";
     } catch (error) {
         console.error("Manual yükleme hatası:", error);
         manualBase64 = null;
-        manualStatus.textContent = "❌ Game Manual yüklenemedi";
+        manualStatus.textContent = "❌ Game Manual";
         manualStatus.className = "manual-status manual-error";
     }
 }
@@ -446,11 +441,11 @@ function changeLanguage(lang) {
             update2: "📜 Team Update 02",
             update1: "📜 Team Update 01",
             update0: "📜 Team Update 00",
-            sidebarRightTitle: "📊 Canlı İstatistikler",
-            statTotalViews: "Toplam Ziyaretçi",
+            istatistik: "Canlı İstatistikler",
+            ziyaretci: "Toplam Ziyaretçi",
             statActiveUsers: "Anlık Aktif Kullanıcı",
             statTopCountry: "En Çok Ziyaret Eden Ülke",
-            topCountryValue: "🇹🇷 Türkiye (%65)",
+            ulke: "🇹🇷 Türkiye (%65.3)",
             manualLoading: "📖 Game Manual yükleniyor...",
             manualReady: "✅ Game Manual Hazır",
             manualError: "❌ Game Manual yüklenemedi",
@@ -472,11 +467,11 @@ function changeLanguage(lang) {
             update2: "📜 Team Update 02",
             update1: "📜 Team Update 01",
             update0: "📜 Team Update 00",
-            sidebarRightTitle: "📊 Live Analytics",
-            statTotalViews: "Total Visitors",
+            istatistik: "Live Analytics",
+            ziyaretci: "Total Visitors",
             statActiveUsers: "Active Users (Now)",
-            statTopCountry: "Top Visiting Country",
-            topCountryValue: "🇹🇷 Türkiye (%65)",
+            ulke: "Top Visiting Country",
+            topCountryValue: "🇹🇷 Türkiye (%65.3)",
             manualLoading: "📖 Loading Game Manual...",
             manualReady: "✅ Game Manual Ready",
             manualError: "❌ Failed to load Game Manual",
@@ -498,11 +493,11 @@ function changeLanguage(lang) {
             update2: "📜 Team Update 02",
             update1: "📜 Team Update 01",
             update0: "📜 Team Update 00",
-            sidebarRightTitle: "📊 Estadísticas en Vivo",
-            statTotalViews: "Visitas Totales",
+            istatistik: "Estadísticas en Vivo",
+            ziyaretci: "Visitas Totales",
             statActiveUsers: "Usuarios Activos (Ahora)",
             statTopCountry: "País Más Visitante",
-            topCountryValue: "🇹🇷 Turquía (%65)",
+            ulke: "🇹🇷 Turquía (%65.3)",
             manualLoading: "📖 Cargando Game Manual...",
             manualReady: "✅ Game Manual Listo",
             manualError: "❌ Error al cargar Game Manual",
@@ -524,11 +519,11 @@ function changeLanguage(lang) {
             update2: "📜 Team Update 02",
             update1: "📜 Team Update 01",
             update0: "📜 Team Update 00",
-            sidebarRightTitle: "📊 Estatísticas ao Vivo",
-            statTotalViews: "Total de Visitantes",
+            istatistik: "Estatísticas ao Vivo",
+            ziyaretci: "Total de Visitantes",
             statActiveUsers: "Usuários Ativos (Agora)",
             statTopCountry: "País com Mais Visitas",
-            topCountryValue: "🇹🇷 Turquia (%65)",
+            ulke: "🇹🇷 Turquia (%65.3)",
             manualLoading: "📖 Carregando Game Manual...",
             manualReady: "✅ Game Manual Pronto",
             manualError: "❌ Falha ao carregar Game Manual",
@@ -550,11 +545,11 @@ function changeLanguage(lang) {
             update2: "📜 Team Update 02",
             update1: "📜 Team Update 01",
             update0: "📜 Team Update 00",
-            sidebarRightTitle: "📊 实时数据统计",
-            statTotalViews: "总访问人数",
+            istatistik: "实时数据统计",
+            ziyaretci: "总访问人数",
             statActiveUsers: "当前在线用户",
-            statTopCountry: "主要访问国家",
-            topCountryValue: "🇹🇷 土耳其 (%65)",
+            ulke: "主要访问国家",
+            topCountryValue: "🇹🇷 土耳其 (%65.3)",
             manualLoading: "📖 正在加载 Game Manual...",
             manualReady: "✅ Game Manual 已就绪",
             manualError: "❌ 加载 Game Manual 失败",
