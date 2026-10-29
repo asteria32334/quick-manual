@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QuickManual AI - Asteria #32334</title>
+    
+    <!-- Supabase JS Kütüphanesi -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
     <style>
         * { box-sizing: border-box; }
         body {
@@ -193,13 +197,10 @@
 <!-- SOL PANEL: Geçmiş Manual Sürümleri -->
 <div class="sidebar-left">
     <h3>📖 Game Manual Sürümleri</h3>
-    <a href="./game-manual.pdf" class="manual-link" target="_blank">2026-2027 Canopy TU6</a>
-    <a href="#" class="manual-link">2026-2027 Canopy TU5</a>
-    <a href="#" class="manual-link">2026-2027 Canopy TU4</a>
-    <a href="#" class="manual-link">2026-2027 Canopy TU3</a>
-    <a href="#" class="manual-link">2026-2027 Canopy TU2</a>
-    <a href="#" class="manual-link">2026-2027 Canopy TU1</a>
-    <a href="#" class="manual-link">2026-2027 Canopy TU0</a>
+    <a href="./game-manual.pdf" class="manual-link" target="_blank">🟢 2026-2027 Canopy (Güncel)</a>
+    <a href="#" class="manual-link">📜 2025-2026 Age</a>
+    <a href="#" class="manual-link">📜 2024-2025 Submerged</a>
+    <a href="#" class="manual-link">📜 2023-2024 CenterStage</a>
 </div>
 
 <!-- ORTA ANA İÇERİK -->
@@ -244,17 +245,17 @@
     </div>
 </div>
 
-<!-- SAĞ PANEL: Sayaçlar ve İstatistikler -->
+<!-- SAĞ PANEL: Canlı Sayaçlar (Supabase Bağlantılı) -->
 <div class="sidebar-right">
-    <h3>İstatistikler</h3>
+    <h3>📊 Canlı İstatistikler</h3>
     
     <div class="stat-card">
         <div class="stat-title">Toplam Ziyaretçi</div>
-        <div class="stat-value" id="totalViews">341</div>
+        <div class="stat-value" id="totalViews">Yükleniyor...</div>
     </div>
 
     <div class="stat-card">
-        <div class="stat-title">Aktif Kullanıcı (Şu an)</div>
+        <div class="stat-title">Anlık Aktif Kullanıcı</div>
         <div class="stat-value" id="activeUsers">1</div>
     </div>
 
@@ -265,6 +266,13 @@
 </div>
 
 <script>
+/* =====================================================
+   SUPABASE AYARLARI (Kendi bilgilerini buraya yazacaksın)
+   ===================================================== */
+const SUPABASE_URL = "https://plsfmbknqsjgvpjoubht.supabase.co";
+const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBsc2ZtYmtucXNqZ3Zwam91Ymh0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1ODc3NzcsImV4cCI6MjA5NjE2Mzc3N30.TLee9QqcSjvT00ouwF53ntu-K7kcY9R_BDK9Tv82aF4";
+const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
 const WORKER_URL = "https://quickmanual-api.asteria-32334.workers.dev/";
 const MANUAL_URL = "./game-manual.pdf";
 
@@ -277,7 +285,37 @@ let manualBase64 = null;
 const manualMimeType = "application/pdf";
 let currentLanguage = "tr";
 
+// Sayfa açıldığında çalışacak fonksiyonlar
 loadManual();
+incrementAndFetchViews();
+
+// Supabase Canlı Sayaç Fonksiyonu
+async function incrementAndFetchViews() {
+    try {
+        // 1. Mevcut sayıyı tablodan çek
+        let { data, error } = await supabaseClient
+            .from('site_stats')
+            .select('views')
+            .eq('id', 1)
+            .single();
+
+        if (error) throw error;
+
+        let newViews = (data.views || 341) + 1;
+
+        // 2. Sayıyı 1 artırarak güncelle
+        await supabaseClient
+            .from('site_stats')
+            .update({ views: newViews })
+            .eq('id', 1);
+
+        // 3. Ekrana yazdır
+        document.getElementById("totalViews").textContent = newViews;
+    } catch (error) {
+        console.error("Sayaç güncellenemedi:", error);
+        document.getElementById("totalViews").textContent = "341"; // Yedek değer
+    }
+}
 
 async function loadManual() {
     try {
@@ -292,7 +330,7 @@ async function loadManual() {
         const sizeMB = arrayBuffer.byteLength / (1024 * 1024);
         if (sizeMB > 50) throw new Error("Game Manual 50 MB'dan büyük.");
 
-        manualStatus.textContent = "✅ Game Manual";
+        manualStatus.textContent = "✅ Game Manual Hazır";
         manualStatus.className = "manual-status manual-ok";
     } catch (error) {
         console.error("Manual yükleme hatası:", error);
