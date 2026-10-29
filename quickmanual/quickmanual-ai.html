@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QuickManual AI - Asteria #32334</title>
+
+    <link rel="icon" href="images/logo (2).png" >
+
+    <link rel="manifest" href="manifest.json">
+
+    <link rel="apple-touch-icon" href="images/logo.png">
     
     <!-- Supabase JS Kütüphanesi -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
@@ -203,7 +209,7 @@
 <!-- SOL PANEL: 2026-2027 Canopy Team Updates -->
 <div class="sidebar-left">
     <h3 id="sidebarLeftTitle">📢 Team Updates (2026-2027)</h3>
-    
+    <a href="#" class="manual-link active" id="update7">📌 Team Update 07 (Son)</a>
     <a href="#" class="manual-link" id="update6">📜 Team Update 06</a>
     <a href="#" class="manual-link" id="update5">📜 Team Update 05</a>
     <a href="#" class="manual-link" id="update4">📜 Team Update 04</a>
@@ -556,9 +562,9 @@ function getLanguageTexts(lang) {
             statTotalViews: "总访问人数",
             statActiveUsers: "当前在线用户",
             statTopCountry: "主要访问国家",
-            topCountryValue: "🇹🇷 土耳其 (%65.3)",
+            topCountryValue: "🇹🇷 土耳其 (%65)",
             manualLoading: "📖 正在加载 Game Manual...",
-            manualReady: "✅ Game Manual 已就绪,,,",
+            manualReady: "✅ Game Manual 已就绪",
             manualError: "❌ 加载 Game Manual 失败",
             manualNotLoaded: "❌ Game Manual 尚未加载。",
             apiError: "❌ 发生错误:\n\n"
@@ -590,7 +596,7 @@ function changeLanguage(lang) {
     document.getElementById("update2").textContent = t.update2;
     document.getElementById("update1").textContent = t.update1;
 
-    // Sağ Sidebar (İstatistik Kartları)
+    // Sağ Sidebar (İstatistik Başlıkları ve Değerleri)
     document.getElementById("sidebarRightTitle").textContent = t.sidebarRightTitle;
     document.getElementById("statTitleTotalViews").textContent = t.statTotalViews;
     document.getElementById("statTitleActiveUsers").textContent = t.statActiveUsers;
