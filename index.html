@@ -551,7 +551,9 @@ function getLanguageTexts(lang) {
             manualReady: "✅ Game Manual Hazır",
             manualError: "❌ Game Manual yüklenemedi",
             manualNotLoaded: "❌ Game Manual henüz yüklenmedi.",
-            apiError: "❌ Hata oluştu:\n\n"
+            apiError: "❌ Hata oluştu:\n\n",
+            kurallarg: "Kurallar Özeti",
+            kurallar: "Kurallar",
         },
         en: {
             subtitle: "AI assistant powered by the Game Manual",
@@ -574,7 +576,9 @@ function getLanguageTexts(lang) {
             manualReady: "✅ Game Manual Ready",
             manualError: "❌ Failed to load Game Manual",
             manualNotLoaded: "❌ Game Manual is not loaded yet.",
-            apiError: "❌ Error occurred:\n\n"
+            apiError: "❌ Error occurred:\n\n",
+            kurallarg: "Summary of Rules",
+            kurallar: "Rules",
         },
         es: {
             subtitle: "Asistente de IA basado en el Game Manual",
@@ -597,7 +601,9 @@ function getLanguageTexts(lang) {
             manualReady: "✅ Game Manual Listo",
             manualError: "❌ Error al cargar Game Manual",
             manualNotLoaded: "❌ El Game Manual aún no se ha cargado.",
-            apiError: "❌ Ocurrió un error:\n\n"
+            apiError: "❌ Ocurrió un error:\n\n",
+            kurallarg: "Resumen de las reglas",
+            kurallar: "Normas",
         },
         pt: {
             subtitle: "Assistente de IA baseado no Game Manual",
@@ -620,7 +626,9 @@ function getLanguageTexts(lang) {
             manualReady: "✅ Game Manual Pronto",
             manualError: "❌ Falha ao carregar Game Manual",
             manualNotLoaded: "❌ O Game Manual ainda não foi carregado.",
-            apiError: "❌ Ocorreu um erro:\n\n"
+            apiError: "❌ Ocorreu um erro:\n\n",
+            kurallarg: "Resumo das Regras",
+            kurallar: "Regras",
         },
         zh: {
             subtitle: "基于 Game Manual 的 AI 助手",
@@ -643,7 +651,9 @@ function getLanguageTexts(lang) {
             manualReady: "✅ Game Manual 已就绪",
             manualError: "❌ 加载 Game Manual 失败",
             manualNotLoaded: "❌ Game Manual 尚未加载。",
-            apiError: "❌ 发生错误:\n\n"
+            apiError: "❌ 发生错误:\n\n",
+            kurallarg: "规则摘要",
+            kurallar: "规则",
         }
     };
     return texts[lang] || texts.tr;
@@ -676,6 +686,8 @@ function changeLanguage(lang) {
     document.getElementById("statTitleTotalViews").textContent = t.statTotalViews;
     document.getElementById("statTitleTopCountry").textContent = t.statTopCountry;
     document.getElementById("statValueTopCountry").textContent = t.topCountryValue;
+    document.getElementById("kurallarg").textContent = t.kurallarg;
+    document.getElementById("kurallar").textContent = t.kurallar;
 
     // Yükleniyor Mesajı
     const thinkingEl = document.getElementById("thinkingText");
